@@ -1,0 +1,65 @@
+<!-- Testimonial/stats section -->
+<div class="relative my-4">
+    <div class="lg:mx-auto lg:grid lg:max-w-7xl lg:grid-cols-2 lg:items-start lg:gap-24 lg:px-8">
+      <div class="relative sm:py-8 lg:py-0">
+        <div class="relative max-w-md px-4 py-6 mx-auto sm:max-w-3xl sm:px-6 lg:max-w-none lg:px-0 lg:py-20">
+          <!-- Testimonial card-->
+          <div class="relative overflow-hidden">
+            {{ $missionimage := resources.Get "images/about.png" }}
+            {{ with $missionimage }}
+            {{ with .Resize (printf "%dx%d webp q50" .Width .Height) }}
+            <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" class="object-cover w-full h-full"
+              alt="Our Mission - Sign Makers" loading="lazy" />
+            {{ end }}
+            {{ end }}
+  
+          </div>
+        </div>
+      </div>
+  
+      <div class="relative max-w-md px-4 mx-auto sm:max-w-3xl sm:px-6 lg:px-0">
+        <!-- Content area -->
+        <div class="md:py-12 sm:pt-6 lg:py-20">
+          <div class="mb-4">
+            <span
+              class="inline-flex rounded-xl justify-between items-center py-1 px-4 mb-7 text-sm bg-neutral font-medium text-secondary">Why
+              choose us</span>
+          </div>
+          <h2 class="text-3xl text-white font-bold mb-4">What we can do for you</h2>
+          <p class="text-stone-300 mb-6">Capture Attention with Eye-Catching Signs.          </p>
+          <p class="text-stone-300 mb-8">From eye-catching storefront signs and dynamic vehicle wraps to durable outdoor
+            signage and vibrant banners, our team offers comprehensive sign solutions tailored to your specific needs. We
+            handle everything from design and production to installation and maintenance, ensuring your message stands out
+            in every setting.</p>
+          <ul class="list-disc list-inside mb-8 text-stone-300">
+            <li class="flex items-center mb-2"><svg class="w-6 h-6 text-neutral mr-2" fill="none" stroke="currentColor"
+                stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+              </svg> Custom Sign Design</li>
+            <li class="flex items-center mb-2"><svg class="w-6 h-6 text-neutral mr-2" fill="none" stroke="currentColor"
+                stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+              </svg> Sign Fabrication</li>
+            <li class="flex items-center mb-2"><svg class="w-6 h-6  text-neutral  mr-2" fill="none" stroke="currentColor"
+                stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+              </svg> Installation Services</li>
+            <li class="flex items-center mb-2"><svg class="w-6 h-6  text-neutral  mr-2" fill="none" stroke="currentColor"
+                stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+              </svg> Maintenance & Repair</li>
+            <li class="flex items-center mb-2"><svg class="w-6 h-6  text-neutral  mr-2" fill="none" stroke="currentColor"
+                stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+              </svg> Consultation & Permitting</li>
+          </ul>
+          <a href="#"
+            class="inline-block px-6 py-3 text-white bg-primary rounded-lg font-semibold shadow hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500">
+            Reach Out →
+          </a>
+        </div>
+      </div>
+  
+    </div>
+  
+  </div>

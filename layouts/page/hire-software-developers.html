@@ -1,0 +1,197 @@
+{{ define "main" }}
+
+<main>
+    <section>
+        <div class="relative items-center justify-center w-full overflow-y-hidden pt-20 lg:pt-20">
+            <div class="relative z-10">
+                <div
+                    class="absolute inset-x-0 top-1/2 -z-10 flex -translate-y-1/2 justify-center overflow-hidden [mask-image:radial-gradient(50%_45%_at_50%_55%,white,transparent)]">
+                    <svg class="h-[60rem] w-[100rem] flex-none stroke-white opacity-10" aria-hidden="true">
+                        <defs>
+                            <pattern id="e9033f3e-f665-41a6-84ef-756f6778e6fe" width="200" height="200" x="50%" y="50%"
+                                patternUnits="userSpaceOnUse" patternTransform="translate(-100 0)">
+                                <path d="M.5 200V.5H200" fill="none"></path>
+                            </pattern>
+                        </defs>
+                        <rect width="100%" height="100%" stroke-width="0"
+                            fill="url(#e9033f3e-f665-41a6-84ef-756f6778e6fe)">
+                        </rect>
+                    </svg>
+                </div>
+            </div>
+            <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12">
+                <span
+                    class="inline-flex rounded-xl justify-between items-center py-1 px-4 mb-7 text-sm bg-neutral font-medium text-secondary">
+                    Hire Software Developers</span>
+                <h1
+                    class="mb-4 text-3xl max-w-4xl mx-auto font-medium tracking-tight leading-none text-white md:text-4xl lg:text-5xl">
+                    “Professional, Reliable, High Standard”</h1>
+                <p class="my-2 text-stone-200 text-2xl">
+                    Just Some of the Ways Clients Describe Our Developers
+                </p>
+            </div>
+            <div class="flex justify-center z-10 relative">
+                <a href="/contact"
+                    class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-secondary hover:text-white rounded-lg bg-neutral hover:bg-teal-700 focus:ring-4 focus:ring-teal-300 dark:focus:ring-teal-800">
+                    Reach Out
+                    <svg class="ml-2 -mr-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class=" relative z-10">
+        <div class="container mx-auto">
+            <div class="relative my-4">
+                <div class="lg:mx-auto lg:grid lg:max-w-7xl lg:grid-cols-2  items-center lg:gap-24 lg:px-8">
+                    <div class="relative sm:py-8 lg:py-0">
+                        <div class="md:py-12 sm:pt-6 lg:py-20">
+                            <div class="mb-4">
+                                <span
+                                    class="inline-flex rounded-xl justify-between items-center py-1 px-4 mb-7 text-sm bg-neutral font-medium text-secondary">Build
+                                    Your Team</span>
+                            </div>
+                            <h2 class="text-3xl text-white font-bold mb-4">Build Your Team</h2>
+                            <p class="text-gray-600 text-white mb-8">
+
+                                With us you will hire the best developers. But you need more than that. For this reason,
+                                together with you, we carefully review your project requirements and find the best
+                                fit.  So you don’t simply get a contracted expert developer (or a team of them) but
+                                really work with people who deeply care for your project, understand your end goal and
+                                support you all the way to the finish line.
+
+                            </p>
+                            <a href="/contact"
+                                class="inline-block px-6 py-3 text-white bg-primary rounded-lg font-semibold shadow hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500">
+                                Reach Out →
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="relative max-w-md px-4 mx-auto sm:max-w-3xl sm:px-6 lg:px-0">
+                        <!-- Content area -->
+                        <div
+                            class="relative max-w-md px-4 py-6 mx-auto sm:max-w-3xl sm:px-6 lg:max-w-none lg:px-0 lg:py-20">
+                            <!-- Testimonial card-->
+                            <div class="relative overflow-hidden">
+                                {{ $missionimage := resources.Get "images/build-your-team.png" }}
+                                {{ with $missionimage }}
+                                {{ with .Resize (printf "%dx%d webp q50" .Width .Height) }}
+                                <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}"
+                                    class="object-cover w-full h-full" alt="Our Mission - Sign Makers" loading="lazy" />
+                                {{ end }}
+                                {{ end }}
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-neutral">
+        <div class="container mx-auto py-16 pb-16">
+            <h2 class="text-2xl md:text-5xl font-medium text-white text-center">Why Choose Nine Tech?</h2>
+
+            <div class="flex justify-center items-center">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-16 items-center">
+    
+                    <!-- Card 1 -->
+                    <div
+                        class="group relative  my-6 overflow-hidden bg-white px-6 pt-10 pb-8  transition-all duration-300 sm:mx-auto sm:max-w-sm sm:rounded-lg sm:px-10">
+                        <div class="relative z-10 mx-auto max-w-md">
+                            <div class="flex-justify-center">
+                                <svg width="512" height="512" viewBox="0 0 512 512" style="color:#001F54" xmlns="http://www.w3.org/2000/svg" class="h-full w-full"><rect width="512" height="512" x="0" y="0" rx="30" fill="transparent" stroke="transparent" stroke-width="0" stroke-opacity="100%" paint-order="stroke"></rect><svg width="256px" height="256px" viewBox="0 0 16 16" fill="#001F54" x="128" y="128" role="img" style="display:inline-block;vertical-align:middle" xmlns="http://www.w3.org/2000/svg"><g fill="#001F54"><g fill="currentColor"><path d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857V3.857z"/><path d="M6.5 7a1 1 0 1 0 0-2a1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2a1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2a1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2a1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2a1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2a1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2a1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2a1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2a1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2a1 1 0 0 0 0 2z"/></g></g></svg></svg>                            </div>
+                            <div
+                                class=" text-base text-center leading-7 text-secondary transition-all duration-300 group-hover:text-secondary">
+                                <h4 class="h3">
+                                    One Month Free Trial</h4>
+                            </div>
+                            <div
+                                class="space-y-6 pt-5 text-base leading-7 text-secondary hover:text-secondary transition-all duration-300 group-hover:text-secondary">
+                                <p>
+                                    Our projects succeed and our clients win. Still, we like to say: During the first 30 days - if you don’t like what we do - you can cancel any time.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 1 end -->
+    
+                    <!-- Card 2 -->
+                    <div
+                    class="group relative  my-6 overflow-hidden bg-white px-6 pt-10 pb-8  transition-all duration-300 sm:mx-auto sm:max-w-sm sm:rounded-lg sm:px-10">
+                    <div class="relative z-10 mx-auto max-w-md">
+                        <div class="flex-justify-center">
+                            <svg width="512" height="512" viewBox="0 0 512 512" style="color:#001F54" xmlns="http://www.w3.org/2000/svg" class="h-full w-full"><rect width="512" height="512" x="0" y="0" rx="30" fill="transparent" stroke="transparent" stroke-width="0" stroke-opacity="100%" paint-order="stroke"></rect><svg width="256px" height="256px" viewBox="0 0 16 16" fill="#001F54" x="128" y="128" role="img" style="display:inline-block;vertical-align:middle" xmlns="http://www.w3.org/2000/svg"><g fill="#001F54"><path fill="currentColor" d="M13.973 7.722c.018.173.027.354.027.545c0 1.297-.452 2.169-.89 2.715a3.603 3.603 0 0 1-.603.596a2.61 2.61 0 0 1-.236.162l-.009.005a.5.5 0 0 0-.262.44V13.5a.5.5 0 0 1-.5.5H11a1 1 0 0 0-1-1H8a1 1 0 0 0-1 1h-.5a.5.5 0 0 1-.5-.5v-.603a.5.5 0 0 0-.45-.498a2.855 2.855 0 0 1-.464-.143a3.16 3.16 0 0 1-1.063-.707c-.443-.45-.714-1.042-.86-1.453c-.143-.409-.471-.779-.94-.911A.307.307 0 0 1 2 8.89v-.794a.29.29 0 0 1 .21-.279c.485-.139.809-.531.946-.945c.112-.34.31-.776.632-1.103a4.818 4.818 0 0 1 1.262-.906c.039-.02.07-.034.09-.043l.02-.01l.004-.001a.5.5 0 0 0 .303-.46V2.675a7.2 7.2 0 0 0 .7.527c.317.208.687.405 1.074.51c.114-.328.27-.64.464-.928h-.006c-.279-.029-.62-.18-.985-.419a7.02 7.02 0 0 1-.94-.757a.774.774 0 0 0-.827-.15a.76.76 0 0 0-.48.704v1.877a6.09 6.09 0 0 0-1.39 1.028c-.477.482-.736 1.084-.87 1.491c-.056.167-.168.268-.272.297A1.29 1.29 0 0 0 1 8.095v.795c0 .585.389 1.098.951 1.257a.43.43 0 0 1 .27.281c.166.472.498 1.223 1.09 1.823A4.158 4.158 0 0 0 5 13.287v.213A1.5 1.5 0 0 0 6.5 15H7a1 1 0 0 0 1-1h2a1 1 0 0 0 1 1h.5a1.5 1.5 0 0 0 1.5-1.5v-1.043a4.61 4.61 0 0 0 .89-.85c.562-.7 1.11-1.788 1.11-3.34c0-.65-.092-1.232-.27-1.752a4.01 4.01 0 0 1-.757 1.207Zm-.182-3.847a3.001 3.001 0 0 1-.91 3.502c-.417.329-.988.304-1.478.1l-2.39-.989c-.49-.203-.912-.589-.974-1.116a3.001 3.001 0 0 1 5.752-1.497Zm-1.53 2.717a2.001 2.001 0 1 0-3.228-1.337c.002.02.01.057.066.116a.87.87 0 0 0 .297.193l2.39.99a.84.84 0 0 0 .347.073c.08-.002.113-.023.128-.035ZM5.75 7.5a.75.75 0 1 0 0-1.5a.75.75 0 0 0 0 1.5Z"/></g></svg></svg>
+                        </div>
+                        <div
+                            class="space-y-6 pt-5 text-base text-center leading-7 text-secondary transition-all duration-300 group-hover:text-secondary">
+                            <h4 class="h3">
+                                Save Money</h4>
+                        </div>
+                        <div
+                            class="space-y-6 pt-5 text-base leading-7 text-secondary hover:text-secondary transition-all duration-300 group-hover:text-secondary">
+                            <p>
+                                An average of £20k. Every year. That’s how much our clients save by hiring our developers instead of permanent employees.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                    <!-- Card 2 end -->
+    
+                    <!-- Card 3 -->
+                    <div
+                    class="group relative  my-6 overflow-hidden bg-white px-6 pt-10 pb-8  transition-all duration-300 sm:mx-auto sm:max-w-sm sm:rounded-lg sm:px-10">
+                    <div class="relative z-10 mx-auto max-w-md">
+                        <div class="flex justify-center">
+                            <svg width="512" height="512" viewBox="0 0 512 512" style="color:#001F54" xmlns="http://www.w3.org/2000/svg" class="h-full w-full"><rect width="512" height="512" x="0" y="0" rx="30" fill="transparent" stroke="transparent" stroke-width="0" stroke-opacity="100%" paint-order="stroke"></rect><svg width="256px" height="256px" viewBox="0 0 1024 1024" fill="#001F54" x="128" y="128" role="img" style="display:inline-block;vertical-align:middle" xmlns="http://www.w3.org/2000/svg"><g fill="#001F54"><path fill="currentColor" d="M918.4 201.6c-6.4-6.4-12.8-9.6-22.4-9.6H768V96c0-9.6-3.2-16-9.6-22.4C752 67.2 745.6 64 736 64H288c-9.6 0-16 3.2-22.4 9.6C259.2 80 256 86.4 256 96v96H128c-9.6 0-16 3.2-22.4 9.6c-6.4 6.4-9.6 16-9.6 22.4c3.2 108.8 25.6 185.6 64 224c34.4 34.4 77.56 55.65 127.65 61.99c10.91 20.44 24.78 39.25 41.95 56.41c40.86 40.86 91 65.47 150.4 71.9V768h-96c-9.6 0-16 3.2-22.4 9.6c-6.4 6.4-9.6 12.8-9.6 22.4s3.2 16 9.6 22.4c6.4 6.4 12.8 9.6 22.4 9.6h256c9.6 0 16-3.2 22.4-9.6c6.4-6.4 9.6-12.8 9.6-22.4s-3.2-16-9.6-22.4c-6.4-6.4-12.8-9.6-22.4-9.6h-96V637.26c59.4-7.71 109.54-30.01 150.4-70.86c17.2-17.2 31.51-36.06 42.81-56.55c48.93-6.51 90.02-27.7 126.79-61.85c38.4-38.4 60.8-112 64-224c0-6.4-3.2-16-9.6-22.4zM256 438.4c-19.2-6.4-35.2-19.2-51.2-35.2c-22.4-22.4-35.2-70.4-41.6-147.2H256v182.4zm390.4 80C608 553.6 566.4 576 512 576s-99.2-19.2-134.4-57.6C342.4 480 320 438.4 320 384V128h384v256c0 54.4-19.2 99.2-57.6 134.4zm172.8-115.2c-16 16-32 25.6-51.2 35.2V256h92.8c-6.4 76.8-19.2 124.8-41.6 147.2zM768 896H256c-9.6 0-16 3.2-22.4 9.6c-6.4 6.4-9.6 12.8-9.6 22.4s3.2 16 9.6 22.4c6.4 6.4 12.8 9.6 22.4 9.6h512c9.6 0 16-3.2 22.4-9.6c6.4-6.4 9.6-12.8 9.6-22.4s-3.2-16-9.6-22.4c-6.4-6.4-12.8-9.6-22.4-9.6z"/></g></svg></svg>
+                        </div>
+                        <div
+                            class="space-y-6 pt-5 text-base text-center leading-7 text-secondary transition-all duration-300 group-hover:text-secondary">
+                            <h4 class="h3">
+                                Top Talent</h4>
+                        </div>
+                        <div
+                            class="space-y-6 pt-5 text-base leading-7 text-secondary hover:text-secondary transition-all duration-300 group-hover:text-secondary">
+                            <p>
+                                Our projects succeed and our clients win. Still, we like to say: During the first 30 days - if you don’t like what we do - you can cancel any time.</p>
+                        </div>
+                    </div>
+                </div>
+                    <!-- Card 3 end -->
+    
+                    <!-- Card 4 -->
+                    <div
+                    class="group relative  my-6 overflow-hidden bg-white px-6 pt-10 pb-8  transition-all duration-300 sm:mx-auto sm:max-w-sm sm:rounded-lg sm:px-10">
+                    <div class="relative z-10 mx-auto max-w-md">
+                        <div class="flex justify-center">
+                            <svg width="512" height="512" viewBox="0 0 512 512" style="color:#001F54" xmlns="http://www.w3.org/2000/svg" class="h-full w-full"><rect width="512" height="512" x="0" y="0" rx="30" fill="transparent" stroke="transparent" stroke-width="0" stroke-opacity="100%" paint-order="stroke"></rect><svg width="256px" height="256px" viewBox="0 0 1024 1024" fill="#001F54" x="128" y="128" role="img" style="display:inline-block;vertical-align:middle" xmlns="http://www.w3.org/2000/svg"><g fill="#001F54"><path fill="currentColor" d="M888 792H200V168c0-4.4-3.6-8-8-8h-56c-4.4 0-8 3.6-8 8v688c0 4.4 3.6 8 8 8h752c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM305.8 637.7c3.1 3.1 8.1 3.1 11.3 0l138.3-137.6L583 628.5c3.1 3.1 8.2 3.1 11.3 0l275.4-275.3c3.1-3.1 3.1-8.2 0-11.3l-39.6-39.6a8.03 8.03 0 0 0-11.3 0l-230 229.9L461.4 404a8.03 8.03 0 0 0-11.3 0L266.3 586.7a8.03 8.03 0 0 0 0 11.3l39.5 39.7z"/></g></svg></svg>
+                        </div>
+                        <div
+                            class="space-y-6 pt-5 text-base text-center leading-7 text-secondary transition-all duration-300 group-hover:text-secondary">
+                            <h4 class="h3">
+                                A Story of Success</h4>
+                        </div>
+                        <div
+                            class="space-y-6 pt-5 text-base leading-7 text-secondary hover:text-secondary transition-all duration-300 group-hover:text-secondary">
+                            <p>
+                                Thanks to our infrastructure and expertise, our developer placements have a 95% success rate.    
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                    <!-- Card 4 end -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {{ partial "cta.html" . }}
+</main>
+
+{{ end }}

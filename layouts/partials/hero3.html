@@ -1,0 +1,63 @@
+<div class="relative items-center justify-center w-full overflow-x-hidden pt-4 md:pt-8">
+    <div class="relative z-10">
+        <div
+            class="absolute inset-x-0 top-1/2 -z-10 flex -translate-y-1/2 justify-center overflow-hidden [mask-image:radial-gradient(50%_45%_at_50%_55%,white,transparent)]">
+            <svg class="h-[60rem] w-[100rem] flex-none stroke-secondary opacity-10" aria-hidden="true">
+                <defs>
+                    <pattern id="e9033f3e-f665-41a6-84ef-756f6778e6fe" width="200" height="200" x="50%" y="50%"
+                        patternUnits="userSpaceOnUse" patternTransform="translate(-100 0)">
+                        <path d="M.5 200V.5H200" fill="none"></path>
+                    </pattern>
+                </defs>
+                <rect width="100%" height="100%" stroke-width="0" fill="url(#e9033f3e-f665-41a6-84ef-756f6778e6fe)">
+                </rect>
+            </svg>
+        </div>
+    </div>
+    <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-4 lg:px-12 relative z-10">
+        
+            <span class="inline-flex rounded-xl justify-between items-center py-1 px-4 mb-7 text-sm bg-neutral font-medium text-secondary">Your One Stop For Signage Solutions</span>
+        <h1
+            class="mb-4 text-3xl max-w-4xl mx-auto font-medium tracking-tight leading-none text-white md:text-4xl lg:text-5xl">
+            We Deliver the Software You Need </br> No More, No less</h1>
+        <p class="mb-8 text-xl md:text-2xl font-normal text-stone-400 sm:px-16 xl:px-48 dark:text-stone-50">Prosign
+            delivers bespoke signage solutions that captivate and convert</p>
+        <div class="flex flex-col mb-8 lg:mb-16 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
+            <a href="/contact"
+                class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-secondary hover:text-white rounded-lg bg-neutral hover:bg-teal-700 focus:ring-4 focus:ring-teal-300 dark:focus:ring-teal-800">
+                Reach Out
+                <svg class="ml-2 -mr-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                        d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                        clip-rule="evenodd"></path>
+                </svg>
+            </a>
+            <a href="#services"
+                class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white bg-secondary rounded-lg border border-secondary hover:bg-blue-800 focus:ring-4 focus:ring-gray-100">
+                Learn More
+                <svg class="ml-2 -mr-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                        d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                        clip-rule="evenodd"></path>
+                </svg>
+            </a>
+        </div>
+        <div class="flex justify-center">
+            <div class="relative  w-full max-w-4xl xl:max-w-6xl lg:w-screen">
+                {{ with resources.Get "images/hero-software.png" }}
+                {{ $small := (.Resize "900x webp q100").RelPermalink }}
+                {{ $medium := (.Resize "1500x webp q100").RelPermalink }}
+                {{ $large := (.Resize "2000x webp q100").RelPermalink }}
+                {{ $heroimage := (.Resize "2000x webp q100").RelPermalink }}
+                <img srcset="
+                {{- with $small -}}, {{.}} 768w{{- end -}}
+                {{- with $medium -}}, {{.}} 1024w{{- end -}}
+                {{- with $large -}}, {{.}} 1374w{{- end -}}" src="{{ $heroimage }}"
+                    class="w-full h-full rounded-xl" alt="Sign Makers crafting a high quality premium LED signage">
+                {{ end }}
+            </div>
+        </div>
+    </div>
+</div>

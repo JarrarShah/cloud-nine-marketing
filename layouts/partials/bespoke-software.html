@@ -1,0 +1,23 @@
+<section class="bg-neutral">
+    <div class="container mx-auto py-20">
+        <div class="flex flex-col md:flex-row justify-center items-center">
+            <div class="w-full md:w-1/2">
+                <h2 class="h1  max-w-md text-white">Looking for a complete bespoke package?</h2>
+                <p class="p">Fill in this form to receive our catalogue</p>
+            </div>
+            <div class="w-full md:w-1/2  max-w-lg">
+                {{ with resources.Get "images/case-study.png" }}
+                {{ $small := (.Resize "900x webp q100").RelPermalink }}
+                {{ $medium := (.Resize "1500x webp q100").RelPermalink }}
+                {{ $large := (.Resize "2000x webp q100").RelPermalink }}
+                {{ $heroimage := (.Resize "2000x webp q100").RelPermalink }}
+                <img srcset="
+                {{- with $small -}}, {{.}} 768w{{- end -}}
+                {{- with $medium -}}, {{.}} 1024w{{- end -}}
+                {{- with $large -}}, {{.}} 1374w{{- end -}}" src="{{ $heroimage }}" class="w-full h-full rounded-xl"
+                    alt="Sign Makers crafting a high quality premium LED signage">
+                {{ end }}
+            </div>
+        </div>
+    </div>
+</section>

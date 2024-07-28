@@ -1,0 +1,50 @@
+<!-- Posts Section -->
+<section class="w-full md:w-1/2 lg:w-2/3 flex flex-col items-center px-3">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
+
+        {{ range .Paginator.Pages }}
+
+        <article class="flex flex-col text-white bg-gradient-to-b from-gray-900 to-dark border text-white border-gray-200 rounded-lg shadow my-4">
+            <!-- Article Image -->
+            <a href="{{.RelPermalink}}" class="hover:opacity-75">
+                {{ with .Resources.GetMatch .Params.featuredImage }}
+                {{ $postimage := (.Resize "500x webp q90").RelPermalink }}
+                <img src="{{ $postimage }}" class="object-fit overflow-hidden" width="100%" height="" loading="lazy"
+                    alt="{{ .Title }}" />
+                {{ else }}
+                {{ $im := (.Resources.Get .Params.featuredImage) }}
+
+                {{ $im }}
+                {{ end }}
+
+            </a>
+            <div class="flex flex-col justify-start p-6">
+                <div class="flex">
+                    {{ range $elem_index, $elem_val := (.GetTerms "tags") }}
+                    <a href="{{.RelPermalink}}" class="uppercase pb-4 pr-4"><span
+                            class="inline-flex items-center rounded-md bg-primary px-2 py-1 ml-1 text-xs font-bold hover:text-primary hover:bg-white text-black ring-1 ring-inset ring-gray-500/10">{{
+                            .LinkTitle }}</span> </a>
+                    {{- end -}}
+                </div>
+                <a href="{{.RelPermalink}}" class="hover:text-primary pb-4">
+                    <h4 class="h3">{{.Title}}</h4>
+                </a>
+                <p href="#" class="text-sm pb-3">
+                    By <span class="font-semibold">{{ .Params.author }},</span>
+                    Published on <time datetime="January 2, 2006">{{.Date.Format "January 2, 2006"}}</time>
+
+                </p>
+                <a href="{{.RelPermalink}}" class="pb-6">{{ if .Summary }}{{ .Summary | truncate 160 }}{{ else }}{{
+                    .Params.description }}{{ end }}</a>
+
+                <a href="{{.RelPermalink}}" class="uppercase text-primary hover:text-amber-500">Continue Reading <i
+                        class="fas fa-arrow-right"></i></a>
+            </div>
+        </article>
+        {{ end }}
+    </div>
+
+    <!-- Pagination -->
+    {{ partial "pagination" . }}
+
+</section>

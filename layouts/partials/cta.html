@@ -1,0 +1,34 @@
+<section class="mt-12">
+    <div class="container mx-auto">
+        <div class="relative py-2 md:py-12">
+            <div
+                class="container mx-auto bg-gradient-to-tr from-indigo-300 via-indigo-800 to-cyan-300 rounded-2xl shadow-md z-0">
+                <div class="row">
+                    <div class="flex-col flex md:flex-row justify-between items-center">
+                        <div class="mx-auto p-3 md:p-12">
+                            <h3
+                                class="text-lg md:text-4xl max-w-2xl text-center md:text-left font-bold tracking-tight text-white">
+                                Looking for a complete bespoke package?
+                            </h3>
+                            <h3 class="text-lg md:text-3xl text-white text-center md:text-left font-bold tracking-tight"> Outsource your software
+                                today!</h3>
+                            <p
+                                class="max-w-2xl mt-4 mb-8 mx-auto text-sm text-center md:text-left md:text-xl tracking-tight font-semibold text-stone-300">
+                                Completely zero-risk. Unmatched customer service.
+                            </p>
+                            <a href="/book-free-trial/"
+                                class="block px-5 py-3 w-auto mt-2 text-xl text-center text-white font-bold border border-blue-500 rounded-lg focus:ring focus:ring-sky-300 bg-primary hover:bg-secondary hover:text-white transition ease-in-out duration-200">
+                                Get Started</a>
+                        </div>
+                        <div class="sm:mx-auto sm:flex sm:max-w-lg">
+                            {{ with resources.Get "/images/software-engineer.png" }}
+                            {{ $together := .RelPermalink }}
+                            <img src="{{$together}}" class="w-full z-40 overflow-vissible" alt="">
+                            {{ end }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
