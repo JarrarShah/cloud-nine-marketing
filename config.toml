@@ -1,5 +1,5 @@
 baseURL = "https://cab-connects.com"
-title = "Cab Connects"
+title = "Cloud Nine Marketing"
 
 languageCode = "en-us"
 DefaultContentLanguage = "en"
@@ -24,12 +24,12 @@ home = ["HTML", "AMP", "RSS", "JSON"]
     services = "/:title"
 
 [params]
-author = "Cab Connects"
+author = "Cloud Nine Marketing"
 authorimage = "../assets/images/global/author.webp"
 github = ""
 facebook = ""
 og_image = "images/og-cabconnects.png"
-sitename = "Cab Connects"
+sitename = "Cloud Nine Marketing"
 twitter = ""
 description = "Welcome to CabConnects, your reliable inbound Call Center solution. With our 24/7 call answering services, we ensure that no call goes unanswered. Whether you need support during peak hours or assistance with overflow, our expert team is here to help. Trust CabConnects for seamless call center solutions tailored to your needs."
 logo = ""

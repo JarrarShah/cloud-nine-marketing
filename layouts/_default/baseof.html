@@ -5,7 +5,7 @@
     {{ partial "head.html" . }}
 </head>
 
-<body class="antialiased bg-gray-900">
+<body class="antialiased">
     <!-- Google Tag Manager (noscript) -->
     <!-- <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TGF5RC8V"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> -->
@@ -14,6 +14,21 @@
     {{ partial "nav.html" . }}
     {{ block "main" . }}{{ end }}
     {{ partial "footer" . }}
+    <div class="fixed bottom-0 right-0 w-full md:bottom-6 md:right-12 md:w-auto z-50" :class="bannerOpen ? '' : 'hidden'" x-data="{ bannerOpen: true }">
+        <div class="bg-secondary text-sm p-3 md:rounded shadow flex justify-between">
+            <div class="text-slate-500 inline-flex">
+                <a class="font-medium hover:underline text-slate-300" href="https://cruip.com/create-an-infinite-horizontal-scroll-animation-with-tailwind-css/" target="_blank">
+                   Talk to us on WhatsApp
+                </a>
+            </div>
+            <button class="text-slate-500 hover:text-slate-400 pl-2 ml-3 border-l border-slate-700" @click="bannerOpen = false">
+                <span class="sr-only">Close</span>
+                <svg class="w-4 h-4 shrink-0 fill-current" viewBox="0 0 16 16">
+                    <path d="M12.72 3.293a1 1 0 00-1.415 0L8.012 6.586 4.72 3.293a1 1 0 00-1.414 1.414L6.598 8l-3.293 3.293a1 1 0 101.414 1.414l3.293-3.293 3.293 3.293a1 1 0 001.414-1.414L9.426 8l3.293-3.293a1 1 0 000-1.414z" />
+                </svg>
+            </button>
+        </div>
+    </div>
 </body>
 {{ partial "footer-scripts" . }}
 

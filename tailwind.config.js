@@ -5,6 +5,15 @@ module.exports = {
   darkMode: 'class',
   theme: {
     extend: {
+      animation: {
+        'infinite-scroll': 'infinite-scroll 25s linear infinite',
+      },
+      keyframes: {
+        'infinite-scroll': {
+          from: { transform: 'translateX(0)' },
+          to: { transform: 'translateX(-100%)' },
+        }
+      } ,                   
       fontFamily: {
         sans: ['Mukta', ...defaultTheme.fontFamily.sans],
         poppins: ['"Poppins"', 'cursive'],
@@ -13,9 +22,9 @@ module.exports = {
         padding: '2rem',
       },
       colors: {
-        primary: '#0EA5E9',
-        secondary: '#001F54',
-        neutral: '#5EEAD4',
+        primary: '#DC4465',
+        secondary: '#2A086A',
+        neutral: '#0FA3B1',
         dark: '#232323',
         darksecondary: '#56445D',
         hoverprimary: '#E45310',
@@ -41,6 +50,9 @@ module.exports = {
         '4xl': '2.25rem',    // 4 Extra Large
         '5xl': '3rem',       // 5 Extra Large
         '6xl': '4rem',       // 6 Extra Large
+      },
+      borderRadius: {
+        '3xl': '50px',       // Custom rounded-3xl with 50px radius
       },
     },
   },

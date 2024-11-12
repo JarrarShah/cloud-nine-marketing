@@ -24,5 +24,5 @@ The Golden Pheasant, located in Plumley, owned by JW LEES Brewery, required a ni
 
 
 
-Trust Cab Connects to revitalize your establishment's image with our expert signage solutions. We'll bring a fresh new look to your business, making it stand out in the center of Starkholmes.
+Trust Cloud Nine Marketing to revitalize your establishment's image with our expert signage solutions. We'll bring a fresh new look to your business, making it stand out in the center of Starkholmes.
 

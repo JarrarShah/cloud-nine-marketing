@@ -21,4 +21,4 @@ The Star located in the centre of Penkridge, owned by Marstons Brewery. Looking 
 - Designed a full brand package
 - Fitted all new signage including post sign, raised letters to the gable
 
-Trust Cab Connects to revitalize your establishment's image with our expert signage solutions. We'll bring a fresh new look to your business, making it stand out in the center of Starkholmes.
+Trust Cloud Nine Marketing to revitalize your establishment's image with our expert signage solutions. We'll bring a fresh new look to your business, making it stand out in the center of Starkholmes.

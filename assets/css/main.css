@@ -129,3 +129,19 @@ EmojiSymbols;
         background: #616161;
     }
 }
+
+
+/* Example for sticky sections with dynamic styles */
+[data-sticky-sections] section {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    opacity: var(--stick-visibility, 0);  /* Default opacity */
+    transform: scale(var(--stick-scale, 0.8));  /* Default scale */
+  }
+  
+  /* The container can also be styled with custom variables if needed */
+  [data-sticky-sections] {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+  
