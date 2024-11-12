@@ -22,4 +22,4 @@ The Holcombe Tap, Ramsbottom, formerly the Mason Arms, needed a total overhaul t
 - A whole new rebrand and design
 - Fitted new signage on the front of the building, manufactured and fitted standing signage
 
-Trust Cab Connects to revitalize your establishment's image with our expert signage solutions. We'll bring a fresh new look to your business, making it stand out in the center of Starkholmes.
+Trust Cloud Nine Marketing to revitalize your establishment's image with our expert signage solutions. We'll bring a fresh new look to your business, making it stand out in the center of Starkholmes.

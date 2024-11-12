@@ -23,5 +23,5 @@ The Cock & Bottle located in Tarleton, owned by Thwaites Brewery. We created a f
 
 
 
-Trust Cab Connects to revitalize your establishment's image with our expert signage solutions. We'll bring a fresh new look to your business, making it stand out in the center of Starkholmes.
+Trust Cloud Nine Marketing to revitalize your establishment's image with our expert signage solutions. We'll bring a fresh new look to your business, making it stand out in the center of Starkholmes.
 
