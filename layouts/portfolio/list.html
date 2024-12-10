@@ -1,92 +1,177 @@
 {{define "main"}}
 
-<main class="mb-16">
 
-  <div class="mx-auto max-w-screen-xl px-6 pt-8 md:pt-14 lg:pt-20">
-    <h1
-      class="pb-4 h1 font-medium text-secondary tracking-snug leading-tight sm:leading-tight md:leading-tight lg:leading-tight md:text-center">
-      Explore Our Craftsmanship Portfolio    </h1>
-    <p class="pb-6 text-gray-600 text-base md:tracking-tight md:text-center leading-normal md:leading-normal">
-      Unveiling a Tapestry of Expertise and Innovation in Signage Solutions
-    </p>
-    <div class="pt-8 flex justify-center text-primary">
-      <svg width="204" height="14" xmlns="http://www.w3.org/2000/svg">
-        <g fill="currentColor" fill-rule="evenodd">
-          <path
-            d="M.835 7.23c-.264-.864-.033-1.753.708-2.42.91-.758 2.285-.742 3.1.09l.112.124a9.767 9.767 0 006.37 3.34c2.362.24 4.745-.389 6.631-1.785l.254-.195c.186-.132.367-.283.548-.442l.557-.494c.096-.083.194-.166.295-.247l.58-.527c.702-.632 1.495-1.31 2.412-1.835 2.201-1.24 4.914-1.629 7.719-1.101 2.083.433 4.232 1.286 6.575 2.773 1.087.674 1.395 2.09.702 3.12-.674 1.088-2.09 1.395-3.12.703-1.932-1.172-3.533-1.878-5.068-2.164-1.743-.348-3.385-.161-4.603.589-.565.314-1.09.758-1.63 1.242l-.546.493-1.635 1.444c-2.854 2.194-6.555 3.263-10.183 2.925-3.57-.356-7.01-2.137-9.36-4.88a1.922 1.922 0 01-.418-.753zM93.541 4.686c.38.828.24 1.815-.424 2.521-.843.95-2.348.97-3.297.127-1.86-1.76-4.35-2.698-6.806-2.702a9.87 9.87 0 00-6.533 2.539l-.238.223a6.299 6.299 0 00-.628.648l-.418.49c-.073.085-.148.171-.226.258l-.82.908c-.566.62-1.183 1.257-1.933 1.822-2.056 1.51-4.796 2.221-7.703 1.977-2.204-.207-4.415-.853-7.01-2.136-1.185-.582-1.665-1.946-1.083-3.13.502-1.12 1.829-1.623 2.93-1.135l.143.069c2.069 1.004 3.807 1.542 5.364 1.695 1.806.14 3.452-.237 4.635-1.102.66-.517 1.326-1.223 1.973-1.988l.732-.822c.253-.281.512-.565.776-.834C75.59 1.552 79.225.063 82.92.003 86.633 0 90.273 1.405 92.95 3.986c.3.16.503.412.591.7z">
-          </path>
-          <g>
-            <path
-              d="M112.835 7.23c-.264-.864-.033-1.753.708-2.42.91-.758 2.285-.742 3.1.09l.112.124a9.767 9.767 0 006.37 3.34c2.362.24 4.745-.389 6.631-1.785l.254-.195c.186-.132.367-.283.548-.442l.557-.494c.096-.083.194-.166.295-.247l.58-.527c.702-.632 1.495-1.31 2.412-1.835 2.201-1.24 4.914-1.629 7.719-1.101 2.083.433 4.232 1.286 6.575 2.773 1.087.674 1.395 2.09.702 3.12-.674 1.088-2.09 1.395-3.12.703-1.932-1.172-3.533-1.878-5.068-2.164-1.743-.348-3.385-.161-4.603.589-.565.314-1.09.758-1.63 1.242l-.546.493-1.635 1.444c-2.854 2.194-6.555 3.263-10.183 2.925-3.57-.356-7.01-2.137-9.36-4.88a1.922 1.922 0 01-.418-.753zM203.541 4.686c.38.828.24 1.815-.424 2.521-.843.95-2.348.97-3.297.127-1.86-1.76-4.35-2.698-6.806-2.702a9.87 9.87 0 00-6.533 2.539l-.238.223a6.299 6.299 0 00-.628.648l-.418.49c-.073.085-.148.171-.226.258l-.82.908c-.566.62-1.183 1.257-1.933 1.822-2.056 1.51-4.796 2.221-7.703 1.977-2.204-.207-4.415-.853-7.01-2.136-1.185-.582-1.665-1.946-1.083-3.13.502-1.12 1.829-1.623 2.93-1.135l.143.069c2.069 1.004 3.807 1.542 5.364 1.695 1.806.14 3.452-.237 4.635-1.102.66-.517 1.326-1.223 1.973-1.988l.732-.822c.253-.281.512-.565.776-.834 2.615-2.562 6.25-4.051 9.946-4.111 3.712-.002 7.352 1.402 10.029 3.983.3.16.503.412.591.7z">
-            </path>
-          </g>
-        </g>
-      </svg>
-    </div>
-  </div>
 
-  <!-- {{ $products := getJSON "/data/products.json" }}
-
-  <section class="container pt-12 mb-12 mx-auto">
-      <div class="flex justify-center">
-          <h2 class="font-semibold mt-4 text-4xl leading-snug lg:text-5xl lg:leading-[62px] text-slate-800 mb-12">Outdoor Garden Products</h2>
-      </div>
-      <div class="flex-row md:flex space-y-4 gap-x-6 justify-center">
-              {{ range $products }}
-          {{ partial "product.html" . }}
-          {{ end }}
-      </div>
-  </section> -->
-
-  <div class="container mx-auto md:mt-12 mt-5">
-    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-      {{ range $index, $element := (where .Site.RegularPages "Section" "portfolio") }}
-      <div class="{{ if mod $index 2 }}bg-gray-100 text-dark{{ else }}bg-gray-50{{ end }} p-6 rounded-lg">
-        <a href="{{ .RelPermalink }}" class="group">
-            <div class="aspect-w-3 aspect-h-2">
-              {{ with .Resources.GetMatch .Params.featuredImage }}
-                {{ $postimage := (.Resize "500x webp q90").RelPermalink }}
-                <img class="object-cover shadow-lg rounded-lg group-hover:opacity-75 h-64" src="{{ $postimage }}" alt="{{ .Title }}">
-              {{ else }}
-                {{ $im := (.Resources.Get .Params.featuredImage) }}
-                {{ $im }}
-              {{ end }}
+<section class="bg-neutral pt-14">
+    <div class="relative bg-white rounded-t-3xl px-8 items-center justify-center w-full overflow-hidden pt-4 md:pt-8">
+        <div class="relative z-10">
+            <div
+                class="absolute inset-x-0 top-1/2 -z-10 flex -translate-y-1/2 justify-center overflow-hidden [mask-image:radial-gradient(50%_45%_at_50%_55%,white,transparent)]">
+                <svg class="h-[60rem] w-[100rem] flex-none stroke-secondary opacity-10" aria-hidden="true">
+                    <defs>
+                        <pattern id="e9033f3e-f665-41a6-84ef-756f6778e6fe" width="200" height="200" x="50%" y="50%"
+                            patternUnits="userSpaceOnUse" patternTransform="translate(-100 0)">
+                            <path d="M.5 200V.5H200" fill="none"></path>
+                        </pattern>
+                    </defs>
+                    <rect width="100%" height="100%" stroke-width="0" fill="url(#e9033f3e-f665-41a6-84ef-756f6778e6fe)">
+                    </rect>
+                </svg>
             </div>
-          </a>
-    
-          <div class="mt-4">
-            <div class="flex items-center space-x-3">
-              <div class="flex items-center space-x-2">
-                {{ range $index, $tag := .Params.categories }}
-                  <span class="inline-flex items-center leading-none px-2.5 py-1.5 text-sm font-medium text-skin-inverted rounded-full border border-skin-input">
-                    {{ $tag }}
-                  </span>
-                {{ end }}
-              </div>
-            </div>
-    
-            <div class="mt-2">
-              <a href="{{ .RelPermalink }}" class="group">
-                <h4 class="text-[22px] leading-[34px]  font-semibold hover:text-primary mt-auto">{{ .Title }}</h4>
-              </a>
-              <p class="mt-1 text-base font-normal text-skin-base tracking-tight leading-tight">
-                {{ if .Params.summary }}
-                  {{ .Params.summary }}
-                {{ else }}
-                  {{ .Params.description }}
-                {{ end }}
-              </p>
-    
-              <a href="{{.RelPermalink}}"
-                        class="text-primary hover:underline mt-16 inline-block uppercase font-medium tracking-[0.86px]">Read
-                        more</a>
-            </div>
-          </div>
         </div>
-      {{ end }}
+        <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-4 lg:px-12 relative z-10">
+
+            <span
+                class="inline-flex rounded-xl justify-between items-center py-1 px-4 mb-7 text-sm bg-neutral font-medium text-white">Your
+                One Stop For Signage Solutions</span>
+            <h1
+                class="mb-4 text-3xl max-w-4xl mx-auto font-medium tracking-tight leading-none text-dark md:text-4xl lg:text-5xl">
+                How we’ve helped people</h1>
+            <p class="mb-8 text-xl md:text-2xl font-normal text-stone-400 sm:px-16 xl:px-48 dark:text-stone-50">Cloud
+                nine
+                offers digital marketing services to make your business known to your audience and hence drive sales!
+            </p>
+            <div class="flex flex-col mb-8 lg:mb-16 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
+                <a href="/contact"
+                    class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white hover:text-white rounded-lg bg-primary hover:bg-teal-700 focus:ring-4 focus:ring-teal-300 dark:focus:ring-teal-800">
+                    Reach Out
+                    <svg class="ml-2 -mr-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </a>
+                <a href="#services"
+                    class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white bg-secondary rounded-lg border border-secondary hover:bg-blue-800 focus:ring-4 focus:ring-gray-100">
+                    Learn More
+                    <svg class="ml-2 -mr-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </a>
+            </div>
+            <!-- <div class="flex justify-center">
+              <div class="relative  w-full max-w-4xl xl:max-w-6xl lg:w-screen">
+                  {{ with resources.Get "images/hero-software.png" }}
+                  {{ $small := (.Resize "900x webp q100").RelPermalink }}
+                  {{ $medium := (.Resize "1500x webp q100").RelPermalink }}
+                  {{ $large := (.Resize "2000x webp q100").RelPermalink }}
+                  {{ $heroimage := (.Resize "2000x webp q100").RelPermalink }}
+                  <img srcset="
+                  {{- with $small -}}, {{.}} 768w{{- end -}}
+                  {{- with $medium -}}, {{.}} 1024w{{- end -}}
+                  {{- with $large -}}, {{.}} 1374w{{- end -}}" src="{{ $heroimage }}"
+                      class="w-full h-full rounded-xl" alt="Sign Makers crafting a high quality premium LED signage">
+                  {{ end }}
+              </div>
+          </div> -->
+        </div>
     </div>
-  </div>
-  
-</main>
+</section>
+
+<div class="container mx-auto rounded-b-3xl">
+    <div class="flex py-20 justify-center">
+        <div class="w-full md:w-1/2">
+            <h2 class="h2">Our Work</h2>
+            <p class="text-gray-500 max-w-xl">
+                At Radiant, we are dedicated to transforming the way revenue organizations source and close deals. Our
+                mission is to provide our customers with an unfair advantage over both their competitors and potential
+                customers through insight and analysis. We’ll stop at nothing to get you the data you need to close a
+                deal.
+                <br><br>
+                We’re customer-obsessed — putting the time in to build a detailed financial picture of every one of our
+                customers so that we know more about your business than you do. We are in this together, mostly because
+                we are all implicated in large-scale financial crime. In our history as a company, we’ve never lost a
+                customer, because if any one of us talks, we all go down.
+            </p>
+        </div>
+        <div class="w-full md:w-1/2">
+            {{ with resources.Get "images/hero-software.png" }}
+            {{ $small := (.Resize "900x webp q100").RelPermalink }}
+            {{ $medium := (.Resize "1500x webp q100").RelPermalink }}
+            {{ $large := (.Resize "2000x webp q100").RelPermalink }}
+            {{ $heroimage := (.Resize "2000x webp q100").RelPermalink }}
+            <img srcset="
+                {{- with $small -}}, {{.}} 768w{{- end -}}
+                {{- with $medium -}}, {{.}} 1024w{{- end -}}
+                {{- with $large -}}, {{.}} 1374w{{- end -}}" src="{{ $heroimage }}" class="w-full h-auto object-cover"
+                alt="Sign Makers crafting a high quality premium LED signage">
+            {{ end }}
+        </div>
+    </div>
+</div>
+
+<section class="bg-neutral py-12 px-4">
+    <div class="container mx-auto max-w-7xl">
+        <!-- Page Title -->
+        <h1 class="text-4xl font-bold text-center mb-12 text-gray-100">Our Portfolio</h1>
+        <!-- Category Filters -->
+        <div class="flex justify-center mb-8">
+            <ul class="flex space-x-6 items-center bg-gray-800 px-6 py-3 rounded-full">
+                <!-- "All" Filter -->
+                <li class="flex items-center">
+                    <span class="w-2 h-2 bg-primary rounded-full mr-2"></span>
+                    <button onclick="filterSelection('all')"
+                        class="text-sm text-gray-300 hover:text-gray-100 transition-colors">
+                        ALL
+                    </button>
+                </li>
+                {{ $categories := slice }}
+                {{ range where .Site.Pages "Section" "portfolio" }}
+                {{ range .Params.categories }}
+                {{ if not (in $categories .) }}
+                {{ $categories = $categories | append . }}
+                {{ end }}
+                {{ end }}
+                {{ end }}
+                {{ range $categories }}
+                <li class="flex items-center">
+                    <span class="w-2 h-2 bg-primary rounded-full mr-2"></span>
+                    <button onclick="filterSelection('{{ lower . | urlize }}')"
+                        class="text-sm text-gray-300 hover:text-gray-100 transition-colors">
+                        {{ . | upper }}
+                    </button>
+                </li>
+                {{ end }}
+            </ul>
+        </div>
+        <!-- Portfolio Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {{ range .Pages }}
+            <a class="group flex flex-col portfolio-item {{ range .Params.categories }}{{ lower . | urlize }} {{ end }}"
+                href="{{.RelPermalink}}">
+                <div class="relative rounded-lg overflow-hidden">
+                    {{ with .Resources.GetMatch .Params.featuredImage }}
+                    {{ $large := (.Resize "2000x webp q100").RelPermalink }}
+                    <img class="w-full h-64 object-cover transition-transform duration-500 transform group-hover:scale-105"
+                        src="{{ $large }}" alt="{{ .Title }}">
+                    {{ end }}
+                </div>
+                <!-- Portfolio Text Section -->
+                <div class="mt-4">
+                    <h3 class="text-lg font-semibold text-gray-100 group-hover:text-primary">{{ .Title }}</h3>
+                    <p class="mt-2 text-gray-300 text-base">
+                        {{ if .Params.summary }}{{ .Params.summary }}{{ else }}{{ .Params.description }}{{ end }}
+                    </p>
+                    <!-- Categories -->
+                    <div class="mt-4">
+                        <p class="text-sm text-gray-400">
+                            {{ if .Params.categories }}
+                            {{ delimit .Params.categories ", " }}
+                            {{ else }}
+                            No categories available.
+                            {{ end }}
+                        </p>
+                    </div>
+                </div>
+            </a>
+            {{ end }}
+        </div>
+    </div>
+</section>
+
 
 {{ end }}

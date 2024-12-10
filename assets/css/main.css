@@ -144,4 +144,37 @@ EmojiSymbols;
     display: flex;
     flex-direction: column;
   }
+
+  .card-image {
+    background-size: cover;
+    background-position: center;
+}
+
+.card-image::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40%;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6), rgb(15 23 42));
+}
+
+.card-arrow {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.2); /* Slightly transparent white */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+.card-arrow:hover {
+    background-color: rgba(255, 255, 255, 0.4); /* More opaque white on hover */
+}
   

@@ -1,7 +1,7 @@
 <section class="rounded-3xl bg-secondary mt-20">
   <div class="container mx-auto ">
     <div class="relative my-4">
-      <div class="lg:mx-auto lg:grid lg:max-w-7xl lg:grid-cols-2 lg:items-start lg:gap-24 lg:px-8">
+      <div class="lg:mx-auto lg:grid lg:max-w-7xl lg:grid-cols-2 lg:items-center lg:gap-24 lg:px-8">
         <div class="relative sm:py-8 lg:py-0">
           <div class="relative max-w-md px-4 py-6 mx-auto sm:max-w-3xl sm:px-6 lg:max-w-none lg:px-0 lg:py-20">
             <!-- Testimonial card-->
@@ -9,50 +9,82 @@
               {{ $missionimage := resources.Get "images/about.png" }}
               {{ with $missionimage }}
               {{ with .Resize (printf "%dx%d webp q50" .Width .Height) }}
-              <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" class="object-cover w-full h-full"
-                alt="Our Mission - Sign Makers" loading="lazy" />
+              <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}"
+                class="object-cover w-full h-full" alt="Our Mission - Sign Makers" loading="lazy" />
               {{ end }}
               {{ end }}
-    
+
             </div>
           </div>
         </div>
-    
+
         <div class="relative max-w-md px-4 mx-auto sm:max-w-3xl sm:px-6 lg:px-0">
           <!-- Content area -->
           <div class="md:py-12 sm:pt-6 lg:py-20">
             <div class="mb-4">
               <span
-                class="inline-flex rounded-xl justify-between items-center py-1 px-4 mb-7 text-sm bg-neutral font-medium text-white">Why
-                choose us</span>
+                class="inline-flex rounded-xl justify-between items-center py-1 px-4 mb-7 text-sm bg-neutral font-medium text-white">Who
+                are we?</span>
             </div>
-            <h2 class="text-3xl text-white font-bold mb-4">What we can do for you</h2>
-            <p class="text-stone-300 mb-6">Capture Attention with Eye-Catching Signs.          </p>
-            <p class="text-stone-300 mb-8">From eye-catching storefront signs and dynamic vehicle wraps to durable outdoor
-              signage and vibrant banners, our team offers comprehensive sign solutions tailored to your specific needs. We
-              handle everything from design and production to installation and maintenance, ensuring your message stands out
-              in every setting.</p>
+            <h2 class="text-3xl text-white font-bold mb-4">We don't just market, we dominate...</h2>
+            <p class="text-stone-300 mb-8">At Cloud Nine, we don’t just market—we dominate. Our team of visionaries,
+              strategists, and creators are dedicated to transforming your brand into an unforgettable experience. With
+              a track record of delivering exceptional results across web design, digital marketing, and creative
+              content, we’re your partner in achieving sky-high success. Choose Cloud Nine and watch your business soar
+              beyond the ordinary. <br> <br>
+              From a sparkling online presence to measurable business growth, Cloud Nine is your one-stop solution for
+              marketing magic. Our comprehensive services ensure your brand connects, captivates, and converts:</p>
             <ul class="list-disc list-inside mb-8 text-stone-300">
-              <li class="flex items-center mb-2"><svg class="w-6 h-6 text-neutral mr-2" fill="none" stroke="currentColor"
-                  stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <li class="flex items-center mb-2"><svg class="w-6 h-6 text-neutral mr-2" fill="none"
+                  stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
-                </svg> Custom Sign Design</li>
-              <li class="flex items-center mb-2"><svg class="w-6 h-6 text-neutral mr-2" fill="none" stroke="currentColor"
-                  stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                </svg> Web Design & Development</li>
+              <li class="flex items-center mb-2"><svg class="w-6 h-6 text-neutral mr-2" fill="none"
+                  stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
-                </svg> Sign Fabrication</li>
-              <li class="flex items-center mb-2"><svg class="w-6 h-6  text-neutral  mr-2" fill="none" stroke="currentColor"
-                  stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                </svg> Maintaince and support to ongoing marketing efforts</li>
+              <li class="flex items-center mb-2"><svg class="w-6 h-6  text-neutral  mr-2" fill="none"
+                  stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
-                </svg> Installation Services</li>
-              <li class="flex items-center mb-2"><svg class="w-6 h-6  text-neutral  mr-2" fill="none" stroke="currentColor"
-                  stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                </svg> Social Media Marketing</li>
+              <li class="flex items-center mb-2"><svg class="w-6 h-6  text-neutral  mr-2" fill="none"
+                  stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
-                </svg> Maintenance & Repair</li>
-              <li class="flex items-center mb-2"><svg class="w-6 h-6  text-neutral  mr-2" fill="none" stroke="currentColor"
-                  stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                </svg> Search Engine Opitmisation (On & Off Page)</li>
+              <li class="flex items-center mb-2"><svg class="w-6 h-6  text-neutral  mr-2" fill="none"
+                  stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
-                </svg> Consultation & Permitting</li>
+                </svg> Lead Generation</li>
+              <li class="flex items-center mb-2"><svg class="w-6 h-6  text-neutral  mr-2" fill="none"
+                  stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+                </svg> Email Marketing </li>
+              <li class="flex items-center mb-2"><svg class="w-6 h-6  text-neutral  mr-2" fill="none"
+                  stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+                </svg> Brandings and Logos </li>
+              <li class="flex items-center mb-2"><svg class="w-6 h-6  text-neutral  mr-2" fill="none"
+                  stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+                </svg> Product Photography </li>
+              <li class="flex items-center mb-2"><svg class="w-6 h-6  text-neutral  mr-2" fill="none"
+                  stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+                </svg> Digital Video Advert Script Planning and shoot </li>
+              <li class="flex items-center mb-2"><svg class="w-6 h-6  text-neutral  mr-2" fill="none"
+                  stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+                </svg> Virtual Assistants for everyday task</li>
             </ul>
             <a href="#"
               class="inline-block px-6 py-3 text-white bg-primary rounded-lg font-semibold shadow hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500">
@@ -60,9 +92,27 @@
             </a>
           </div>
         </div>
-    
+
       </div>
-    
+
     </div>
   </div>
 </section>
+
+<blockquote class="flex flex-col items-center p-4 py-20 pb-20">
+  <p class="max-w-7xl text-xl font-medium text-center md:text-2xl lg:text-3xl">"Before Cloud Nine, our brand was like a
+    kite in a storm—aimlessly flapping around with no direction. But now? We're a rocket ship! They built us a website
+    so sleek even our competitors spend more time on it than their own. Our social media is blowing up, and leads are
+    pouring in faster than we can handle. It’s like they sprinkled magic dust on our marketing. Honestly, if Cloud Nine
+    offered a frequent flyer program, we’d have platinum status by now. Don’t just take my word for it—hire them and
+    prepare to lose gravity! "
+  </p>
+  <footer class="flex items-center gap-3 mt-6 md:mt-12">
+    <img class="flex-shrink-0 w-12 h-12 border rounded-full border-black/10"
+      src="https://loremflickr.com/g/200/200/girl" alt="Sebastiaan Kloos" loading="lazy">
+    <a href="" target="_blank" class="inline-block font-bold tracking-tight">
+      <p>Mandy Purewal</p>
+      <p class="font-medium text-black/60">Founder of LiveLong Genetics</p>
+    </a>
+  </footer>
+</blockquote>
