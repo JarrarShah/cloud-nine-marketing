@@ -7,11 +7,17 @@ module.exports = {
     extend: {
       animation: {
         'infinite-scroll': 'infinite-scroll 25s linear infinite',
+        'rotate': 'rotate 30s linear infinite',
+
       },
       keyframes: {
         'infinite-scroll': {
           from: { transform: 'translateX(0)' },
           to: { transform: 'translateX(-100%)' },
+        },
+        'rotate': {
+          '0%': { transform: 'perspective(1000px) rotateY(0deg)'},
+          '100%': { transform: 'perspective(1000px) rotateY(360deg)'}
         }
       } ,                   
       fontFamily: {

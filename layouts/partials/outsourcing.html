@@ -1,160 +1,163 @@
-<section class="py-16 bg-gray-50">
-    <div class="max-w-7xl mx-auto px-6 lg:px-8">
-        <!-- Header -->
-        <div class="mb-12">
-            <p class="text-sm font-semibold text-blue-600 uppercase tracking-wide">Explore</p>
-            <h2 class="text-3xl font-bold text-gray-900">What We Can Do for Our Clients</h2>
-            <p class="text-gray-600 mt-4 max-w-2xl">There are many variations of passages of Lorem Ipsum available, but
-                the majority.</p>
-        </div>
-
-        <!-- Content -->
-        <div class="grid md:grid-cols-3 gap-4 items-center">
-            <!-- Main Block -->
-            {{ $blogbg := resources.Get "images/landingpage/tech-services-by-cloud-nine-marketing.jpg" }}
-            <div class="relative group overflow-hidden rounded-lg shadow-lg h-96 w-full bg-gray-800 md:col-span-1 bg-no-repeat object-cover group-hover:scale-105 transition-transform duration-300"
-                style="
-            background-position: 50%;
-            background-image: url('{{ $blogbg.RelPermalink}}')">
-                <div class="absolute inset-0 bg-gray-800 bg-opacity-60 flex flex-col justify-end p-6 space-y-4">
-                    <h3 class="text-xl font-bold text-white">UX & UI Design with Development</h3>
-                    <p class="text-sm text-gray-300">Lorem Ipsum is simply dummy text of the printing global tech.</p>
-                    <a href="#" class="inline-flex items-center text-white hover:text-primary hover:underline">
-                        Explore Topic <span class="ml-1">→</span>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Right-Side Blocks -->
-            <div class="space-y-6">
-                <!-- Block 1 -->
-                <div class="p-6 rounded-lg shadow-lg bg-neutral text-white">
-                    <h3 class="text-lg font-bold">Read Our Blog</h3>
-                    <p class="text-sm mt-2">Lorem Ipsum is simply dummy text of the printing text to the global tech.
-                    </p>
-                    <a href="#" class="inline-flex items-center mt-4 text-white hover:underline">
-                        Learn More <span class="ml-1">→</span>
-                    </a>
-                </div>
-                <!-- Block 2 -->
-                <div class="p-6 rounded-lg shadow-lg bg-secondary text-white">
-                    <h3 class="text-lg font-bold">Explore Our Services</h3>
-                    <p class="text-sm mt-2">Lorem Ipsum is simply dummy text of the printing text to the global tech.
-                    </p>
-                    <a href="#" class="inline-flex items-center mt-4 text-white hover:underline">
-                        Learn More <span class="ml-1">→</span>
-                    </a>
-                </div>
-            </div>
-            <!-- Block 3 -->
-            {{ $blogbg := resources.Get "images/landingpage/cloudnine_expert_marketers.jpg" }}
-            <div class="relative group overflow-hidden rounded-lg shadow-lg h-full w-full md:col-span-1 bg-no-repeat object-cover group-hover:scale-105 transition-transform duration-300"
-                style="
-            background-position: 50%;
-            background-image: url('{{ $blogbg.RelPermalink}}')">
-                <div class="absolute inset-0 bg-gray-800 bg-opacity-60 flex flex-col justify-end p-6 space-y-4">
-                    <h3 class="text-lg font-bold text-white">Meet Our Expert</h3>
-                    <p class="text-sm text-white mt-2">There are many variations of passages of Lorem Ipsum
-                        available.</p>
-                    <a href="#" class="inline-flex items-center mt-4 text-white hover:underline">
-                        Learn More <span class="ml-1">→</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-
 <section>
     <div class="container mx-auto mt-12 md:mt-20">
-        <div class="flex  py-12">
-            <h3 class="text-3xl md:text-5xl text-dark text-left font-semibold"> Looking of ways to grow?
+        <div class="flex flex-col justify-center items-center  py-12">
+            <span
+        class="inline-flex rounded-xl justify-between items-center py-1 px-4 mb-7 text-sm border border-2 border-gray-900 font-medium text-dark">Get Yourself A Cloudy Experience</span>
+            <h3 class="text-3xl md:text-5xl text-dark text-left font-semibold"> <span class="text-primary">Cloud9</span>Offers 
             </h3>
         </div>
     </div>
 </section>
 
-<section class="pb-20">
+<section class="pb-20 relative">
     <div class="container mx-auto">
-        <div class="flex flex-col md:flex-row   justify-center gap-x-3">
-            <div class="w-full md:w-2/5 relative h-96 bg-black rounded-2xl">
-                <div class=" grid grid-cols-2 justify-items-stretch px-6 py-6">
+        <div class="flex flex-col md:flex-row   justify-center gap-x-3 gap-y-3">
+            <div class="w-full md:w-2/5 relative h-96 bg-gradient-to-tr from-red-50 via-teal-50 to-gray-100 rounded-2xl">
+                <div class=" grid grid-cols-1  justify-items-stretch px-6 py-6">
                     <!-- Title and Tag -->
-                    <h4
-                        class="mb-4 text-3xl max-w-xl font-medium  tracking-tight leading-none text-white md:text-4xl lg:text-4xl text-left justify-self-start">
+                    <div class="flex justify-between">
+                        <h4
+                        class="mb-4 text-3xl max-w-xl font-bold  tracking-tight leading-none text-dark md:text-4xl lg:text-4xl text-left justify-self-start">
                         Branding & Logo Design</h4>
                     <span
-                        class="inline-flex rounded-xl justify-between items-center py-1 h-8 px-4 text-sm bg-neutral font-medium text-secondary justify-self-end">
+                        class="inline-flex rounded-xl justify-between items-center py-1 h-8 px-4 text-sm bg-primary font-medium text-white justify-self-end">
                         HOT
                     </span>
-                    <h5
-                        class="text-3xl max-w-xl p-6 font-bold tracking-tight text-white absolute text-white inset-x-0 bottom-0">
-                        Read More
-                    </h5>
+                    </div>
+                    <p class="text-dark max-w-sm">Crafting your brand identity involves defining your mission, values, and
+                        visual elements to create a cohesive and memorable presence.</p>
+
+                    <div
+                        class="text-xl max-w-xl p-6 font-bold tracking-tight text-dark absolute text-dark inset-x-0 bottom-0">
+                        <a href="#_" class="relative inline-flex items-center justify-center p-4 px-6 py-3 overflow-hidden font-medium text-dark transition duration-300 ease-out border-2 border-white rounded-full shadow-md group">
+                            <span class="absolute inset-0 flex items-center justify-center w-full h-full text-dark duration-300 -translate-x-full bg-transparent group-hover:translate-x-0 ease">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                            </span>
+                            <span class="absolute flex items-center justify-center w-full h-full text-dark transition-all duration-300 transform group-hover:translate-x-full ease">Read More</span>
+                            <span class="relative invisible">Read More</span>
+                        </a>
+                    </div>
                 </div>
             </div>
-            <div class="w-full md:w-3/5 h-96 relative bg-gray-800 rounded-2xl">
-                <div class=" grid grid-cols-2 justify-items-stretch px-6 py-6">
+            <div class="w-full md:w-3/5 h-96 relative bg-gradient-to-r from-red-50 via-teal-50 to-gray-100 rounded-2xl">
+                <div class=" grid grid-cols-1  justify-items-stretch px-6 py-6">
                     <!-- Title and Tag -->
-                    <h4
-                        class="mb-4 text-3xl max-w-xl font-medium  tracking-tight leading-none text-white md:text-4xl lg:text-4xl text-left justify-self-start">
-                        Lead Generation and Appointment setting</h4>
+                    <div class="flex justify-between">
+                        <h4
+                        class="mb-4 text-2xl max-w-2xl font-bold  tracking-tight leading-none text-dark  md:text-4xl lg:text-4xl text-left justify-self-start">
+                        Reach Cloud 9 With <span class="text-primary text-xl md:text-2xl">Performance Marketing</span></h4>
                     <span
-                        class="inline-flex rounded-xl justify-between items-center py-1 px-4 mb-7 text-sm bg-neutral font-medium text-secondary justify-self-end">
+                        class="inline-flex rounded-xl justify-between items-center  py-1 px-4 mb-7 text-sm bg-primary font-medium text-white justify-self-end">
                         HOT
                     </span>
-                    <h5
-                        class="text-3xl max-w-xl p-6 font-bold tracking-tight text-white absolute text-white inset-x-0 bottom-0">
-                        Read More
-                    </h5>
+                    </div>
+                    <p class="text-dark max-w-xl">From in-depth keyword research and A/B-tested campaigns to ongoing
+                        optimisation across multiple platforms, we’ll ensure your brand dominates. Our performance
+                        marketing approach targets the right audience, maximises ROI, and keeps your business ahead of
+                        the curve.. </p>
+                        <div
+                        class="text-xl max-w-xl p-6 font-bold tracking-tight text-dark absolute text-dark inset-x-0 bottom-0">
+                        <a href="#_" class="relative inline-flex items-center justify-center p-4 px-6 py-3 overflow-hidden font-medium text-dark transition duration-300 ease-out border-2 border-white rounded-full shadow-md group">
+                            <span class="absolute inset-0 flex items-center justify-center w-full h-full text-dark duration-300 -translate-x-full bg-transparent group-hover:translate-x-0 ease">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                            </span>
+                            <span class="absolute flex items-center justify-center w-full h-full text-dark transition-all duration-300 transform group-hover:translate-x-full ease">Read More</span>
+                            <span class="relative invisible">Read More</span>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="flex flex-col md:flex-row  h-96 py-6 gap-x-3">
-            <div class="w-full md:w-1/3 rounded-2xl relative  h-96 bg-red-500">
-                <div class=" grid grid-cols-2 justify-items-stretch px-6 py-6">
+        <div class="flex flex-col md:flex-row py-6 gap-x-3 gap-y-3">
+            <div class="w-full md:w-1/3 rounded-2xl relative  h-96 bg-gradient-to-br from-red-50 via-teal-50 to-gray-100">
+                <div class=" grid grid-col-1 h-auto md:grid-cols-1 justify-items-stretch px-6 py-6">
                     <!-- Title and Tag -->
-                    <h4
-                        class="mb-4 text-3xl max-w-xl font-medium  tracking-tight leading-none text-white md:text-4xl lg:text-4xl text-left justify-self-start">
+                    <div class="flex">
+                        <h4
+                        class="mb-4 text-3xl max-w-xl font-bold  tracking-tight leading-none text-dark md:text-4xl lg:text-4xl text-left justify-self-start">
                         Product Photography</h4>
                     <span
-                        class="inline-flex rounded-xl justify-between items-center py-1 px-4 h-8 text-sm bg-neutral font-medium text-secondary justify-self-end">
+                        class="inline-flex rounded-xl justify-between items-center py-1 px-4 h-8 text-sm bg-primary font-medium text-white justify-self-end">
                         HOT
                     </span>
-                    <h5
-                        class="text-3xl max-w-xl p-6 font-bold tracking-tight text-white absolute text-white inset-x-0 bottom-0">
-                        Read More
-                    </h5>
+                    </div>
+                    <p class="text-dark">Crafting your brand identity involves defining your mission, values, and
+                        visual elements to create a cohesive and memorable presence. </p>
+                        <div
+                        class="text-xl max-w-xl p-6 font-bold tracking-tight text-dark absolute text-dark inset-x-0 bottom-0">
+                        <a href="#_" class="relative inline-flex items-center justify-center p-4 px-6 py-3 overflow-hidden font-medium text-dark transition duration-300 ease-out border-2 border-white rounded-full shadow-md group">
+                            <span class="absolute inset-0 flex items-center justify-center w-full h-full text-dark duration-300 -translate-x-full bg-transparent group-hover:translate-x-0 ease">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                            </span>
+                            <span class="absolute flex items-center justify-center w-full h-full text-dark transition-all duration-300 transform group-hover:translate-x-full ease">Read More</span>
+                            <span class="relative invisible">Read More</span>
+                        </a>
+                    </div>
                 </div>
             </div>
-            <div class="w-full md:w-2/3  h-96 rounded-2xl relative bg-amber-500">
-                <div class=" grid grid-cols-2 justify-items-stretch px-6 py-6">
+            <div class="w-full md:w-2/3  h-96 rounded-2xl relative bg-gradient-to-l from-red-50 via-teal-50 to-gray-100">
+                <div class=" grid grid-cols-1 justify-items-stretch px-6 py-6">
                     <!-- Title and Tag -->
-                    <h4
-                        class="mb-4 text-3xl max-w-xl font-medium  tracking-tight leading-none text-white md:text-4xl lg:text-4xl text-left justify-self-start">
-                        E-commerce Growth</h4>
+                    <div class="flex justify-between"><h4
+                        class="mb-4 text-3xl max-w-xl font-bold  tracking-tight leading-none text-dark md:text-4xl lg:text-4xl text-left justify-self-start">
+                        Email Marketing</h4>
                     <span
-                        class="inline-flex rounded-xl justify-between items-center py-1 px-4 mb-7 text-sm bg-neutral font-medium text-secondary justify-self-end">
+                        class="inline-flex rounded-xl justify-between items-center py-1 px-4 mb-7 text-sm bg-primary font-medium text-white justify-self-end">
+                        HOT
+                    </span></div>
+                    <p class="text-dark max-w-xl">We’re all humans, right? So why spam crappy emails written by CHATGPT? Cloud 9
+                        believes in the power of genuine connection. That's why we write personalized emails filled with
+                        emotion and personality, so you can build real relationships with your audience and drive
+                        meaningful engagement.</p>
+
+                        <div
+                        class="text-xl max-w-xl p-6 font-bold tracking-tight text-dark absolute text-dark inset-x-0 bottom-0">
+                        <a href="#_" class="relative inline-flex items-center justify-center p-4 px-6 py-3 overflow-hidden font-medium text-dark transition duration-300 ease-out border-2 border-white rounded-full shadow-md group">
+                            <span class="absolute inset-0 flex items-center justify-center w-full h-full text-dark duration-300 -translate-x-full bg-transparent group-hover:translate-x-0 ease">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                            </span>
+                            <span class="absolute flex items-center justify-center w-full h-full text-dark transition-all duration-300 transform group-hover:translate-x-full ease">Read More</span>
+                            <span class="relative invisible">Read More</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full md:w-1/3  h-96 rounded-2xl relative bg-gradient-to-r from-red-50 via-teal-50 to-red-100">
+                <div class=" grid grid-cols-1 justify-items-stretch px-6 py-6">
+                    <!-- Title and Tag -->
+                    <div class="flex justify-between">
+                        <h4
+                        class="mb-4 text-3xl max-w-xl font-bold  tracking-tight leading-none text-dark md:text-4xl lg:text-4xl text-left justify-self-start">
+                        Website development</h4>
+                    <span
+                        class="inline-flex rounded-xl justify-between items-center py-1 px-4 mb-20 text-sm bg-primary font-medium text-white justify-self-end">
                         HOT
                     </span>
-                    <h5
-                        class="text-3xl max-w-xl p-6 font-bold tracking-tight text-white absolute text-white inset-x-0 bottom-0">
-                        Read More
-                    </h5>
+                    </div>
+                    <p class="text-dark">Crafting your brand identity involves defining your mission, values, and
+                        visual elements to create a cohesive and memorable presence. </p>
+
+                        <div
+                        class="text-xl max-w-xl p-6 font-bold tracking-tight text-dark absolute text-dark inset-x-0 bottom-0">
+                        <a href="#_" class="relative inline-flex items-center justify-center p-4 px-6 py-3 overflow-hidden font-medium text-dark transition duration-300 ease-out border-2 border-white rounded-full shadow-md group">
+                            <span class="absolute inset-0 flex items-center justify-center w-full h-full text-dark duration-300 -translate-x-full bg-transparent group-hover:translate-x-0 ease">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                            </span>
+                            <span class="absolute flex items-center justify-center w-full h-full text-dark transition-all duration-300 transform group-hover:translate-x-full ease">Read More</span>
+                            <span class="relative invisible">Read More</span>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="flex justify-center py-12">
-            <a href="/contact"
-                class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white hover:text-white rounded-lg bg-primary hover:bg-teal-700 focus:ring-4 focus:ring-teal-300 dark:focus:ring-teal-800">
-                All Services
-                <svg class="ml-2 -mr-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd"
-                        d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                        clip-rule="evenodd"></path>
-                </svg>
+            <a href="#_" class="relative inline-block text-lg group">
+                <span class="relative z-10 block px-5 py-3 overflow-hidden font-medium leading-tight text-primary transition-colors duration-300 ease-out border-2 border-primary rounded-lg group-hover:text-dark">
+                    <span class="absolute inset-0 w-full h-full px-5 py-3 rounded-lg bg-gray-50"></span>
+                    <span class="absolute left-0 w-48 h-48 -ml-2 transition-all duration-300 origin-top-right -rotate-90 -translate-x-full translate-y-12 bg-primary group-hover:-rotate-180 ease"></span>
+                    <span class="relative">View All Services</span>
+                </span>
+                <span class="absolute bottom-0 right-0 w-full h-12 -mb-1 -mr-1 transition-all duration-200 ease-linear bg-primary rounded-lg group-hover:mb-0 group-hover:mr-0" data-rounded="rounded-lg"></span>
             </a>
         </div>
     </div>
