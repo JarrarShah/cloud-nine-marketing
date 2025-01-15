@@ -44,7 +44,7 @@
                                 </div>
                                 <div
                                     class="flex-1 flex items-center lg:scale-[var(--stick-scale)] lg:opacity-[var(--stick-visibility)] transition duration-300">
-                                    {{ with resources.Get "images/livelonggenetics_cloudnine_coverimage.png" }}
+                                    {{ with resources.Get "images/C9.png" }}
                                     {{ $small := (.Resize "900x webp q100").RelPermalink }}
                                     {{ $medium := (.Resize "1500x webp q100").RelPermalink }}
                                     {{ $large := (.Resize "2000x webp q100").RelPermalink }}
@@ -53,7 +53,7 @@
                                     {{- with $small -}}, {{.}} 768w{{- end -}}
                                     {{- with $medium -}}, {{.}} 1024w{{- end -}}
                                     {{- with $large -}}, {{.}} 1374w{{- end -}}" src="{{ $heroimage2 }}"
-                                        class="object-cover w-full h-full rounded-t-2xl rounded-bl-2xl md:rounded-t-3xl md:rounded-bl-3xl rounded" alt="Illustration 01" />
+                                        class="object-cover w-full h-1/2 rounded-t-2xl rounded-bl-2xl md:rounded-t-3xl md:rounded-bl-3xl rounded" alt="Illustration 01" />
                                     {{ end }}
                                 </div>
                             </div>

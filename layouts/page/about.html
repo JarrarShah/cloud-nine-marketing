@@ -1,171 +1,135 @@
 {{ define "main" }}
 
-<section class="bg-primary pt-14">
-  <div class="relative bg-white rounded-t-3xl px-8 items-center justify-center w-full overflow-hidden pt-4 md:pt-8">
-    <div class="relative z-10">
-      <div
-        class="absolute inset-x-0 top-1/2 -z-10 flex -translate-y-1/2 justify-center overflow-hidden [mask-image:radial-gradient(50%_45%_at_50%_55%,white,transparent)]">
-        <svg class="h-[60rem] w-[100rem] flex-none stroke-secondary opacity-10" aria-hidden="true">
-          <defs>
-            <pattern id="e9033f3e-f665-41a6-84ef-756f6778e6fe" width="200" height="200" x="50%" y="50%"
-              patternUnits="userSpaceOnUse" patternTransform="translate(-100 0)">
-              <path d="M.5 200V.5H200" fill="none"></path>
-            </pattern>
-          </defs>
-          <rect width="100%" height="100%" stroke-width="0" fill="url(#e9033f3e-f665-41a6-84ef-756f6778e6fe)">
-          </rect>
-        </svg>
+{{ partial "about-hero.html" . }}
+
+<section class="rounded-3xl py-8 bg-white">
+  <div class="container mx-auto ">
+    <div class="relative my-4">
+      <div class="lg:mx-auto lg:grid lg:max-w-7xl lg:grid-cols-2 lg:items-center lg:gap-24 lg:px-8">
+        <div class="text-pretty">
+          <h2 class="text-3xl font-semibold mb-4">Our Mission</h2>
+          <p class="text-gray-700 font-normal text-lg mb-4 max-w-2xl">
+            At Radiant, we are dedicated to transforming the way revenue organizations source and close deals. Our
+            mission
+            is to provide our customers with an unfair advantage over both their competitors and potential customers
+            through
+            insight and analysis. We’ll stop at nothing to get you the data you need to close a deal.
+            <br><br>
+            We’re customer-obsessed — putting the time in to build a detailed financial picture of every one of our
+            customers so that we know more about your business than you do. We are in this together, mostly because we
+            are
+            all implicated in large-scale financial crime. In our history as a company, we’ve never lost a customer,
+            because
+            if any one of us talks, we all go down.
+          </p>
+        </div>
+        <div class="relative">
+          <div class="rounded-lg overflow-hidden">
+            {{ with resources.Get "images/c9.svg" }}
+            {{ if eq .MediaType.SubType "svg" }}
+            <img src="{{ .RelPermalink }}" class="w-full h-auto object-cover grayscale hover:grayscale-0" alt="">
+            {{ else }}
+            {{ $heroimage := (.Resize "2000x webp q100").RelPermalink }}
+            <img src="{{ $heroimage }}" class="w-full h-auto object-cover grayscale hover:grayscale-0" alt="">
+            {{ end }}
+            {{ end }}
+
+          </div>
+        </div>
       </div>
     </div>
-    <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-4 lg:px-12 relative z-10">
-
-      <span
-        class="inline-flex rounded-xl justify-between items-center py-1 px-4 mb-7 text-sm bg-neutral font-medium text-white">Your
-        One Stop For Signage Solutions</span>
-      <h1
-        class="mb-4 text-3xl max-w-4xl mx-auto font-medium tracking-tight leading-none text-dark md:text-4xl lg:text-5xl">
-        Helping companies generate revenue.</h1>
-      <p class="mb-8 text-xl md:text-2xl font-normal text-stone-400 sm:px-16 xl:px-48 dark:text-stone-50">Cloud nine
-        offers digital marketing services to make your business known to your audience and hence drive sales!</p>
-      <div class="flex flex-col mb-8 lg:mb-16 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
-        <a href="/contact"
-          class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white hover:text-white rounded-lg bg-primary hover:bg-teal-700 focus:ring-4 focus:ring-teal-300 dark:focus:ring-teal-800">
-          Reach Out
-          <svg class="ml-2 -mr-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd"
-              d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-              clip-rule="evenodd"></path>
-          </svg>
-        </a>
-        <a href="#services"
-          class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white bg-secondary rounded-lg border border-secondary hover:bg-blue-800 focus:ring-4 focus:ring-gray-100">
-          Learn More
-          <svg class="ml-2 -mr-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd"
-              d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-              clip-rule="evenodd"></path>
-          </svg>
-        </a>
-      </div>
-      <!-- <div class="flex justify-center">
-              <div class="relative  w-full max-w-4xl xl:max-w-6xl lg:w-screen">
-                  {{ with resources.Get "images/hero-software.png" }}
-                  {{ $small := (.Resize "900x webp q100").RelPermalink }}
-                  {{ $medium := (.Resize "1500x webp q100").RelPermalink }}
-                  {{ $large := (.Resize "2000x webp q100").RelPermalink }}
-                  {{ $heroimage := (.Resize "2000x webp q100").RelPermalink }}
-                  <img srcset="
-                  {{- with $small -}}, {{.}} 768w{{- end -}}
-                  {{- with $medium -}}, {{.}} 1024w{{- end -}}
-                  {{- with $large -}}, {{.}} 1374w{{- end -}}" src="{{ $heroimage }}"
-                      class="w-full h-full rounded-xl" alt="Sign Makers crafting a high quality premium LED signage">
-                  {{ end }}
-              </div>
-          </div> -->
-    </div>
-  </div>
-</section>
-
-<section class="container mx-auto py-12 px-4 rounded-2xl">
-  <!-- Mission Section -->
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-    <!-- Text Content -->
-    <div>
-      <h2 class="h2 font-semibold mb-4">Our Mission</h2>
-      <p class="text-gray-700 mb-4 max-w-2xl">
-        At Radiant, we are dedicated to transforming the way revenue organizations source and close deals. Our mission
-        is to provide our customers with an unfair advantage over both their competitors and potential customers through
-        insight and analysis. We’ll stop at nothing to get you the data you need to close a deal.
-        <br><br>
-        We’re customer-obsessed — putting the time in to build a detailed financial picture of every one of our
-        customers so that we know more about your business than you do. We are in this together, mostly because we are
-        all implicated in large-scale financial crime. In our history as a company, we’ve never lost a customer, because
-        if any one of us talks, we all go down.
-      </p>
-      <div class="flex justify-center">
+    <div class="container mx-auto">
+      <div class="flex flex-col md:flex-row justify-center gap-x-20 mt-12 mb-12">
         <hr class="h-px my-8 bg-dark text-dark border-0">
-        <div class="w-1/2">
-          <li class="flex items-center space-x-2">
+        <div class="w-auto">
+          <li class="flex  justify-center items-center space-x-2">
             <span class="text-4xl font-bold text-primary">50+</span>
-            <span class="text-gray-600">People we work with</span>
+            <span class="text-2xl md:text-4xl text-gray-600">People we work with</span>
           </li>
         </div>
-        <div class="w-1/2">
-          <li class="flex items-center space-x-2">
+        <div class="w-auto">
+          <li class="flex  justify-center items-center space-x-2">
             <span class="text-4xl font-bold text-primary">500+</span>
-            <span class="text-gray-600">Appointments set</span>
+            <span class="text-2xl md:text-4xl text-gray-600">Appointments set</span>
+          </li>
+        </div>
+        <div class="w-auto">
+          <li class="flex justify-center items-center space-x-2">
+            <span class="text-4xl font-bold text-primary">10k+</span>
+            <span class="text-2xl md:text-4xl text-gray-600">Leads generated</span>
           </li>
         </div>
       </div>
-      <div class="flex">
-        <div class="w-full">
-          <li class="flex items-center space-x-2">
-            <span class="text-4xl font-bold text-primary">10k+</span>
-            <span class="text-gray-600">Leads generated</span>
-          </li>
+    </div>
+    <div class="container mx-auto pt-12 mb-8">
+      <div class="flex flex-col gap-4">
+        <div class="flex justify-center gap-x-6">
+          <div class="w-1/2 overflow-hidden">
+            {{ with resources.Get "images/hero-software.png" }}
+            {{ $small := (.Resize "900x webp q100").RelPermalink }}
+            {{ $medium := (.Resize "1500x webp q100").RelPermalink }}
+            {{ $large := (.Resize "2000x webp q100").RelPermalink }}
+            {{ $heroimage := (.Resize "2000x webp q100").RelPermalink }}
+            <img srcset="
+                    {{- with $small -}}, {{.}} 768w{{- end -}}
+                    {{- with $medium -}}, {{.}} 1024w{{- end -}}
+                    {{- with $large -}}, {{.}} 1374w{{- end -}}" src="{{ $heroimage }}"
+              class="w-full h-full rounded-bl-2xl rounded-t-2xl object-cover grayscale hover:grayscale-0 "
+              alt="Sign Makers crafting a high quality premium LED signage">
+            {{ end }}
+          </div>
+          <div class="w-full overflow-hidden">
+            {{ with resources.Get "images/hero-software.png" }}
+            {{ $small := (.Resize "900x webp q100").RelPermalink }}
+            {{ $medium := (.Resize "1500x webp q100").RelPermalink }}
+            {{ $large := (.Resize "2000x webp q100").RelPermalink }}
+            {{ $heroimage := (.Resize "2000x webp q100").RelPermalink }}
+            <img srcset="
+                    {{- with $small -}}, {{.}} 768w{{- end -}}
+                    {{- with $medium -}}, {{.}} 1024w{{- end -}}
+                    {{- with $large -}}, {{.}} 1374w{{- end -}}" src="{{ $heroimage }}"
+              class="w-full h-96 object-cover grayscale hover:grayscale-0 rounded-br-2xl rounded-t-2xl"
+              alt="Sign Makers crafting a high quality premium LED signage">
+            {{ end }}
+          </div>
+        </div>
+        <div class="flex justify-center gap-x-6 mt-4">
+          <div class="w-1/2 overflow-hidden">
+            {{ with resources.Get "images/hero-software.png" }}
+            {{ $small := (.Resize "900x webp q100").RelPermalink }}
+            {{ $medium := (.Resize "1500x webp q100").RelPermalink }}
+            {{ $large := (.Resize "2000x webp q100").RelPermalink }}
+            {{ $heroimage := (.Resize "2000x webp q100").RelPermalink }}
+            <img srcset="
+                    {{- with $small -}}, {{.}} 768w{{- end -}}
+                    {{- with $medium -}}, {{.}} 1024w{{- end -}}
+                    {{- with $large -}}, {{.}} 1374w{{- end -}}" src="{{ $heroimage }}"
+              class="w-full h-96 rounded-tl-2xl rouned-br-2xl shadow-md object-cover grayscale hover:grayscale-0 rounded-bl-2xl rounded-t-2xl"
+              alt="Sign Makers crafting a high quality premium LED signage">
+            {{ end }}
+          </div>
+          <div class="rounded-lg overflow-hidden">
+            {{ with resources.Get "images/hero-software.png" }}
+            {{ $small := (.Resize "900x webp q100").RelPermalink }}
+            {{ $medium := (.Resize "1500x webp q100").RelPermalink }}
+            {{ $large := (.Resize "2000x webp q100").RelPermalink }}
+            {{ $heroimage := (.Resize "2000x webp q100").RelPermalink }}
+            <img srcset="
+                    {{- with $small -}}, {{.}} 768w{{- end -}}
+                    {{- with $medium -}}, {{.}} 1024w{{- end -}}
+                    {{- with $large -}}, {{.}} 1374w{{- end -}}" src="{{ $heroimage }}"
+              class="w-full h-auto object-cover grayscale hover:grayscale-0 rounded-br-2xl rounded-t-2xl" alt="">
+            {{ end }}
+          </div>
         </div>
       </div>
     </div>
 
-    <!-- Image Grid -->
-    <div class="grid grid-cols-2 gap-4">
-      <div class="rounded-lg overflow-hidden shadow-md">
-        {{ with resources.Get "images/hero-software.png" }}
-        {{ $small := (.Resize "900x webp q100").RelPermalink }}
-        {{ $medium := (.Resize "1500x webp q100").RelPermalink }}
-        {{ $large := (.Resize "2000x webp q100").RelPermalink }}
-        {{ $heroimage := (.Resize "2000x webp q100").RelPermalink }}
-        <img srcset="
-                {{- with $small -}}, {{.}} 768w{{- end -}}
-                {{- with $medium -}}, {{.}} 1024w{{- end -}}
-                {{- with $large -}}, {{.}} 1374w{{- end -}}" src="{{ $heroimage }}" class="w-full h-auto object-cover"
-          alt="Sign Makers crafting a high quality premium LED signage">
-        {{ end }}
-      </div>
-      <div class="rounded-lg overflow-hidden shadow-md">
-        {{ with resources.Get "images/hero-software.png" }}
-        {{ $small := (.Resize "900x webp q100").RelPermalink }}
-        {{ $medium := (.Resize "1500x webp q100").RelPermalink }}
-        {{ $large := (.Resize "2000x webp q100").RelPermalink }}
-        {{ $heroimage := (.Resize "2000x webp q100").RelPermalink }}
-        <img srcset="
-                {{- with $small -}}, {{.}} 768w{{- end -}}
-                {{- with $medium -}}, {{.}} 1024w{{- end -}}
-                {{- with $large -}}, {{.}} 1374w{{- end -}}" src="{{ $heroimage }}" class="w-full h-auto object-cover"
-          alt="Sign Makers crafting a high quality premium LED signage">
-        {{ end }}
-      </div>
-      <div class="rounded-lg overflow-hidden shadow-md">
-        {{ with resources.Get "images/hero-software.png" }}
-        {{ $small := (.Resize "900x webp q100").RelPermalink }}
-        {{ $medium := (.Resize "1500x webp q100").RelPermalink }}
-        {{ $large := (.Resize "2000x webp q100").RelPermalink }}
-        {{ $heroimage := (.Resize "2000x webp q100").RelPermalink }}
-        <img srcset="
-                {{- with $small -}}, {{.}} 768w{{- end -}}
-                {{- with $medium -}}, {{.}} 1024w{{- end -}}
-                {{- with $large -}}, {{.}} 1374w{{- end -}}" src="{{ $heroimage }}" class="w-full h-auto object-cover"
-          alt="Sign Makers crafting a high quality premium LED signage">
-        {{ end }}
-      </div>
-      <div class="rounded-lg overflow-hidden shadow-md">
-        {{ with resources.Get "images/hero-software.png" }}
-        {{ $small := (.Resize "900x webp q100").RelPermalink }}
-        {{ $medium := (.Resize "1500x webp q100").RelPermalink }}
-        {{ $large := (.Resize "2000x webp q100").RelPermalink }}
-        {{ $heroimage := (.Resize "2000x webp q100").RelPermalink }}
-        <img srcset="
-                {{- with $small -}}, {{.}} 768w{{- end -}}
-                {{- with $medium -}}, {{.}} 1024w{{- end -}}
-                {{- with $large -}}, {{.}} 1374w{{- end -}}" src="{{ $heroimage }}" class="w-full h-auto object-cover"
-          alt="Sign Makers crafting a high quality premium LED signage">
-        {{ end }}
-      </div>
-    </div>
   </div>
 </section>
 
-<div class="bg-primary rounded-t-3xl text-white py-16 px-8">
+<div
+  class="bg-gradient-to-r from-white from-10% via-gray-50 via-30% to-white to-90% rounded-t-3xl text-dark py-16 px-8">
   <div class="max-w-7xl mx-auto space-y-12">
     <!-- Header -->
     <div class="space-y-4">
@@ -202,8 +166,8 @@
         <img srcset="
                 {{- with $small -}}, {{.}} 768w{{- end -}}
                 {{- with $medium -}}, {{.}} 1024w{{- end -}}
-                {{- with $large -}}, {{.}} 1374w{{- end -}}" src="{{ $heroimage }}" class="rounded-lg shadow-lg max-w-full"
-          alt="Meet the team - Cloud Nine">
+                {{- with $large -}}, {{.}} 1374w{{- end -}}" src="{{ $heroimage }}"
+          class="rounded-lg shadow-lg max-w-full" alt="Meet the team - Cloud Nine">
         {{ end }}
       </div>
     </div>
@@ -215,45 +179,46 @@
         <!-- Team Member -->
         <div class="text-center">
           <img src="/path-to-avatar.jpg" alt="John Doe" class="w-24 h-24 mx-auto rounded-full shadow-md">
-          <h3 class="font-semibold mt-4">John Doe</h3>
+          <h3 class="font-semibold mt-4">Jarrar Haider Shah</h3>
           <p class="text-sm">CEO / Founder</p>
         </div>
         <!-- Duplicate this block for each team member -->
         <div class="text-center">
           <img src="/path-to-avatar.jpg" alt="John Doe" class="w-24 h-24 mx-auto rounded-full shadow-md">
-          <h3 class="font-semibold mt-4">John Doe</h3>
-          <p class="text-sm">CEO / Founder</p>
+          <h3 class="font-semibold mt-4">Shaiza Haider Shah</h3>
+          <p class="text-sm">Director Legals</p>
         </div>
         <div class="text-center">
           <img src="/path-to-avatar.jpg" alt="John Doe" class="w-24 h-24 mx-auto rounded-full shadow-md">
-          <h3 class="font-semibold mt-4">John Doe</h3>
-          <p class="text-sm">CEO / Founder</p>
+          <h3 class="font-semibold mt-4">Abdullah Ahmed</h3>
+          <p class="text-sm">Content Head</p>
         </div>
         <div class="text-center">
           <img src="/path-to-avatar.jpg" alt="John Doe" class="w-24 h-24 mx-auto rounded-full shadow-md">
-          <h3 class="font-semibold mt-4">John Doe</h3>
-          <p class="text-sm">CEO / Founder</p>
+          <h3 class="font-semibold mt-4">Sarfraz Khan Bangash</h3>
+          <p class="text-sm">Animations and Graphics Expert</p>
         </div>
         <div class="text-center">
           <img src="/path-to-avatar.jpg" alt="John Doe" class="w-24 h-24 mx-auto rounded-full shadow-md">
-          <h3 class="font-semibold mt-4">John Doe</h3>
-          <p class="text-sm">CEO / Founder</p>
+          <h3 class="font-semibold mt-4">Ali Aman</h3>
+          <p class="text-sm">Social Media Manager</p>
         </div>
         <div class="text-center">
           <img src="/path-to-avatar.jpg" alt="John Doe" class="w-24 h-24 mx-auto rounded-full shadow-md">
-          <h3 class="font-semibold mt-4">John Doe</h3>
-          <p class="text-sm">CEO / Founder</p>
+          <h3 class="font-semibold mt-4">Asad Alvi</h3>
+          <p class="text-sm">Lead Photographer and Videos</p>
         </div>
         <div class="text-center">
           <img src="/path-to-avatar.jpg" alt="John Doe" class="w-24 h-24 mx-auto rounded-full shadow-md">
-          <h3 class="font-semibold mt-4">John Doe</h3>
-          <p class="text-sm">CEO / Founder</p>
+          <h3 class="font-semibold mt-4">Haider Abbas Shah</h3>
+          <p class="text-sm">Sales Consultant</p>
         </div>
         <div class="text-center">
           <img src="/path-to-avatar.jpg" alt="John Doe" class="w-24 h-24 mx-auto rounded-full shadow-md">
-          <h3 class="font-semibold mt-4">John Doe</h3>
-          <p class="text-sm">CEO / Founder</p>
+          <h3 class="font-semibold mt-4">Tayyab Rahman</h3>
+          <p class="text-sm">Consultant</p>
         </div>
+        
       </div>
     </div>
   </div>

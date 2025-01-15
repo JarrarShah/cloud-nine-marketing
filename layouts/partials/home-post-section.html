@@ -1,76 +1,78 @@
 <section>
-    <div class=" max-w-7xl mx-auto pb-20">
-        <!-- Title and Subtitle -->
-        <div class="px-2 sm:px-6 py-16 md:py-20 mx-auto text-center">
-            <h2
-                class="font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-none text-dark tracking-tighter mb-4">
-                Our Blog
-            </h2>
-            <p class="text-lg sm:text-xl md:text-2xl lg:text-3xl text-dark mb-8">Insights and updates from our team</p>
-        </div>
-
-        <!-- First Row with 2 Blog Cards -->
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-12 w-full">
-            {{ range ( first 2 ( where .Paginator.Pages "Type" "blog" ) ) }}
-            <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                <a href="{{.RelPermalink}}">
-                    <div class="relative card-image">
-                        {{ $featured := .Params.featuredImage }}
-                        {{ with .Resources.GetMatch $featured }}
-                        {{ $postimage := (.Resize "600x400 webp q100").RelPermalink }}
-                        <img src="{{ $postimage }}" class="w-full h-auto object-cover rounded-2xl"
-                            alt="{{ .Params.description }}" title="{{ .Params.description }}" />
-                        {{ end }}
-                        <div class="absolute z-50 bottom-0 left-0  bg-opacity-20 text-white p-4 max-w-md">
-                            <h4 class="text-lg font-semibold max-w-xl">{{.Title}}</h4>
-                            <p class="text-sm">{{ .Date.Format "January 2, 2006" }}</p>
+    <div class="mx-auto container">
+        <div class=" max-w-7xl pb-20">
+            <!-- Title and Subtitle -->
+            <div class="px-2 sm:px-6 py-16 md:py-20 mx-auto text-center">
+                <h2
+                    class="font-bold text-2xl  md:text-4xl lg:text-5xl leading-none text-dark tracking-tighter mb-4">
+                    Read Our Blog
+                </h2>
+                <p class="text-lg sm:text-xl md:text-2xl lg:text-3xl text-dark mb-8">Insights and updates from our team</p>
+            </div>
+    
+            <!-- First Row with 2 Blog Cards -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-12 w-full">
+                {{ range ( first 2 ( where .Paginator.Pages "Type" "blog" ) ) }}
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <a href="{{.RelPermalink}}">
+                        <div class="relative card-image">
+                            {{ $featured := .Params.featuredImage }}
+                            {{ with .Resources.GetMatch $featured }}
+                            {{ $postimage := (.Resize "600x400 webp q100").RelPermalink }}
+                            <img src="{{ $postimage }}" class="w-full h-auto object-cover rounded-2xl"
+                                alt="{{ .Params.description }}" title="{{ .Params.description }}" />
+                            {{ end }}
+                            <div class="absolute z-50 bottom-0 left-0  bg-opacity-20 text-white p-4 max-w-md">
+                                <h4 class="text-lg font-semibold max-w-xl">{{.Title}}</h4>
+                                <p class="text-sm">{{ .Date.Format "January 2, 2006" }}</p>
+                            </div>
+                            <a href="/" class="card-arrow z-50">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                    stroke="currentColor" class="w-6 h-6 text-white">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                                </svg>
+                            </a>
                         </div>
-                        <a href="/" class="card-arrow z-50">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                                stroke="currentColor" class="w-6 h-6 text-white">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-                            </svg>
-                        </a>
-                    </div>
-                </a>
+                    </a>
+                </div>
+                {{ end }}
             </div>
-            {{ end }}
-        </div>
-
-        <!-- Second Row with Text and CTA Button, and a Blog Card -->
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-12 w-full">
-            <!-- Text and CTA Button -->
-            <div class=" rounded-lg p-6 flex flex-col justify-center items-center text-center">
-                <p class="text-lg sm:text-xl md:text-2xl lg:text-3xl text-dark mb-4">Stay updated with our latest
-                    articles</p>
-                <a href="/blog" class="btn-primary text-white bg-primary hover:bg-blue-600 px-6 py-3 rounded-lg">Visit
-                    Blog</a>
-            </div>
-            <!-- Single Blog Card -->
-            {{ range ( first 1 ( after 2 ( where .Paginator.Pages "Type" "blog" ) ) ) }}
-            <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                <a href="{{.RelPermalink}}">
-                    <div class="relative card-image">
-                        {{ $featured := .Params.featuredImage }}
-                        {{ with .Resources.GetMatch $featured }}
-                        {{ $postimage := (.Resize "600x400 webp q100").RelPermalink }}
-                        <img src="{{ $postimage }}" class="w-full h-auto object-cover rounded-2xl"
-                            alt="{{ .Params.description }}" title="{{ .Params.description }}" />
-                        {{ end }}
-                        <div class="absolute z-50 bottom-0 left-0  bg-opacity-20 text-white p-4 max-w-md">
-                            <h4 class="text-lg font-semibold max-w-xl">{{.Title}}</h4>
-                            <p class="text-sm">{{ .Date.Format "January 2, 2006" }}</p>
+    
+            <!-- Second Row with Text and CTA Button, and a Blog Card -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-12 w-full">
+                <!-- Text and CTA Button -->
+                <div class=" rounded-lg p-6 flex flex-col justify-center items-center text-center">
+                    <p class="text-lg md:text-2xl lg:text-4xl text-dark mb-4">Stay updated with our latest
+                        articles</p>
+                    <a href="/blog" class="btn-primary text-white bg-primary hover:bg-blue-600 px-6 py-3 rounded-lg">Visit
+                        Blog</a>
+                </div>
+                <!-- Single Blog Card -->
+                {{ range ( first 1 ( after 2 ( where .Paginator.Pages "Type" "blog" ) ) ) }}
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <a href="{{.RelPermalink}}">
+                        <div class="relative card-image">
+                            {{ $featured := .Params.featuredImage }}
+                            {{ with .Resources.GetMatch $featured }}
+                            {{ $postimage := (.Resize "600x400 webp q100").RelPermalink }}
+                            <img src="{{ $postimage }}" class="w-full h-auto object-cover rounded-2xl"
+                                alt="{{ .Params.description }}" title="{{ .Params.description }}" />
+                            {{ end }}
+                            <div class="absolute z-50 bottom-0 left-0  bg-opacity-20 text-white p-4 max-w-md">
+                                <h4 class="text-lg font-semibold max-w-xl">{{.Title}}</h4>
+                                <p class="text-sm">{{ .Date.Format "January 2, 2006" }}</p>
+                            </div>
+                            <a href="/" class="card-arrow z-50">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                    stroke="currentColor" class="w-6 h-6 text-white">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                                </svg>
+                            </a>
                         </div>
-                        <a href="/" class="card-arrow z-50">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                                stroke="currentColor" class="w-6 h-6 text-white">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-                            </svg>
-                        </a>
-                    </div>
-                </a>
+                    </a>
+                </div>
+                {{ end }}
             </div>
-            {{ end }}
         </div>
     </div>
 </section>
