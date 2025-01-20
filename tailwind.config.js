@@ -60,6 +60,11 @@ module.exports = {
       borderRadius: {
         '3xl': '50px',       // Custom rounded-3xl with 50px radius
       },
+      borderWidth: {
+        '10': '10px',
+        '20': '20px', // Huge border
+        '50': '50px',
+      },
     },
   },
   variants: {

@@ -3,44 +3,52 @@
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
 
         {{ range .Paginator.Pages }}
-
-        <article class="flex flex-col text-white bg-gradient-to-b from-gray-900 to-dark border text-white border-gray-200 rounded-lg shadow my-4">
-            <!-- Article Image -->
-            <a href="{{.RelPermalink}}" class="hover:opacity-75">
-                {{ with .Resources.GetMatch .Params.featuredImage }}
-                {{ $postimage := (.Resize "500x webp q90").RelPermalink }}
-                <img src="{{ $postimage }}" class="object-fit overflow-hidden" width="100%" height="" loading="lazy"
-                    alt="{{ .Title }}" />
-                {{ else }}
-                {{ $im := (.Resources.Get .Params.featuredImage) }}
-
-                {{ $im }}
-                {{ end }}
-
-            </a>
-            <div class="flex flex-col justify-start p-6">
-                <div class="flex">
-                    {{ range $elem_index, $elem_val := (.GetTerms "tags") }}
-                    <a href="{{.RelPermalink}}" class="uppercase pb-4 pr-4"><span
-                            class="inline-flex items-center rounded-md bg-primary px-2 py-1 ml-1 text-xs font-bold hover:text-primary hover:bg-white text-black ring-1 ring-inset ring-gray-500/10">{{
-                            .LinkTitle }}</span> </a>
-                    {{- end -}}
-                </div>
-                <a href="{{.RelPermalink}}" class="hover:text-primary pb-4">
-                    <h4 class="h3">{{.Title}}</h4>
+        <div class="rounded bg-gradient-to-l from-red-50 via-teal-50 to-gray-100 overflow-hidden shadow-lg">
+            <a href="{{ .RelPermalink }}"></a>
+            <div class="relative">
+                <a href="{{ .RelPermalink }}">
+                    <img class="w-full" src="{{ with .Resources.GetMatch .Params.featuredImage }}{{ (.Resize "500x webp q90").RelPermalink }}{{ else }}{{ .Params.featuredImage }}{{ end }}" alt="{{ .Title }}">
+                    <div class="hover:bg-transparent transition duration-300 absolute bottom-0 top-0 right-0 left-0 bg-gray-900 opacity-25"></div>
                 </a>
-                <p href="#" class="text-sm pb-3">
-                    By <span class="font-semibold">{{ .Params.author }},</span>
-                    Published on <time datetime="January 2, 2006">{{.Date.Format "January 2, 2006"}}</time>
-
-                </p>
-                <a href="{{.RelPermalink}}" class="pb-6">{{ if .Summary }}{{ .Summary | truncate 160 }}{{ else }}{{
-                    .Params.description }}{{ end }}</a>
-
-                <a href="{{.RelPermalink}}" class="uppercase text-primary hover:text-amber-500">Continue Reading <i
-                        class="fas fa-arrow-right"></i></a>
+                <a href="#">
+                    <div class="absolute bottom-0 left-0 bg-primary px-4 py-2 text-white text-sm hover:bg-white hover:text-indigo-600 transition duration-500 ease-in-out">
+                        {{ if .Params.category }}{{ .Params.category }}{{ else }}Category{{ end }}
+                    </div>
+                </a>
+        
+                <div class="text-sm absolute top-0 right-0 bg-primary px-4 text-white rounded-full h-12 w-12 flex flex-col items-center justify-center mt-3 mr-3 hover:bg-white hover:text-indigo-600 transition duration-500 ease-in-out">
+                    <span class="font-bold">{{ .Date.Format "02" }}</span>
+                    <small>{{ .Date.Format "January" }}</small>
+                </div>
             </div>
-        </article>
+            <div class="px-6 py-4">
+                <a href="{{ .RelPermalink }}" class="font-semibold text-lg inline-block hover:text-indigo-600 transition duration-500 ease-in-out">
+                    {{ .Title }}
+                </a>
+                <p class="text-gray-500 text-sm">
+                    {{ if .Params.description }}{{ .Params.description }}{{ else }}No description available.{{ end }}
+                </p>
+            </div>
+            <div class="px-6 py-4 flex flex-row items-center">
+                <span class="py-1 text-sm font-regular text-gray-900 mr-1 flex flex-row items-center">
+                    <svg height="13px" width="13px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                        <path d="M256,0C114.837,0,0,114.837,0,256s114.837,256,256,256s256-114.837,256-256S397.163,0,256,0z M277.333,256
+                        c0,11.797-9.536,21.333-21.333,21.333h-85.333c-11.797,0-21.333-9.536-21.333-21.333s9.536-21.333,21.333-21.333h64v-128
+                        c0-11.797,9.536-21.333,21.333-21.333s21.333,9.536,21.333,21.333V256z"></path>
+                    </svg>
+                    <span class="ml-1">{{ .ReadingTime }} mins read</span>
+                </span>
+            </div>
+            <div class="max-w-xl p-6 relative">
+                <a href="{{ .RelPermalink }}" class="relative inline-flex items-center justify-center p-4 px-6 py-3 overflow-hidden font-medium text-dark transition duration-300 ease-out border-2 border-white rounded-full shadow-md group">
+                  <span class="absolute inset-0 flex items-center justify-center w-full h-full text-dark duration-300 -translate-x-full bg-transparent group-hover:translate-x-0 ease">
+                      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                  </span>
+                  <span class="absolute flex items-center justify-center w-full h-full text-dark transition-all duration-300 transform group-hover:translate-x-full ease">Read More</span>
+                  <span class="relative invisible">Read More</span>
+              </a>
+            </div>
+        </div>
         {{ end }}
     </div>
 

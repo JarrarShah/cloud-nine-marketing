@@ -1,0 +1,527 @@
+{{ define "main" }}
+
+<section
+    class="relative overflow-hidden bg-gradient-to-tr from-red-50 via-teal-50 to-gray-100 pb-12 pt-20 sm:pb-16 sm:pt-32 lg:pb-24 xl:pb-32 xl:pt-12">
+    <div class="relative z-10">
+        <div
+            class="absolute inset-x-0 top-1/2 -z-10 flex -translate-y-1/2 justify-center overflow-hidden [mask-image:radial-gradient(50%_45%_at_50%_55%,white,transparent)]">
+            <svg class="h-[60rem] w-[100rem] flex-none stroke-secondary opacity-20" aria-hidden="true">
+                <defs>
+                    <pattern id="e9033f3e-f665-41a6-84ef-756f6778e6fe" width="200" height="200" x="50%" y="50%"
+                        patternUnits="userSpaceOnUse" patternTransform="translate(-100 0)">
+                        <path d="M.5 200V.5H200" fill="none"></path>
+                    </pattern>
+                </defs>
+                <svg x="50%" y="50%" class="overflow-visible fill-amber-50">
+                    <path d="M-300 0h201v201h-201Z M300 200h201v201h-201Z" stroke-width="0"></path>
+                </svg>
+                <rect width="100%" height="100%" stroke-width="0" fill="url(#e9033f3e-f665-41a6-84ef-756f6778e6fe)">
+                </rect>
+            </svg>
+        </div>
+    </div>
+    <div class="relative z-20 mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="mx-auto max-w-2xl text-center">
+            <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+                Create An <span class="text-primary">Instantly
+                </span> Reputable Company
+            </h1>
+            <h2 class="mt-6 text-lg leading-8 font-medium font-poppins text-gray-600">
+                We specialize in making brand identities that are <i class="font-bold">UNIQUE, ICONIC</i> and <i
+                    class="font-bold">DISTINCTIVE</i>. Whether we're giving a brand a fresh look or creating one from
+                scratch, we're all about leaving a memorable mark
+            </h2>
+            <div class="mt-10 flex items-center justify-center gap-x-6">
+                <a class="isomorphic-link isomorphic-link--internal inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-4 py-3 text-sm font-semibold text-white shadow-sm transition-all duration-150 hover:bg-amber-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+                    href="/book-consultation/">Book Free Consultation Now
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd"
+                            d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <div class="relative mx-auto mt-10 max-w-lg">
+            <!-- {{ with resources.Get "images/branding/branding-for-profit-book.png" }}
+            {{ $together := .RelPermalink }}
+            <img src="{{$together}}" class="w-full rounded-2xl" alt="asdasd">
+            {{ end }} -->
+        </div>
+    </div>
+
+</section>
+
+<section class="bg-white">
+    <div class="container mx-auto">
+        <div class="flex flex-row justify-center">
+            <div>
+                <h2 class="py-12 md:py-36 text-2xl md:text-4xl max-w-5xl text-center font-poppins">There exists a
+                    misconception regarding the true essence of <span class="font-bold">BRANDING</span>. It is not
+                    uncommon for individuals to mistakenly equate it solely with logo design and Corporate Identity.
+                    However, it is imperative to recognize that a Branding initiative encompasses a broader strategic
+                    scope, encompassing both these elements.
+                </h2>
+                <!-- <p class="text-xl max-w-2xl text-center">Branding projects are larger, more complex and take time. They should start at the very foundation of your business and build from there.
+            <br><br>
+                This is not just about the creativity, that’s covered by Logo Design and Corporate Identity.</p> -->
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="bg-white pb-12">
+    <div class="container mx-auto pt-12">
+        <div class="row flex flex-col md:flex-row">
+            <div class="w-full md:w-1/2">
+                <div class="flex flex-row justify-end">
+                    <div>
+                        <h2 class="mb-4 text-3xl md:text-4xl max-w-lg font-bold text-left">WHY IS BRANDING IMPORTANT FOR
+                            YOUR BUSINESS?</h2>
+                        <svg width="204" height="14" class="text-primary" xmlns="http://www.w3.org/2000/svg">
+                            <g fill="currentColor" fill-rule="evenodd">
+                                <path
+                                    d="M.835 7.23c-.264-.864-.033-1.753.708-2.42.91-.758 2.285-.742 3.1.09l.112.124a9.767 9.767 0 006.37 3.34c2.362.24 4.745-.389 6.631-1.785l.254-.195c.186-.132.367-.283.548-.442l.557-.494c.096-.083.194-.166.295-.247l.58-.527c.702-.632 1.495-1.31 2.412-1.835 2.201-1.24 4.914-1.629 7.719-1.101 2.083.433 4.232 1.286 6.575 2.773 1.087.674 1.395 2.09.702 3.12-.674 1.088-2.09 1.395-3.12.703-1.932-1.172-3.533-1.878-5.068-2.164-1.743-.348-3.385-.161-4.603.589-.565.314-1.09.758-1.63 1.242l-.546.493-1.635 1.444c-2.854 2.194-6.555 3.263-10.183 2.925-3.57-.356-7.01-2.137-9.36-4.88a1.922 1.922 0 01-.418-.753zM93.541 4.686c.38.828.24 1.815-.424 2.521-.843.95-2.348.97-3.297.127-1.86-1.76-4.35-2.698-6.806-2.702a9.87 9.87 0 00-6.533 2.539l-.238.223a6.299 6.299 0 00-.628.648l-.418.49c-.073.085-.148.171-.226.258l-.82.908c-.566.62-1.183 1.257-1.933 1.822-2.056 1.51-4.796 2.221-7.703 1.977-2.204-.207-4.415-.853-7.01-2.136-1.185-.582-1.665-1.946-1.083-3.13.502-1.12 1.829-1.623 2.93-1.135l.143.069c2.069 1.004 3.807 1.542 5.364 1.695 1.806.14 3.452-.237 4.635-1.102.66-.517 1.326-1.223 1.973-1.988l.732-.822c.253-.281.512-.565.776-.834C75.59 1.552 79.225.063 82.92.003 86.633 0 90.273 1.405 92.95 3.986c.3.16.503.412.591.7z">
+                                </path>
+                                <g>
+                                    <path
+                                        d="M112.835 7.23c-.264-.864-.033-1.753.708-2.42.91-.758 2.285-.742 3.1.09l.112.124a9.767 9.767 0 006.37 3.34c2.362.24 4.745-.389 6.631-1.785l.254-.195c.186-.132.367-.283.548-.442l.557-.494c.096-.083.194-.166.295-.247l.58-.527c.702-.632 1.495-1.31 2.412-1.835 2.201-1.24 4.914-1.629 7.719-1.101 2.083.433 4.232 1.286 6.575 2.773 1.087.674 1.395 2.09.702 3.12-.674 1.088-2.09 1.395-3.12.703-1.932-1.172-3.533-1.878-5.068-2.164-1.743-.348-3.385-.161-4.603.589-.565.314-1.09.758-1.63 1.242l-.546.493-1.635 1.444c-2.854 2.194-6.555 3.263-10.183 2.925-3.57-.356-7.01-2.137-9.36-4.88a1.922 1.922 0 01-.418-.753zM203.541 4.686c.38.828.24 1.815-.424 2.521-.843.95-2.348.97-3.297.127-1.86-1.76-4.35-2.698-6.806-2.702a9.87 9.87 0 00-6.533 2.539l-.238.223a6.299 6.299 0 00-.628.648l-.418.49c-.073.085-.148.171-.226.258l-.82.908c-.566.62-1.183 1.257-1.933 1.822-2.056 1.51-4.796 2.221-7.703 1.977-2.204-.207-4.415-.853-7.01-2.136-1.185-.582-1.665-1.946-1.083-3.13.502-1.12 1.829-1.623 2.93-1.135l.143.069c2.069 1.004 3.807 1.542 5.364 1.695 1.806.14 3.452-.237 4.635-1.102.66-.517 1.326-1.223 1.973-1.988l.732-.822c.253-.281.512-.565.776-.834 2.615-2.562 6.25-4.051 9.946-4.111 3.712-.002 7.352 1.402 10.029 3.983.3.16.503.412.591.7z">
+                                    </path>
+                                </g>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full md:w-1/2 py-2">
+                <p class="text-base max-w-3xl">
+                    If you find yourself on the journey of establishing a new company, reshaping an established one, or
+                    introducing a fresh product or service to the market.
+                    <br><br>
+                    <span class="font-semibold">
+                        <i>You will need a full branding project!</i>
+                    </span>
+                    <br><br>
+                </p>
+                <p class="text-base text-left max-w-3xl py-2">Branding initiatives dive deep into the core of your
+                    offering, encompassing critical elements such as:
+                </p>
+                <ol class="my-2 list-decimal text-base   max-w-3xl ml-3">
+                    <li>Brand Strategy
+                    </li>
+                    <li>Brand Positioning
+                    </li>
+                    <li>Market research
+                    </li>
+                    <li>Naming
+                    </li>
+                    <li>Tag Line
+                    </li>
+                    <li>Logo Design
+                    </li>
+                    <li>Corporate Identity Establishment (including defining fonts, colors, etc.)
+                    </li>
+                </ol>
+                <p class="text-base max-w-3xl">
+                    If you already have points 1-5 sorted, it’s more likely you need a <a
+                        href="/branding-and-logo-design" class="font-medium hover:underline text-blue-500">logo
+                        design</a> or corporate identity
+                    as the next steps.
+                    <br><br>
+                    If these foundational elements have not been established then a comprehensive branding strategy is
+                    needed.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="relative md:pb-24 pb-16 pt-6">
+    <div class="container mx-auto">
+        <div class="flex justify-center">
+            <div class="max-w-5xl mt-12">
+                <h2
+                    class="mt-12 mb-16 max-w-5xl mx-auto text-center text-2xl font-semibold tracking-tight text-gray-900 capitalize dark:text-gray-50 sm:text-4xl">
+                    How Outsourced Sales is making Brands?
+                </h2>
+                <p class="mb-8 leading-relaxed max-w-2xl text-center">
+                    Branding projects are big, complex, and time-consuming. They should begin at the very heart of your
+                    business and expand from there. It's not just about being creative—<a
+                        href="/branding-and-logo-design" class="font-bold hover:underline text-blue-500">Logo
+                        Design</a> and Corporate Identity cover that aspect.
+                    <br> <br>
+                    Here are a few important steps involved:
+                </p>
+            </div>
+        </div>
+        <div class="flex justify-center items-center mt-6">
+            <div class="w-full md:w-1/2 justify-center">
+                <div class="flex flex-col md:flex-row justify-center items-center">
+                    <div class="w-1/4 mb-4 md:mb-0">
+                        {{ with resources.Get "images/logo-design/brand.png" }}
+                        {{ $together := .RelPermalink }}
+                        <div class="w-1/4 mb-4 md:mb-0">
+                            <img src="{{$together}}" class="w-auto" alt="asdasd">
+                        </div>
+                        {{ end }}
+                    </div>
+                    <div class="w-3/4">
+                        <h4 class="text-2xl font-poppins font-bold">Brand strategy and positioning.
+                        </h4>
+                        <p class="font-medium text-xl py-2">
+                            A brand strategy and positioning is a plan of how you are going to achieve your goals
+                        </p>
+                        <p>Developing a strong brand strategy involves defining your Mission, Vision, and Values, along
+                            with a clear brand promise and communication plan. Focusing on strategy more than just
+                            looks, this approach highlights that brand identity is about what messages are sent rather
+                            than how they look.
+                            <br><br>
+                            It requires outlining how your product or service will be found, its purpose, and unique
+                            selling points. Key to this is setting goals and how you'll communicate them, identifying
+                            target audiences, understanding competitors, and planning engagement strategies. These
+                            foundational steps need careful research and resolution before diving into creative work,
+                            ensuring that your message is aligned with what the market needs.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex justify-center items-center mt-12">
+            <div class="w-full md:w-1/2 justify-center">
+                <div class="flex flex-col md:flex-row justify-center items-center">
+                    <div class="w-1/4 mb-4 md:mb-0">
+                        {{ with resources.Get "images/telemarketing/icons/leads.png" }}
+                        {{ $together := .RelPermalink }}
+                        <div class="w-1/4 mb-4 md:mb-0">
+                            <img src="{{$together}}" class="w-auto" alt="asdasd">
+                        </div>
+                        {{ end }}
+                    </div>
+                    <div class="w-3/4">
+                        <h4 class="text-2xl font-poppins font-bold">Market research</h4>
+                        <p class="font-medium text-xl py-2">
+                            Boardroom guess-making is not the way to inform decisions.
+                        </p>
+
+                        <p>Branding requires market research to provide data that allows you to make the right choices.
+
+                            Brands that don’t research and fully understand their marketplace often make the wrong
+                            choices.
+
+                            Disruptive brands are all-to-often not that at all, challenger brands can also end up as
+                            me-too offerings.
+
+                            Tempering the ambition and passion for your new venture with a healthy dose of market
+                            research means you can benchmark your product or service objectively rather than
+                            subjectively.
+
+                            Someone needs to do the research.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flex justify-center items-center mt-12">
+            <div class="w-full md:w-1/2 justify-center">
+                <div class="flex flex-col md:flex-row justify-center items-center">
+                    <div class="w-1/4 mb-4 md:mb-0">
+                        {{ with resources.Get "images/logo-design/air-jordan.png" }}
+                        {{ $together := .RelPermalink }}
+                        <div class="w-1/4 mb-4 md:mb-0">
+                            <img src="{{$together}}" class="w-auto" alt="asdasd">
+                        </div>
+                        {{ end }}
+                    </div>
+                    <div class="w-3/4">
+                        <h4 class="text-2xl font-poppins font-bold">Naming & Tag line.</h4>
+                        <p class="font-medium text-xl py-2">
+                            Approach naming with a calculated strategy and thorough research.
+                        </p>
+
+                        <p>Naming a business, product or service is a subjective and challenging task, and without the
+                            aforementioned stages, it’s guesswork at best. Getting the naming stage wrong can lead to
+                            costly changes further down the line. Things that might not have seemed possible in the
+                            early days may become possibilities further down the line, and if your naming is not right,
+                            it can cause issues.
+                            <br><br>
+                            Take the example of an up-and-coming UK-based brand that suddenly discovers a huge
+                            opportunity in the USA, only to find that the company name is already in use and/or
+                            trademarked in the USA.
+                            <br><br>
+                            <span class="font-bold italic">What do you sacrifice?</span>
+                            <br><br>
+                            <span class="font-bold italic">
+                                The equity in the UK brand you’ve already built or the opportunity for a huge new
+                                market?
+                            </span>
+                            <br><br>
+                            This is why naming should never be knee-jerk. Your tagline is equally important and should
+                            be subject to the same research and due diligence. That will do is never something that
+                            should be said during a naming or tagline discussion.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-4xl mx-auto mt-16">
+            <p class="text-base text-center">This is a big list. It takes a very skilled branding
+                team to execute it successfully. We’ve built those teams at <span class="font-bold text-neutral-600">
+                    Outsourced Sales</span>.
+            </p>
+        </div>
+        <div class="flex justify-center">
+            <div class="max-w-7xl mx-auto mt-4">
+                <a href="/book-consultation/"
+                    class="block px-5 py-3 text-xl text-center font-medium text-white bg-primary border border-amber-500 rounded-md shadow hover:bg-amber-500 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-amber-500 sm:px-10">
+                    <span class="font-bold">Interested?</span> Contact Now
+                </a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="bg-white">
+    <div class="px-4 py-12 mx-auto sm:px-6 md:px-12 lg:px-24 lg:py-24">
+        <div class="flex flex-wrap max-w-6xl items-center mx-auto">
+
+            <div
+                class="w-full md:w-1/2 max-w-5xl items-start mt-12 mb-16 text-left text-lg lg:flex-grow lg:w-1/2  md:mb-0 xl:mt-0">
+                <h2 class="mb-8 xs:text-2xl md:text-3xl max-w-xl lg:text-4xl font-medium leading-none text-neutral-600">
+                    Crafting Compelling Brand Identities: From Strategy to Reality
+                </h2>
+                <p class="mb-4 max-w-xl  text-base leading-relaxed text-left font-medium">
+
+                    At Outsourced Sales, we specialize in crafting brand strategies rooted in deep insights and
+                    understanding. We immerse ourselves in the essence and purpose of your business and offerings,
+                    analyzing your market position, competitors, and target audience.
+                </p>
+                <p class="mb-4 text-base max-w-xl  leading-relaxed text-left">
+                    Branding isn't just about looks; it's about telling a story that connects. We focus on the core
+                    elements like identity, colors, images, and tone to create a strong brand identity.
+
+
+
+                </p>
+                <p class="mb-4 text-base max-w-xl  leading-relaxed text-left">
+                    Our approach to brand development is precise and in line with the agreed strategy, resulting in
+                    brands that are unified, authoritative, and distinctive. Whatever your branding needs, trust us to
+                    bring your vision to life.
+
+                </p>
+                <p class="mb-4 text-base max-w-xl  leading-relaxed text-left">
+                    Our leadership, the driving force behind Outsourced Sales, have authored the book <a
+                        href="https://brandingforprofitbook.com/"
+                        class="font-medium hover:underline  text-blue-500">"Branding for Profit"</a>, offering valuable
+                    insights into the world of branding.
+
+
+                </p>
+                <a href="/book-consultation/"
+                    class="block px-5 py-3 text-xl max-w-xl text-center font-medium text-white bg-primary border border-amber-500 rounded-md shadow hover:bg-amber-500 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-amber-500 sm:px-10">
+                    <span class="font-bold">Interested?</span> Contact Now
+                </a>
+            </div>
+            <div class="w-full lg:max-w-lg lg:w-1/2 rounded-xl">
+                <div class="relative w-full max-w-lg">
+                    <div class="aspect-w-16 aspect-video md:aspect-square">
+                        <iframe class="w-full aaspect-video md:aspect-square"
+                            src="https://www.youtube.com/embed/lWeCykBpXOE?si=Pn4Gj6MLgfUdSUAs"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen autoplay>
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<section>
+    <div class="container mx-auto">
+        <div class="flex justify-center">
+            <div class=" mt-12">
+                <h2
+                    class="mt-12 mb-16 max-w-5xl mx-auto text-left text-2xl font-semibold tracking-tight text-gray-900 capitalize dark:text-gray-50 sm:text-4xl">
+                    Use Our Professional Branding Services To Create An Instantly Reputable Business
+
+                </h2>
+
+                <p class="mb-8 leading-relaxed max-w-2xl text-left">
+                    Welcome to our Branding Services! We specialize in crafting captivating brand identities that
+                    resonate with your audience and leave a lasting impression. Our team guides you through the process
+                    of creating a unique brand logo that effectively communicates your brand's story and values. From
+                    initial concepts to final execution, we ensure a seamless journey with attention to detail and
+                    consistency.
+                    <br><br>
+                    Our expert logo designers are dedicated to simplicity, avoiding generic symbols, and creating
+                    harmonious layouts that are both memorable and scalable. We prioritize collaboration, seeking your
+                    input every step of the way to ensure the final result evokes a "WOW" factor.
+                    <br><br>
+                    Trust our branding service to elevate your brand with <a href="/branding-and-logo-design"
+                        class="font-medium hover:underline  text-blue-500">logo designs</a> that embody your vision and
+                    establish a distinctive visual identity.
+                </p>
+            </div>
+        </div>
+        <div class="px-4 py-12 mx-auto max-w-7xl sm:px-6 md:px-12 lg:px-24 lg:py-24">
+            <div class="flex md:flex-row flex-col items-center mx-auto gap-6 max-w-8xl">
+                <div class="w-full md:w-1/2">
+                    <h2 class="mb-8 xs:text-2xl md:text-3xl lg:text-4xl font-medium leading-none text-neutral-600">
+                        <span class="text-primary">Professional
+                        </span> <br>Brand Naming
+                    </h2>
+                    <p class="mb-8 leading-relaxed max-w-2xl text-left">
+                        Brand names give businesses the opportunity to put a meaning behind their name with completely
+                        positive connotations. If somebody automatically associates your brand name with positive
+                        emotions, you’ve earned yourself a customer for life. We help organisations find memorable names
+                        that reflect the identity of their product, solution or business and sets them apart from the
+                        competition.
+                        <br><br>
+                        As a branding agency, we know that the company and/or brand name is critical to the positioning
+                        and success of the brand. The name will make a statement regarding what you do and, more
+                        importantly, how you do it.
+                    </p>
+                </div>
+                <div class="w-full md:w-1/2 rounded-xl order-first md:order-last">
+                    <div class="relative mx-auto">
+
+                        {{ with resources.Get "images/branding/brand.jpg" }}
+                        {{ $small := (.Resize "550x webp q100").RelPermalink }}
+                        {{ $medium := (.Resize "900x webp q100").RelPermalink }}
+                        {{ $large := (.Resize "1500x webp q100").RelPermalink }}
+                        {{ $together := (.Resize "1500x webp q100").RelPermalink }}
+                        <img class="object-cover object-center w-full rounded-2xl shadow shadow-lg w-96" alt="hero"
+                            src="{{$together}}">
+                        {{ end }}
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+        <div class="px-4 mx-auto max-w-7xl sm:px-6 md:px-12 lg:px-24 lg:py-24">
+            <div class="flex flex-wrap items-center mx-auto max-w-7xl">
+                <div class="w-full lg:max-w-lg lg:w-1/2 rounded-xl">
+                    <div class="relative w-full  mx-auto">
+
+                        {{ with resources.Get "images/branding/brand-2.jpg" }}
+                        {{ $small := (.Resize "550x webp q100").RelPermalink }}
+                        {{ $medium := (.Resize "900x webp q100").RelPermalink }}
+                        {{ $large := (.Resize "1500x webp q100").RelPermalink }}
+                        {{ $together := (.Resize "1500x webp q100").RelPermalink }}
+                        <img class="object-cover object-center w-full rounded-2xl shadow shadow-lg" alt="hero"
+                            src="{{$together}}">
+                        {{ end }}
+                    </div>
+
+                </div>
+                <div
+                    class="flex flex-col items-start mt-12 mb-16 text-left text-lg lg:flex-grow lg:w-1/2 lg:pl-6 xl:pl-24 md:mb-0 xl:mt-0">
+                    <h2 class="mb-8 xs:text-2xl md:text-3xl lg:text-4xl font-medium leading-none text-neutral-600">
+                        <span class="text-primary">Exceptional
+                        </span> <br>Brand Identity Creation
+                    </h2>
+                    <p class="mb-8 leading-relaxed text-left">
+                        As a creative branding agency, we know that establishing a strong brand identity is paramount to
+                        a company’s success. Customers, users and employees, in equal measure, rally to the flag.
+                        Meaningful and symbolic – a defined and differentiated identity can be a prime mover. We connect
+                        with brands with head and heart and the most memorable brands usually combine a strong appeal to
+                        both.
+                        <br><br>
+                        Effective brand identity development usually creates well differentiated identities. Others may
+                        follow these are ‘me too’ brands. You may not like a brand – if you do, that’s great! But if you
+                        remember it – for whatever reason – then it has worked.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+        <div class="px-4 py-2 mx-auto max-w-7xl sm:px-6 md:px-12 lg:px-24 lg:py-24">
+            <div class="flex flex-wrap items-center mx-auto max-w-7xl">
+                <div
+                    class="flex flex-col items-start mt-12 mb-16 text-left text-lg lg:flex-grow lg:w-1/2 lg:pl-6 xl:pl-24 md:mb-0 xl:mt-0">
+                    <h2 class="mb-8 xs:text-2xl md:text-3xl lg:text-4xl font-medium leading-none text-neutral-600">
+                        <span class="text-primary">Symbolic
+
+                        </span> <br>Brand Packaging
+
+                    </h2>
+
+                    <p class="mb-8 leading-relaxed text-left">
+                        Consumers are all discerning. And with more and more products purchased online, brands have less
+                        time to make an impactful impression. Ensuring your product has effective packaging is all
+                        important.
+                        <br><br>
+                        We can help create stunning labelling and packaging design or your product that would make your
+                        product stand out amongst the competition, online or on store shelves. Our services cover both
+                        the style/shape of the product packaging as well as the design/labelling upon it.
+                    </p>
+                </div>
+                <div class="w-full lg:max-w-lg lg:w-1/2 rounded-xl">
+                    <div class="relative w-full max-w-lg">
+
+                        {{ with resources.Get "images/branding/brand-packaging.png" }}
+                        {{ $small := (.Resize "550x webp q100").RelPermalink }}
+                        {{ $medium := (.Resize "900x webp q100").RelPermalink }}
+                        {{ $large := (.Resize "1500x webp q100").RelPermalink }}
+                        {{ $together := (.Resize "1500x webp q100").RelPermalink }}
+                        <img class="mx-auto w-auto" alt="hero" src="{{$together}}">
+                        {{ end }}
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+        <div class="px-4 py-12 mx-auto max-w-7xl sm:px-6 md:px-12 lg:px-24 lg:py-24">
+            <div class="flex flex-wrap items-center mx-auto max-w-7xl">
+                <div class="w-full lg:max-w-lg lg:w-1/2 rounded-xl order-last md:order-first">
+                    <div class="relative w-full max-w-lg">
+
+                        {{ with resources.Get "images/branding/1.jpg" }}
+                        {{ $small := (.Resize "550x webp q100").RelPermalink }}
+                        {{ $medium := (.Resize "900x webp q100").RelPermalink }}
+                        {{ $large := (.Resize "1500x webp q100").RelPermalink }}
+                        {{ $together := (.Resize "1500x webp q100").RelPermalink }}
+                        <img class="object-cover object-center mx-auto rounded-2xl shadow-md" alt="hero"
+                            src="{{$together}}">
+                        {{ end }}
+                    </div>
+
+
+                </div>
+                <div
+                    class="flex flex-col items-start mt-12 mb-16 text-left text-lg lg:flex-grow lg:w-1/2 lg:pl-6 xl:pl-24 md:mb-0 xl:mt-0 order-first md:order-last">
+                    <h2 class="mb-8 xs:text-2xl md:text-3xl lg:text-4xl font-medium leading-none text-neutral-600">
+                        <span class="text-primary">Distinguished
+                        </span> <br>Brand Guidelines
+                    </h2>
+                    <p class="mb-8 leading-relaxed text-left">
+                        Establishing a brand guidelines document is crucial in maintaining brand consistency. For
+                        companies with multiple locations, multiple departments and multiple marketing requirements, a
+                        brand guideline document provides rules as to the usage of the brand. As an established branding
+                        and design agency, we are able to put together a brand guidelines document at all sizes and
+                        complexity.
+                        <br><br>
+                        From a simple sheet simply showing the make up of the brand logo through to a comprehensive
+                        document outlining the templates for all the company’s marketing collateral pieces, and other
+                        brand assets, across different media channels, you can rely on us to protect your brand.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+</section>
+
+{{ partial "cta.html" . }}
+
+
+{{ end }}

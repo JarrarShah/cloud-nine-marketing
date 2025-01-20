@@ -1,6 +1,4 @@
 @import "./glightbox.css";
-@import 'typeface-mukta';
-@import "./custom.css";
 
 /* assets */
 @tailwind base;
@@ -24,10 +22,6 @@ Segoe UI Symbol,
 Android Emoji,
 EmojiSymbols;
 /* Custom CSS */
-
-.prose :where(h1):not(:where([class~="not-prose"] *)) {
-    color: white !important;
-}
 
 .product-inner {
     position: relative;
@@ -134,18 +128,20 @@ EmojiSymbols;
 /* Example for sticky sections with dynamic styles */
 [data-sticky-sections] section {
     transition: opacity 0.3s ease, transform 0.3s ease;
-    opacity: var(--stick-visibility, 0);  /* Default opacity */
-    transform: scale(var(--stick-scale, 0.8));  /* Default scale */
-  }
-  
-  /* The container can also be styled with custom variables if needed */
-  [data-sticky-sections] {
+    opacity: var(--stick-visibility, 0);
+    /* Default opacity */
+    transform: scale(var(--stick-scale, 0.8));
+    /* Default scale */
+}
+
+/* The container can also be styled with custom variables if needed */
+[data-sticky-sections] {
     position: relative;
     display: flex;
     flex-direction: column;
-  }
+}
 
-  .card-image {
+.card-image {
     background-size: cover;
     background-position: center;
 }
@@ -167,33 +163,37 @@ EmojiSymbols;
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.2); /* Slightly transparent white */
+    background-color: rgba(255, 255, 255, 0.2);
+    /* Slightly transparent white */
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: background-color 0.3s ease; /* Smooth transition on hover */
+    transition: background-color 0.3s ease;
+    /* Smooth transition on hover */
 }
 
 .card-arrow:hover {
-    background-color: rgba(255, 255, 255, 0.4); /* More opaque white on hover */
+    background-color: rgba(255, 255, 255, 0.4);
+    /* More opaque white on hover */
 }
-  
+
 @layer components {
     .span-style {
-      @apply absolute top-0 left-0 w-full h-full origin-center [transform-style:preserve-3d] lg:[transform:rotateY(calc(var(--i)*45deg))_translateZ(350px)] md:[transform:rotateY(calc(var(--i)*45deg))_translateZ(265px)] sm:[transform:rotateY(calc(var(--i)*45deg))_translateZ(216px)] [transform:rotateY(calc(var(--i)*45deg))_translateZ(120px)];
+        @apply absolute top-0 left-0 w-full h-full origin-center [transform-style:preserve-3d] lg:[transform:rotateY(calc(var(--i)*45deg))_translateZ(350px)] md:[transform:rotateY(calc(var(--i)*45deg))_translateZ(265px)] sm:[transform:rotateY(calc(var(--i)*45deg))_translateZ(216px)] [transform:rotateY(calc(var(--i)*45deg))_translateZ(120px)];
     }
-    .img-style {
-      @apply absolute top-0 left-0 w-full h-full rounded-sm object-cover [transition:2s] sm:hover:-translate-y-[50px] hover:-translate-y-[20px] hover:scale-[1.3];
-    }
-  }
 
-  .area {
-	background: #ffffff;
-	background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);
-	width: 100%;
-	height: 80vh;
-	position: absolute;
-	z-index: -1;
+    .img-style {
+        @apply absolute top-0 left-0 w-full h-full rounded-sm object-cover [transition:2s] sm:hover:-translate-y-[50px] hover:-translate-y-[20px] hover:scale-[1.3];
+    }
+}
+
+.area {
+    background: #ffffff;
+    background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);
+    width: 100%;
+    height: 80vh;
+    position: absolute;
+    z-index: -1;
 }
 
 /* Cloud Animation */
@@ -203,7 +203,7 @@ EmojiSymbols;
     top: 0;
     left: 0;
     width: 100%;
-    height: 96%;
+    height: 50%;
     overflow: hidden;
 }
 
@@ -211,16 +211,20 @@ EmojiSymbols;
     position: absolute;
     display: block;
     list-style: none;
-    width: 150px;  /* Reduced the width */
-    height: 70px;  /* Reduced the height */
+    width: 150px;
+    /* Reduced the width */
+    height: 70px;
+    /* Reduced the height */
     background: #dc4465;
-    box-shadow: 5px 5px rgba(0,0,0,0.2);
+    box-shadow: 5px 5px rgba(0, 0, 0, 0.2);
     animation: animate 25s linear infinite;
     bottom: -150px;
-    border-radius: 50px;  /* Adjusted border-radius to match new size */
+    border-radius: 50px;
+    /* Adjusted border-radius to match new size */
 }
 
-.clouds li::after, .clouds li::before {
+.clouds li::after,
+.clouds li::before {
     content: "";
     position: relative;
     display: inline-block;
@@ -229,17 +233,25 @@ EmojiSymbols;
 }
 
 .clouds li::after {
-    width: 50px;  /* Reduced the width */
-    height: 50px;  /* Reduced the height */
-    top: -100px;  /* Adjusted position */
-    left: 25px;  /* Adjusted position */
+    width: 50px;
+    /* Reduced the width */
+    height: 50px;
+    /* Reduced the height */
+    top: -100px;
+    /* Adjusted position */
+    left: 25px;
+    /* Adjusted position */
 }
 
 .clouds li::before {
-    width: 60px;  /* Reduced the width */
-    height: 60px;  /* Reduced the height */
-    top: -15px;  /* Adjusted position */
-    left: 45px;  /* Adjusted position */
+    width: 60px;
+    /* Reduced the width */
+    height: 60px;
+    /* Reduced the height */
+    top: -15px;
+    /* Adjusted position */
+    left: 45px;
+    /* Adjusted position */
 }
 
 .clouds li:nth-child(1) {
@@ -328,3 +340,53 @@ EmojiSymbols;
         opacity: 0;
     }
 }
+
+.accent-cut-dark::after {
+    border-bottom: 48px solid #000000;
+    border-left: 40px solid transparent;
+    bottom: -1px;
+    content: "";
+    height: 0;
+    position: absolute;
+    right: -1px;
+    width: 0;
+}
+
+.accent-cut::after {
+    border-bottom: 48px solid #fff;
+    border-left: 40px solid transparent;
+    bottom: -1px;
+    content: "";
+    height: 0;
+    position: absolute;
+    right: -1px;
+    width: 0;
+}
+
+@media (min-width: 1024px) {
+    .accent-cut::after {
+        border-bottom-width: 66px;
+        border-left-width: 55px;
+    }
+}
+
+.accent-vertical.accent-vertical-primary-300:before {
+    --tw-bg-opacity: 1;
+    background-color: #DC4465;
+}
+
+.accent-vertical:before {
+    --tw-skew-y: -50deg;
+    height: 100%;
+    left: -20px;
+    position: absolute;
+    top: 12px;
+    width: 20px;
+}
+
+.accent-underline:after, .accent-vertical:before {
+    content: "";
+    display: block;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
