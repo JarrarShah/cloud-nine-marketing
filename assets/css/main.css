@@ -396,16 +396,16 @@ EmojiSymbols;
   }
   
   *::-webkit-scrollbar-track {
-    background-color: #c7c7c7 !important; /* Tailwind gray-200 */
+    background-color: #838383 !important; /* Tailwind gray-200 */
   }
   
   *::-webkit-scrollbar-thumb {
-    background-image: linear-gradient(45deg, #DC4465, #ec2e57) !important; /* Gradient colors */
+    background-image: linear-gradient(45deg, #000000, #181818) !important; /* Gradient colors */
     border-radius: 6px !important; /* Optional: Add rounded corners */
   }
   
   *::-webkit-scrollbar-thumb:hover {
-    background-image: linear-gradient(45deg, #ec2e57, #DC4465) !important; /* Gradient colors for hover state */
+    background-image: linear-gradient(45deg, #181818, #2b2b2b) !important; /* Gradient colors for hover state */
   }
   
 /* Nav item animation */

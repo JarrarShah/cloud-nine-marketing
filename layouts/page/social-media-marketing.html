@@ -1,9 +1,9 @@
 {{ define "main" }}
 
 <main>
-    <section class="pt-20">
+    <section class="pt-20 bg-gradient-to-r from-white via-sky-50 to-white">
         <!--Start Background Animation Body-->
-        <div class="area">
+        <!-- <div class="area">
             <ul class="clouds">
                 <li></li>
                 <li></li>
@@ -16,12 +16,12 @@
                 <li></li>
                 <li></li>
             </ul>
-        </div>
+        </div> -->
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-12 pb-16 text-center lg:pt-12">
             <span
               class="inline-flex rounded-xl justify-between items-center py-1 px-4 mb-7 text-sm border border-2 border-gray-900 font-medium text-dark">Get to know us</span>
 
-            <h1 class="mb-4 text-3xl max-w-4xl mx-auto font-medium tracking-tight leading-none text-dark md:text-4xl lg:text-5xl">
+            <h1 class="mb-4 text-3xl max-w-4xl mx-auto font-medium tracking-tight leading-none text-dark md:text-6xl lg:text-8xl">
                 <span class="inline-block">SOCIAL MEDIA
                     <span class="relative whitespace-nowrap text-primary">
                         <span class="relative">MARKETING</span></span>
@@ -47,7 +47,7 @@
                 <span class="inline-block">Outsourced Sales integrates your social channels seamlessly into an omnichannel strategy. Our approach combines intelligent AI utilization, data-driven analysis, and agile responses to market dynamics, harmonizing your social media marketing strategy with broader digital objectives like digital PR and SEO..</span>
             </p> -->
             <div class="pt-8 flex justify-center">
-                {{ with resources.Get "images/socialmedia/socials.png" }}
+                {{ with resources.Get "images/ssocial.png" }}
                 {{ $together := .RelPermalink }}
                 <img src="{{$together}}" class="w-auto" alt="asdasd">
                 {{ end }}
@@ -57,13 +57,13 @@
     </section>
 
     <section class="bg-white">
-        <div class="px-4 py-6 mx-auto max-w-7xl sm:px-6 md:px-12 lg:px-24 lg:py-0">
+        <div class="container mx-auto px-6 md:px-12 lg:px-24 lg:py-20">
             <div class="flex flex-wrap items-center mx-auto max-w-7xl">
                 <div
                     class="flex flex-col items-start justify-between mt-12 mb-16 text-left text-lg lg:flex-grow lg:w-1/2 lg:pl-6 xl:pl-24 md:mb-0 xl:mt-0">
                     <h2 class="mb-8 xs:text-2xl md:text-3xl lg:text-4xl font-medium leading-none text-neutral-600">
-                        Why You need Social Media Marketing?</h2>
-                    <p class="mb-8 leading-relaxed text-left">
+                        Why do you need Social Media Marketing?</h2>
+                    <p class="mb-8 max-w-xl leading-relaxed text-left">
                         Your brand represents you, where every scroll, like, and share counts, your brand’s story deserves to be heard. At Outsourced Sales, we don’t just tell your story; we set the digital stage for it to echo across the social media universe. <br><br> Unlike traditional digital
                         marketing agencies, we don't just advocate for sporadic posting on social platforms in the hopes
                         of gaining traction. Instead, we take a tailored, results-driven approach
@@ -79,12 +79,12 @@
                         <div class="relative w-full max-w-lg">
                             <div class="relative">
 
-                                {{ with resources.Get "images/smma.png" }}
+                                {{ with resources.Get "images/SMM-2.png" }}
                                 {{ $small := (.Resize "550x webp q100").RelPermalink }}
                                 {{ $medium := (.Resize "900x webp q100").RelPermalink }}
                                 {{ $large := (.Resize "1500x webp q100").RelPermalink }}
                                 {{ $together := (.Resize "1500x webp q100").RelPermalink }}
-                                <img class="object-cover object-center mx-auto" alt="hero" src="{{$together}}">
+                                <img class="object-cover grayscale hover:grayscale-0 object-center mx-auto" alt="hero" src="{{$together}}">
                                 {{ end }}
                             </div>
                         </div>
@@ -136,7 +136,7 @@
     <section>
         <div class="flex md:flex-row flex-col justify-end mt-16">
 
-            <div class="w-full md:w-4/5 rounded bg-teal-600 h-full w-full">
+            <div class="w-full md:w-4/5 rounded bg-gradient-to-l from-teal-100 via-cyan-100 to-emerald-100 h-full w-full">
                 <div class="w-full">
                     <h1
                         class="text-3xl max-w-3xl font-extrabold md:text-6xl text-center md:text-left lg:text-6xl text-gray-900 font-bold pt-12 px-16">
@@ -146,13 +146,13 @@
                         <div class="w-full mx-auto py-6 md:py-0 md:w-3/4 text-left">
                             <div class="container mt-12 ml-0 md:ml-10 ">
                                 <div class="text-2xl md:max-w-3xl text-gray-900 dark:text-white inline-block">
-                                    <p class="leading-7 text-xl md:text-2xl text-white inline-block">We aim to create a tailored social media management strategy that goes beyond your expectations. 
+                                    <p class="leading-7 text-xl md:text-2xl text-stone-600 inline-block">We aim to create a tailored social media management strategy that goes beyond your expectations. 
                                     </p>
                                 </div>
                                 <div class="mt-2">
                                     <div
-                                        class="text-2xl mt-6 space-y-6 md:max-w-3xl text-gray-900 dark:text-white inline-block">
-                                        <p class="leading-7 text-base text-white inline-block">A common misconception
+                                        class="text-2xl mt-6 space-y-6 md:max-w-3xl  text-stone-400 inline-block">
+                                        <p class="leading-7 text-lg text-stone-400 inline-block">A common misconception
                                             about
                                             social is that it’s a separate entity. It’s more powerful when aligned with
                                             the
@@ -165,8 +165,8 @@
                                 </div>
                                 <div class="mt-2">
                                     <div
-                                        class="text-2xl mt-6 space-y-6 md:max-w-3xl text-gray-900 dark:text-white inline-block">
-                                        <p class="leading-7 text-base text-white inline-block">It's important to interact with your audience on social media platforms, as user-generated content from these channels can lead to a 4.5% increase in conversion rates.  We recognize the importance of strategic social media marketing that educates, captivates, and converts your audience. 
+                                        class="text-2xl mt-6 space-y-6 md:max-w-3xl text-stone-400 inline-block">
+                                        <p class="leading-7 text-lg text-stone-400 inline-block">It's important to interact with your audience on social media platforms, as user-generated content from these channels can lead to a 4.5% increase in conversion rates.  We recognize the importance of strategic social media marketing that educates, captivates, and converts your audience. 
                                         <br><br>
                                         Our comprehensive nine-step process is designed to achieve these objectives
                                         </p>
