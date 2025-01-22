@@ -1,52 +1,59 @@
 <div class="bg-white">
-    <div class="container mx-auto">
-      <div class="max-w-7xl py-24 sm:px-6 sm:py-32 lg:px-8">
-        <div class="relative isolate overflow-hidden border border-2 border-gray-900 bg-gradient-to-r from-gray-50 via-white to-gray-100 px-6 pt-16 shadow-2xl rounded-3xl sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0">
-          <svg viewBox="0 0 1024 1024" class="absolute left-1/2 top-1/2 -z-10 size-[64rem] -translate-y-1/2 [mask-image:radial-gradient(closest-side,white,transparent)] sm:left-full sm:-ml-80 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2 lg:translate-y-0" aria-hidden="true">
-            <circle cx="512" cy="512" r="512" fill="url(#759c1415-0410-454c-8f7c-9a820de03641)" fill-opacity="0.7" />
-            <defs>
-              <radialGradient id="759c1415-0410-454c-8f7c-9a820de03641">
-                <stop stop-color="#DC4465" />
-                <stop offset="1" stop-color="#DC4465" />
-              </radialGradient>
-            </defs>
-          </svg>
-          <div class="mx-auto max-w-md text-center lg:mx-0 lg:flex-auto lg:py-32 lg:text-left">
-            <h2 class="text-balance text-3xl font-semibold tracking-tight text-dark md:text-5xl">Ready to get ahead of your Competition?</h2>
-            <h4 class="text-balance text-2xl font-light mt-2 tracking-tight text-gray-600 md:text-2xl">We're giving out a 30 min free consutlation call</h4>
-            <p class="mt-6 text-pretty font-semibold text-lg/8  text-gray-900">Book a call now and let's discuss the posibilities of getting ahead</p>
-            <div class="mt-10 flex items-center justify-center gap-x-6 lg:justify-start">
-              <a href="#" class="rounded-md bg-dark px-3.5 py-2.5 w-full text-lg font-semibold text-white shadow-sm hover:bg-gray-900 hover:text-white focus-visible:outline text-center focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">Book a free consultation call</a>
-            </div>
+  <div class="container mx-auto">
+    <div class="max-w-7xl mx-auto py-24 sm:px-6 sm:py-32 lg:px-8">
+      <div
+        class="relative isolate overflow-hidden border border-2 border-gray-900 bg-gradient-to-r from-gray-50 via-white to-gray-100 px-6 pt-16 shadow-2xl rounded-3xl sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0">
+        <svg viewBox="0 0 1024 1024"
+          class="absolute left-1/2 top-1/2 -z-10 size-[64rem] -translate-y-1/2 [mask-image:radial-gradient(closest-side,white,transparent)] sm:left-full sm:-ml-80 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2 lg:translate-y-0"
+          aria-hidden="true">
+          <circle cx="512" cy="512" r="512" fill="url(#759c1415-0410-454c-8f7c-9a820de03641)" fill-opacity="0.7" />
+          <defs>
+            <radialGradient id="759c1415-0410-454c-8f7c-9a820de03641">
+              <stop stop-color="#DC4465" />
+              <stop offset="1" stop-color="#DC4465" />
+            </radialGradient>
+          </defs>
+        </svg>
+        <div class="mx-auto max-w-md text-center lg:mx-0 lg:flex-auto lg:py-32 lg:text-left">
+          <h2 class="text-balance text-3xl font-semibold tracking-tight text-dark md:text-5xl">Ready to get ahead of
+            your Competition?</h2>
+          <h4 class="text-balance text-2xl font-light mt-2 tracking-tight text-gray-600 md:text-2xl">We're giving out a
+            30 min free consutlation call</h4>
+          <p class="mt-6 text-pretty font-semibold text-lg/8 text-gray-900">Book a call now and let's discuss the
+            posibilities of getting ahead</p>
+          <div class="mt-10 flex items-center justify-center gap-x-6 lg:justify-start">
+            <a href="#"
+              class="rounded-md bg-dark px-3.5 py-2.5 w-full text-lg font-semibold text-white shadow-sm hover:bg-gray-900 hover:text-white focus-visible:outline text-center focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">Book
+              a free consultation call</a>
           </div>
-          <div class="relative mt-16 h-80 lg:mt-8">
-            {{ with resources.Get "images/aeroplane.png" }}
-                {{ $small := (.Resize "900x webp q100").RelPermalink }}
-                {{ $medium := (.Resize "1500x webp q100").RelPermalink }}
-                {{ $large := (.Resize "2000x webp q100").RelPermalink }}
-                {{ $heroimage3 := (.Resize "2000x webp q100").RelPermalink }}
-                <img srcset="
+        </div>
+        <div class="relative mt-16 h-80 lg:mt-8">
+          {{ with resources.Get "images/aeroplane.png" }}
+          {{ $small := (.Resize "900x webp q100").RelPermalink }}
+          {{ $medium := (.Resize "1500x webp q100").RelPermalink }}
+          {{ $large := (.Resize "2000x webp q100").RelPermalink }}
+          {{ $heroimage3 := (.Resize "2000x webp q100").RelPermalink }}
+          <img srcset="
                       {{- with $small -}}, {{.}} 768w{{- end -}}
                       {{- with $medium -}}, {{.}} 1024w{{- end -}}
                       {{- with $large -}}, {{.}} 1374w{{- end -}}" src="{{ $heroimage3 }}"
-                  class="relative top-0 left-12 md:left-32 xl:left-96 w-full h-full rounded-xl overflow-hidden  grayscale	hover:grayscale-0"
-                  alt="Overlay image description">
-                {{ end }}
-                {{ with resources.Get "images/target.png" }}
-                {{ $small := (.Resize "900x webp q100").RelPermalink }}
-                {{ $medium := (.Resize "1500x webp q100").RelPermalink }}
-                {{ $large := (.Resize "2000x webp q100").RelPermalink }}
-                {{ $heroimage3 := (.Resize "2000x webp q100").RelPermalink }}
-                <img srcset="
+            class="relative top-0 left-12 md:left-32 xl:left-96 w-full h-full rounded-xl overflow-hidden  grayscale	hover:grayscale-0"
+            alt="Overlay image description">
+          {{ end }}
+          {{ with resources.Get "images/target.png" }}
+          {{ $small := (.Resize "900x webp q100").RelPermalink }}
+          {{ $medium := (.Resize "1500x webp q100").RelPermalink }}
+          {{ $large := (.Resize "2000x webp q100").RelPermalink }}
+          {{ $heroimage3 := (.Resize "2000x webp q100").RelPermalink }}
+          <img srcset="
                       {{- with $small -}}, {{.}} 768w{{- end -}}
                       {{- with $medium -}}, {{.}} 1024w{{- end -}}
                       {{- with $large -}}, {{.}} 1374w{{- end -}}" src="{{ $heroimage3 }}"
-                  class="relative w-full h-full rounded-xl overflow-hidden  grayscale	hover:grayscale-0"
-                  alt="Overlay image description">
-                {{ end }}
-          </div>
+            class="relative w-full h-full rounded-xl overflow-hidden  grayscale	hover:grayscale-0"
+            alt="Overlay image description">
+          {{ end }}
         </div>
       </div>
     </div>
+  </div>
 </div>
-  

@@ -175,7 +175,7 @@
     <!-- Team Section -->
     <div>
       <h2 class="text-8xl font-bold mb-6"> Meet The Team</h2>
-      
+
     </div>
   </div>
 </div>
@@ -183,49 +183,93 @@
 <section class="relative z-0 scroll-mt-24 scroll-mt-32 l:!scroll-mt-64">
   <div class="container mx-auto">
     <div class="mx-auto flex flex-wrap items-center justify-center gap-12 t:gap-16 lg:max-w-[none] lg:gap-24 d:px-16">
-    
+
       <!-- First Team Member -->
+      <div
+        class="absolute inset-0 z-30 opacity-0 transition delay-[200ms] duration-500 ease-in-out group-hover:opacity-100 group-hover:delay-[0ms]">
+        <div class="absolute inset-0 z-10 flex h-full w-full p-6 lg:p-8">
+          <div class="flex gap-8">
+            <div class="w-1/2">
+              <a class="group/card block w-full" href="#">
+                <div class="rounded-[0.875rem] bg-gradient-to-r from-rose-50 via-yellow-50 to-sky-5 p-0.5">
+                  <div class="aspect-wide w-full rounded-xl bg-gray-1100 p-8">
+                    {{ with resources.Get "images/Jerry.png" }}
+                    {{ $small := (.Resize "550x webp q100").RelPermalink }}
+                    {{ $medium := (.Resize "900x webp q100").RelPermalink }}
+                    {{ $large := (.Resize "1500x webp q100").RelPermalink }}
+                    {{ $together := (.Resize "1500x webp q100").RelPermalink }}
+                    <img
+                      class="h-full w-full grayscale object-contain transition-transform duration-300 ease-in-out group-hover/card:scale-105"
+                      alt="hero" src="{{$together}}">
+                    {{ end }}
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="relative h-full w-1/2 pt-2">
+              <div
+                class="inline-flex items-center gap-1.5 font-sohne text-10pt font-extrabold uppercase tracking-widest text-gray-900">
+                <span>CEO | Founder</span>
+              </div>
+              <div class="rich-text mt-2 text-9pt font-normal leading-snug text-gray-400">
+                <p>The YC and Google backed startup is disrupting the CMS ecosystem with a free and open source
+                  alternative that’s more flexible and powerful than the SaaS incumbents.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="w-full scroll-mt-32 lg:w-[calc(50%-3rem)] d:!scroll-mt-48">
         <div class="group rounded-xl bg-gradient-to-r from-rose-50 via-yellow-50 to-sky-50 p-2">
           <div class="relative flex justify-between rounded-lg bg-white lg:aspect-wider h-96">
-            <div class="flex justify-between p-6 opacity-100 transition delay-[200ms] duration-500 ease-in-out group-hover:opacity-0 group-hover:delay-[0ms] lg:p-8">
-              <div class="max-w-[10ch] text-4xl font-bold leading-[0.9] tracking-tighter text-black t:text-36pt lg:text-6xl lg:leading-[1.125] d:text-36pt">First Name</div>
-              <div class="pointer-events-none absolute -bottom-6 -right-4 -top-6 aspect-wide h-[calc(100%+3rem)] lg:-bottom-12 lg:-right-12 lg:-top-12 lg:h-[calc(100%+6rem)]">
+            <div
+              class="flex justify-between p-6 opacity-100 transition delay-[200ms] duration-500 ease-in-out group-hover:opacity-0 group-hover:delay-[0ms] lg:p-8">
+              <div
+                class="max-w-[10ch] text-4xl font-bold leading-[0.9] tracking-tighter text-black t:text-36pt lg:text-6xl lg:leading-[1.125] d:text-36pt">
+                Jarrar Shah</div>
+              <div
+                class="pointer-events-none absolute -bottom-6 -right-4 -top-6 aspect-wide h-[calc(100%+3rem)] lg:-bottom-12 lg:-right-12 lg:-top-12 lg:h-[calc(100%+6rem)]">
                 <div class="h-full">
-                  {{ with resources.Get "images/avatar.png" }}
-                                {{ $small := (.Resize "550x webp q100").RelPermalink }}
-                                {{ $medium := (.Resize "900x webp q100").RelPermalink }}
-                                {{ $large := (.Resize "1500x webp q100").RelPermalink }}
-                                {{ $together := (.Resize "1500x webp q100").RelPermalink }}
-                                <img class="fade-to-be2 h-full w-full object-contain object-right-bottom" alt="hero" src="{{$together}}">
-                                {{ end }}
+                  {{ with resources.Get "images/Jerry.png" }}
+                  {{ $small := (.Resize "550x webp q100").RelPermalink }}
+                  {{ $medium := (.Resize "900x webp q100").RelPermalink }}
+                  {{ $large := (.Resize "1500x webp q100").RelPermalink }}
+                  {{ $together := (.Resize "1500x webp q100").RelPermalink }}
+                  <img class="fade-to-be2 grayscale h-full w-full object-contain object-right-bottom" alt="hero"
+                    src="{{$together}}">
+                  {{ end }}
                 </div>
               </div>
             </div>
-            <div class="absolute inset-0 z-30 opacity-0 transition delay-[200ms] duration-500 ease-in-out group-hover:opacity-100 group-hover:delay-[0ms]">
+            <div
+              class="absolute inset-0 z-30 opacity-0 transition delay-[200ms] duration-500 ease-in-out group-hover:opacity-100 group-hover:delay-[0ms]">
               <div class="absolute inset-0 z-10 flex h-full w-full p-6 lg:p-8">
                 <div class="flex gap-8">
                   <div class="w-1/2">
                     <a class="group/card block w-full" href="#">
                       <div class="rounded-[0.875rem] bg-gradient-to-r from-rose-50 via-yellow-50 to-sky-5 p-0.5">
                         <div class="aspect-wide w-full rounded-xl bg-gray-1100 p-8">
-                          {{ with resources.Get "images/avatar.png" }}
-                                {{ $small := (.Resize "550x webp q100").RelPermalink }}
-                                {{ $medium := (.Resize "900x webp q100").RelPermalink }}
-                                {{ $large := (.Resize "1500x webp q100").RelPermalink }}
-                                {{ $together := (.Resize "1500x webp q100").RelPermalink }}
-                                <img class="h-full w-full object-contain transition-transform duration-300 ease-in-out group-hover/card:scale-105" alt="hero" src="{{$together}}">
-                                {{ end }}
+                          {{ with resources.Get "images/Jerry.png" }}
+                          {{ $small := (.Resize "550x webp q100").RelPermalink }}
+                          {{ $medium := (.Resize "900x webp q100").RelPermalink }}
+                          {{ $large := (.Resize "1500x webp q100").RelPermalink }}
+                          {{ $together := (.Resize "1500x webp q100").RelPermalink }}
+                          <img
+                            class="h-full w-full grayscale object-contain transition-transform duration-300 ease-in-out group-hover/card:scale-105"
+                            alt="hero" src="{{$together}}">
+                          {{ end }}
                         </div>
                       </div>
                     </a>
                   </div>
                   <div class="relative h-full w-1/2 pt-2">
-                    <div class="inline-flex items-center gap-1.5 font-sohne text-10pt font-extrabold uppercase tracking-widest text-gray-900">
-                      <span>Client</span>
+                    <div
+                      class="inline-flex items-center gap-1.5 font-sohne text-10pt font-extrabold uppercase tracking-widest text-gray-900">
+                      <span>CEO | Founder</span>
                     </div>
                     <div class="rich-text mt-2 text-9pt font-normal leading-snug text-gray-400">
-                      <p>The YC and Google backed startup is disrupting the CMS ecosystem with a free and open source alternative that’s more flexible and powerful than the SaaS incumbents.</p>
+                      <p>The YC and Google backed startup is disrupting the CMS ecosystem with a free and open source
+                        alternative that’s more flexible and powerful than the SaaS incumbents.</p>
                     </div>
                   </div>
                 </div>
@@ -234,27 +278,35 @@
           </div>
         </div>
       </div>
+
       <!-- First team memeber end -->
-  
+
       <!-- second team member -->
+
       <div class="w-full scroll-mt-32 lg:w-[calc(50%-3rem)] d:!scroll-mt-48">
         <div class="group rounded-xl bg-gradient-to-r from-rose-50 via-yellow-50 to-sky-50 p-2">
           <div class="relative flex justify-between rounded-lg bg-white lg:aspect-wider h-96">
-            <div class="flex justify-between p-6 opacity-100 transition delay-[200ms] duration-500 ease-in-out group-hover:opacity-0 group-hover:delay-[0ms] lg:p-8">
-              <div class="max-w-[10ch] text-4xl font-bold leading-[0.9] tracking-tighter text-black t:text-36pt lg:text-6xl lg:leading-[1.125] d:text-36pt">First Name</div>
-              <div class="pointer-events-none absolute -bottom-6 -right-4 -top-6 aspect-wide h-[calc(100%+3rem)] lg:-bottom-12 lg:-right-12 lg:-top-12 lg:h-[calc(100%+6rem)]">
+            <div
+              class="flex justify-between p-6 opacity-100 transition delay-[200ms] duration-500 ease-in-out group-hover:opacity-0 group-hover:delay-[0ms] lg:p-8">
+              <div
+                class="max-w-[10ch] text-4xl font-bold leading-[0.9] tracking-tighter text-black t:text-36pt lg:text-6xl lg:leading-[1.125] d:text-36pt">
+                First Name</div>
+              <div
+                class="pointer-events-none absolute -bottom-6 -right-4 -top-6 aspect-wide h-[calc(100%+3rem)] lg:-bottom-12 lg:-right-12 lg:-top-12 lg:h-[calc(100%+6rem)]">
                 <div class="h-full">
                   {{ with resources.Get "images/avatar.png" }}
-                                {{ $small := (.Resize "550x webp q100").RelPermalink }}
-                                {{ $medium := (.Resize "900x webp q100").RelPermalink }}
-                                {{ $large := (.Resize "1500x webp q100").RelPermalink }}
-                                {{ $together := (.Resize "1500x webp q100").RelPermalink }}
-                                <img class="fade-to-be2 h-full w-full object-contain object-right-bottom" alt="hero" src="{{$together}}">
-                                {{ end }}
+                  {{ $small := (.Resize "550x webp q100").RelPermalink }}
+                  {{ $medium := (.Resize "900x webp q100").RelPermalink }}
+                  {{ $large := (.Resize "1500x webp q100").RelPermalink }}
+                  {{ $together := (.Resize "1500x webp q100").RelPermalink }}
+                  <img class="fade-to-be2 h-full w-full object-contain object-right-bottom" alt="hero"
+                    src="{{$together}}">
+                  {{ end }}
                 </div>
               </div>
             </div>
-            <div class="absolute inset-0 z-30 opacity-0 transition delay-[200ms] duration-500 ease-in-out group-hover:opacity-100 group-hover:delay-[0ms]">
+            <div
+              class="absolute inset-0 z-30 opacity-0 transition delay-[200ms] duration-500 ease-in-out group-hover:opacity-100 group-hover:delay-[0ms]">
               <div class="absolute inset-0 z-10 flex h-full w-full p-6 lg:p-8">
                 <div class="flex gap-8">
                   <div class="w-1/2">
@@ -262,22 +314,26 @@
                       <div class="rounded-[0.875rem] bg-gradient-to-r from-rose-50 via-yellow-50 to-sky-5 p-0.5">
                         <div class="aspect-wide w-full rounded-xl bg-gray-1100 p-8">
                           {{ with resources.Get "images/avatar.png" }}
-                                {{ $small := (.Resize "550x webp q100").RelPermalink }}
-                                {{ $medium := (.Resize "900x webp q100").RelPermalink }}
-                                {{ $large := (.Resize "1500x webp q100").RelPermalink }}
-                                {{ $together := (.Resize "1500x webp q100").RelPermalink }}
-                                <img class="h-full w-full object-contain transition-transform duration-300 ease-in-out group-hover/card:scale-105" alt="hero" src="{{$together}}">
-                                {{ end }}
+                          {{ $small := (.Resize "550x webp q100").RelPermalink }}
+                          {{ $medium := (.Resize "900x webp q100").RelPermalink }}
+                          {{ $large := (.Resize "1500x webp q100").RelPermalink }}
+                          {{ $together := (.Resize "1500x webp q100").RelPermalink }}
+                          <img
+                            class="h-full w-full object-contain transition-transform duration-300 ease-in-out group-hover/card:scale-105"
+                            alt="hero" src="{{$together}}">
+                          {{ end }}
                         </div>
                       </div>
                     </a>
                   </div>
                   <div class="relative h-full w-1/2 pt-2">
-                    <div class="inline-flex items-center gap-1.5 font-sohne text-10pt font-extrabold uppercase tracking-widest text-gray-900">
+                    <div
+                      class="inline-flex items-center gap-1.5 font-sohne text-10pt font-extrabold uppercase tracking-widest text-gray-900">
                       <span>Client</span>
                     </div>
                     <div class="rich-text mt-2 text-9pt font-normal leading-snug text-gray-400">
-                      <p>The YC and Google backed startup is disrupting the CMS ecosystem with a free and open source alternative that’s more flexible and powerful than the SaaS incumbents.</p>
+                      <p>The YC and Google backed startup is disrupting the CMS ecosystem with a free and open source
+                        alternative that’s more flexible and powerful than the SaaS incumbents.</p>
                     </div>
                   </div>
                 </div>
@@ -297,26 +353,32 @@
         </div>
       </div>
       <!-- second team member end -->
-  
+
       <!-- Third Team Member -->
       <div class="w-full scroll-mt-32 lg:w-[calc(50%-3rem)] d:!scroll-mt-48">
         <div class="group rounded-xl bg-gradient-to-r from-rose-50 via-yellow-50 to-sky-50 p-2">
           <div class="relative flex justify-between rounded-lg bg-white lg:aspect-wider h-96">
-            <div class="flex justify-between p-6 opacity-100 transition delay-[200ms] duration-500 ease-in-out group-hover:opacity-0 group-hover:delay-[0ms] lg:p-8">
-              <div class="max-w-[10ch] text-4xl font-bold leading-[0.9] tracking-tighter text-black t:text-36pt lg:text-6xl lg:leading-[1.125] d:text-36pt">First Name</div>
-              <div class="pointer-events-none absolute -bottom-6 -right-4 -top-6 aspect-wide h-[calc(100%+3rem)] lg:-bottom-12 lg:-right-12 lg:-top-12 lg:h-[calc(100%+6rem)]">
+            <div
+              class="flex justify-between p-6 opacity-100 transition delay-[200ms] duration-500 ease-in-out group-hover:opacity-0 group-hover:delay-[0ms] lg:p-8">
+              <div
+                class="max-w-[10ch] text-4xl font-bold leading-[0.9] tracking-tighter text-black t:text-36pt lg:text-6xl lg:leading-[1.125] d:text-36pt">
+                First Name</div>
+              <div
+                class="pointer-events-none absolute -bottom-6 -right-4 -top-6 aspect-wide h-[calc(100%+3rem)] lg:-bottom-12 lg:-right-12 lg:-top-12 lg:h-[calc(100%+6rem)]">
                 <div class="h-full">
                   {{ with resources.Get "images/avatar.png" }}
-                                {{ $small := (.Resize "550x webp q100").RelPermalink }}
-                                {{ $medium := (.Resize "900x webp q100").RelPermalink }}
-                                {{ $large := (.Resize "1500x webp q100").RelPermalink }}
-                                {{ $together := (.Resize "1500x webp q100").RelPermalink }}
-                                <img class="fade-to-be2 h-full w-full object-contain object-right-bottom" alt="hero" src="{{$together}}">
-                                {{ end }}
+                  {{ $small := (.Resize "550x webp q100").RelPermalink }}
+                  {{ $medium := (.Resize "900x webp q100").RelPermalink }}
+                  {{ $large := (.Resize "1500x webp q100").RelPermalink }}
+                  {{ $together := (.Resize "1500x webp q100").RelPermalink }}
+                  <img class="fade-to-be2 h-full w-full object-contain object-right-bottom" alt="hero"
+                    src="{{$together}}">
+                  {{ end }}
                 </div>
               </div>
             </div>
-            <div class="absolute inset-0 z-30 opacity-0 transition delay-[200ms] duration-500 ease-in-out group-hover:opacity-100 group-hover:delay-[0ms]">
+            <div
+              class="absolute inset-0 z-30 opacity-0 transition delay-[200ms] duration-500 ease-in-out group-hover:opacity-100 group-hover:delay-[0ms]">
               <div class="absolute inset-0 z-10 flex h-full w-full p-6 lg:p-8">
                 <div class="flex gap-8">
                   <div class="w-1/2">
@@ -324,22 +386,26 @@
                       <div class="rounded-[0.875rem] bg-gradient-to-r from-rose-50 via-yellow-50 to-sky-5 p-0.5">
                         <div class="aspect-wide w-full rounded-xl bg-gray-1100 p-8">
                           {{ with resources.Get "images/avatar.png" }}
-                                {{ $small := (.Resize "550x webp q100").RelPermalink }}
-                                {{ $medium := (.Resize "900x webp q100").RelPermalink }}
-                                {{ $large := (.Resize "1500x webp q100").RelPermalink }}
-                                {{ $together := (.Resize "1500x webp q100").RelPermalink }}
-                                <img class="h-full w-full object-contain transition-transform duration-300 ease-in-out group-hover/card:scale-105" alt="hero" src="{{$together}}">
-                                {{ end }}
+                          {{ $small := (.Resize "550x webp q100").RelPermalink }}
+                          {{ $medium := (.Resize "900x webp q100").RelPermalink }}
+                          {{ $large := (.Resize "1500x webp q100").RelPermalink }}
+                          {{ $together := (.Resize "1500x webp q100").RelPermalink }}
+                          <img
+                            class="h-full w-full object-contain transition-transform duration-300 ease-in-out group-hover/card:scale-105"
+                            alt="hero" src="{{$together}}">
+                          {{ end }}
                         </div>
                       </div>
                     </a>
                   </div>
                   <div class="relative h-full w-1/2 pt-2">
-                    <div class="inline-flex items-center gap-1.5 font-sohne text-10pt font-extrabold uppercase tracking-widest text-gray-900">
+                    <div
+                      class="inline-flex items-center gap-1.5 font-sohne text-10pt font-extrabold uppercase tracking-widest text-gray-900">
                       <span>Client</span>
                     </div>
                     <div class="rich-text mt-2 text-9pt font-normal leading-snug text-gray-400">
-                      <p>The YC and Google backed startup is disrupting the CMS ecosystem with a free and open source alternative that’s more flexible and powerful than the SaaS incumbents.</p>
+                      <p>The YC and Google backed startup is disrupting the CMS ecosystem with a free and open source
+                        alternative that’s more flexible and powerful than the SaaS incumbents.</p>
                     </div>
                   </div>
                 </div>
@@ -359,10 +425,79 @@
         </div>
       </div>
       <!-- Third team memeber end -->
-  
+
+      <div class="w-full scroll-mt-32 lg:w-[calc(50%-3rem)] d:!scroll-mt-48">
+        <div class="group rounded-xl bg-gradient-to-r from-rose-50 via-yellow-50 to-sky-50 p-2">
+          <div class="relative flex justify-between rounded-lg bg-white lg:aspect-wider h-96">
+            <div
+              class="flex justify-between p-6 opacity-100 transition delay-[200ms] duration-500 ease-in-out group-hover:opacity-0 group-hover:delay-[0ms] lg:p-8">
+              <div
+                class="max-w-[10ch] text-4xl font-bold leading-[0.9] tracking-tighter text-black t:text-36pt lg:text-6xl lg:leading-[1.125] d:text-36pt">
+                First Name</div>
+              <div
+                class="pointer-events-none absolute -bottom-6 -right-4 -top-6 aspect-wide h-[calc(100%+3rem)] lg:-bottom-12 lg:-right-12 lg:-top-12 lg:h-[calc(100%+6rem)]">
+                <div class="h-full">
+                  {{ with resources.Get "images/avatar.png" }}
+                  {{ $small := (.Resize "550x webp q100").RelPermalink }}
+                  {{ $medium := (.Resize "900x webp q100").RelPermalink }}
+                  {{ $large := (.Resize "1500x webp q100").RelPermalink }}
+                  {{ $together := (.Resize "1500x webp q100").RelPermalink }}
+                  <img class="fade-to-be2 h-full w-full object-contain object-right-bottom" alt="hero"
+                    src="{{$together}}">
+                  {{ end }}
+                </div>
+              </div>
+            </div>
+            <div
+              class="absolute inset-0 z-30 opacity-0 transition delay-[200ms] duration-500 ease-in-out group-hover:opacity-100 group-hover:delay-[0ms]">
+              <div class="absolute inset-0 z-10 flex h-full w-full p-6 lg:p-8">
+                <div class="flex gap-8">
+                  <div class="w-1/2">
+                    <a class="group/card block w-full" href="#">
+                      <div class="rounded-[0.875rem] bg-gradient-to-r from-rose-50 via-yellow-50 to-sky-5 p-0.5">
+                        <div class="aspect-wide w-full rounded-xl bg-gray-1100 p-8">
+                          {{ with resources.Get "images/avatar.png" }}
+                          {{ $small := (.Resize "550x webp q100").RelPermalink }}
+                          {{ $medium := (.Resize "900x webp q100").RelPermalink }}
+                          {{ $large := (.Resize "1500x webp q100").RelPermalink }}
+                          {{ $together := (.Resize "1500x webp q100").RelPermalink }}
+                          <img
+                            class="h-full w-full object-contain transition-transform duration-300 ease-in-out group-hover/card:scale-105"
+                            alt="hero" src="{{$together}}">
+                          {{ end }}
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="relative h-full w-1/2 pt-2">
+                    <div
+                      class="inline-flex items-center gap-1.5 font-sohne text-10pt font-extrabold uppercase tracking-widest text-gray-900">
+                      <span>Client</span>
+                    </div>
+                    <div class="rich-text mt-2 text-9pt font-normal leading-snug text-gray-400">
+                      <p>The YC and Google backed startup is disrupting the CMS ecosystem with a free and open source
+                        alternative that’s more flexible and powerful than the SaaS incumbents.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- <div class="absolute bottom-0 left-0 z-50 flex gap-6 p-6 lg:p-8">
+              <div class="group relative inline-flex flex-shrink-0">
+                <div class="absolute inset-0 flex h-full w-full max-w-full">
+                  <div class="squircle h-full w-full bg-gray-900"></div>
+                </div>
+                <div class="bg-gray-900 text-white squircle group/button inline-block border-px border-transparent transition duration-300 ease-in-out hover:scale-105 cursor-pointer h-9">
+                  <a class="inline-flex flex-shrink-0 items-center font-sohne font-semibold leading-none gap-1.5 px-2.5 text-12pt h-9" href="/project/payload"></a>
+                </div>
+              </div>
+            </div> -->
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-  
+
 </section>
 
 
