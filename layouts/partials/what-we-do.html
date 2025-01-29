@@ -4,10 +4,30 @@
       <div class="lg:mx-auto lg:grid lg:max-w-7xl lg:grid-cols-2 lg:items-center lg:gap-24 lg:px-8">
         <div class="relative sm:py-8 lg:py-0">
           <div class="relative max-w-md px-4 py-6 mx-auto sm:max-w-3xl sm:px-6 lg:max-w-none lg:px-0 lg:py-20">
-            <!-- Testimonial card-->
-            <div class="relative flex  justify-center overflow-hidden">
-              <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
-<dotlottie-player src="https://lottie.host/7f43ac53-a61e-4705-860a-c426f21335d3/o6BdY2rhfe.lottie" background="transparent" speed="1" class="h-full w-full grayscale hover:grayscale-0" loop autoplay></dotlottie-player>
+            <!-- Image -->
+            <div class="relative flex  justify-center  group">
+
+
+              <div class="relative flex items-center justify-center h-96 w-full grayscale group-hover:grayscale-0">
+                {{ with resources.Get "images/flying-saucer.png" }}
+                {{ $saucer := .RelPermalink }}
+                <img src="{{ $saucer }}" class="absolute -top-20 animate-wiggle animate-bounce h-48 lg:h-64 xl:h-64 z-30" alt="Flying Saucer">
+                {{ end }}
+
+                {{ with resources.Get "images/light.png" }}
+                {{ $lightning := .RelPermalink }}
+                <img src="{{ $lightning }}" class="relative bottom-12 left-6 animate-pulse h-32 z-20" alt="Lightning">
+                {{ end }}
+
+                {{ with resources.Get "images/truck.png" }}
+                {{ $truck := .RelPermalink }}
+                <img src="{{ $truck }}"
+                  class="absolute top-40 md:top-60  animate-wiggle h-48 md:h-64 xl:h-64"
+                  alt="Truck">
+                {{ end }}
+              </div>
+
+
             </div>
           </div>
         </div>
@@ -22,12 +42,14 @@
             </div>
             <h2 class="text-4xl text-dark font-bold mb-4">We tear down walls, bridge gaps, and help you <span
                 class="text-primary rounded-3xl">achieve more.</span> </h2>
-            <p class="text-dark mb-8 leading-8 text-lg">Interested in disrupting the market, getting new customers and disrupting the
+            <p class="text-dark mb-8 leading-8 text-lg">Interested in disrupting the market, getting new customers and
+              disrupting the
               closing sales? <br>
               If yes, you’re in the right place! <br>
 
-              We have a team of experts who know exactly how to bridge the gap between your brand and your ideal clients. <br>
-              
+              We have a team of experts who know exactly how to bridge the gap between your brand and your ideal
+              clients. <br>
+
               We are well versed with assisting brands in landing repeat business – we know how to take you there.
               <br>
               Over the years, we’ve perfected the process of getting leads and made it flexible enough to craft a

@@ -27,6 +27,7 @@
   height: 100%;
   z-index: 9999;
   overflow: hidden;
+  opacity: 100%;
 }
 
 .glightbox-container .gslider {

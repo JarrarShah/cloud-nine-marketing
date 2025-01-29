@@ -420,5 +420,30 @@ EmojiSymbols;
     transform: scaleX(1); 
   }
   
-  
+ /* Apply the custom cursor */
+ *, *:before, *:after {
+   @apply cursor-custom;
+ }
+ 
+ /* Active cursor for specific elements */
+ .active-cursor, 
+ .active-cursor *,
+ html body a, 
+ html body a *, 
+ html body button, 
+ html body button *, 
+ html body input, 
+ html body input *, 
+ html body label, 
+ html body label *, 
+ html body option, 
+ html body option *, 
+ html body select, 
+ html body select *, 
+ html body textarea, 
+ html body textarea * {
+   cursor: url(/images/active-cursor-small.png), auto !important;
+ }
+ 
+ 
   

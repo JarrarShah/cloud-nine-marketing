@@ -12,7 +12,28 @@ image2: "images/3.jpg"
 image3: "images/4.jpeg"
 keywords: "Horse & Farrier, Branding, Signage, Sign Design, Design, interior signage, exterior design"
 categories: ["Signage", "logo design"]
+
+# Additional fields
+bg_hero_image: "images/1.jpeg"
+Title: "Welcome to Horse & Farrier"
+Subtext: "Reimagining branding with a modern touch."
+CTA_link: "https://example.com/contact"
+
+client_name: "Horse & Farrier"
+industry_type: "Hospitality"
+services_provided: ["Branding", "Signage Design", "Logo Design", "Interior & Exterior Design"]
+visit_website_link: "https://horseandfarrier.com"
+
+social_image1: "images/1.jpeg"
+social_image2: "images/1.jpeg"
+
+project: "A complete rebranding effort focused on aligning the Horse & Farrier with modern aesthetics."
+work: "Developed new logo, fresh color schemes, and comprehensive signage solutions."
+process: "Conducted site surveys, created prototypes, and executed the redesign with precision."
+worker_statement: "Our team is proud to have been part of this transformative journey for Horse & Farrier."
+worker_name: "Avatar"
 ---
+
 ## What the Client Wanted
 The Horse & Farrier, Lancaster, needed a complete new overhaul, with new signage scheme, fresh colours and new logo.
 

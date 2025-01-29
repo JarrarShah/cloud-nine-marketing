@@ -9,6 +9,7 @@ module.exports = {
       animation: {
         'infinite-scroll': 'infinite-scroll 25s linear infinite',
         'rotate': 'rotate 30s linear infinite',
+        'wiggle': 'wiggle 1s ease-in-out infinite',
       },
       keyframes: {
         'infinite-scroll': {
@@ -18,7 +19,11 @@ module.exports = {
         'rotate': {
           '0%': { transform: 'perspective(1000px) rotateY(0deg)' },
           '100%': { transform: 'perspective(1000px) rotateY(360deg)' },
-        }
+        },
+        'wiggle': {
+          '0%, 100%': { transform: 'rotate(-3deg)' },
+          '50%': { transform: 'rotate(3deg)' },
+        },
       },
       fontFamily: {
         sans: ['Mukta', ...defaultTheme.fontFamily.sans],
@@ -70,6 +75,10 @@ module.exports = {
           thumb: 'bg-primary', // Color of the scrollbar thumb
           track: 'bg-black', // Color of the scrollbar track
         },
+      },
+      cursor: {
+        'custom': 'url(/images/normal-cursor-small.png), auto',
+        'pointer': 'url(/images/active-cursor-small.png), pointer',
       },
     },
   },

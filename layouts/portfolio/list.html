@@ -112,25 +112,34 @@
             <ul class="flex space-x-6 items-center bg-white border border-2 border-gray-900 px-6 py-3 rounded-full">
                 <!-- "All" Filter -->
                 <li class="flex items-center">
-                    <span class="w-2 h-2   rounded-full mr-2"></span>
+                    <span class="w-2 h-2 rounded-full mr-2"></span>
                     <button onclick="filterSelection('all')"
-                        class="text-sm text-dark hover:text-gray-700 transition-colors ">
+                        class="text-sm text-dark hover:text-gray-700 transition-colors">
                         ALL
                     </button>
                 </li>
-                {{ $categories := slice }}
+                {{ $industryTypes := slice }}
                 {{ range where .Site.Pages "Section" "portfolio" }}
-                {{ range .Params.categories }}
-                {{ if not (in $categories .) }}
-                {{ $categories = $categories | append . }}
+                {{ $industryType := .Params.industry_type }}
+                {{ if $industryType }}
+                {{ if reflect.IsSlice $industryType }}
+                {{ range $industryType }}
+                {{ if not (in $industryTypes .) }}
+                {{ $industryTypes = $industryTypes | append . }}
+                {{ end }}
+                {{ end }}
+                {{ else }}
+                {{ if not (in $industryTypes $industryType) }}
+                {{ $industryTypes = $industryTypes | append $industryType }}
                 {{ end }}
                 {{ end }}
                 {{ end }}
-                {{ range $categories }}
+                {{ end }}
+                {{ range $industryTypes }}
                 <li class="flex items-center">
                     <span class="w-2 h-2 bg-primary rounded-full mr-2"></span>
                     <button onclick="filterSelection('{{ lower . | urlize }}')"
-                        class="text-sm text-dark hover:text-gray-600 transition-colors">
+                        class="text-xs font-semibold text-dark hover:text-gray-600 transition-colors">
                         {{ . | upper }}
                     </button>
                 </li>
@@ -139,9 +148,15 @@
         </div>
         <!-- Portfolio Grid -->
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {{ range .Pages }}
-            <a class="group flex flex-col portfolio-item {{ range .Params.categories }}{{ lower . | urlize }} {{ end }}"
-                href="{{.RelPermalink}}">
+            {{ range where .Site.Pages "Section" "portfolio" }}
+            {{ $industryTypes := .Params.industry_type }}
+            {{ if reflect.IsSlice $industryTypes }}
+            {{ $industryTypes = delimit (apply $industryTypes "lower" "." "urlize") " " }}
+            {{ else }}
+            {{ $industryTypes = lower $industryTypes | urlize }}
+            {{ end }}
+            <a class="group flex flex-col portfolio-item" data-industry="{{ $industryTypes }}"
+                href="{{ .RelPermalink }}">
                 <div class="relative rounded-lg overflow-hidden">
                     {{ with .Resources.GetMatch .Params.featuredImage }}
                     {{ $large := (.Resize "2000x webp q100").RelPermalink }}
@@ -171,6 +186,37 @@
         </div>
     </div>
 </section>
+
+<!-- JavaScript for Filtering -->
+<script>
+    function filterSelection(industry) {
+        const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+        portfolioItems.forEach(item => {
+            const itemIndustries = item.getAttribute('data-industry').split(' ');
+            if (industry === 'all' || itemIndustries.includes(industry)) {
+                item.style.display = 'block';
+            } else {
+                item.style.display = 'none';
+            }
+        });
+    }
+
+    // Initialize by showing all items
+    filterSelection('all');
+</script>
+
+<!-- Optional CSS for Smooth Transitions -->
+<style>
+    .portfolio-item {
+        transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    .portfolio-item[data-industry] {
+        display: block;
+        /* Default display */
+    }
+</style>
 
 
 {{ end }}

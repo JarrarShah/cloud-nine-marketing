@@ -1,163 +1,802 @@
 {{define "main"}}
 
-<section class="relative md:pb-24 md:pt-12 pb-16 pt-6">
+<section class="relative md:pb-24 md:pt-12 pb-0 pt-6">
+  <div class="w-full bg-center bg-cover" style="background-image: url({{ .Params.bg_hero_image }});">
+    <div class="flex items-center justify-center w-full h-full bg-gray-900 bg-opacity-50 py-12">
+      <div class="text-center">
+        <div class="container px-4 mx-auto">
+          <div class="max-w-4xl mx-auto text-center">
+            <span
+              class="inline-flex rounded-xl justify-between items-center py-1 px-4 mb-7 text-sm border border-2 border-white font-medium text-white">Starting
+              a venture?</span>
+            <h1
+              class="mb-4 text-3xl max-w-7xl mx-auto font-medium tracking-tight leading-none text-white md:text-4xl lg:text-5xl">
+              {{ .Title }}</span>
 
-  <div class="lg:container mx-auto">
-    <nav class="flex px-6 mb-6" aria-label="Breadcrumb">
-      <ol class="inline-flex items-center space-x-1 md:space-x-3">
-        {{ range $index, $item := .Ancestors.Reverse }}
-        {{ with $item }}
-        <li class="inline-flex items-center">
-          <a href="{{ .RelPermalink}}"
-            class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-primary dark:text-gray-400 dark:hover:text-white">
-            {{ if lt $index 1}}
-            <svg aria-hidden="true" class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z">
-              </path>
-            </svg>
-            {{ else }}
-            <svg aria-hidden="true" class="w-6 h-6 text-gray-400" fill="currentColor" viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd"
-                d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                clip-rule="evenodd"></path>
-            </svg>
-            {{ end }}
-            {{ .Title }}
-          </a>
-        </li>
-        {{ end }}
-        {{- end }}
-        <li aria-current="page">
-          <div class="flex items-center">
-            <svg aria-hidden="true" class="w-6 h-6 text-gray-400" fill="currentColor" viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd"
-                d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                clip-rule="evenodd"></path>
-            </svg>
-            <span class="ml-1 text-sm font-medium text-gray-500 md:ml-2 dark:text-gray-400">{{ .Title
-              }}</span>
+            </h1>
+            <p class="max-w-3xl mx-auto mb-10 text-lg text-gray-300">
+              {{ .Params.Subtext }}
+            </p>
+            <a class="inline-block w-full md:w-auto mb-4 md:mr-6 py-5 px-8 text-sm font-bold uppercase border-2 border-transparent bg-gray-200 rounded hover:bg-gray-100 text-gray-800 transition duration-200"
+              href="{{ .Params.CTA_link }}">start your free trial</a>
           </div>
-        </li>
-      </ol>
-    </nav>
-    <div class="grid md:grid-cols-12 grid-cols-1 gap-[30px]">
-      <div class="lg:col-span-8 md:col-span-6">
-        <h1 class="my-3 text-4xl md:text-5xl xl:text-5xl font-bold tracking-tight mb-12 mx-auto text-center">{{ .Title
-          }}</h1>
-          <div class="px-6 border-r">
-            <div class="flex flex-col md:flex-row -mx-4">
-              <div class="md:flex-1 px-4 w-full">
-                <div x-data="{ image: 1 }" x-cloak>
-                  <div class="h-80 rounded-lg bg-gray-100 mb-4">
-                    <template x-for="i in 4">
-                      <div x-show="image === i" class="h-80 rounded-lg bg-cover bg-no-repeat"
-                        :style="'background-image: url(' + getImageUrl(i) + ');'">
-                      </div>
-                    </template>
-                  </div>
-                  <div class="flex -mx-2 mb-4">
-                    <template x-for="i in 4">
-                      <div class="flex-1 px-2">
-                        <button x-on:click="image = i"
-                          :class="{ 'ring-2 ring-indigo-300 ring-inset': image === i }"
-                          class="focus:outline-none w-full rounded-lg h-24 md:h-32 bg-gray-100 flex items-center justify-center image-selector bg-cover bg-no-repeat"
-                          :style="'background-image: url(' + getImageUrl(i) + ');'">
-                        </button>
-                      </div>
-                    </template>
-                  </div>
-                </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="container mx-auto p-6 md:flex md:gap-12">
+  <!-- Left Column -->
+  <div class="md:w-1/2  text-black dark:text-white md:sticky md:top-12 self-start md:pl-32">
+    <div class="container mx-auto">
+      <div class="mb-4 pt-12">
+        <h4 class="text-2xl font-bold">Client</h4>
+        <p>{{ .Params.client_name }}</p>
+      </div>
+      <div class="mb-4">
+        <h4 class="text-2xl font-bold">Industry</h4>
+        <p>{{ .Params.industry_type }}</p>
+      </div>
+      <div class="mb-4 space-y-6">
+        <h4 class="text-2xl font-bold">Services</h4>
+        {{ range $elem_index, $elem_val := (.GetTerms "categories") }}
+        <a href="{{.RelPermalink}}" class="uppercase pb-4 pr-4 mt-12"><span
+            class="inline-flex rounded-xl justify-between items-center py-1 px-4 mb-7 text-sm border border-2 border-black font-medium text-dark">{{
+            .LinkTitle }}</span></a>
+        {{- end -}}
+      </div>
+      {{ if .Params.visit_website_link }}
+      <div>
+        <a href="{{ .Params.visit_website_link }}"
+          class="inline-block font-bold bg-white text-black border-2 border-gray-900 px-4 py-2 rounded shadow-md">
+          <div class="flex items-center">
+            <svg class="h-6 w-6 mr-2" stroke-width="2.2" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000"><path d="M14 11.9976C14 9.5059 11.683 7 8.85714 7C8.52241 7 7.41904 7.00001 7.14286 7.00001C4.30254 7.00001 2 9.23752 2 11.9976C2 14.376 3.70973 16.3664 6 16.8714C6.36756 16.9525 6.75006 16.9952 7.14286 16.9952" stroke="#000000" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"></path><path d="M10 11.9976C10 14.4893 12.317 16.9952 15.1429 16.9952C15.4776 16.9952 16.581 16.9952 16.8571 16.9952C19.6975 16.9952 22 14.7577 22 11.9976C22 9.6192 20.2903 7.62884 18 7.12383C17.6324 7.04278 17.2499 6.99999 16.8571 6.99999" stroke="#000000" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"></path></svg>              Visit website
+          </div>
+        </a>
+      </div>
+      {{ end }}
+
+    </div>
+  </div>
+
+  <!-- Right Column -->
+  <div class="mt-6 md:mt-0 md:w-2/3">
+    <div class="container mx-auto space-y-6">
+      <div>
+        <h3 class="text-4xl font-semibold text-black uppercase">Project</h3>
+        <p class="text-lg text-black">
+          {{ .Params.project }}
+        </p>
+        <div class="container mx-auto">
+          <div class="flex flex-col items-center md:flex-row gap-2 my-8">
+            <div class="flex flex-1 flex-col">
+              <div class="flex flex-1 flex-col">
+                <!-- img_01 (main image) -->
+                <a href="{{ .Params.image1 }}" class="glightbox-hero hover:pointer" rel="noopener noreferrer">
+                  <img class="object-cover h-full w-full rounded-lg" src="{{ .Params.image1 }}" alt="Main Image">
+                </a>
               </div>
             </div>
-          
-            <article class="prose dark:prose-invert lg:prose-xl mt-6">
-              {{ .Content }}
-            </article>
-          </div>
-          <script>
-            function getImageUrl(index) {
-              // Define an array containing the image URLs corresponding to featuredImage, image1, image2, image3
-              const imageUrls = [
-                '{{ .Params.featuredImage }}',
-                '{{ .Params.image1 }}',
-                '{{ .Params.image2 }}',
-                '{{ .Params.image3 }}',
-              ];
-          
-              // Return the URL of the image based on the index (1-based)
-              return imageUrls[index - 1];
-            }
-          </script>       
-      </div>
-
-      <div class="px-6 lg:px-0 lg:col-span-4 md:col-span-6">
-        <div class="sticky top-20">
-          <div class="w-full bg-white shadow flex flex-col my-4 p-6">
-            <p class="text-xl font-semibold pb-5">Search Content</p>
-            <form action="{{ `search` | relURL }}" class="flex flex-row lg:flex-row">
-              <input type="search" name="q" id="search-query"
-                class="w-full m-0 -mr-0.5 block px-4 py-2 text-gray-700 bg-white border rounded-l-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-amber-400 dark:focus:border-amber-300 focus:outline-none focus:ring focus:ring-opacity-40 focus:ring-amber-300"
-                placeholder="Search for..." placeholder="Search" aria-label="Search" aria-describedby="button-addon1" />
-
-              <!--Search button-->
-              <button
-                class="relative z-[2] flex items-center rounded-r px-6 py-2.5 text-xs bg-secondary font-medium uppercase leading-tight text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:bg-primary focus:shadow-lg focus:outline-none focus:ring-0 active:bg-amber-500 active:shadow-lg"
-               type="submit" id="button-addon1" data-te-ripple-init
-                data-te-ripple-color="light">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5">
-                  <path fill-rule="evenodd"
-                    d="M9 3.5a5.5 5.5 0 100 11 5.5 5.5 0 000-11zM2 9a7 7 0 1112.452 4.391l3.328 3.329a.75.75 0 11-1.06 1.06l-3.329-3.328A7 7 0 012 9z"
-                    clip-rule="evenodd" />
-                </svg>
-              </button>
-            </form>
-          </div>
-
-          <!-- component -->
-          <div class="h-screen px-4 py-8 bg-white dark:bg-gray-800 dark:border-gray-600 overflow-auto">
-
-            <h3 class="text-3xl font-semibold text-gray-800 dark:text-white">Other Projects</h3>
-
-            <div class="flex flex-col justify-between flex-1 mt-6">
-              <nav>
-
-                {{ $related := (where .Site.RegularPages "Section" "portfolio") }}
-                {{ range $index, $item := $related }}
-                {{ with $item }}
-                <div class="flex items-center mt-5">
-                  {{ if .Resources.GetMatch (.Params.featuredImage) }}
-                  {{ $postimage := .Resources.GetMatch (.Params.featuredImage) }}
-                  {{ $small := ($postimage.Resize "200x webp q90").RelPermalink }}
-                  <a href="{{ .RelPermalink }}" class="">
-                    <img src="{{ $small }}" class="h-16 rounded-md shadow dark:shadow-gray-800" alt="{{ .Title }}" />
-                  </a>
-                  {{ end }}
-                  <div class="mx-3">
-                    <a href="{{ .RelPermalink }}" class="font-semibold hover:text-primary">{{ .Title
-                      }}</a>
-
-                  </div>
-                </div>
-                {{ if lt $index ( len $related )}}
-                <hr class="mt-5" />
-                {{ end }}
-                {{ end }}
-                {{ end }}
-
-
-              </nav>
-
+            <div class="flex flex-1">
+              <div class="grid grid-cols-2 gap-2">
+                <!-- img_02 -->
+                <a href="{{ .Params.image2 }}" class="glightbox-hero hover:pointer" rel="noopener noreferrer">
+                  <img class="object-cover h-64 w-full rounded-lg hover:pointer" src="{{ .Params.image2 }}"
+                    alt="Image 2">
+                </a>
+                <!-- img_03 -->
+                <a href="{{ .Params.image3 }}" class="glightbox-hero hover:pointer" rel="noopener noreferrer">
+                  <img class="object-cover h-64 w-full rounded-lg" src="{{ .Params.image3 }}" alt="Image 3">
+                </a>
+                <!-- img_04 -->
+                <a href="{{ .Params.image4 }}" class="glightbox-hero hover:pointer" rel="noopener noreferrer">
+                  <img class="object-cover h-64 w-full rounded-lg" src="{{ .Params.image4 }}" alt="Image 4">
+                </a>
+                <!-- img_05 -->
+                <a href="{{ .Params.image5 }}" class="glightbox-hero hover:pointer" rel="noopener noreferrer">
+                  <img class="object-cover h-64 w-full rounded-lg" src="{{ .Params.image5 }}" alt="Image 5">
+                </a>
+              </div>
             </div>
           </div>
         </div>
       </div>
+      <div>
+        <div class="mx-auto w-full container space-y-12 l:space-y-16 d:space-y-24">
+          <div>
+            <div
+              class="inline-flex items-center gap-1.5 font-sohne text-2xl font-extrabold uppercase tracking-widest text-black">
+              <span>Project</span>
+              <div class="h-3 w-3">
+                <div
+                  class="relative top-px text-dark [&amp;&gt;*&gt;*]:!h-3 [&amp;&gt;*&gt;*]:!w-3 [&amp;&gt;*]:!contents">
+                </div>
+              </div>
+            </div>
+            <div class="relative l:mb-0&quot; mb-6">
+              <div
+                class="rich-text relative z-10 space-y-4 text-center font-sohne text-lg [text-wrap:balance] l:!block l:text-left l:text-12pt l:[text-wrap:wrap] font-light leading-normal text-dark line-clamp-3 group-[.is-modal]:line-clamp-5 has-clamp l:line-clamp-none mt-4 !text-left">
+                <p>{{ .Params.project }}</p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div
+              class="inline-flex items-center gap-1.5 font-sohne text-2xl font-extrabold uppercase tracking-widest text-black">
+              <span>Logo Design</span>
+              <div class="max-w-3xl mx-auto ml-4">
+                <div class="relative top-px text-lg text-dark [&amp;&gt;*&gt;*]:!h-3 [&amp;&gt;*&gt;*]:!w-3"></div>
+              </div>
+            </div>
+            <div
+              class="rounded-xl {{ .Params.logo_section_bg }} border border-gray-900 bg-gray-1100 p-4 t:p-8 l:-mx-4 l:p-16 relative mt-4 flex aspect-wider items-center !p-0">
+              <div class="relative flex h-full max-h-full w-full max-w-full !p-4 t:!p-8 l:!p-16">
+                <div class="h-full w-full !object-contain text-2xl"> 
+                  <img src="{{.Params.logo_design }}" class="mx-auto {{ .Params.logo_bg }} " alt="">
+                  <img src="{{.Params.logo_design2 }}" class="mx-auto " alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div
+              class="inline-flex items-center gap-1.5 font-sohne text-2xl font-extrabold uppercase tracking-widest text-black">
+              <span>Work</span>
+              <div class="max-w-3xl mx-auto ml-4">
+                <div class="relative top-px text-lg text-dark [&amp;&gt;*&gt;*]:!h-3 [&amp;&gt;*&gt;*]:!w-3"></div>
+              </div>
+            </div>
+            <div
+              class="rounded-xl border border-gray-900 bg-gray-1100 p-4 t:p-8 l:-mx-4 l:p-16 relative mt-4 flex aspect-wider items-center !p-0">
+              <div class="relative flex h-full max-h-full w-full max-w-full !p-4 t:!p-8 l:!p-16">
+                <div class="h-full w-full !object-contain text-2xl"> {{.Params.work }}</div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <!-- <div class="inline-flex items-center gap-1.5 font-sohne text-2xl font-extrabold uppercase tracking-widest text-black">
+                  <span>Process</span>
+              </div> -->
+            <!-- <div class="rounded-xl border border-gray-900 bg-gray-1100 p-4 t:p-8 l:-mx-4 l:p-16 relative mt-4">
+                  <div class="flex flex-col items-center justify-center gap-8 px-4 t:px-8 l:gap-16">
+                      <div>
+                          <img src="https://cdn.sanity.io/images/udskqtz4/production/1b7483d9983888ee72557455ba1f53b6e6cf6163-1247x300.png" alt="" />
+                      </div>
+                      <div>
+                          <img src="https://cdn.sanity.io/images/udskqtz4/production/b6b8a9fe5aef9a926c37389ffa0e9e0567e06ac2-1240x300.png" alt="" />
+                      </div>
+                  </div>
+              </div> -->
+          </div>
+          <div class="justify-center gap-x-6 items-center flex-col md:flex-row flex gap-y-6 mx-auto">
+            <div class="h-64 w-64 md:h-96 w-96">
+              <img src="{{ .Params.social_image1 }}" class="object-cover mx-auto h-full" alt="">
+            </div>
+            <!-- Centered iPhone -->
+            <div>
+              <div
+                class="relative w-72 h-[600px] rounded-[45px] shadow-[0_0_2px_2px_rgba(255,255,255,0.1)] border-8 border-zinc-900 ml-1">
+                <!-- Dynamic Island -->
+                <div
+                  class="absolute top-2 left-1/2 transform -translate-x-1/2 w-[90px] h-[22px] bg-zinc-900 rounded-full z-20">
+                </div>
 
+                <div
+                  class="absolute -inset-[1px] border-[3px] border-zinc-700 border-opacity-40 rounded-[37px] pointer-events-none">
+                </div>
+
+
+                <!-- Screen Content -->
+                <div
+                  class="relative w-full h-full  rounded-[37px] overflow-hidden flex items-center justify-center  bg-zinc-900/10">
+                  <img src="{{ .Params.iPhone_image }}" class="object-cover h-full" alt="">
+                  <div
+                    class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-24 w-12 bg-zinc-600 blur-[60px]">
+
+                  </div>
+                </div>
+
+                <!-- Left Side Buttons -->
+                <!-- Silent Switch -->
+                <div class="absolute left-[-12px] top-20 w-[6px] h-8 bg-zinc-900 rounded-l-md shadow-md"></div>
+
+                <!-- Volume Up -->
+                <div class="absolute left-[-12px] top-36 w-[6px] h-12 bg-zinc-900 rounded-l-md shadow-md"></div>
+
+                <!-- Volume Down -->
+                <div class="absolute left-[-12px] top-52 w-[6px] h-12 bg-zinc-900 rounded-l-md shadow-md"></div>
+
+                <!-- Right Side Button (Power) -->
+                <div class="absolute right-[-12px] top-36 w-[6px] h-16 bg-zinc-900 rounded-r-md shadow-md"></div>
+              </div>
+            </div>
+            <!-- Iphone End -->
+            <div class="h-64 w-64 md:h-96 w-96">
+              <img src="{{ .Params.social_image2 }}" class="object-cover mx-auto h-full" alt="">
+            </div>
+          </div>
+
+          {{ if .Params.branding_image }}
+          <div>
+            <div
+              class="inline-flex items-center gap-1.5 font-sohne text-2xl font-extrabold uppercase tracking-widest text-black">
+              <span>Branding</span>
+              <div class="h-3 w-3">
+                <div
+                  class="relative top-px text-dark [&amp;&gt;*&gt;*]:!h-3 [&amp;&gt;*&gt;*]:!w-3 [&amp;&gt;*]:!contents">
+                </div>
+              </div>
+            </div>
+            <div
+              class="relative z-10 mt-4 space-y-4 font-sohne text-lg font-light leading-normal text-dark [text-wrap:balance] l:!block l:text-left l:text-12pt l:[text-wrap:wrap]">
+              <p>{{ .Params.branding_details }}</p>
+            </div>
+          </div>
+          <div class="flex justify-center md:justify-between flex-col md:flex-row">
+            <div class="relative">
+              <img src="{{ .Params.branding_image }}" class="mx-auto h-full md:h-96 w-auto" alt="">
+            </div>
+            <div class="relative">
+              <img src="{{ .Params.branding_image2 }}" class="mx-auto h-full md:h-96 w-auto" alt="">
+            </div>
+          </div>
+
+          {{ end }}
+
+          <!-- Macbook Start -->
+          {{ if .Params.website_image }}
+          <div>
+            <div
+              class="inline-flex items-center gap-1.5 font-sohne text-2xl font-extrabold uppercase tracking-widest text-black">
+              <span>Website</span>
+              <div class="h-3 w-3">
+                <div
+                  class="relative top-px text-dark [&amp;&gt;*&gt;*]:!h-3 [&amp;&gt;*&gt;*]:!w-3 [&amp;&gt;*]:!contents">
+                </div>
+              </div>
+            </div>
+            <div
+              class="relative z-10 mt-4 space-y-4 font-sohne text-lg font-light leading-normal text-dark [text-wrap:balance] l:!block l:text-left l:text-12pt l:[text-wrap:wrap]">
+              <p>{{ .Params.website_details }}</p>
+            </div>
+          </div>
+          <div class="overflow-hidden">
+            <div class="w-[608px] [perspective:2000px] mx-auto">
+              <div
+                class="relative w-full h-[420px] [transform:rotateX(73deg)] [transform-style:preserve-3d] origin-bottom">
+                <div
+                  class="absolute overflow-hidden aspect-video left-0 h-[342px] -top-[343px] bg-black border-[2px] border-[#404041] rounded-md [transform:rotateX(-70deg)] origin-bottom">
+                  <div
+                    class="absolute bottom-0 w-full left-0 bg-zinc-900 h-3 flex items-center justify-center text-zinc-200 text-[6px] font-thin">
+                    MacBook Air
+                  </div>
+                  <div class="absolute inset-1 mb-4 mx-1 mt-1 rounded-[3px] overflow-hidden">
+                    <div class="relative w-full h-full  overflow-hidden flex items-center justify-center" style="background-image: url('{{ .Params.website_image }}');
+                           background-repeat: no-repeat;
+                           background-size: cover;"> <svg class="text-slate-100 h-[66px]"
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path fill="currentColor"
+                          d="M17.05 20.28c-.98.95-2.05.8-3.08.35c-1.09-.46-2.09-.48-3.24 0c-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8c1.18-.24 2.31-.93 3.57-.84c1.51.12 2.65.72 3.4 1.8c-3.12 1.87-2.38 5.98.48 7.13c-.57 1.5-1.31 2.99-2.54 4.09zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25c.29 2.58-2.34 4.5-3.74 4.25" />
+                      </svg>
+                      <div
+                        class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-12 w-48 bg-slate-500 blur-[80px]">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="w-[608px] h-[420px] bg-[#6F7072] rounded-[16px] border-b border-zinc-800 flex flex-col pb-3 items-start overflow-hidden">
+                  <div class="absolute inset-0 mt-3 bg-[#646464] w-full h-full -z-10 rounded-[28px]"></div>
+                  <div
+                    class="absolute bottom-[8px] left-[241px] h-[8px] bg-zinc-700/50 w-[126px] rounded-t-full -mb-4 [transform:rotateX(210deg)]">
+                  </div>
+                  <div class="h-[6.94%] w-full relative">
+                    <div class="absolute top-0 left-1/2 -translate-x-1/2 h-2 w-[75%] flex items-center">
+                      <div class="w-[10%] bg-gradient-to-b from-black via-neutral-700 to-black h-full rounded-bl-sm">
+                      </div>
+                      <div class="flex-grow bg-gradient-to-b from-black via-black to-zinc-700 h-full"></div>
+                      <div class="w-[10%] bg-gradient-to-b from-black via-neutral-700 to-black h-full rounded-br-sm">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="h-[50.42%] w-full relative flex">
+                    <div class="my-[6px] w-[4.07%] mx-[2px]" style="background-image: url('');
+                              background-repeat: repeat;
+                              background-size: 3px 3px;">
+                    </div>
+                    <div
+                      class="w-[91.86%] rounded-md border-neutral-600/60 border-opacity-70 border relative overflow-hidden flex flex-col p-[5px]">
+                      <div
+                        class="absolute left-0 top-0 w-[2px] h-full bg-gradient-to-r from-neutral-600/20 via-neutral-800/10 to-transparent">
+                      </div>
+                      <div
+                        class="absolute right-0 top-0 w-[2px] h-full bg-gradient-to-l from-neutral-600/20 via-neutral-800/10 to-transparent">
+                      </div>
+                      <div
+                        class="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-t from-neutral-600/20 via-neutral-800/10 to-transparent">
+                      </div>
+
+                      <!-- Function keys row -->
+                      <div class="h-[10.03%] mb-[.6%] flex items-center gap-x-[3px] w-full">
+                        <div
+                          class="bg-gradient-to-t from-black via-black to-zinc-900 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_2px_0_rgba(0,0,0,0.3)] h-full rounded-[4px] flex-1 flex items-center justify-center text-[8px] text-neutral-400">
+                          esc</div>
+                        <div
+                          class="bg-gradient-to-t from-black via-black to-zinc-900 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_2px_0_rgba(0,0,0,0.3)] h-full rounded-[4px] flex-1 flex items-center justify-center text-[8px] text-neutral-400">
+                          F1</div>
+                        <div
+                          class="bg-gradient-to-t from-black via-black to-zinc-900 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_2px_0_rgba(0,0,0,0.3)] h-full rounded-[4px] flex-1 flex items-center justify-center text-[8px] text-neutral-400">
+                          F2</div>
+                        <div
+                          class="bg-gradient-to-t from-black via-black to-zinc-900 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_2px_0_rgba(0,0,0,0.3)] h-full rounded-[4px] flex-1 flex items-center justify-center text-[8px] text-neutral-400">
+                          F3</div>
+                        <div
+                          class="bg-gradient-to-t from-black via-black to-zinc-900 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_2px_0_rgba(0,0,0,0.3)] h-full rounded-[4px] flex-1 flex items-center justify-center text-[8px] text-neutral-400">
+                          F4</div>
+                        <div
+                          class="bg-gradient-to-t from-black via-black to-zinc-900 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_2px_0_rgba(0,0,0,0.3)] h-full rounded-[4px] flex-1 flex items-center justify-center text-[8px] text-neutral-400">
+                          F5</div>
+                        <div
+                          class="bg-gradient-to-t from-black via-black to-zinc-900 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_2px_0_rgba(0,0,0,0.3)] h-full rounded-[4px] flex-1 flex items-center justify-center text-[8px] text-neutral-400">
+                          F6</div>
+                        <div
+                          class="bg-gradient-to-t from-black via-black to-zinc-900 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_2px_0_rgba(0,0,0,0.3)] h-full rounded-[4px] flex-1 flex items-center justify-center text-[8px] text-neutral-400">
+                          F7</div>
+                        <div
+                          class="bg-gradient-to-t from-black via-black to-zinc-900 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_2px_0_rgba(0,0,0,0.3)] h-full rounded-[4px] flex-1 flex items-center justify-center text-[8px] text-neutral-400">
+                          F8</div>
+                        <div
+                          class="bg-gradient-to-t from-black via-black to-zinc-900 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_2px_0_rgba(0,0,0,0.3)] h-full rounded-[4px] flex-1 flex items-center justify-center text-[8px] text-neutral-400">
+                          F9</div>
+                        <div
+                          class="bg-gradient-to-t from-black via-black to-zinc-900 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_2px_0_rgba(0,0,0,0.3)] h-full rounded-[4px] flex-1 flex items-center justify-center text-[8px] text-neutral-400">
+                          F10</div>
+                        <div
+                          class="bg-gradient-to-t from-black via-black to-zinc-900 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_2px_0_rgba(0,0,0,0.3)] h-full rounded-[4px] flex-1 flex items-center justify-center text-[8px] text-neutral-400">
+                          F11</div>
+                        <div
+                          class="bg-gradient-to-t from-black via-black to-zinc-900 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_2px_0_rgba(0,0,0,0.3)] h-full rounded-[4px] flex-1 flex items-center justify-center text-[8px] text-neutral-400">
+                          F12</div>
+                        <div
+                          class="bg-gradient-to-t from-black via-black to-zinc-900 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_2px_0_rgba(0,0,0,0.3)] aspect-square h-full rounded-[4px]">
+                        </div>
+                      </div>
+
+                      <!-- Number row -->
+                      <div class="h-[16.62%] mb-[.6%] flex items-center space-x-[2px] w-full">
+                        <div
+                          class="bg-gradient-to-t from-black via-black to-zinc-900 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_2px_0_rgba(0,0,0,0.3)] h-full rounded-[4px] flex-1 flex flex-col items-center justify-center text-[8px] text-neutral-400">
+                          <div>~</div>
+                          <div>`</div>
+                        </div>
+                        <div
+                          class="bg-gradient-to-t from-black via-black to-zinc-900 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_2px_0_rgba(0,0,0,0.3)] h-full rounded-[4px] flex-1 flex flex-col items-center justify-center text-[8px] text-neutral-400">
+                          <div>!</div>
+                          <div>1</div>
+                        </div>
+                        <div
+                          class="bg-gradient-to-t from-black via-black to-zinc-900 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_2px_0_rgba(0,0,0,0.3)] h-full rounded-[4px] flex-1 flex flex-col items-center justify-center text-[8px] text-neutral-400">
+                          <div>@</div>
+                          <div>2</div>
+                        </div>
+                        <div
+                          class="bg-gradient-to-t from-black via-black to-zinc-900 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_2px_0_rgba(0,0,0,0.3)] h-full rounded-[4px] flex-1 flex flex-col items-center justify-center text-[8px] text-neutral-400">
+                          <div>#</div>
+                          <div>3</div>
+                        </div>
+                        <div
+                          class="bg-gradient-to-t from-black via-black to-zinc-900 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_2px_0_rgba(0,0,0,0.3)] h-full rounded-[4px] flex-1 flex flex-col items-center justify-center text-[8px] text-neutral-400">
+                          <div>$</div>
+                          <div>4</div>
+                        </div>
+                        <div
+                          class="bg-gradient-to-t from-black via-black to-zinc-900 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_2px_0_rgba(0,0,0,0.3)] h-full rounded-[4px] flex-1 flex flex-col items-center justify-center text-[8px] text-neutral-400">
+                          <div>%</div>
+                          <div>5</div>
+                        </div>
+                        <div
+                          class="bg-gradient-to-t from-black via-black to-zinc-900 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_2px_0_rgba(0,0,0,0.3)] h-full rounded-[4px] flex-1 flex flex-col items-center justify-center text-[8px] text-neutral-400">
+                          <div>^</div>
+                          <div>6</div>
+                        </div>
+                        <div
+                          class="bg-gradient-to-t from-black via-black to-zinc-900 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_2px_0_rgba(0,0,0,0.3)] h-full rounded-[4px] flex-1 flex flex-col items-center justify-center text-[8px] text-neutral-400">
+                          <div>&</div>
+                          <div>7</div>
+                        </div>
+                        <div
+                          class="bg-gradient-to-t from-black via-black to-zinc-900 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_2px_0_rgba(0,0,0,0.3)] h-full rounded-[4px] flex-1 flex flex-col items-center justify-center text-[8px] text-neutral-400">
+                          <div>*</div>
+                          <div>8</div>
+                        </div>
+                        <div
+                          class="bg-gradient-to-t from-black via-black to-zinc-900 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_2px_0_rgba(0,0,0,0.3)] h-full rounded-[4px] flex-1 flex flex-col items-center justify-center text-[8px] text-neutral-400">
+                          <div>(</div>
+                          <div>9</div>
+                        </div>
+                        <div
+                          class="bg-gradient-to-t from-black via-black to-zinc-900 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_2px_0_rgba(0,0,0,0.3)] h-full rounded-[4px] flex-1 flex flex-col items-center justify-center text-[8px] text-neutral-400">
+                          <div>)</div>
+                          <div>0</div>
+                        </div>
+                        <div
+                          class="bg-gradient-to-t from-black via-black to-zinc-900 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_2px_0_rgba(0,0,0,0.3)] h-full rounded-[4px] flex-1 flex flex-col items-center justify-center text-[8px] text-neutral-400">
+                          <div>_</div>
+                          <div>-</div>
+                        </div>
+                        <div
+                          class="bg-gradient-to-t from-black via-black to-zinc-900 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_2px_0_rgba(0,0,0,0.3)] h-full rounded-[4px] flex-1 flex flex-col items-center justify-center text-[8px] text-neutral-400">
+                          <div>+</div>
+                          <div>=</div>
+                        </div>
+                        <div
+                          class="bg-gradient-to-t from-black via-black to-zinc-900 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_2px_0_rgba(0,0,0,0.3)] h-full rounded-[4px] flex-[1.3] flex items-end justify-end p-1 text-[8px] text-neutral-400">
+                          delete
+                        </div>
+                      </div>
+                      <!-- QWERTY row -->
+                      <div class="h-[16.62%] mb-[.6%] flex items-center space-x-[2px] w-full">
+                        <div
+                          class="bg-gradient-to-t from-black via-black to-zinc-900 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_2px_0_rgba(0,0,0,0.3)] h-full rounded-[4px] flex-[1.31] flex items-end justify-start p-1 text-[8px] text-neutral-400">
+                          tab
+                        </div>
+                        <div
+                          class="bg-gradient-to-t from-black via-black to-zinc-900 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_2px_0_rgba(0,0,0,0.3)] h-full rounded-[4px] flex-1 flex flex-col items-center justify-center text-[8px] text-neutral-400">
+                          <div></div>
+                          <div>Q</div>
+                        </div>
+                        <div
+                          class="bg-gradient-to-t from-black via-black to-zinc-900 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_2px_0_rgba(0,0,0,0.3)] h-full rounded-[4px] flex-1 flex flex-col items-center justify-center text-[8px] text-neutral-400">
+                          <div></div>
+                          <div>W</div>
+                        </div>
+                        <div
+                          class="bg-gradient-to-t from-black via-black to-zinc-900 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_2px_0_rgba(0,0,0,0.3)] h-full rounded-[4px] flex-1 flex flex-col items-center justify-center text-[8px] text-neutral-400">
+                          <div></div>
+                          <div>E</div>
+                        </div>
+                        <div
+                          class="bg-gradient-to-t from-black via-black to-zinc-900 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_2px_0_rgba(0,0,0,0.3)] h-full rounded-[4px] flex-1 flex flex-col items-center justify-center text-[8px] text-neutral-400">
+                          <div></div>
+                          <div>R</div>
+                        </div>
+                        <div
+                          class="bg-gradient-to-t from-black via-black to-zinc-900 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_2px_0_rgba(0,0,0,0.3)] h-full rounded-[4px] flex-1 flex flex-col items-center justify-center text-[8px] text-neutral-400">
+                          <div></div>
+                          <div>T</div>
+                        </div>
+                        <div
+                          class="bg-gradient-to-t from-black via-black to-zinc-900 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_2px_0_rgba(0,0,0,0.3)] h-full rounded-[4px] flex-1 flex flex-col items-center justify-center text-[8px] text-neutral-400">
+                          <div></div>
+                          <div>Y</div>
+                        </div>
+                        <div
+                          class="bg-gradient-to-t from-black via-black to-zinc-900 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_2px_0_rgba(0,0,0,0.3)] h-full rounded-[4px] flex-1 flex flex-col items-center justify-center text-[8px] text-neutral-400">
+                          <div></div>
+                          <div>U</div>
+                        </div>
+                        <div
+                          class="bg-gradient-to-t from-black via-black to-zinc-900 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_2px_0_rgba(0,0,0,0.3)] h-full rounded-[4px] flex-1 flex flex-col items-center justify-center text-[8px] text-neutral-400">
+                          <div></div>
+                          <div>I</div>
+                        </div>
+                        <div
+                          class="bg-gradient-to-t from-black via-black to-zinc-900 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_2px_0_rgba(0,0,0,0.3)] h-full rounded-[4px] flex-1 flex flex-col items-center justify-center text-[8px] text-neutral-400">
+                          <div></div>
+                          <div>O</div>
+                        </div>
+                        <div
+                          class="bg-gradient-to-t from-black via-black to-zinc-900 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_2px_0_rgba(0,0,0,0.3)] h-full rounded-[4px] flex-1 flex flex-col items-center justify-center text-[8px] text-neutral-400">
+                          <div></div>
+                          <div>P</div>
+                        </div>
+                        <div
+                          class="bg-gradient-to-t from-black via-black to-zinc-900 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_2px_0_rgba(0,0,0,0.3)] h-full rounded-[4px] flex-1 flex flex-col items-center justify-center text-[8px] text-neutral-400">
+                          <div>{</div>
+                          <div>[</div>
+                        </div>
+                        <div
+                          class="bg-gradient-to-t from-black via-black to-zinc-900 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_2px_0_rgba(0,0,0,0.3)] h-full rounded-[4px] flex-1 flex flex-col items-center justify-center text-[8px] text-neutral-400">
+                          <div>}</div>
+                          <div>]</div>
+                        </div>
+                        <div
+                          class="bg-gradient-to-t from-black via-black to-zinc-900 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_2px_0_rgba(0,0,0,0.3)] h-full rounded-[4px] flex-1 flex flex-col items-center justify-center text-[8px] text-neutral-400">
+                          <div>|</div>
+                          <div>\</div>
+                        </div>
+                      </div>
+                      <!-- ASDF row -->
+                      <div class="h-[16.62%] mb-[.6%] flex items-center space-x-[2px] w-full">
+                        <div
+                          class="bg-gradient-to-t from-black via-black to-zinc-900 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_2px_0_rgba(0,0,0,0.3)] h-full rounded-[4px] flex-[1.5] flex items-end justify-start p-1 text-[8px] text-neutral-400">
+                          caps lock
+                        </div>
+                        <div
+                          class="bg-gradient-to-t from-black via-black to-zinc-900 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_2px_0_rgba(0,0,0,0.3)] h-full rounded-[4px] flex-1 flex flex-col items-center justify-center text-[8px] text-neutral-400">
+                          <div></div>
+                          <div>A</div>
+                        </div>
+                        <div
+                          class="bg-gradient-to-t from-black via-black to-zinc-900 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_2px_0_rgba(0,0,0,0.3)] h-full rounded-[4px] flex-1 flex flex-col items-center justify-center text-[8px] text-neutral-400">
+                          <div></div>
+                          <div>S</div>
+                        </div>
+                        <div
+                          class="bg-gradient-to-t from-black via-black to-zinc-900 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_2px_0_rgba(0,0,0,0.3)] h-full rounded-[4px] flex-1 flex flex-col items-center justify-center text-[8px] text-neutral-400">
+                          <div></div>
+                          <div>D</div>
+                        </div>
+                        <div
+                          class="bg-gradient-to-t from-black via-black to-zinc-900 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_2px_0_rgba(0,0,0,0.3)] h-full rounded-[4px] flex-1 flex flex-col items-center justify-center text-[8px] text-neutral-400">
+                          <div></div>
+                          <div>F</div>
+                        </div>
+                        <div
+                          class="bg-gradient-to-t from-black via-black to-zinc-900 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_2px_0_rgba(0,0,0,0.3)] h-full rounded-[4px] flex-1 flex flex-col items-center justify-center text-[8px] text-neutral-400">
+                          <div></div>
+                          <div>G</div>
+                        </div>
+                        <div
+                          class="bg-gradient-to-t from-black via-black to-zinc-900 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_2px_0_rgba(0,0,0,0.3)] h-full rounded-[4px] flex-1 flex flex-col items-center justify-center text-[8px] text-neutral-400">
+                          <div></div>
+                          <div>H</div>
+                        </div>
+                        <div
+                          class="bg-gradient-to-t from-black via-black to-zinc-900 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_2px_0_rgba(0,0,0,0.3)] h-full rounded-[4px] flex-1 flex flex-col items-center justify-center text-[8px] text-neutral-400">
+                          <div></div>
+                          <div>J</div>
+                        </div>
+                        <div
+                          class="bg-gradient-to-t from-black via-black to-zinc-900 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_2px_0_rgba(0,0,0,0.3)] h-full rounded-[4px] flex-1 flex flex-col items-center justify-center text-[8px] text-neutral-400">
+                          <div></div>
+                          <div>K</div>
+                        </div>
+                        <div
+                          class="bg-gradient-to-t from-black via-black to-zinc-900 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_2px_0_rgba(0,0,0,0.3)] h-full rounded-[4px] flex-1 flex flex-col items-center justify-center text-[8px] text-neutral-400">
+                          <div></div>
+                          <div>L</div>
+                        </div>
+                        <div
+                          class="bg-gradient-to-t from-black via-black to-zinc-900 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_2px_0_rgba(0,0,0,0.3)] h-full rounded-[4px] flex-1 flex flex-col items-center justify-center text-[8px] text-neutral-400">
+                          <div>:</div>
+                          <div>;</div>
+                        </div>
+                        <div
+                          class="bg-gradient-to-t from-black via-black to-zinc-900 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_2px_0_rgba(0,0,0,0.3)] h-full rounded-[4px] flex-1 flex flex-col items-center justify-center text-[8px] text-neutral-400">
+                          <div>"</div>
+                          <div>'</div>
+                        </div>
+                        <div
+                          class="bg-gradient-to-t from-black via-black to-zinc-900 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_2px_0_rgba(0,0,0,0.3)] h-full rounded-[4px] flex-[1.55] flex items-end justify-end p-1 text-[8px] text-neutral-400">
+                          return
+                        </div>
+                      </div>
+                      <!-- ZXCV row -->
+                      <div class="h-[16.62%] mb-[.5%] flex items-center space-x-[2px] w-full">
+                        <div
+                          class="bg-gradient-to-t from-black via-black to-zinc-900 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_2px_0_rgba(0,0,0,0.3)] h-full rounded-[3px] flex-[2] flex items-end justify-start p-1 text-[8px] text-neutral-400">
+                          shift
+                        </div>
+                        <div
+                          class="bg-gradient-to-t from-black via-black to-zinc-900 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_2px_0_rgba(0,0,0,0.3)] h-full rounded-[4px] flex-1 flex flex-col items-center justify-center text-[8px] text-neutral-400">
+                          <div></div>
+                          <div>Z</div>
+                        </div>
+                        <div
+                          class="bg-gradient-to-t from-black via-black to-zinc-900 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_2px_0_rgba(0,0,0,0.3)] h-full rounded-[4px] flex-1 flex flex-col items-center justify-center text-[8px] text-neutral-400">
+                          <div></div>
+                          <div>X</div>
+                        </div>
+                        <div
+                          class="bg-gradient-to-t from-black via-black to-zinc-900 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_2px_0_rgba(0,0,0,0.3)] h-full rounded-[4px] flex-1 flex flex-col items-center justify-center text-[8px] text-neutral-400">
+                          <div></div>
+                          <div>C</div>
+                        </div>
+                        <div
+                          class="bg-gradient-to-t from-black via-black to-zinc-900 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_2px_0_rgba(0,0,0,0.3)] h-full rounded-[4px] flex-1 flex flex-col items-center justify-center text-[8px] text-neutral-400">
+                          <div></div>
+                          <div>V</div>
+                        </div>
+                        <div
+                          class="bg-gradient-to-t from-black via-black to-zinc-900 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_2px_0_rgba(0,0,0,0.3)] h-full rounded-[4px] flex-1 flex flex-col items-center justify-center text-[8px] text-neutral-400">
+                          <div></div>
+                          <div>B</div>
+                        </div>
+                        <div
+                          class="bg-gradient-to-t from-black via-black to-zinc-900 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_2px_0_rgba(0,0,0,0.3)] h-full rounded-[4px] flex-1 flex flex-col items-center justify-center text-[8px] text-neutral-400">
+                          <div></div>
+                          <div>N</div>
+                        </div>
+                        <div
+                          class="bg-gradient-to-t from-black via-black to-zinc-900 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_2px_0_rgba(0,0,0,0.3)] h-full rounded-[4px] flex-1 flex flex-col items-center justify-center text-[8px] text-neutral-400">
+                          <div></div>
+                          <div>M</div>
+                        </div>
+                        <div
+                          class="bg-gradient-to-t from-black via-black to-zinc-900 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_2px_0_rgba(0,0,0,0.3)] h-full rounded-[4px] flex-1 flex flex-col items-center justify-center text-[8px] text-neutral-400">
+                          <div>&lt;</div>
+                          <div>,</div>
+                        </div>
+                        <div
+                          class="bg-gradient-to-t from-black via-black to-zinc-900 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_2px_0_rgba(0,0,0,0.3)] h-full rounded-[4px] flex-1 flex flex-col items-center justify-center text-[8px] text-neutral-400">
+                          <div>&gt;</div>
+                          <div>.</div>
+                        </div>
+                        <div
+                          class="bg-gradient-to-t from-black via-black to-zinc-900 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_2px_0_rgba(0,0,0,0.3)] h-full rounded-[4px] flex-1 flex flex-col items-center justify-center text-[8px] text-neutral-400">
+                          <div>?</div>
+                          <div>/</div>
+                        </div>
+                        <div
+                          class="bg-gradient-to-t from-black via-black to-zinc-900 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_2px_0_rgba(0,0,0,0.3)] h-full rounded-[3px] flex-[2] flex items-end justify-end p-1 text-[8px] text-neutral-400">
+                          shift
+                        </div>
+                      </div>
+                      <!-- Bottom row -->
+                      <div class="h-[16.62%] flex items-end space-x-[2px] w-full">
+                        <div
+                          class="bg-gradient-to-t from-black via-black to-zinc-900 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_2px_0_rgba(0,0,0,0.3)] h-full flex-[1.2] rounded-[3px] flex flex-col items-center justify-center text-[8px] text-neutral-400 relative">
+                          <div class="absolute top-1 right-[6px]">fn</div>
+                          <div class="absolute bottom-1 left-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 24 24">
+                              <path fill="currentColor" fill-rule="evenodd"
+                                d="M12 21.237a9.237 9.237 0 1 0 0-18.474a9.237 9.237 0 0 0 0 18.474m2.99-16.971c.36.387.685.838.97 1.335c.523.905.931 1.99 1.195 3.19q.623.156 1.166.348c.668.237 1.255.517 1.72.84a8.31 8.31 0 0 0-5.051-5.713m5.171 9.196c-.483.359-1.113.668-1.84.925q-.498.176-1.066.322c-.254 1.4-.7 2.66-1.294 3.69a7.4 7.4 0 0 1-.971 1.335a8.3 8.3 0 0 0 5.171-6.272m-11.15 6.272a7.4 7.4 0 0 1-.972-1.335c-.593-1.03-1.04-2.29-1.294-3.69a13 13 0 0 1-1.066-.322c-.727-.257-1.357-.566-1.84-.925a8.3 8.3 0 0 0 5.171 6.272M3.958 9.978c.465-.322 1.052-.602 1.72-.839q.543-.191 1.166-.348c.264-1.2.672-2.285 1.194-3.19a7.4 7.4 0 0 1 .971-1.335A8.31 8.31 0 0 0 3.96 9.978m11.18-3.905c.409.71.746 1.554.989 2.496a22.5 22.5 0 0 0-3.655-.354v-4.41c.978.19 1.918.97 2.666 2.268m1.204 3.504a21 21 0 0 0-3.87-.415v5.202c1.447-.028 2.792-.183 3.945-.43q.127-.932.128-1.934c0-.845-.071-1.658-.203-2.423m-4.818-5.773v4.41a22.5 22.5 0 0 0-3.654.355c.242-.942.58-1.787.988-2.496c.748-1.297 1.688-2.078 2.666-2.269m0 5.358a21 21 0 0 0-3.87.415A14.3 14.3 0 0 0 7.453 12c0 .667.044 1.314.128 1.933c1.153.248 2.498.403 3.945.43zm-5.531.87q.315-.11.663-.21a15.5 15.5 0 0 0-.062 3.865q-.315-.093-.601-.193c-.76-.269-1.34-.577-1.722-.896c-.385-.321-.515-.605-.515-.835s.13-.514.515-.835c.382-.319.962-.627 1.722-.895m2.865 7.895c-.479-.832-.86-1.85-1.105-2.992c1.138.219 2.418.351 3.771.376v4.885c-.978-.191-1.918-.972-2.666-2.27m3.614 2.269V15.31a22.4 22.4 0 0 0 3.771-.376c-.244 1.143-.626 2.16-1.105 2.992c-.748 1.297-1.688 2.078-2.666 2.269M17.494 12q0 .864-.09 1.687q.315-.092.601-.193c.76-.269 1.34-.577 1.722-.896c.385-.321.515-.605.515-.835s-.13-.514-.515-.835c-.382-.319-.962-.627-1.722-.895q-.315-.111-.663-.211c.1.7.153 1.429.153 2.178"
+                                clip-rule="evenodd" />
+                            </svg>
+                          </div>
+                        </div>
+                        <div
+                          class="bg-gradient-to-t from-black via-black to-zinc-900 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_2px_0_rgba(0,0,0,0.3)] h-full flex-[1] rounded-[3px] relative flex items-end justify-center p-1 text-[8px] text-neutral-400">
+                          <div class="absolute top-1 right-1">⌃</div>
+                          <div>control</div>
+                        </div>
+                        <div
+                          class="bg-gradient-to-t from-black via-black to-zinc-900 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_2px_0_rgba(0,0,0,0.3)] h-full flex-[1] rounded-[3px] relative flex items-end justify-center p-1 text-[8px] text-neutral-400">
+                          <div class="absolute top-[1px] right-1">⌥</div>
+                          <div>option</div>
+                        </div>
+                        <div
+                          class="bg-gradient-to-t from-black via-black to-zinc-900 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_2px_0_rgba(0,0,0,0.3)] h-full flex-[.8] rounded-[3px] relative flex items-end justify-center p-1 text-[8px] text-neutral-400">
+                          <div class="absolute top-[1px] right-1">⌘</div>
+                          <div>command</div>
+                        </div>
+                        <div
+                          class="bg-gradient-to-t from-black via-black to-zinc-900 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_2px_0_rgba(0,0,0,0.3)] h-full flex-[7] rounded-[3px]">
+                        </div>
+                        <div
+                          class="bg-gradient-to-t from-black via-black to-zinc-900 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_2px_0_rgba(0,0,0,0.3)] h-full flex-[1] rounded-[3px] relative flex items-end p-1 text-[8px] text-neutral-400">
+                          <div class="absolute top-[1px] left-1">⌘</div>
+                          <div>command</div>
+                        </div>
+                        <div
+                          class="bg-gradient-to-t from-black via-black to-zinc-900 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_2px_0_rgba(0,0,0,0.3)] h-full flex-[.8] rounded-[3px] relative flex items-end justify-center p-1 text-[8px] text-neutral-400">
+                          <div class="absolute top-[1px] left-1">⌥</div>
+                          <div>option</div>
+                        </div>
+                        <div
+                          class="bg-gradient-to-t from-black via-black to-zinc-900 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_2px_0_rgba(0,0,0,0.3)] h-1/2 flex-[1.4] rounded-[3px] flex items-center justify-center text-[8px] text-neutral-400">
+                          <svg class="rotate-180" width="8" height="5" viewBox="0 0 8 8">
+                            <polygon points="8,4 4,0 4,8" fill="currentColor" />
+                          </svg>
+                        </div>
+                        <div
+                          class="bg-gradient-to-t from-black via-black to-zinc-900 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_2px_0_rgba(0,0,0,0.3)] h-full flex-[1.4] rounded-[3px] flex flex-col gap-[1px]">
+                          <div
+                            class="bg-gradient-to-t from-black via-black to-zinc-900 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_2px_0_rgba(0,0,0,0.3)] flex-1 rounded-t-[3px] flex items-center justify-center text-[8px] text-neutral-400">
+                            <svg width="8" height="5" viewBox="0 0 8 8">
+                              <polygon points="4,0 0,4 8,4" fill="currentColor" />
+                            </svg>
+                          </div>
+                          <div
+                            class="bg-gradient-to-t from-black via-black to-zinc-900 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_2px_0_rgba(0,0,0,0.3)] flex-1 rounded-b-[3px] flex items-center justify-center text-[8px] text-neutral-400">
+                            <svg width="8" height="5" viewBox="0 0 8 8">
+                              <polygon points="4,8 0,4 8,4" fill="currentColor" />
+                            </svg>
+                          </div>
+                        </div>
+                        <div
+                          class="bg-gradient-to-t from-black via-black to-zinc-900 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_2px_0_rgba(0,0,0,0.3)] h-1/2 flex-[1.4] rounded-[3px] flex items-center justify-center text-[8px] text-neutral-400">
+                          <svg class="rotate-180" width="8" height="5" viewBox="0 0 8 8">
+                            <polygon points="0,4 4,0 4,8" fill="currentColor" />
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="my-[6px] w-[4.07%] mx-[2px]" style="background-image: url('data:image/svg+xml,\
+                              <svg xmlns=\'http://www.w3.org/2000/svg\' width=\'4\' height=\'4\' viewBox=\'0 0 4 4\'>\
+                              <circle cx=\'2\' cy=\'2\' r=\'0.8\' fill=\'rgba(0, 0, 0, 0.2)\'/>\
+                              </svg>');
+                              background-repeat: repeat;
+                              background-size: 3px 3px;">
+                    </div>
+                  </div>
+                  <div class="h-[42.64%] w-full relative flex flex-col items-center">
+                    <div
+                      class="w-[40.41%] h-[91.56%] rounded-md border-neutral-600/60 border-opacity-70 border border-b-2 border- my-auto">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          {{ end }}
+          <!-- Macbook End -->
+          <div>
+            <div
+              class="inline-flex items-center gap-1.5 font-sohne text-2xl font-extrabold uppercase tracking-widest text-black">
+              <span>Background</span>
+              <div class="h-3 w-3">
+                <div
+                  class="relative top-px text-dark [&amp;&gt;*&gt;*]:!h-3 [&amp;&gt;*&gt;*]:!w-3 [&amp;&gt;*]:!contents">
+                </div>
+              </div>
+            </div>
+            <div
+              class="relative z-10 mt-4 space-y-4 font-sohne text-lg font-light leading-normal text-dark [text-wrap:balance] l:!block l:text-left l:text-12pt l:[text-wrap:wrap]">
+              <p>As Payload is meant to be built upon, we wanted the type to hold its own, but never clash with the logo
+                or color palette of a customized Payload installation. Deliberately crafted to be beautiful, but
+                indistinct, the
+                <!-- -->
+                <a href="https://klim.co.nz/blog/untitled-sans-serif-design-information/"
+                  class="text-gray-300 underline decoration-gray-500 decoration-solid decoration-1 underline-offset-1 transition duration-300 ease-in-out l:hover:text-blue l:hover:decoration-blue"
+                  target="_blank">Untitled Sans</a>
+                <!-- -->family by the Klim Type Foundry was the perfect choice.
+              </p>
+              <p>We typeset the new Payload wordmark in Untitled Sans with custom kerning and outline work. The new icon
+                represents a more literal manifestation of the “network payload” design, but with broken lines to
+                highlight the open nature of the content framework, contrasting it from vendor-locked SaaS solutions.
+              </p>
+            </div>
+          </div>
+          <div>
+            <div
+              class="inline-flex items-center gap-1.5 font-sohne text-2xl font-extrabold uppercase tracking-widest text-black">
+              <span>Our Statement</span>
+              <div class="h-3 w-3">
+                <div
+                  class="relative top-px text-dark [&amp;&gt;*&gt;*]:!h-3 [&amp;&gt;*&gt;*]:!w-3 [&amp;&gt;*]:!contents">
+                </div>
+              </div>
+            </div>
+            <div
+              class="relative z-10 mt-4 space-y-4 font-sohne text-lg font-light leading-normal text-dark [text-wrap:balance] l:!block l:text-left l:text-12pt l:[text-wrap:wrap]">
+              <p>{{ .Params.worker_statement }}</p>
+            </div>
+            <div>
+              <div
+                class="inline-flex mt-12 items-center gap-1.5 font-sohne text-2xl font-extrabold uppercase tracking-widest text-black">
+                <!-- <span>Designer’s statement</span>
+                  <div class="h-3 w-3">
+                      <div class="relative top-px text-dark [&amp;&gt;*&gt;*]:!h-3 [&amp;&gt;*&gt;*]:!w-3 [&amp;&gt;*]:!contents"></div>
+                  </div> -->
+              </div>
+              <div class="prose dark:prose-invert max-w-none">
+                {{ .Content }}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  </div><!--end grid-->
-</section>
+  </div>
+</div>
+
+
+<script>
+  function getImageUrl(index) {
+    // Define an array containing the image URLs corresponding to featuredImage, image1, image2, image3
+    const imageUrls = [
+      '{{ .Params.featuredImage }}',
+      '{{ .Params.image1 }}',
+      '{{ .Params.image2 }}',
+      '{{ .Params.image3 }}',
+    ];
+
+    // Return the URL of the image based on the index (1-based)
+    return imageUrls[index - 1];
+  }
+</script>
 
 {{ end }}
