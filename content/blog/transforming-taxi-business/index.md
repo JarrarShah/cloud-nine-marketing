@@ -4,6 +4,7 @@ date: 2024-03-08
 draft: false
 description: "Discover how CabConnects helps taxi businesses optimize their communication channels and never miss a call."
 author: "CabConnects Marketing Team"
+authorImage: "images/andre-author.jpg"
 featuredImage: "images/1.png"
 image: "images/2.png"
 images: ["images/1.png"]

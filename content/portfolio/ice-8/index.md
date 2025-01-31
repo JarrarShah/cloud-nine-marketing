@@ -26,15 +26,17 @@ industry_type: "Food & Beverages"
 services_provided: ["Business Consultancy", "Branding", "Marketing", "Social Media Management", "Event Management"]
 visit_website_link: "https://ice8.com"
 
-Image_1: "images/ice8-hero.jpeg"
-Image_2: "images/social-media-1.jpeg"
-Image_3: "images/event-1.jpeg"
-Image_4: "images/branding-1.jpeg"
-Image_5: "images/menu-design.jpeg"
+branding_image: "images/ice8-cap-design.jpg"
+branding_image2: "images/ice-8-tem-photo.jpg"
+branding_details: "When Ice8 Italy approached us to support their launch in Pakistan, we were entrusted with developing a comprehensive branding strategy tailored to their expansion goals. Our scope included uniform design, shop front conceptualization, marketing collateral (brochures, menus, banners), exterior LED board visuals, and a cohesive brand color palette.
+
+We began by deeply analyzing the client’s vision and local market nuances, ensuring every design element aligned with Ice8 Italy’s premium identity while resonating with Pakistani consumers. After finalizing and securing approval for all assets, we extended our support to seamless execution — overseeing high-quality printing, fabrication of branded materials, and coordinating the production of custom uniforms.
+
+This end-to-end collaboration ensured Ice8 Italy’s launch was visually striking, culturally relevant, and operationally flawless."
 
 iPhone_image: "images/ice8-iphone-social-media-managed-by-cloud-nine.png"
-social_image1: "images/social-media-1.jpeg"
-social_image2: "images/ice8-Image5.jpg"
+social_image1: "images/ice8-social-2.jpg"
+social_image2: "images/ice8-social-1.jpg"
 
 project: "Supported ICE8 in launching their ice cream parlor in Pakistan with strategic branding, consultancy, and marketing initiatives."
 work: "Delivered expert business consultancy, crafted their brand identity with custom designs, promoted their products on social platforms, and executed impactful events."

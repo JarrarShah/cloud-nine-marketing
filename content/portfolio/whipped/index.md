@@ -35,6 +35,10 @@ Image_5: "images/product-branding.jpeg"
 social_image1: "images/whipped-social-media-post-1.jpg"
 social_image2: "images/whipped-social-media-post-2.jpg"
 
+logo_section_bg: "hover:bg-[#f1f4aa]"
+logo_design: "images/whipped-logo.png"
+logo_bg: ""
+
 project: "Comprehensive branding and digital marketing support for Whipped, an innovative dessert startup."
 work: "Managed personal and product branding, handled social media accounts with custom graphics and animations, executed lead-generating campaigns, and organized brand awareness events."
 process: "Collaborated with Whipped to define their brand identity, create effective digital campaigns, deliver high-quality social media content, and plan impactful events."

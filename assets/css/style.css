@@ -4923,11 +4923,6 @@ video {
   color: rgb(239 68 68 / var(--tw-text-opacity));
 }
 
-.text-rose-500 {
-  --tw-text-opacity: 1;
-  color: rgb(244 63 94 / var(--tw-text-opacity));
-}
-
 .text-secondary {
   --tw-text-opacity: 1;
   color: rgb(42 8 106 / var(--tw-text-opacity));
@@ -5563,7 +5558,6 @@ EmojiSymbols;
 }
 
 .area {
-  background: #ffffff;
   background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);
   width: 100%;
   height: 80vh;
@@ -6576,6 +6570,16 @@ EmojiSymbols;
   background-color: rgb(0 86 95 / var(--tw-bg-opacity));
 }
 
+.hover\:bg-\[\#294b59\]:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(41 75 89 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-\[\#f1f4aa\]:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(241 244 170 / var(--tw-bg-opacity));
+}
+
 .hover\:bg-amber-500:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(245 158 11 / var(--tw-bg-opacity));
@@ -7578,6 +7582,10 @@ EmojiSymbols;
     flex-direction: column;
   }
 
+  .md\:items-center {
+    align-items: center;
+  }
+
   .md\:justify-start {
     justify-content: flex-start;
   }
@@ -7598,6 +7606,12 @@ EmojiSymbols;
     --tw-space-x-reverse: 0;
     margin-right: calc(0px * var(--tw-space-x-reverse));
     margin-left: calc(0px * calc(1 - var(--tw-space-x-reverse)));
+  }
+
+  .md\:space-x-2 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 0;
+    margin-right: calc(0.5rem * var(--tw-space-x-reverse));
+    margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
   }
 
   .md\:space-x-3 > :not([hidden]) ~ :not([hidden]) {

@@ -19,7 +19,7 @@ categories: ["Business Consultancy", "Food & Beverage", "Community Engagement"]
 bg_hero_image: "images/curbside-kitchen-bg-cloud-nine.png"
 Title: "Empowering Curbside Café with Strategic Solutions"
 Subtext: "Creating vibrant community spaces with expert consultancy."
-CTA_link: "https://curbsidecafe.com/contact"
+CTA_link: "https://curbsidecafe.com/contact" 
 
 client_name: "Curbside Café"
 industry_type: "Food & Beverages"
@@ -35,6 +35,10 @@ Image_5: "images/dining-experience.jpeg"
 iPhone_image: "images/cubside-iphone-social-media-managed-by-cloud-nine.png"
 social_image1: "images/Curbside-resturant-marketing-cloud-nine-offers.jpg"
 social_image2: "images/Curbside-resturant-marketing-cloud-nine-social-media-marketing.jpg"
+
+logo_section_bg: "hover:bg-[#294b59]"
+logo_design: "images/curbside-kitchen-logo.png"
+logo_bg: ""
 
 project: "Providing expert business consultancy to streamline operations and promote the unique community culture of Curbside Café."
 work: "Analyzed operational challenges and provided tailored solutions across sales, IT, finance, marketing, and security."

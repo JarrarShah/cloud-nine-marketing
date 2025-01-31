@@ -4,6 +4,7 @@ date: 2024-03-08
 draft: false
 description: "Discover how Cloud Nine Marketing can revolutionize your taxi business operations with innovative solutions and cutting-edge technology."
 author: "Cloud Nine Marketing Marketing Team"
+authorImage: "images/andre-author.jpg"
 featuredImage: "images/1.png"
 image: "images/1.png"
 images: ["images/1.png"]

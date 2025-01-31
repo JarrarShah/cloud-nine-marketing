@@ -121,6 +121,7 @@
               </div>
             </div>
           </div>
+          {{ if .Params.logo_design }}
           <div>
             <div
               class="inline-flex items-center gap-1.5 font-sohne text-2xl font-extrabold uppercase tracking-widest text-black">
@@ -131,14 +132,23 @@
             </div>
             <div
               class="rounded-xl {{ .Params.logo_section_bg }} border border-gray-900 bg-gray-1100 p-4 t:p-8 l:-mx-4 l:p-16 relative mt-4 flex aspect-wider items-center !p-0">
-              <div class="relative flex h-full max-h-full w-full max-w-full !p-4 t:!p-8 l:!p-16">
-                <div class="h-full w-full !object-contain text-2xl"> 
-                  <img src="{{.Params.logo_design }}" class="mx-auto {{ .Params.logo_bg }} " alt="">
-                  <img src="{{.Params.logo_design2 }}" class="mx-auto " alt="">
-                </div>
+              <div class="relative flex flex-col h-full max-h-full w-full max-w-full !p-4 t:!p-8 l:!p-16">
+                
+                  <div class="w-full {{ .Params.logo_bg }} mx-auto">
+                    <img src="{{.Params.logo_design }}" class="mx-auto " alt="">
+                  </div>
+                  <div class="w-full mx-auto">
+                    <img src="{{.Params.logo_design2 }}" class="mx-auto " alt="">
+                  </div>
+              </div>
+            </div>
+            <div class="flex">
+              <div class="mx-auto">
+                *Hover over the box
               </div>
             </div>
           </div>
+          {{ end }}
           <div>
             <div
               class="inline-flex items-center gap-1.5 font-sohne text-2xl font-extrabold uppercase tracking-widest text-black">

@@ -4,6 +4,7 @@ date: 2024-03-08
 draft: false
 description: "Tired of long waiting queues during help calls or booking cab rides? Discover how outsourcing your bookings and dispatching to Cloud Nine Marketing can streamline your operations and enhance customer satisfaction."
 author: "Cloud Nine Marketing SEO Team"
+authorImage: "images/andre-author.jpg"
 featuredImage: "images/1.png"
 image: "images/2.png"
 images: ["images/2.png"]
