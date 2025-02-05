@@ -28,6 +28,7 @@ module.exports = {
       fontFamily: {
         sans: ['Mukta', ...defaultTheme.fontFamily.sans],
         poppins: ['"Poppins"', 'cursive'],
+        chillax: ['Chillax', 'sans-serif'],
       },
       container: {
         padding: '2rem',

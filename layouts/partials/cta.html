@@ -1,8 +1,8 @@
-<div class="bg-white">
+<div class="bg-white dark:bg-gray-900">
   <div class="container mx-auto">
     <div class="max-w-7xl mx-auto py-24 sm:px-6 sm:py-32 lg:px-8">
       <div
-        class="relative isolate overflow-hidden border border-2 border-gray-900 bg-gradient-to-r from-gray-50 via-white to-gray-100 px-6 pt-16 shadow-2xl rounded-3xl sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0">
+        class="relative isolate overflow-hidden border border-2 border-gray-900 bg-gradient-to-r from-gray-50 via-white to-gray-100 dark:from-gray-800 dark:via-gray-900 dark:to-gray-800 px-6 pt-16 shadow-2xl rounded-3xl sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0">
         <svg viewBox="0 0 1024 1024"
           class="absolute left-1/2 top-1/2 -z-10 size-[64rem] -translate-y-1/2 [mask-image:radial-gradient(closest-side,white,transparent)] sm:left-full sm:-ml-80 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2 lg:translate-y-0"
           aria-hidden="true">
@@ -15,11 +15,11 @@
           </defs>
         </svg>
         <div class="mx-auto max-w-md text-center lg:mx-0 lg:flex-auto lg:py-32 lg:text-left">
-          <h2 class="text-balance text-3xl font-semibold tracking-tight text-dark md:text-5xl">Ready to get ahead of
+          <h2 class="text-balance text-3xl font-semibold tracking-tight text-dark md:text-5xl dark:text-gray-100">Ready to get ahead of
             your Competition?</h2>
-          <h4 class="text-balance text-2xl font-light mt-2 tracking-tight text-gray-600 md:text-2xl">We're giving out a
-            30 min free consutlation call</h4>
-          <p class="mt-6 text-pretty font-semibold text-lg/8 text-gray-900">Book a call now and let's discuss the
+          <h4 class="text-balance text-2xl font-light mt-2 tracking-tight text-gray-600 md:text-2xl dark:text-gray-400">We're giving out a
+            30 min free consultation call</h4>
+          <p class="mt-6 text-pretty font-semibold text-lg/8 text-gray-900 dark:text-gray-100">Book a call now and let's discuss the
             posibilities of getting ahead</p>
           <div class="mt-10 flex items-center justify-center gap-x-6 lg:justify-start">
             <a href="#"
@@ -37,7 +37,7 @@
                       {{- with $small -}}, {{.}} 768w{{- end -}}
                       {{- with $medium -}}, {{.}} 1024w{{- end -}}
                       {{- with $large -}}, {{.}} 1374w{{- end -}}" src="{{ $heroimage3 }}"
-            class="relative top-0 left-12 md:left-32 xl:left-96 w-full h-full rounded-xl overflow-hidden  grayscale	hover:grayscale-0"
+            class="relative top-0 left-12 md:left-32 xl:left-96 w-full h-full rounded-xl overflow-hidden  grayscale hover:grayscale-0 dark:grayscale dark:hover:grayscale-0"
             alt="Overlay image description">
           {{ end }}
           {{ with resources.Get "images/target.png" }}
@@ -49,7 +49,7 @@
                       {{- with $small -}}, {{.}} 768w{{- end -}}
                       {{- with $medium -}}, {{.}} 1024w{{- end -}}
                       {{- with $large -}}, {{.}} 1374w{{- end -}}" src="{{ $heroimage3 }}"
-            class="relative w-full h-full rounded-xl overflow-hidden  grayscale	hover:grayscale-0"
+            class="relative w-full h-full rounded-xl overflow-hidden  grayscale hover:grayscale-0 dark:grayscale dark:hover:grayscale-0"
             alt="Overlay image description">
           {{ end }}
         </div>
