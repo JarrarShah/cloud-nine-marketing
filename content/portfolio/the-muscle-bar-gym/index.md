@@ -36,8 +36,12 @@ iPhone_image: "images/TMB-iphone-social-media-managed-by-cloud-nine.png"
 social_image1: "images/tmb-social-media-1.jpg"
 social_image2: "images/tmb-social-media-2.jpg"
 
+overview: "The Muscle Bar (TMB) is a premium fitness center inSouth Asia, dedicated to providing top-tier training facilities and workout programs.They were in need of  re-branding and marketing, including logo design, video series production, and fitness book creation."
+challenge: "TMB needed to establish a strong brand identity, increase engagement on social media, and develop fitness-related content to attract and retain members."
+approach: "We developed a cohesive brand identity by designing a distinctive logo and creating customized promotional materials such as stickers, shirts, and pamphlets. We developed and executed strategic marketing campaigns, including a collaboration with Fit Flex Club, a renowned fitness brand. This partnership helped expand TMB’s reach and credibility.
+"
 project: "Comprehensive branding and marketing for The Muscle Bar, including logo design, video series production, and fitness book creation."
 work: "Developed TMB's brand identity, executed marketing campaigns with strategic collaborations, produced professional fitness videos, and designed their fitness books."
 process: "Worked closely with the client to understand their vision, designed and executed branding elements, planned social media collaborations, and created both digital and physical fitness books."
-worker_statement: "Our dedicated team helped TMB enhance their brand visibility, engage their audience, and establish a unique presence in the fitness industry."
+worker_statement: "With our branding and marketing efforts, The Muscle Bar gained a strong foothold in the fitness industry, attracting new members and enhancing its online and offline presence."
 ---

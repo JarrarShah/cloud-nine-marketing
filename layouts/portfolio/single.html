@@ -27,7 +27,7 @@
 </section>
 
 <section class="dark:bg-gray-900">
-  <div class="container mx-auto p-6 md:flex md:gap-12">
+  <div class="md:container mx-auto p-6 md:flex md:gap-12 items-center">
     <!-- Left Column -->
     <div class="md:w-1/2 text-black dark:text-white md:sticky md:top-12 self-start md:pl-32">
       <div class="container mx-auto">
@@ -74,31 +74,47 @@
   
     <!-- Right Column -->
     <div class="mt-6 md:mt-0 md:w-2/3">
-      <div class="container mx-auto space-y-6">
+      <div class="container mx-auto space-y-6 mt-0 md:mt-12">
         <div>
-          <div
-            class="inline-flex items-center gap-1.5 font-sohne text-2xl font-extrabold uppercase tracking-widest text-black dark:text-white">
-            <span>Project</span>
-            <div class="h-3 w-3">
-              <div class="relative top-px text-dark dark:text-gray-100 [&>*]:!h-3 [&>*]:!w-3 [&>*]:!contents">
+          <div class="mx-auto w-full space-y-12 l:space-y-16 d:space-y-24">
+            <div>
+              <div
+                class="inline-flex items-center gap-1.5 font-chillax text-2xl font-extrabold uppercase tracking-widest text-black dark:text-white">
+                <span>Overview</span>
+                <div class="h-3 w-3">
+                  <div class="relative top-px text-dark dark:text-gray-100 [&>*]:!h-3 [&>*]:!w-3 [&>*]:!contents">
+                  </div>
+                </div>
+              </div>
+              <div class="relative mb-6">
+                <div
+                  class="rich-text relative z-10 space-y-4 text-center font-chillax text-lg text-wrap-balance l:!block l:text-left l:text-12pt l:text-wrap-wrap font-light leading-normal text-dark dark:text-gray-100 line-clamp-3 group-[.is-modal]:line-clamp-5 has-clamp l:line-clamp-none mt-4 !text-left">
+                  <p>{{ .Params.overview }}</p>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="relative mb-6">
-            <div
-              class="rich-text relative z-10 space-y-4 text-center font-sohne text-lg text-wrap-balance l:!block l:text-left l:text-12pt l:text-wrap-wrap font-light leading-normal text-dark dark:text-gray-100 line-clamp-3 group-[.is-modal]:line-clamp-5 has-clamp l:line-clamp-none mt-4 !text-left">
-              <p>{{ .Params.project }}</p>
-            </div>
-          </div>
-        </div>
-  
-  
-        <div>
-          <div class="mx-auto w-full container space-y-12 l:space-y-16 d:space-y-24">
+            {{ if .Params.challenge }}
             <div>
-              <h3 class="text-4xl dark:text-white font-semibold text-black uppercase">Project</h3>
-              <p class="text-lg text-black dark:text-white">
-                {{ .Params.project }}
+              <div
+                class="inline-flex items-center gap-1.5 font-chillax text-2xl font-extrabold uppercase tracking-widest text-black dark:text-white">
+                <span>The Challenge</span>
+                <div class="h-3 w-3">
+                  <div class="relative top-px text-dark dark:text-gray-100 [&>*]:!h-3 [&>*]:!w-3 [&>*]:!contents">
+                  </div>
+                </div>
+              </div>
+              <div class="relative mb-6">
+                <div
+                  class="rich-text relative z-10 space-y-4 text-center font-chillax text-lg text-wrap-balance l:!block l:text-left l:text-12pt l:text-wrap-wrap font-light leading-normal text-dark dark:text-gray-100 line-clamp-3 group-[.is-modal]:line-clamp-5 has-clamp l:line-clamp-none mt-4 !text-left">
+                  <p>{{ .Params.challenge }}</p>
+                </div>
+              </div>
+            </div>
+            {{ end }}
+            <div>
+              <h3 class="inline-flex items-center gap-1.5 font-chillax text-2xl font-extrabold uppercase tracking-widest text-black dark:text-white">Our Approach</h3>
+              <p class="rich-text relative z-10 space-y-4 text-center font-chillax text-lg text-wrap-balance l:!block l:text-left l:text-12pt l:text-wrap-wrap font-light leading-normal text-dark dark:text-gray-100 line-clamp-3 group-[.is-modal]:line-clamp-5 has-clamp l:line-clamp-none mt-4 !text-left">
+                {{ .Params.approach }}
               </p>
               <div class="container mx-auto">
                 <div class="flex flex-col items-center md:flex-row gap-2 my-8">
@@ -137,7 +153,7 @@
             {{ if .Params.logo_design }}
             <div>
               <div
-                class="inline-flex items-center gap-1.5 font-sohne text-2xl font-extrabold uppercase tracking-widest text-black dark:text-white">
+                class="inline-flex items-center gap-1.5 font-chillax text-2xl font-extrabold uppercase tracking-widest text-black dark:text-white">
                 <span>Logo Design</span>
                 <div class="max-w-3xl mx-auto ml-4">
                   <div class="relative top-px text-lg text-dark dark:text-gray-100 [&>*]:!h-3 [&>*]:!w-3"></div>
@@ -164,8 +180,8 @@
   
             <div>
               <div
-                class="inline-flex dark:text-white items-center gap-1.5 font-sohne text-2xl font-extrabold uppercase tracking-widest text-black">
-                <span>Work</span>
+                class="inline-flex dark:text-white items-center gap-1.5 font-chillax text-2xl font-extrabold uppercase tracking-widest text-black">
+                <!-- <span>Work</span> -->
                 <div class="max-w-3xl mx-auto ml-4">
                   <div class="relative top-px text-lg text-dark [&amp;&gt;*&gt;*]:!h-3 [&amp;&gt;*&gt;*]:!w-3"></div>
                 </div>
@@ -178,7 +194,7 @@
               </div>
             </div>
             <div>
-              <!-- <div class="inline-flex items-center gap-1.5 font-sohne text-2xl font-extrabold uppercase tracking-widest text-black">
+              <!-- <div class="inline-flex items-center gap-1.5 font-chillax text-2xl font-extrabold uppercase tracking-widest text-black">
                     <span>Process</span>
                 </div> -->
               <!-- <div class="rounded-xl border border-gray-900 bg-gray-1100 p-4 t:p-8 l:-mx-4 l:p-16 relative mt-4">
@@ -197,6 +213,7 @@
                 <img src="{{ .Params.social_image1 }}" class="object-cover mx-auto h-full" alt="">
               </div>
               <!-- Centered iPhone -->
+              {{ if .Params.iPhone_image }}
               <div>
                 <div
                   class="relative w-72 h-[600px] rounded-[45px] shadow-[0_0_2px_2px_rgba(255,255,255,0.1)] border-8 border-zinc-900 ml-1">
@@ -234,6 +251,7 @@
                   <div class="absolute right-[-12px] top-36 w-[6px] h-16 bg-zinc-900 rounded-r-md shadow-md"></div>
                 </div>
               </div>
+              {{ end }}
               <!-- Iphone End -->
               <div class="h-64 w-64 md:h-96 w-96">
                 <img src="{{ .Params.social_image2 }}" class="object-cover mx-auto h-full" alt="">
@@ -243,7 +261,7 @@
             {{ if .Params.branding_image }}
             <div>
               <div
-                class="inline-flex items-center gap-1.5 font-sohne text-2xl font-extrabold uppercase tracking-widest text-black dark:text-white">
+                class="inline-flex items-center gap-1.5 font-chillax text-2xl font-extrabold uppercase tracking-widest text-black dark:text-white">
                 <span>Branding</span>
                 <div class="h-3 w-3">
                   <div class="relative top-px text-dark dark:text-gray-100 [&>*]:!h-3 [&>*]:!w-3 [&>*]:!contents">
@@ -251,16 +269,16 @@
                 </div>
               </div>
               <div
-                class="relative z-10 mt-4 space-y-4 font-sohne text-lg font-light leading-normal text-dark dark:text-gray-100 text-wrap-balance l:!block l:text-left l:text-12pt l:text-wrap-wrap">
+                class="relative z-10 mt-4 space-y-4 font-chillax text-lg font-light leading-normal text-dark dark:text-gray-100 text-wrap-balance l:!block l:text-left l:text-12pt l:text-wrap-wrap">
                 <p>{{ .Params.branding_details }}</p>
               </div>
             </div>
             <div class="flex justify-center md:justify-between flex-col md:flex-row">
               <div class="relative">
-                <img src="{{ .Params.branding_image }}" class="mx-auto h-full md:h-96 w-auto" alt="">
+                <img src="{{ .Params.branding_image }}" class="mx-auto h-full w-64 h-64 md:h-96 md:w-auto object-cover" alt="">
               </div>
               <div class="relative">
-                <img src="{{ .Params.branding_image2 }}" class="mx-auto h-full md:h-96 w-auto" alt="">
+                <img src="{{ .Params.branding_image2 }}" class="mx-auto h-full w-64 h-64 md:h-96 md:w-auto object-cover" alt="">
               </div>
             </div>
             {{ end }}
@@ -270,7 +288,7 @@
             {{ if .Params.website_image }}
             <div>
               <div
-                class="inline-flex items-center gap-1.5 font-sohne text-2xl font-extrabold uppercase tracking-widest text-black dark:text-white">
+                class="inline-flex items-center gap-1.5 font-chillax text-2xl font-extrabold uppercase tracking-widest text-black dark:text-white">
                 <span>Website</span>
                 <div class="h-3 w-3">
                   <div class="relative top-px text-dark dark:text-gray-100 [&>*]:!h-3 [&>*]:!w-3 [&>*]:!contents">
@@ -278,12 +296,12 @@
                 </div>
               </div>
               <div
-                class="relative z-10 mt-4 space-y-4 font-sohne text-lg font-light leading-normal text-dark dark:text-gray-100 text-wrap-balance l:!block l:text-left l:text-12pt l:text-wrap-wrap">
+                class="relative z-10 mt-4 space-y-4 font-chillax text-lg font-light leading-normal text-dark dark:text-gray-100 text-wrap-balance l:!block l:text-left l:text-12pt l:text-wrap-wrap">
                 <p>{{ .Params.website_details }}</p>
               </div>
   
             </div>
-            <div class="overflow-hidden">
+            <div class="overflow-hidden flex">
               <div class="w-[608px] [perspective:2000px] mx-auto">
                 <div
                   class="relative w-full h-[420px] [transform:rotateX(73deg)] [transform-style:preserve-3d] origin-bottom">
@@ -746,47 +764,39 @@
             {{ end }}
             <!-- Macbook End -->
             <div>
+              {{ if .Params.results }}
               <div
-                class="inline-flex items-center gap-1.5 font-sohne text-2xl font-extrabold uppercase tracking-widest text-black dark:text-white">
-                <span>Background</span>
+                class="inline-flex items-center gap-1.5 font-chillax text-2xl font-extrabold uppercase tracking-widest text-black dark:text-white">
+                <span>Results</span>
                 <div class="h-3 w-3">
                   <div class="relative top-px text-dark dark:text-gray-100 [&>*]:!h-3 [&>*]:!w-3 [&>*]:!contents">
                   </div>
                 </div>
               </div>
               <div
-                class="relative z-10 mt-4 space-y-4 font-sohne text-lg font-light leading-normal text-dark dark:text-gray-100 text-wrap-balance l:!block l:text-left l:text-12pt l:text-wrap-wrap">
-                <p>As Payload is meant to be built upon, we wanted the type to hold its own, but never clash with the logo
-                  or color palette of a customized Payload installation. Deliberately crafted to be beautiful, but
-                  indistinct, the
-                  <!-- -->
-                  <a href="https://klim.co.nz/blog/untitled-sans-serif-design-information/"
-                    class="text-gray-300 dark:text-gray-100 underline decoration-gray-500 dark:decoration-gray-400 decoration-solid decoration-1 underline-offset-1 transition duration-300 ease-in-out l:hover:text-blue dark:l:hover:text-blue-400 l:hover:decoration-blue dark:l:hover:decoration-blue-400"
-                    target="_blank">Untitled Sans</a>
-                  <!-- -->family by the Klim Type Foundry was the perfect choice.
-                </p>
-                <p>We typeset the new Payload wordmark in Untitled Sans with custom kerning and outline work. The new icon
-                  represents a more literal manifestation of the “network payload” design, but with broken lines to
-                  highlight the open nature of the content framework, contrasting it from vendor-locked SaaS solutions.
+                class="relative z-10 mt-4 space-y-4 font-chillax text-lg font-light leading-normal text-dark dark:text-gray-100 text-wrap-balance l:!block l:text-left l:text-12pt l:text-wrap-wrap">
+                <p> {{ .Params.results}}
                 </p>
               </div>
+              {{ end }}
+
             </div>
             <div>
               <div
-                class="inline-flex items-center gap-1.5 font-sohne text-2xl font-extrabold uppercase tracking-widest text-black dark:text-white">
-                <span>Our Statement</span>
+                class="inline-flex items-center gap-1.5 font-chillax text-2xl font-extrabold uppercase tracking-widest text-black dark:text-white">
+                <span>Key Takeaways</span>
                 <div class="h-3 w-3">
                   <div class="relative top-px text-dark dark:text-gray-100 [&>*]:!h-3 [&>*]:!w-3 [&>*]:!contents">
                   </div>
                 </div>
               </div>
               <div
-                class="relative z-10 mt-4 space-y-4 font-sohne text-lg font-light leading-normal text-dark dark:text-gray-100 text-wrap-balance l:!block l:text-left l:text-12pt l:text-wrap-wrap">
+                class="relative z-10 mt-4 space-y-4 font-chillax text-lg font-light leading-normal text-dark dark:text-gray-100 text-wrap-balance l:!block l:text-left l:text-12pt l:text-wrap-wrap">
                 <p>{{ .Params.worker_statement }}</p>
               </div>
               <div>
                 <div
-                  class="inline-flex mt-12 items-center gap-1.5 font-sohne text-2xl font-extrabold uppercase tracking-widest text-black dark:text-white">
+                  class="inline-flex mt-12 items-center gap-1.5 font-chillax text-2xl font-extrabold uppercase tracking-widest text-black dark:text-white">
                   <!-- <span>Designer’s statement</span>
                     <div class="h-3 w-3">
                         <div class="relative top-px text-dark [&amp;&gt;*&gt;*]:!h-3 [&amp;&gt;*&gt;*]:!w-3 [&amp;&gt;*]:!contents"></div>

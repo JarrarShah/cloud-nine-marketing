@@ -362,6 +362,10 @@ EmojiSymbols;
     width: 0;
 }
 
+.dark .accent-cut::after {
+    border-bottom-color: rgb(17 24 39 / var(--tw-bg-opacity)); /* Adjust this color for dark mode */
+}
+
 @media (min-width: 1024px) {
     .accent-cut::after {
         border-bottom-width: 66px;

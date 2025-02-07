@@ -36,8 +36,18 @@ iPhone_image: "images/Dentalprofiles-iphone-social-media-managed-by-cloud-nine.p
 social_image1: "images/Dentalprofile-Social-media-1-c9.jpg"
 social_image2: "images/Dentalprofile-Social-media-2-c9.jpg"
 
+
+overview: "Dental Profiles is a modern dental clinic offering advanced diagnostics, surgical procedures, and cosmetic dental services. The clinic brings together specialists from various dental disciplines, ensuring comprehensive patient care.
+"
+challenge: "Dental Profiles needed a strong digital presence to attract new patients, educate audiences on dental care, and showcase their expertise. They also required high-quality visual content to enhance their online marketing efforts."
+approach: "We managed Dental Profiles’ Facebook and Instagram accounts, implementing growth-driven strategies to increase engagement and followers. Our responsibilities included:
+Content creation and curation,
+Development of targeted social media campaigns and
+Regular analytics review to optimize performance.
+"
+
 project: "Enhancing the digital presence and showcasing the expertise of Dental Profiles through strategic social media campaigns and professional videography."
 work: "Managed social media accounts, developed growth strategies, created engaging content, and produced a digital video commercial to highlight their state-of-the-art clinic."
 process: "Analyzed target audience, implemented tailored social strategies, created high-quality visuals, and delivered data-driven performance reports."
-worker_statement: "Our efforts helped Dental Profiles attract more patients, establish a strong digital footprint, and showcase their advanced dental services effectively."
+worker_statement: "Through our efforts, Dental Profiles strengthened its social media presence, attracting more potential patients while positioning itself as a leading dental care provider."
 ---

@@ -28,18 +28,19 @@ visit_website_link: "https://ice8.com"
 
 branding_image: "images/ice8-cap-design.jpg"
 branding_image2: "images/ice-8-tem-photo.jpg"
-branding_details: "When Ice8 Italy approached us to support their launch in Pakistan, we were entrusted with developing a comprehensive branding strategy tailored to their expansion goals. Our scope included uniform design, shop front conceptualization, marketing collateral (brochures, menus, banners), exterior LED board visuals, and a cohesive brand color palette.
-
-We began by deeply analyzing the client’s vision and local market nuances, ensuring every design element aligned with Ice8 Italy’s premium identity while resonating with Pakistani consumers. After finalizing and securing approval for all assets, we extended our support to seamless execution — overseeing high-quality printing, fabrication of branded materials, and coordinating the production of custom uniforms.
-
-This end-to-end collaboration ensured Ice8 Italy’s launch was visually striking, culturally relevant, and operationally flawless."
+branding_details: "A strong brand identity is crucial for any startup, and we made sure ICE8PK stood out. Our team designed their visiting cards and panaflex banners, creating a visual identity that was both professional and memorable. We also developed customised branding materials, including uniforms, caps, and aprons, to ensure consistency across all touchpoints. This not only enhanced their brand visibility but also created a cohesive experience for customers.
+"
 
 iPhone_image: "images/ice8-iphone-social-media-managed-by-cloud-nine.png"
 social_image1: "images/ice8-social-2.jpg"
 social_image2: "images/ice8-social-1.jpg"
 
-project: "Supported ICE8 in launching their ice cream parlor in Pakistan with strategic branding, consultancy, and marketing initiatives."
-work: "Delivered expert business consultancy, crafted their brand identity with custom designs, promoted their products on social platforms, and executed impactful events."
+overview: "ICE8, an Italian-based ice cream parlour known for its premium desserts, set its sights on Pakistan with plans to open two branches and expand further. But entering a new market comes with its own set of challenges. From finding the right locations to building a brand that resonates with local customers, ICE8 needed a partner who could handle it all. That’s when they turned to CLOUD9."
+challenge: "ICE8PK faced several hurdles as a startup in Pakistan. They needed to select prime locations that would attract their target audience, create a strong and consistent brand identity, and ensure smooth operations across all departments. On top of that, they wanted to make a memorable entrance into the market with high-profile launch events that would generate buzz and draw in customers."
+approach: "To boost sales and revenue, we crafted targeted marketing strategies tailored to ICE8PK’s needs and market demands. We designed their menu, decided on pricing strategies, and created impactful signboards that left a lasting impression on customers. These signboards played a key role in increasing brand discovery and drawing people into their parlours."
+work: "CLOUD9 stepped in as ICE8PK’s one-stop solution, offering end-to-end support across consultancy, branding, marketing, and event management. Our team became their trusted partner, ensuring every detail was handled with precision and creativity."
 process: "Collaborated closely with ICE8 to create effective strategies for location selection, branding, pricing, and marketing while streamlining their operations in sales, IT, finance, and more."
-worker_statement: "Our tailored solutions helped ICE8 establish a strong presence in Pakistan, ensuring brand growth and successful market entry."
+results: "With CLOUD9’s support, ICE8PK didn’t just enter the Pakistani market—they made a statement. Three successful launches, each attracting over 400 attendees, created significant buzz and brand awareness. Customised branding materials and impactful signboards strengthened their presence, while tailored social media content and ad campaigns boosted online engagement. Streamlined operations across all departments set the foundation for future growth, positioning ICE8PK as a rising star in Pakistan’s food and beverage industry."
+worker_statement: "CLOUD9’s comprehensive support enabled ICE8PK to establish a strong foothold in Pakistan. From branding and marketing to event management and social media, we became their trusted partner in growth. With three successful launches and a solid operational framework, ICE8PK is now poised for further expansion.
+"
 ---

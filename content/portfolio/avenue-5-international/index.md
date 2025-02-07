@@ -34,9 +34,12 @@ Image_5: "images/badminton-event.jpeg"
 
 social_image1: "images/Avenue5-Social-Media-1-c9.jpg"
 social_image2: "images/Avenue5-Social-media-2-c9.jpg"
+iphone_image: "images/avenue5-iphone-image.png"
 
-project: "Organizing a CSR activity and providing comprehensive marketing and event management solutions for Avenue5 International."
-work: "Developed a CSR-focused marketing strategy, planned and managed a badminton tournament, and provided full event coverage."
+overview: "Avenue5 International, needed a marketing strategy that would strengthen its community presence and enhance its networking opportunities.
+Organizing a CSR activity and providing comprehensive marketing and event management solutions for Avenue5 International."
+approach: "We devised a creative marketing strategy centered around a CSR activity—a Badminton Tournament Matches League. This initiative not only added value to the community but also helped Avenue5 International expand its network and brand awareness."
+work: "We positioned Avenue5 International as a socially responsible company that actively engages with the community. The successful execution of the tournament elevated their brand perception."
 process: "Collaborated with the client to plan the event, coordinated logistics, procured prizes, and ensured seamless execution with professional social media coverage."
-worker_statement: "We are proud to have created a positive community impact and strengthened Avenue5 International’s brand presence through innovative strategies and flawless event management."
+worker_statement: "Our marketing and event management strategies helped Avenue5 International foster strong community connections and enhance brand recognition. The Badminton Tournament Matches League was a testament to our ability to create events that leave a lasting impression."
 ---

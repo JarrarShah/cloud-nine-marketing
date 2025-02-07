@@ -33,11 +33,12 @@ Image_4: "images/branding-1.jpeg"
 Image_5: "images/dining-experience.jpeg"
 
 iPhone_image: ""
-social_image1: "images/Milano-Continental-Image-3.png"
+social_image1: "images/Milano-Continental-Image-6.jpeg"
 social_image2: "images/Milano-Continental-Image-5.JPG"
 
-project: "Comprehensive branding and digital presence management for Milano Continental, ensuring smooth event execution and effective promotions."
+overview: "Milano Continental needed ongoing brand maintenance, strong social media strategies, and seamless event management to increase foot traffic and customer engagement."
+approach: "Our strategy for Milano Continental included designing panaflexes, billboards, steamers, and business cards to maintain a strong, professional brand image, developing targeted social media strategies with promotional content, strategic boosting, and hashtag optimization to enhance online presence, and organizing restaurant events with comprehensive event promotion, planning, décor, and professional photography/videography coverage to boost market presence."
 work: "Created panaflexes, billboards, and business cards; developed social media strategies to boost engagement; and managed event schedules, decor, and multimedia coverage."
 process: "Worked closely with Milano Continental to enhance their visibility, create engaging social media campaigns, and deliver seamless event management services."
-worker_statement: "Our dedicated team has helped Milano Continental achieve higher reach, a strong brand identity, and smooth event operations."
+worker_statement: "With our expertise, Milano Continental strengthened its brand presence, increased engagement, and successfully hosted multiple restaurant events, driving customer interest and loyalty."
 ---

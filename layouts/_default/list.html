@@ -2,68 +2,62 @@
 
 <main>
   <section>
-    <div class="relative rounded-br-3xl bg-black pt-14 accent-cut">
+    <div class="relative rounded-br-3xl bg-black pt-14 accent-cut dark:accent-cut-dark">
       <!-- Background Image -->
       {{ $blogbg := resources.Get "images/nasa.jpg" }}
       <div class="relative bg-cover h-full lg:h-[500px] rounded-t-3xl bg-center py-32"
         style="background-image: url('{{ $blogbg.RelPermalink }}'); z-index: 1;">
         <!-- Overlay -->
         <div class="absolute inset-0 bg-black/70"></div>
-       <div class="flex justify-center">
-        <span
-        class="inline-flex rounded-xl z-50 justify-between items-center py-1 px-4 mb-7 text-sm border border-2 border-white font-medium text-white">
-        Read what our experts have to say</span>
-       </div>
+        <div class="flex justify-center">
+          <span
+            class="inline-flex rounded-xl z-50 justify-between items-center py-1 px-4 mb-7 text-sm border border-2 border-white font-medium text-white">
+            Read what our experts have to say</span>
+        </div>
         <div class="relative flex justify-center text-4xl font-bold text-white z-50">Articles and Blogs</div>
         <!-- 3D Title Box -->
-        <div class="absolute bottom-0 z-10 pr-4 pl-8 -mb-24 w-full sm:-mb-20 md:-mb-10 lg:-mb-12 xl:px-8 xl:-mb-16">
-          <div
-            class="relative p-4 mx-auto w-full max-w-7xl bg-white border-t border-gray-100 lg:py-8 lg:pr-16 lg:pl-8 accent-vertical accent-vertical-primary-300 accent-cut-dark accent-cut-primary-400">
-            <a class="group" href="/article/tesla-new-model-y-germany" data-ga-click data-ga-item="title"
-              data-ga-position="1" data-ga-label="$text"> <span
-                class="block font-sans text-sm leading-tight uppercase text-primary-400 font-regular group-hover:text-secondary-300">
-                europe launch imminent? </span> <span
-                class="block font-sans leading-7 font-bold text-primary-400 text-2xl lg:text-4xl group-hover:text-secondary-300 mt-2 lg:mt-4">
-                Tesla is already building the new Model Y in Berlin, reports say </span> </a>
-          </div>
-        </div>
+<div class="absolute bottom-0 z-10 pr-4 pl-8 -mb-24 w-full sm:-mb-20 md:-mb-10 lg:-mb-12 xl:px-8 xl:-mb-16">
+  {{ $latestPost := first 1 .Pages }}
+  {{ with $latestPost }}
+    {{ range . }}
+    <div
+      class="relative p-4 mx-auto w-full max-w-7xl bg-white border-t border-gray-100 lg:py-8 lg:pr-16 lg:pl-8 accent-vertical accent-vertical-primary-300 accent-cut-dark accent-cut-primary-400">
+      <a class="group" href="{{ .Permalink }}" data-ga-click data-ga-item="title"
+        data-ga-position="1" data-ga-label="$text">
+        <span
+          class="block font-sans text-sm leading-tight uppercase text-primary-400 font-regular group-hover:text-secondary-300">
+          {{ .Params.subtitle }}
+        </span>
+        <span
+          class="block font-sans leading-7 font-bold text-primary-400 text-2xl lg:text-4xl group-hover:text-secondary-300 mt-2 lg:mt-4">
+          {{ .Title | truncate 50 }} <!-- Truncate the title to 50 characters -->
+        </span>
+      </a>
+    </div>
+    {{ end }}
+  {{ end }}
+</div>
+
       </div>
 
       <!-- Content Grid Section -->
       <div class="relative bg-blue-800 text-white py-8 mt-32 md:mt-20">
         <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
-          <!-- First Column -->
+          {{ range first 3 .Pages }}
           <div class="flex">
             <div class="flex flex-col items-start">
-              <p class="text-sm uppercase font-bold tracking-wide mb-2">What Do Ü Mean?</p>
-              <h3 class="text-lg font-semibold">What does 'Udûn' mean in 'The Lord of the Rings: The Rings of Power'?
-              </h3>
+              <a href="{{ .RelPermalink }}">
+                <p class="text-sm uppercase font-bold tracking-wide mb-2">{{ .Params.subtitle }}</p>
+                <h3 class="text-lg font-semibold">{{ .Title | truncate 50 }}</h3>
+              </a>
+               <!-- Truncate the title to 50 characters -->
             </div>
             <div class="hidden md:block w-px bg-primary"></div>
           </div>
-
-          <!-- Vertical Divider -->
-
-          <!-- Second Column -->
-          <div class="flex">
-            <div class="flex flex-col items-start">
-              <p class="text-sm uppercase font-bold tracking-wide mb-2">What Do Ü Mean?</p>
-              <h3 class="text-lg font-semibold">What does 'Udûn' mean in 'The Lord of the Rings: The Rings of Power'?
-              </h3>
-            </div>
-
-            <!-- Vertical Divider -->
-            <div class="hidden md:block w-px bg-primary"></div>
-          </div>
-
-          <!-- Third Column -->
-          <div class="flex flex-col items-start">
-            <p class="text-sm uppercase font-bold tracking-wide mb-2">Great Success</p>
-            <h3 class="text-lg font-semibold">
-              NASA swooped over ocean world Europa and captured stunning footage
-            </h3>
-          </div>
+          {{ end }}
         </div>
+        
+        
       </div>
     </div>
 
@@ -76,7 +70,7 @@
   </ul>
 
   <!-- Topic Nav -->
-  <nav class="w-full py-4" x-data="{ open: false }">
+  <!-- <nav class="w-full py-4" x-data="{ open: false }">
     <div class="block sm:hidden">
       <a href="#" class="block md:hidden text-base font-bold uppercase text-center flex justify-center items-center"
         @click="open = !open">
@@ -97,18 +91,18 @@
         {{end}}
       </div>
     </div>
-  </nav>
+  </nav> -->
 
 
-  <div class="xl:container mx-auto flex flex-wrap py-6">
+<section class="dark:bg-gray-900">
+  <div class="xl:container mx-auto flex flex-wrap  py-6">
 
     <!-- Posts Section -->
     {{ partial "blog-template.html" . }}
 
     <!-- Sidebar Section -->
     <aside class="w-full md:w-1/2 lg:w-1/3 items-center px-3">
-      <div
-        class="w-full rounded-lg  flex flex-col my-4 p-6">
+      <div class="w-full rounded-lg  flex flex-col my-4 p-6">
         <p class="text-xl  font-semibold pb-5">Search Content</p>
         <form action="{{ `search` | relURL }}" class="flex flex-row lg:flex-row">
           <input type="search" name="q" id="search-query"
@@ -128,11 +122,11 @@
         </form>
       </div>
 
-      <div class="bg-white">
+      <div class="bg-white dark:bg-gray-900">
         <div class="container mx-auto">
           <div class="w-full">
-            <div class="relative isolate overflow-hidden border border-2 border-gray-900 bg-gradient-to-r from-gray-50 via-white to-gray-100 px-6 pt-16 shadow-2xl rounded-3xl sm:px-16 md:pt-24 lg:flex lg:gap-x-6 lg:px-12 lg:pt-0">
-              <svg viewBox="0 0 1024 1024" class="absolute left-1/2 top-1/2 -z-10 size-[64rem] opacity-30 -translate-y-1/2 [mask-image:radial-gradient(closest-side,white,transparent)] sm:left-full sm:-ml-80 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2 lg:translate-y-0" aria-hidden="true">
+            <div class="relative isolate overflow-hidden border border-2 border-gray-900 dark:border-gray-100 bg-gradient-to-r from-gray-50 via-white to-gray-100 dark:from-gray-800 dark:via-gray-900 dark:to-gray-800 px-6 pt-16 shadow-2xl rounded-3xl sm:px-16 md:pt-24 lg:flex lg:gap-x-6 lg:px-12 lg:pt-0">
+              <svg viewBox="0 0 1024 1024" class="absolute left-1/2 top-1/2 -z-10 size-[64rem] opacity-30 -translate-y-1/2 [mask-image:radial-gradient(closest-side,white,transparent)] dark:[mask-image:radial-gradient(closest-side,black,transparent)] sm:left-full sm:-ml-80 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2 lg:translate-y-0" aria-hidden="true">
                 <circle cx="512" cy="512" r="512" fill="url(#759c1415-0410-454c-8f7c-9a820de03641)" fill-opacity="0.7" />
                 <defs>
                   <radialGradient id="759c1415-0410-454c-8f7c-9a820de03641">
@@ -142,21 +136,24 @@
                 </defs>
               </svg>
               <div class="mx-auto max-w-md text-center lg:mx-0 lg:flex-auto lg:py-12 lg:text-left">
-                <h2 class="text-balance text-3xl font-semibold tracking-tight text-dark">Ready to get ahead of your Competition?</h2>
-                <h4 class="text-balance text-2xl font-light mt-2 tracking-tight text-gray-600">We're giving out a 30 min free consutlation call</h4>
-                <p class="mt-6 text-pretty font-semibold text-lg/8  text-gray-900">Book a call now and let's discuss the posibilities of getting ahead</p>
+                <h2 class="text-balance text-3xl font-semibold tracking-tight text-dark dark:text-gray-100">Ready to get ahead of your Competition?</h2>
+                <h4 class="text-balance text-2xl font-light mt-2 tracking-tight text-gray-600 dark:text-gray-400">We're giving out a 30 min free consultation call</h4>
+                <p class="mt-6 text-pretty font-semibold text-lg/8 text-gray-900 dark:text-gray-100">Book a call now and let's discuss the possibilities of getting ahead</p>
                 <div class="mt-10 flex items-center justify-center gap-x-6 lg:justify-start">
-                  <a href="#" class="rounded-md bg-dark px-3.5 py-2.5 w-full text-lg font-semibold text-white shadow-sm hover:bg-gray-900 hover:text-white focus-visible:outline text-center focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">Book a free consultation call</a>
+                  <a href="#"
+                    class="rounded-md bg-dark dark:bg-gray-100 px-3.5 py-2.5 w-full text-lg font-semibold text-white dark:text-black shadow-sm hover:bg-gray-900 hover:text-white dark:hover:bg-gray-900 dark:hover:text-white focus-visible:outline text-center focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white dark:focus-visible:outline-gray-900">Book a free consultation call</a>
                 </div>
               </div>
             </div>
           </div>
         </div>
-    </div>
+      </div>
       
+
     </aside>
 
   </div>
+</section>
 
   <!-- {{ partial "subscribe-form.html" . }} -->
 </main>

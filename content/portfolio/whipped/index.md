@@ -39,8 +39,10 @@ logo_section_bg: "hover:bg-[#f1f4aa]"
 logo_design: "images/whipped-logo.png"
 logo_bg: ""
 
-project: "Comprehensive branding and digital marketing support for Whipped, an innovative dessert startup."
+overview: "Whipped is an ice cream and dessert startup based in South Asia, known for its innovative flavors and premium-quality desserts. As a startup they were looking for comprehensive branding and digital marketing support."
+approach: "Our comprehensive approach for Whipped included developing their brand identity with panaflexes, brochures, and letterheads, managing their Facebook and Instagram accounts with engaging animated posts and professional photography/videography, launching various digital campaigns to boost brand awareness, lead generation, website traffic, and video views, and organizing brand awareness events with meticulous event planning, décor, and coverage."
 work: "Managed personal and product branding, handled social media accounts with custom graphics and animations, executed lead-generating campaigns, and organized brand awareness events."
+challenge: "As a new entrant in the dessert industry, Whipped needed strong branding, social media management, and effective digital campaigns to build brand awareness and drive customer engagement."
 process: "Collaborated with Whipped to define their brand identity, create effective digital campaigns, deliver high-quality social media content, and plan impactful events."
 worker_statement: "Our efforts have helped Whipped build a strong digital presence, attract customers, and host memorable brand events."
 ---
