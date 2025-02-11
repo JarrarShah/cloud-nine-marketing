@@ -25,7 +25,7 @@ Subtext: "From branding to website development, creating an impactful digital id
 CTA_link: "https://gorgeousbeds.co.uk"
 
 client_name: "Gorgeous Beds"
-industry_type: "Furniture Manufacturing"
+industry_type: "Manufacturing"
 services_provided: ["Branding", "Social Media Management", "E-Commerce Website Development", "Facebook Ads"]
 visit_website_link: "https://gorgeousbeds.co.uk"
 

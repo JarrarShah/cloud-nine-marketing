@@ -469,5 +469,23 @@ EmojiSymbols;
     font-style: normal;
   }
   
+
+  .portfolio-item {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.portfolio-item[data-industry] {
+    display: block;
+    /* Default display */
+}
+ 
+@media (min-width: 768px) {
+    .portfolio-item:nth-child(2n+2) {
+        margin-top: 80px;
+    }
+    .portfolio-item:nth-child(2n+1) {
+        margin-top: 0;
+    }
+}
  
   

@@ -22,7 +22,7 @@ Subtext: "Transforming the dental experience through strategic social media mana
 CTA_link: "https://dentalprofiles.com/contact"
 
 client_name: "Dental Profiles"
-industry_type: "Healthcare & Dentistry"
+industry_type: "HealthCare"
 services_provided: ["Social Media Management", "Content Creation", "Videography", "Digital Marketing"]
 visit_website_link: "https://dentalprofiles.com"
 

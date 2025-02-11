@@ -22,7 +22,7 @@ Subtext: "Empowering retail growth through impactful social media advertising."
 CTA_link: ""
 
 client_name: "B Electronics"
-industry_type: "Retail & Online Shopping"
+industry_type: "Retail"
 services_provided: ["Social Media Advertising", "Digital Marketing Strategy", "Paid Ad Campaigns"]
 visit_website_link: ""
 

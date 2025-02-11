@@ -22,7 +22,7 @@ Subtext: "Crafting memorable dining experiences through strategic branding, soci
 CTA_link: "/contact"
 
 client_name: "Milano Continental"
-industry_type: "Hospitality & Dining"
+industry_type: "Food & Beverages"
 services_provided: ["Branding", "Social Media Management", "Event Management"]
 visit_website_link: "https://milanocontinental.com"
 

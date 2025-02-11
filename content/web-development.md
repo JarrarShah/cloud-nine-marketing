@@ -7,7 +7,7 @@ description: Websites tailored to your business needs. Elevate your online prese
 author: "Cloud Nine"
 image: "images/outsourced-sales-cover.png"
 images: ["images/outsourced-sales-cover.png"]
-keywords: "Outsourced Sales, Outsourcing, Marketing, Sales, Branding, Lead Generation"
+keywords: "Cloud Nine, Outsourcing, Marketing, Sales, Branding, Lead Generation"
 type: page
 layout: web-development
 ---

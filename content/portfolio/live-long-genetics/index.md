@@ -22,7 +22,7 @@ Subtext: "From eCommerce development to social media marketing, delivering compl
 CTA_link: "https://livelonggenetics.com"
 
 client_name: "Live Long Genetics"
-industry_type: "Health & Wellness"
+industry_type: "HealthCare"
 services_provided: ["Branding", "E-Commerce Website Development", "Social Media Marketing", "Ad Campaigns", "Video Editing"]
 visit_website_link: "https://livelonggenetics.com"
 

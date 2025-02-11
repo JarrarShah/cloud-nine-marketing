@@ -22,7 +22,7 @@ Subtext: "Enhancing community engagement through creative marketing and seamless
 CTA_link: "https://avenue5.com/contact"
 
 client_name: "Avenue5 International"
-industry_type: "Real Estate & Property Management"
+industry_type: "Real Estate"
 services_provided: ["Marketing Strategy", "CSR Activities", "Event Management", "Social Media Coverage"]
 visit_website_link: "https://avenue5.com"
 

@@ -3346,6 +3346,10 @@ video {
   align-items: center;
 }
 
+.items-stretch {
+  align-items: stretch;
+}
+
 .justify-start {
   justify-content: flex-start;
 }
@@ -3603,6 +3607,10 @@ video {
 
 .self-start {
   align-self: flex-start;
+}
+
+.self-end {
+  align-self: flex-end;
 }
 
 .justify-self-start {
@@ -6046,6 +6054,25 @@ EmojiSymbols;
   font-style: normal;
 }
 
+.portfolio-item {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.portfolio-item[data-industry] {
+  display: block;
+  /* Default display */
+}
+
+@media (min-width: 768px) {
+  .portfolio-item:nth-child(2n+2) {
+    margin-top: 80px;
+  }
+
+  .portfolio-item:nth-child(2n+1) {
+    margin-top: 0;
+  }
+}
+
 .dark .dark\:prose-invert {
   --tw-prose-body: var(--tw-prose-invert-body);
   --tw-prose-headings: var(--tw-prose-invert-headings);
@@ -8045,6 +8072,10 @@ EmojiSymbols;
     width: 25%;
   }
 
+  .md\:w-1\/5 {
+    width: 20%;
+  }
+
   .md\:w-2\/3 {
     width: 66.666667%;
   }
@@ -9191,6 +9222,5 @@ EmojiSymbols;
   margin-left: 2rem;
   margin-right: 2rem;
 }
-  
  
   

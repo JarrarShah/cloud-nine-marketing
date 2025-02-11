@@ -3,11 +3,13 @@
 
 
 <section class="bg-black pt-14">
-    <div class="relative bg-white dark:bg-gray-900 rounded-t-3xl px-8 items-center justify-center w-full overflow-hidden pt-4 md:pt-8">
+    <div
+        class="relative bg-white dark:bg-gray-900 rounded-t-3xl px-8 items-center justify-center w-full overflow-hidden pt-4 md:pt-8">
         <div class="relative z-10">
             <div
                 class="absolute inset-x-0 top-1/2 -z-10 flex -translate-y-1/2 justify-center overflow-hidden [mask-image:radial-gradient(50%_45%_at_50%_55%,white,transparent)]">
-                <svg class="h-[60rem] w-[100rem] flex-none stroke-secondary dark:stroke-white opacity-10" aria-hidden="true">
+                <svg class="h-[60rem] w-[100rem] flex-none stroke-secondary dark:stroke-white opacity-10"
+                    aria-hidden="true">
                     <defs>
                         <pattern id="e9033f3e-f665-41a6-84ef-756f6778e6fe" width="200" height="200" x="50%" y="50%"
                             patternUnits="userSpaceOnUse" patternTransform="translate(-100 0)">
@@ -77,14 +79,20 @@
             <div class="w-full md:w-1/2">
                 <h2 class="h2 text-dark dark:text-white dark:text-gray-100">Our Work</h2>
                 <p class="text-gray-500 dark:text-gray-100 max-w-xl">
-                    At Radiant, we are dedicated to transforming the way revenue organizations source and close deals. Our
-                    mission is to provide our customers with an unfair advantage over both their competitors and potential
-                    customers through insight and analysis. We’ll stop at nothing to get you the data you need to close a
+                    At Radiant, we are dedicated to transforming the way revenue organizations source and close deals.
+                    Our
+                    mission is to provide our customers with an unfair advantage over both their competitors and
+                    potential
+                    customers through insight and analysis. We’ll stop at nothing to get you the data you need to close
+                    a
                     deal.
                     <br><br>
-                    We’re customer-obsessed — putting the time in to build a detailed financial picture of every one of our
-                    customers so that we know more about your business than you do. We are in this together, mostly because
-                    we are all implicated in large-scale financial crime. In our history as a company, we’ve never lost a
+                    We’re customer-obsessed — putting the time in to build a detailed financial picture of every one of
+                    our
+                    customers so that we know more about your business than you do. We are in this together, mostly
+                    because
+                    we are all implicated in large-scale financial crime. In our history as a company, we’ve never lost
+                    a
                     customer, because if any one of us talks, we all go down.
                 </p>
             </div>
@@ -97,7 +105,8 @@
                 <img srcset="
                     {{- with $small -}}, {{.}} 768w{{- end -}}
                     {{- with $medium -}}, {{.}} 1024w{{- end -}}
-                    {{- with $large -}}, {{.}} 1374w{{- end -}}" src="{{ $heroimage }}" class="w-full h-auto object-cover grayscale hover:grayscale-0"
+                    {{- with $large -}}, {{.}} 1374w{{- end -}}" src="{{ $heroimage }}"
+                    class="w-full h-auto object-cover grayscale hover:grayscale-0"
                     alt="Sign Makers crafting a high quality premium LED signage">
                 {{ end }}
             </div>
@@ -106,20 +115,18 @@
 </section>
 
 
-<section class="bg-gradient-to-r from-gray-50 via-white to-gray-100 dark:from-gray-800 dark:via-gray-900 dark:to-gray-800 py-12 px-4">
+<section
+    class="bg-gradient-to-r from-gray-50 via-white to-gray-100 dark:from-gray-800 dark:via-gray-900 dark:to-gray-800 py-12 px-4">
     <div class="container mx-auto max-w-7xl">
-        <!-- Page Title -->
-        <h3 class="text-4xl font-bold text-center mb-12 text-dark dark:text-white dark:text-white">Our Portfolio</h3>
         <!-- Category Filters -->
         <div class="flex justify-center mb-8">
-            <ul class="flex-col flex md:flex-row space-x-6 md:items-center bg-white dark:bg-gray-800 border border-2 dark:border-white border-gray-900 px-6 py-3 rounded-3xl">
+            <ul
+                class="flex-col flex md:flex-row space-x-6 md:items-center bg-white dark:bg-gray-800 border border-2 dark:border-white border-gray-900 px-6 py-3 rounded-3xl">
                 <!-- "All" Filter -->
                 <li class="flex md:items-center">
                     <span class="w-2 h-2 bg-primary rounded-full mr-2"></span>
                     <button onclick="filterSelection('all')"
-                        class="text-sm text-dark dark:text-white dark:text-white hover:text-gray-700 transition-colors">
-                        ALL
-                    </button>
+                        class="text-sm text-dark dark:text-white hover:text-gray-700 transition-colors">ALL</button>
                 </li>
                 {{ $industryTypes := slice }}
                 {{ range where .Site.Pages "Section" "portfolio" }}
@@ -142,53 +149,51 @@
                 <li class="flex justify-start items-center">
                     <span class="w-2 h-2 bg-primary rounded-full mr-2"></span>
                     <button onclick="filterSelection('{{ lower . | urlize }}')"
-                        class="text-xs font-semibold text-dark dark:text-white dark:text-white text-left hover:text-gray-600 dark:text-stone-100 dark:text-stone-100 transition-colors">
-                        {{ . | upper }}
-                    </button>
+                        class="text-xs font-semibold text-dark dark:text-white text-left hover:text-gray-600 transition-colors">{{
+                        . | upper }}</button>
                 </li>
                 {{ end }}
             </ul>
         </div>
-        <!-- Portfolio Grid -->
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {{ range where .Site.Pages "Section" "portfolio" }}
-            {{ $industryTypes := .Params.industry_type }}
-            {{ if reflect.IsSlice $industryTypes }}
-            {{ $industryTypes = delimit (apply $industryTypes "lower" "." "urlize") " " }}
-            {{ else }}
-            {{ $industryTypes = lower $industryTypes | urlize }}
-            {{ end }}
-            <a class="group flex flex-col portfolio-item" data-industry="{{ $industryTypes }}"
-                href="{{ .RelPermalink }}">
+        <div class="grid grid-cols-1 items-stretch md:grid-cols-2 lg:grid-cols-2 gap-12">
+            <div class="max-w-2xl mb-12 self-end">
+                <p class="text-primary font-semibold">Portfolio</p>
+                <h2 class="text-4xl font-bold text-dark dark:text-white">Check out some of our recent projects below.
+                </h2>
+                <p class="mt-2 text-gray-600 dark:text-stone-100">
+                    There are many variations of passages of Lorem Ipsum available but the majority have suffered
+                    alteration
+                    in some form.
+                </p>
+            </div>
+            {{ range $index, $page := where .Site.Pages "Section" "portfolio" }}
+            <a class="group flex flex-col portfolio-item"
+                data-industry="{{ $page.Params.industry_type | lower | urlize }}" href="{{ $page.RelPermalink }}">
                 <div class="relative rounded-lg overflow-hidden">
-                    {{ with .Resources.GetMatch .Params.featuredImage }}
+                    {{ with $page.Resources.GetMatch $page.Params.featuredImage }}
                     {{ $large := (.Resize "2000x webp q100").RelPermalink }}
-                    <img class="w-full h-64 object-cover transition-transform duration-500 transform group-hover:scale-105"
-                        src="{{ $large }}" alt="{{ .Title }}">
+                    <img class="w-full h-32 md:h-96 rounded-2xl shadow-md object-cover transition-transform duration-500 transform group-hover:scale-105"
+                        src="{{ $large }}" alt="{{ $page.Title }}">
                     {{ end }}
                 </div>
                 <!-- Portfolio Text Section -->
                 <div class="mt-4">
-                    <h3 class="text-lg font-semibold text-dark dark:text-white dark:text-white group-hover:text-primary">{{ .Title }}</h3>
-                    <p class="mt-2 text-gray-600 dark:text-stone-100 dark:text-stone-100 text-base">
-                        {{ if .Params.summary }}{{ .Params.summary }}{{ else }}{{ .Params.description }}{{ end }}
-                    </p>
-                    <!-- Categories -->
-                    <div class="mt-4">
-                        <p class="text-sm text-gray-400">
-                            {{ if .Params.categories }}
-                            {{ delimit .Params.categories ", " }}
-                            {{ else }}
-                            No categories available.
-                            {{ end }}
-                        </p>
-                    </div>
+                    <p class="text-sm text-primary uppercase font-medium"><span>&#8212;</span>
+                        {{ $page.Params.industry_type }}</p> <!-- Adding the dash and industry -->
+                    <h3 class="text-xl font-semibold text-dark dark:text-white group-hover:text-primary">{{ $page.Title
+                        }}</h3>
                 </div>
             </a>
             {{ end }}
+
+
+
         </div>
     </div>
 </section>
+
+
+
 
 <!-- JavaScript for Filtering -->
 <script>
@@ -209,17 +214,7 @@
     filterSelection('all');
 </script>
 
-<!-- Optional CSS for Smooth Transitions -->
-<style>
-    .portfolio-item {
-        transition: opacity 0.3s ease, transform 0.3s ease;
-    }
 
-    .portfolio-item[data-industry] {
-        display: block;
-        /* Default display */
-    }
-</style>
 
 
 {{ end }}

@@ -22,7 +22,7 @@ Subtext: "Building a stronger fitness brand through creative marketing, branding
 CTA_link: ""
 
 client_name: "TMB (The Muscle Bar)"
-industry_type: "Health & Fitness"
+industry_type: "HealthCare"
 services_provided: ["Branding", "Marketing", "Videography", "eBook and Physical Book Design"]
 visit_website_link: ""
 

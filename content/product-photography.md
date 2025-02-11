@@ -3,11 +3,11 @@ title: "Product Photograpghy"
 date: 2023-3-18T11:10:36+08:00
 draft: false
 language: en
-description: Transform your brand identity with Outsourced Sales' Logo Design services. Our expert designers will create a unique and memorable logo that captures the essence of your brand. Stand out from the crowd and leave a lasting impression on your audience. Let's craft a logo that speaks volumes about your business!
-author: "Outsourced Sales"
+description: "Product photography for e-commerce stores like Shopify and Amazon. High-quality images that enhance your brand. Elevate your product visuals with Cloud Nine."
+author: "Cloud Nine"
 image: "images/outsourced-sales-cover.png"
 images: ["images/outsourced-sales-cover.png"]
-keywords: "Outsourced Sales, Outsourcing, Marketing, Sales, Branding, Lead Generation"
+keywords: "Cloud Nine, Outsourcing, Marketing, Sales, Branding, Lead Generation"
 type: page
 layout: product-photography
 ---
