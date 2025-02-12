@@ -119,8 +119,8 @@
   </div>
 </section>
 
-<section class="">
-  <div class="py-12 bg-white dark:bg-gray-900">
+<section class="h-screen flex items-center justify-center">
+  <div class="bg-white dark:bg-gray-900">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
           <div class="lg:text-center">
@@ -273,8 +273,8 @@
       <!-- Card 3 -->
       <div class="max-w-md rounded-3xl p-px bg-gradient-to-b from-sky-300 to-pink-300 dark:from-sky-800 dark:to-indigo-800 ">
         <div class="rounded-[calc(1.5rem-1px)] p-10 bg-white dark:bg-gray-900">
-          <h4 class="text-gray-700 text-lg  font-chillax font-medium  md:text-2xl dark:text-stone-50">Dedication and Honesty</h4>
-          <p class="text-gray-700 dark:text-gray-300">We believe in the power of promises kept. That’s why we’re committed to 100% client satisfaction, built on the foundation of long-term, mutually beneficial relationships. Our motto? The three “R’s”: Relationships, Responsiveness, and Results. We hold ourselves accountable to the highest standards, ensuring every campaign delivers on its promises—and then some.</p>
+          <h4 class="text-gray-700 text-lg  font-chillax font-medium  md:text-2xl dark:text-stone-50">Creativity</h4>
+          <p class="text-gray-700 dark:text-gray-300  pb-6">We believe creativity is the lifeblood of innovation. It’s how we dream, solve problems, and reimagine what’s possible. At Cloud Nine, we foster a culture of bold ideas, courageous collaboration, and fearless risk-taking. Because the best ideas don’t come from following the rules—they come from breaking them.</p>
     
           <!-- <div class="mt-8 flex gap-4 items-center">
             <img class="h-12 w-12 rounded-full" src="https://pbs.twimg.com/profile_images/1599029039297077249/p0znhFdE_400x400.jpg" alt="" />
@@ -290,55 +290,57 @@
   </div>
 </section>
 
+<section class="h-screen flex items-center justify-center bg-gradient-to-r from-white from-10% via-gray-50 via-30% to-white to-90% dark:from-gray-800 dark:via-gray-900 dark:to-gray-800 text-dark py-16 px-8 dark:text-gray-100">
 
-
-<div class="bg-gradient-to-r from-white from-10% via-gray-50 via-30% to-white to-90% dark:from-gray-800 dark:via-gray-900 dark:to-gray-800 text-dark py-16 px-8 dark:text-gray-100">
-  <div class="max-w-7xl mx-auto space-y-12">
-    <!-- Header -->
-    <div class="space-y-4">
-      <!-- <h3 class="text-lg font-semibold uppercase tracking-wide">Meet the team</h3> -->
-      <h3 class="text-4xl font-bold font-chillax">Your Success, Our Obsession</h3>
-      <p class="text-lg max-w-4xl dark:text-gray-100">
-        Cloud Nine is not just a company; it's a culmination of passion, expertise, and unwavering dedication. Founded by two industry trailblazers and supported by visionary investors who believe in the extraordinary, we bring unparalleled knowledge and commitment to every endeavor.
-      </p>
-    </div>
-
-    <!-- Story Section -->
-    <div class="grid md:grid-cols-2 gap-8 items-center">
+  <div class="">
+    <div class="max-w-7xl mx-auto space-y-12">
+      <!-- Header -->
       <div class="space-y-4">
-        <p class="text-lg dark:text-gray-100">
-          At Cloud Nine, we’re not just another agency—we’re your partners in growth, your champions of success, and your relentless advocates. We’re here to turn your vision into reality, your challenges into opportunities, and your goals into achievements.
-          
-        </p>
-        <p class="text-lg dark:text-gray-100">
-          So, why settle for the ordinary when you can reach Cloud Nine? Let’s create something extraordinary—together.
+        <!-- <h3 class="text-lg font-semibold uppercase tracking-wide">Meet the team</h3> -->
+        <h3 class="text-4xl font-bold font-chillax">Your Success, Our Obsession</h3>
+        <p class="text-lg max-w-4xl dark:text-gray-100">
+          Cloud Nine is not just a company; it's a culmination of passion, expertise, and unwavering dedication. Founded by two industry trailblazers and supported by visionary investors who believe in the extraordinary, we bring unparalleled knowledge and commitment to every endeavor.
         </p>
       </div>
-      <div class="flex justify-center">
-        {{ with resources.Get "images/hero-software.png" }}
-        {{ $small := (.Resize "900x webp q100").RelPermalink }}
-        {{ $medium := (.Resize "1500x webp q100").RelPermalink }}
-        {{ $large := (.Resize "2000x webp q100").RelPermalink }}
-        {{ $heroimage := (.Resize "2000x webp q100").RelPermalink }}
-        <img srcset="
-                {{- with $small -}}, {{.}} 768w{{- end -}}
-                {{- with $medium -}}, {{.}} 1024w{{- end -}}
-                {{- with $large -}}, {{.}} 1374w{{- end -}}" src="{{ $heroimage }}"
-          class="rounded-lg shadow-lg max-w-full" alt="Meet the team - Cloud Nine">
-        {{ end }}
+  
+      <!-- Story Section -->
+      <div class="grid md:grid-cols-2 gap-8 items-center">
+        <div class="space-y-4">
+          <p class="text-lg dark:text-gray-100">
+            At Cloud Nine, we’re not just another agency—we’re your partners in growth, your champions of success, and your relentless advocates. We’re here to turn your vision into reality, your challenges into opportunities, and your goals into achievements.
+            
+          </p>
+          <p class="text-lg dark:text-gray-100">
+            So, why settle for the ordinary when you can reach Cloud Nine? Let’s create something extraordinary—together.
+          </p>
+        </div>
+        <div class="flex justify-center">
+          {{ with resources.Get "images/hero-software.png" }}
+          {{ $small := (.Resize "900x webp q100").RelPermalink }}
+          {{ $medium := (.Resize "1500x webp q100").RelPermalink }}
+          {{ $large := (.Resize "2000x webp q100").RelPermalink }}
+          {{ $heroimage := (.Resize "2000x webp q100").RelPermalink }}
+          <img srcset="
+                  {{- with $small -}}, {{.}} 768w{{- end -}}
+                  {{- with $medium -}}, {{.}} 1024w{{- end -}}
+                  {{- with $large -}}, {{.}} 1374w{{- end -}}" src="{{ $heroimage }}"
+            class="rounded-lg shadow-lg max-w-full" alt="Meet the team - Cloud Nine">
+          {{ end }}
+        </div>
       </div>
-    </div>
-
-    <!-- Team Section -->
-    <div>
-      <h4 class="text-8xl font-chillax font-bold mb-6 py-12"> Meet The Team</h4>
     </div>
   </div>
-</div>
+
+</section>
+
 
 
 <section class="relative z-0 scroll-mt-24 scroll-mt-32 l:!scroll-mt-64 py-16 bg-white dark:bg-gray-900">
   <div class="container mx-auto">
+     <!-- Team Section -->
+     <div>
+      <h4 class="text-8xl font-chillax font-bold mb-6 py-12"> Meet The Team</h4>
+    </div>
     <div class="mx-auto flex flex-wrap items-center justify-center gap-12 t:gap-16 lg:max-w-[none] lg:gap-24 d:px-16">
 
       <!-- First Team Member -->

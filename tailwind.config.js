@@ -81,6 +81,9 @@ module.exports = {
         'custom': 'url(/images/normal-cursor-small.png), auto',
         'pointer': 'url(/images/active-cursor-small.png), pointer',
       },
+      left: {
+        '112': '28rem', // Adjust the value as per your requirement
+      },
     },
   },
   variants: {

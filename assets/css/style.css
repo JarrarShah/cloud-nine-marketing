@@ -2109,6 +2109,10 @@ video {
   top: 1px;
 }
 
+.left-32 {
+  left: 8rem;
+}
+
 .isolate {
   isolation: isolate;
 }
@@ -2207,6 +2211,10 @@ video {
 
 .m-10 {
   margin: 2.5rem;
+}
+
+.m-2 {
+  margin: 0.5rem;
 }
 
 .m-3 {
@@ -2937,6 +2945,10 @@ video {
   width: 1px;
 }
 
+.w-3\/5 {
+  width: 60%;
+}
+
 .max-w-2xl {
   max-width: 42rem;
 }
@@ -3424,6 +3436,16 @@ video {
 
 .gap-\[30px\] {
   gap: 30px;
+}
+
+.gap-x-0 {
+  -moz-column-gap: 0px;
+       column-gap: 0px;
+}
+
+.gap-x-0\.5 {
+  -moz-column-gap: 0.125rem;
+       column-gap: 0.125rem;
 }
 
 .gap-x-1 {
@@ -7891,6 +7913,10 @@ EmojiSymbols;
     visibility: visible;
   }
 
+  .md\:absolute {
+    position: absolute;
+  }
+
   .md\:sticky {
     position: sticky;
   }
@@ -7903,8 +7929,16 @@ EmojiSymbols;
     left: 8rem;
   }
 
+  .md\:left-96 {
+    left: 24rem;
+  }
+
   .md\:left-\[240px\] {
     left: 240px;
+  }
+
+  .md\:left-\[260px\] {
+    left: 260px;
   }
 
   .md\:right-12 {
@@ -8514,6 +8548,10 @@ EmojiSymbols;
     top: -45%;
   }
 
+  .lg\:left-\[500px\] {
+    left: 500px;
+  }
+
   .lg\:z-\[var\(--stick-visibility\)\] {
     z-index: var(--stick-visibility);
   }
@@ -9092,6 +9130,10 @@ EmojiSymbols;
 @media (min-width: 1280px) {
   .xl\:left-96 {
     left: 24rem;
+  }
+
+  .xl\:left-\[500px\] {
+    left: 500px;
   }
 
   .xl\:-mb-16 {

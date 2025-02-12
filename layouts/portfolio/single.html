@@ -121,34 +121,70 @@
                   <div class="flex flex-1 flex-col">
                     <div class="flex flex-1 flex-col">
                       <!-- img_01 (main image) -->
-                      <a href="{{ .Params.image1 }}" class="glightbox-hero hover:pointer" rel="noopener noreferrer">
+                      <a href="{{ .Params.image1 }}" class="glightbox-hero hover:pointer relative" rel="noopener noreferrer">
                         <img class="object-cover h-full w-full rounded-lg" src="{{ .Params.image1 }}" alt="Main Image">
+                        <span class="zoom-icon absolute top-0 right-0 m-2">
+                          <svg width="28px" height="28px" viewBox="0 0 24 24" stroke-width="2" fill="none" xmlns="http://www.w3.org/2000/svg" color="#ffffff">
+                            <path d="M8 11H11M14 11H11M11 11V8M11 11V14" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M17 17L21 21" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M3 11C3 15.4183 6.58172 19 11 19C13.213 19 15.2161 18.1015 16.6644 16.6493C18.1077 15.2022 19 13.2053 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11Z" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                          </svg>
+                        </span>
                       </a>
                     </div>
                   </div>
                   <div class="flex flex-1">
                     <div class="grid grid-cols-2 gap-2">
                       <!-- img_02 -->
-                      <a href="{{ .Params.image2 }}" class="glightbox-hero hover:pointer" rel="noopener noreferrer">
-                        <img class="object-cover h-64 w-full rounded-lg hover:pointer" src="{{ .Params.image2 }}"
-                          alt="Image 2">
+                      <a href="{{ .Params.image2 }}" class="glightbox-hero hover:pointer relative" rel="noopener noreferrer">
+                        <img class="object-cover h-64 w-full rounded-lg hover:pointer" src="{{ .Params.image2 }}" alt="Image 2">
+                        <span class="zoom-icon absolute top-0 right-0 m-2">
+                          <svg width="28px" height="28px" viewBox="0 0 24 24" stroke-width="2" fill="none" xmlns="http://www.w3.org/2000/svg" color="#ffffff">
+                            <path d="M8 11H11M14 11H11M11 11V8M11 11V14" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M17 17L21 21" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M3 11C3 15.4183 6.58172 19 11 19C13.213 19 15.2161 18.1015 16.6644 16.6493C18.1077 15.2022 19 13.2053 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11Z" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                          </svg>
+                        </span>
                       </a>
                       <!-- img_03 -->
-                      <a href="{{ .Params.image3 }}" class="glightbox-hero hover:pointer" rel="noopener noreferrer">
+                      <a href="{{ .Params.image3 }}" class="glightbox-hero hover:pointer relative" rel="noopener noreferrer">
                         <img class="object-cover h-64 w-full rounded-lg" src="{{ .Params.image3 }}" alt="Image 3">
+                        <span class="zoom-icon absolute top-0 right-0 m-2">
+                          <svg width="28px" height="28px" viewBox="0 0 24 24" stroke-width="2" fill="none" xmlns="http://www.w3.org/2000/svg" color="#ffffff">
+                            <path d="M8 11H11M14 11H11M11 11V8M11 11V14" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M17 17L21 21" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M3 11C3 15.4183 6.58172 19 11 19C13.213 19 15.2161 18.1015 16.6644 16.6493C18.1077 15.2022 19 13.2053 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11Z" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                          </svg>
+                        </span>
                       </a>
                       <!-- img_04 -->
-                      <a href="{{ .Params.image4 }}" class="glightbox-hero hover:pointer" rel="noopener noreferrer">
+                      <a href="{{ .Params.image4 }}" class="glightbox-hero hover:pointer relative" rel="noopener noreferrer">
                         <img class="object-cover h-64 w-full rounded-lg" src="{{ .Params.image4 }}" alt="Image 4">
+                        <span class="zoom-icon absolute top-0 right-0 m-2">
+                          <svg width="28px" height="28px" viewBox="0 0 24 24" stroke-width="2" fill="none" xmlns="http://www.w3.org/2000/svg" color="#ffffff">
+                            <path d="M8 11H11M14 11H11M11 11V8M11 11V14" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M17 17L21 21" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M3 11C3 15.4183 6.58172 19 11 19C13.213 19 15.2161 18.1015 16.6644 16.6493C18.1077 15.2022 19 13.2053 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11Z" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                          </svg>
+                        </span>
                       </a>
                       <!-- img_05 -->
-                      <a href="{{ .Params.image5 }}" class="glightbox-hero hover:pointer" rel="noopener noreferrer">
+                      <a href="{{ .Params.image5 }}" class="glightbox-hero hover:pointer relative" rel="noopener noreferrer">
                         <img class="object-cover h-64 w-full rounded-lg" src="{{ .Params.image5 }}" alt="Image 5">
+                        <span class="zoom-icon absolute top-0 right-0 m-2">
+                          <svg width="28px" height="28px" viewBox="0 0 24 24" stroke-width="2" fill="none" xmlns="http://www.w3.org/2000/svg" color="#ffffff">
+                            <path d="M8 11H11M14 11H11M11 11V8M11 11V14" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M17 17L21 21" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M3 11C3 15.4183 6.58172 19 11 19C13.213 19 15.2161 18.1015 16.6644 16.6493C18.1077 15.2022 19 13.2053 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11Z" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                          </svg>
+                        </span>
                       </a>
                     </div>
                   </div>
                 </div>
               </div>
+              
+              
             </div>
             {{ if .Params.logo_design }}
             <div>
