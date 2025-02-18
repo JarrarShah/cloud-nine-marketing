@@ -1,10 +1,10 @@
 {
-  "name": "outsourcedsales",
+  "name": "cloudnine",
   "version": "0.1.1",
   "description": "Hugo + Alpine.js + TailwindCSS",
   "main": "index.js",
-  "repository": "https://github.com/imobilize/outsourcedsales",
-  "author": "Andre Barrett",
+  "repository": "https://github.com/JarrarShah/cloud-nine-marketing/",
+  "author": "Jarrar Shah",
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.9",
     "alpinejs": "^3.13.0",

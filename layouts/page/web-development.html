@@ -1,6 +1,7 @@
 {{ define "main" }}
 
-<section class="text-gray-600 body-font  flex bg-gradient-to-r from-neutral via-sky-600 to-neutral relative py-20">
+<section
+    class="text-gray-600 dark:text-white body-font  flex bg-gradient-to-r from-neutral via-sky-600 to-neutral relative py-20">
     <div class="container  mx-auto h-5/6 flex px-5 items-center justify-center flex-col">
         <div class="w-full text-center animate-fade-in-down py-12">
             <!-- Change the heading text -->
@@ -50,7 +51,7 @@
                 <!-- Update the button texts and links -->
                 <a href="#_" class="relative group group-hover:active-cursor inline-block text-lg group">
                     <span
-                        class="relative z-10 block px-5 py-3 overflow-hidden font-medium leading-tight text-gray-800 transition-colors duration-300 ease-out border-2 border-gray-900 rounded-lg group-hover:text-white">
+                        class="relative z-10 block px-5 py-3 overflow-hidden font-medium leading-tight text-gray-800 dark:text-white transition-colors duration-300 ease-out border-2 border-gray-900 rounded-lg group-hover:text-white">
                         <span class="absolute inset-0 w-full h-full px-5 py-3 rounded-lg bg-gray-50"></span>
                         <span
                             class="absolute left-0 w-48 h-48 -ml-2 transition-all duration-300 origin-top-right -rotate-90 -translate-x-full translate-y-12 bg-gray-900 group-hover:-rotate-180 ease"></span>
@@ -92,7 +93,8 @@
                         <div class="col-span-1 ">
                             {{ with resources.Get "images/web-card.png" }}
                             {{ $together := .RelPermalink }}
-                            <img src="{{$together}}" class="w-full h-auto rounded-xl skew-y-3 top-12 right-1/2" alt="asdasd">
+                            <img src="{{$together}}" class="w-full h-auto rounded-xl skew-y-3 top-12 right-1/2"
+                                alt="asdasd">
                             {{ end }}
                         </div>
                         <div class="col-span-1">
@@ -124,17 +126,15 @@
     <div class="px-4 py-12 mx-auto max-w-7xl sm:px-6 md:px-12 lg:px-24 lg:py-24">
         <div class="flex justify-center py-8">
             <div class="text-center">
-                <h2 class="text-2xl font-bold font-poppins md:text-4xl mx-auto">
+                <h2
+                    class="text-2xl font-bold font-chillax text-dark dark:text-white md:text-4xl mx-auto dark:text-gray-100">
                     We build your website at an affordable price.
                 </h2>
-                <h4 class="text-xl text-gray-600">Launch the website of your dreams.
-
+                <h4 class="text-xl text-gray-600 dark:text-white dark:text-gray-400">Launch the website of your dreams.
                 </h4>
             </div>
         </div>
-        <div class="flex flex-col md:flex-row items-center justify-center">
-
-        </div>
+        <div class="flex flex-col md:flex-row items-center justify-center"></div>
         <div class="flex flex-col md:flex-row items-center justify-center text-left text-lg lg:flex-grow lg:w-full">
             <div class="w-full lg:max-w-lg lg:w-1/2 rounded-xl">
                 <div class="w-full">
@@ -143,67 +143,76 @@
                     {{ $medium := (.Resize "900x webp q100").RelPermalink }}
                     {{ $large := (.Resize "1500x webp q100").RelPermalink }}
                     {{ $together := (.Resize "1500x webp q100").RelPermalink }}
-                    <img class="object-cover object-center rounded-2xl shadow shadow-lg mx-auto" alt="hero" src="{{$together}}">
+                    <img class="object-cover object-center rounded-2xl shadow shadow-lg mx-auto" alt="hero"
+                        src="{{$together}}">
                     {{ end }}
                 </div>
             </div>
             <div class="w-full lg:max-w-lg lg:w-1/2 lg:flex justify-center">
                 <ul class="space-y-2 text-xl">
                     <li class="flex items-center">
-                        <svg class="h-6 w-6 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <svg class="h-6 w-6 mr-2 text-lime-600 dark:text-lime-100" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7">
                             </path>
                         </svg>
-                        <span class="font-medium">Beautiful multi-page website</span>
+                        <span class="font-medium dark:text-gray-100">Beautiful multi-page website</span>
                     </li>
                     <li class="flex items-center">
-                        <svg class="h-6 w-6 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <svg class="h-6 w-6 mr-2 text-lime-600 dark:text-lime-100" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7">
                             </path>
                         </svg>
-                        <span class="font-medium">Personalized design & SEO</span>
+                        <span class="font-medium dark:text-gray-100">Personalized design & SEO</span>
                     </li>
                     <li class="flex items-center">
-                        <svg class="h-6 w-6 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <svg class="h-6 w-6 mr-2 text-lime-600 dark:text-lime-100" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7">
                             </path>
                         </svg>
-                        <span class="font-medium">Fast loading to rank on Google</span>
+                        <span class="font-medium dark:text-gray-100">Fast loading to rank on Google</span>
                     </li>
                     <li class="flex items-center">
-                        <svg class="h-6 w-6 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <svg class="h-6 w-6 mr-2 text-lime-600 dark:text-lime-100" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7">
                             </path>
                         </svg>
-                        <span class="font-medium">Ecommerce & bookings</span>
+                        <span class="font-medium dark:text-gray-100">Ecommerce & bookings</span>
                     </li>
                     <li class="flex items-center">
-                        <svg class="h-6 w-6 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <svg class="h-6 w-6 mr-2 text-lime-600 dark:text-lime-100" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7">
                             </path>
                         </svg>
-                        <span class="font-medium">Easy to edit & use</span>
+                        <span class="font-medium dark:text-gray-100">Easy to edit & use</span>
                     </li>
                     <li class="flex items-center">
-                        <svg class="h-6 w-6 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <svg class="h-6 w-6 mr-2 text-lime-600 dark:text-lime-100" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7">
                             </path>
                         </svg>
-                        <span class="font-medium">Domain, email, hosting & SSL</span>
+                        <span class="font-medium dark:text-gray-100">Domain, email, hosting & SSL</span>
                     </li>
                     <li class="flex items-center">
-                        <svg class="h-6 w-6 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <svg class="h-6 w-6 mr-2 text-lime-600 dark:text-lime-100" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7">
                             </path>
                         </svg>
-                        <span class="font-medium">Our team on hand to help you</span>
+                        <span class="font-medium dark:text-gray-100">Our team on hand to help you</span>
                     </li>
                     <li class="flex items-center">
-                        <svg class="h-6 w-6 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <svg class="h-6 w-6 mr-2 text-lime-600 dark:text-lime-100" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7">
                             </path>
                         </svg>
-                        <span class="font-medium">30 day money-back guarantee</span>
+                        <span class="font-medium dark:text-gray-100">30 day money-back guarantee</span>
                     </li>
                 </ul>
             </div>
@@ -212,14 +221,15 @@
             <div class="max-w-7xl mx-auto my-2 md:my-8">
                 <a href="#_" class="relative group group-hover:active-cursor inline-block text-lg group">
                     <span
-                        class="relative z-10 block px-5 py-3 overflow-hidden font-medium leading-tight text-gray-800 transition-colors duration-300 ease-out border-2 border-gray-900 rounded-lg group-hover:text-white">
-                        <span class="absolute inset-0 w-full h-full px-5 py-3 rounded-lg bg-gray-50"></span>
+                        class="relative z-10 block px-5 py-3 overflow-hidden font-medium leading-tight text-gray-800 dark:text-white dark:text-gray-100 transition-colors duration-300 ease-out border-2 border-gray-900 dark:border-gray-100 rounded-lg group-hover:text-white dark:group-hover:text-gray-900">
                         <span
-                            class="absolute left-0 w-48 h-48 -ml-2 transition-all duration-300 origin-top-right -rotate-90 -translate-x-full translate-y-12 bg-gray-900 group-hover:-rotate-180 ease"></span>
+                            class="absolute inset-0 w-full h-full px-5 py-3 rounded-lg bg-gray-50 dark:bg-gray-800"></span>
+                        <span
+                            class="absolute left-0 w-48 h-48 -ml-2 transition-all duration-300 origin-top-right -rotate-90 -translate-x-full translate-y-12 bg-gray-900 dark:bg-gray-100 group-hover:-rotate-180 ease"></span>
                         <span class="relative">Reach Out</span>
                     </span>
                     <span
-                        class="absolute bottom-0 right-0 w-full h-12 -mb-1 -mr-1 transition-all duration-200 ease-linear bg-gray-900 rounded-lg group-hover:mb-0 group-hover:mr-0"
+                        class="absolute bottom-0 right-0 w-full h-12 -mb-1 -mr-1 transition-all duration-200 ease-linear bg-gray-900 dark:bg-gray-100 rounded-lg group-hover:mb-0 group-hover:mr-0"
                         data-rounded="rounded-lg"></span>
                 </a>
             </div>
@@ -227,11 +237,13 @@
     </div>
 </section>
 
+
 <section>
     <div class="flex lg:flex-grow justify-center mx-auto py-8 px-4">
         <div class="">
-            <h1 class="text-3xl md:text-4xl text-center font-bold mb-4">How it works</h1>
-            <p class="text-lg text-center text-gray-600 mb-8">We bring your story to life</p>
+            <h2 class="text-3xl md:text-4xl text-center dark:text-white font-bold mb-4">How it works</h2>
+            <p class="text-lg text-center dark:text-white text-gray-600 dark:text-white mb-8">We bring your story to
+                life</p>
 
             <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 gap-8 justify-center max-w-5xl mx-auto">
                 <!-- Card 1 -->
@@ -267,23 +279,24 @@
 
 </section>
 
-<section class="bg-gray-100 py-12" id="included">
+<section class="bg-gray-100 dark:bg-gray-800 py-12" id="included">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center">
-            <h2 class="text-3xl font-bold text-gray-800 mb-8">What features are included in your Cloud Nine
+            <h2 class="text-3xl font-bold text-gray-800 dark:text-white mb-8">What features are included in your Cloud
+                Nine
                 website?</h2>
-            <p class="text-lg text-gray-600 mb-12">All the essentials to run a successful website or online store.</p>
+            <p class="text-lg text-gray-600 dark:text-white mb-12">All the essentials to run a successful website or
+                online store.</p>
         </div>
         <div class="grid text-center grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-8">
             <!-- Feature 1: Done-for-you design and content -->
             <div class="p-6">
                 <div class="flex justify-center">
-                    <svg class="h-12" viewBox="0 0 512 512" style="color:#050935" xmlns="http://www.w3.org/2000/svg"
-                        class="h-full w-full">
-                        <rect width="512" height="512" x="0" y="0" rx="30" fill="transparent" stroke="transparent"
-                            stroke-width="0" stroke-opacity="100%" paint-order="stroke"></rect><svg width="512px"
-                            height="512px" viewBox="0 0 24 24" fill="currentColor" x="0" y="0" role="img"
-                            style="display:inline-block;vertical-align:middle" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="h-12 text-black dark:text-white" viewBox="0 0 512 512"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <rect class="w-full h-full" rx="30" fill="transparent" stroke="transparent"></rect>
+                        <svg class="w-full h-full text-black dark:text-white" viewBox="0 0 24 24" fill="currentColor"
+                            role="img" xmlns="http://www.w3.org/2000/svg">
                             <g fill="currentColor">
                                 <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                                     stroke-width="2">
@@ -295,9 +308,12 @@
                         </svg>
                     </svg>
 
+
                 </div>
-                <h3 class="text-xl font-semibold text-gray-800 mb-4">Done-for-you design and content</h3>
-                <p class="text-gray-600">We write the copy, pick the right images, create your design, provide rich
+                <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-4">Done-for-you design and content
+                </h3>
+                <p class="text-gray-600 dark:text-white">We write the copy, pick the right images, create your design,
+                    provide rich
                     content for your products and services, and go the extra mile to make a website that looks great on
                     any device.
                 </p>
@@ -306,21 +322,23 @@
             <!-- Feature 2: Custom domain name & professional email -->
             <div class="p-6">
                 <div class="flex justify-center">
-                    <svg class="h-12 rounded" viewBox="0 0 512 512" style="color:#050935"
-                        xmlns="http://www.w3.org/2000/svg" class="h-full w-full">
-                        <rect width="512" height="512" x="0" y="0" rx="30" fill="transparent" stroke="transparent"
-                            stroke-width="0" stroke-opacity="100%" paint-order="stroke"></rect><svg width="512px"
-                            height="512px" viewBox="0 0 24 24" fill="currentColor" x="0" y="0" role="img"
-                            style="display:inline-block;vertical-align:middle" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="h-12 rounded text-black dark:text-white" viewBox="0 0 512 512"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <rect class="w-full h-full" rx="30" fill="transparent" stroke="transparent"></rect>
+                        <svg class="w-full h-full text-black dark:text-white" viewBox="0 0 24 24" fill="currentColor"
+                            role="img" xmlns="http://www.w3.org/2000/svg">
                             <g fill="currentColor">
                                 <path fill="none" stroke="currentColor" stroke-width="2"
                                     d="M13 3v4v-4ZM9 3v4v-4ZM5 3v4v-4ZM1 7h22H1Zm0 14h22V3H1v18Z" />
                             </g>
                         </svg>
                     </svg>
+
                 </div>
-                <h3 class="text-xl font-semibold text-gray-800 mb-4">Custom domain name & professional email</h3>
-                <p class="text-gray-600">We provide you with a custom domain name of your choice (yourbusiness.com) and
+                <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-4">Custom domain name & professional
+                    email</h3>
+                <p class="text-gray-600 dark:text-white">We provide you with a custom domain name of your choice
+                    (yourbusiness.com) and
                     a matching email address (you@yourbusiness.com) to complete your professional brand.
 
                 </p>
@@ -329,12 +347,11 @@
             <!-- Feature 3: Unlimited hosting -->
             <div class="p-6">
                 <div class="flex justify-center">
-                    <svg class="h-12 rounded" viewBox="0 0 512 512" style="color:#050935"
-                        xmlns="http://www.w3.org/2000/svg" class="h-full w-full">
-                        <rect width="512" height="512" x="0" y="0" rx="30" fill="transparent" stroke="transparent"
-                            stroke-width="0" stroke-opacity="100%" paint-order="stroke"></rect><svg width="512px"
-                            height="512px" viewBox="0 0 24 24" fill="currentColor" x="0" y="0" role="img"
-                            style="display:inline-block;vertical-align:middle" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="h-12 rounded text-black dark:text-white" viewBox="0 0 512 512"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <rect class="w-full h-full" rx="30" fill="transparent" stroke="transparent"></rect>
+                        <svg class="w-full h-full text-black dark:text-white" viewBox="0 0 24 24" fill="currentColor"
+                            role="img" xmlns="http://www.w3.org/2000/svg">
                             <g fill="currentColor">
                                 <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                                     stroke-width="1.5">
@@ -346,9 +363,11 @@
                             </g>
                         </svg>
                     </svg>
+
                 </div>
-                <h3 class="text-xl font-semibold text-gray-800 mb-4">Unlimited hosting</h3>
-                <p class="text-gray-600">We provide unlimited hosting so your website will always be available, highly
+                <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-4">Unlimited hosting</h3>
+                <p class="text-gray-600 dark:text-white">We provide unlimited hosting so your website will always be
+                    available, highly
                     secure, and fast.
 
                 </p>
@@ -370,8 +389,8 @@
                         </svg>
                     </svg>
                 </div>
-                <h3 class="text-xl font-semibold text-gray-800 mb-4">Easy-to-use editor</h3>
-                <p class="text-gray-600">Customize anything. Change the layout, add pages, products, blog or news
+                <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-4">Easy-to-use editor</h3>
+                <p class="text-gray-600 dark:text-white">Customize anything. Change the layout, add pages, products, blog or news
                     sections to get more traffic.
                 </p>
             </div> -->
@@ -379,12 +398,11 @@
             <!-- Feature 5: Unlimited 0% commission sales -->
             <div class="p-6">
                 <div class="flex justify-center">
-                    <svg class="h-12 rounded" viewBox="0 0 512 512" style="color:#050935"
-                        xmlns="http://www.w3.org/2000/svg" class="h-full w-full">
-                        <rect width="512" height="512" x="0" y="0" rx="30" fill="transparent" stroke="transparent"
-                            stroke-width="0" stroke-opacity="100%" paint-order="stroke"></rect><svg width="512px"
-                            height="512px" viewBox="0 0 24 24" fill="currentColor" x="0" y="0" role="img"
-                            style="display:inline-block;vertical-align:middle" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="h-12 rounded text-black dark:text-white" viewBox="0 0 512 512"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <rect class="w-full h-full" rx="30" fill="transparent" stroke="transparent"></rect>
+                        <svg class="w-full h-full text-black dark:text-white" viewBox="0 0 24 24" fill="currentColor"
+                            role="img" xmlns="http://www.w3.org/2000/svg">
                             <g fill="currentColor">
                                 <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                                     stroke-width="2">
@@ -395,9 +413,11 @@
                             </g>
                         </svg>
                     </svg>
+
                 </div>
-                <h3 class="text-xl font-semibold text-gray-800 mb-4">Unlimited 0% commission sales</h3>
-                <p class="text-gray-600">Add as many products as you need and sell to new or returning customers through
+                <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-4">Unlimited 0% commission sales</h3>
+                <p class="text-gray-600 dark:text-white">Add as many products as you need and sell to new or returning
+                    customers through
                     your website without ever paying Cloud Nine a commission.
                 </p>
             </div>
@@ -405,12 +425,11 @@
             <!-- Feature 6: Take appointments 24/7 -->
             <div class="p-6">
                 <div class="flex justify-center">
-                    <svg class="h-12 rounded" viewBox="0 0 512 512" style="color:#050935"
-                        xmlns="http://www.w3.org/2000/svg" class="h-full w-full">
-                        <rect width="512" height="512" x="0" y="0" rx="30" fill="transparent" stroke="transparent"
-                            stroke-width="0" stroke-opacity="100%" paint-order="stroke"></rect><svg width="512px"
-                            height="512px" viewBox="0 0 16 16" fill="currentColor" x="0" y="0" role="img"
-                            style="display:inline-block;vertical-align:middle" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="h-12 rounded text-black dark:text-white" viewBox="0 0 512 512"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <rect class="w-full h-full" rx="30" fill="transparent" stroke="transparent"></rect>
+                        <svg class="w-full h-full text-black dark:text-white" viewBox="0 0 16 16" fill="currentColor"
+                            role="img" xmlns="http://www.w3.org/2000/svg">
                             <g fill="currentColor">
                                 <g fill="currentColor">
                                     <path
@@ -421,9 +440,11 @@
                             </g>
                         </svg>
                     </svg>
+
                 </div>
-                <h3 class="text-xl font-semibold text-gray-800 mb-4">Take appointments 24/7</h3>
-                <p class="text-gray-600">Receive appointment requests through your website and sync confirmed bookings
+                <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-4">Take appointments 24/7</h3>
+                <p class="text-gray-600 dark:text-white">Receive appointment requests through your website and sync
+                    confirmed bookings
                     with your calendar. Connect your own bookings platform to your website if you prefer!
 
             </div>
@@ -431,12 +452,11 @@
             <!-- Feature 7: Unlimited edits done by us -->
             <div class="p-6">
                 <div class="flex justify-center">
-                    <svg class="h-12 rounded" viewBox="0 0 512 512" style="color:#050935"
-                        xmlns="http://www.w3.org/2000/svg" class="h-full w-full">
-                        <rect width="512" height="512" x="0" y="0" rx="30" fill="transparent" stroke="transparent"
-                            stroke-width="0" stroke-opacity="100%" paint-order="stroke"></rect><svg width="512px"
-                            height="512px" viewBox="0 0 24 24" fill="currentColor" x="0" y="0" role="img"
-                            style="display:inline-block;vertical-align:middle" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="h-12 rounded text-black dark:text-white" viewBox="0 0 512 512"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <rect class="w-full h-full" rx="30" fill="transparent" stroke="transparent"></rect>
+                        <svg class="w-full h-full text-black dark:text-white" viewBox="0 0 24 24" fill="currentColor"
+                            role="img" xmlns="http://www.w3.org/2000/svg">
                             <g fill="currentColor">
                                 <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                                     stroke-width="2">
@@ -447,9 +467,11 @@
                             </g>
                         </svg>
                     </svg>
+
                 </div>
-                <h3 class="text-xl font-semibold text-gray-800 mb-4">Unlimited edits done by us</h3>
-                <p class="text-gray-600">For 30 days after we launch your website, we remain on hand to make any edits
+                <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-4">Unlimited edits done by us</h3>
+                <p class="text-gray-600 dark:text-white">For 30 days after we launch your website, we remain on hand to
+                    make any edits
                     you need. Just make a request through your website editor or via Live Chat in the Business Hub.
                 </p>
             </div>
@@ -457,12 +479,11 @@
             <!-- Feature 8: Real human support -->
             <div class="p-6">
                 <div class="flex justify-center">
-                    <svg class="h-12 rounded" viewBox="0 0 512 512" style="color:#050935"
-                        xmlns="http://www.w3.org/2000/svg" class="h-full w-full">
-                        <rect width="512" height="512" x="0" y="0" rx="30" fill="transparent" stroke="transparent"
-                            stroke-width="0" stroke-opacity="100%" paint-order="stroke"></rect><svg width="512px"
-                            height="512px" viewBox="0 0 14 14" fill="currentColor" x="0" y="0" role="img"
-                            style="display:inline-block;vertical-align:middle" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="h-12 rounded text-black dark:text-white" viewBox="0 0 512 512"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <rect class="w-full h-full" rx="30" fill="transparent" stroke="transparent"></rect>
+                        <svg class="w-full h-full text-black dark:text-white" viewBox="0 0 14 14" fill="currentColor"
+                            role="img" xmlns="http://www.w3.org/2000/svg">
                             <g fill="currentColor">
                                 <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
                                     <path
@@ -473,9 +494,11 @@
                             </g>
                         </svg>
                     </svg>
+
                 </div>
-                <h3 class="text-xl font-semibold text-gray-800 mb-4">Real human support</h3>
-                <p class="text-gray-600">With Cloud Nine (pronounced you & I) you will never be alone. Get world
+                <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-4">Real human support</h3>
+                <p class="text-gray-600 dark:text-white">With Cloud Nine (pronounced you & I) you will never be alone.
+                    Get world
                     class human support to answer your questions and get advice about succeeding online.
 
                 </p>
@@ -484,21 +507,23 @@
             <!-- Feature 9: Personal analytics dashboard & lead capture -->
             <div class="p-6">
                 <div class="flex justify-center">
-                    <svg class="h-12 rounded" viewBox="0 0 512 512" style="color:#050935"
-                        xmlns="http://www.w3.org/2000/svg" class="h-full w-full">
-                        <rect width="512" height="512" x="0" y="0" rx="30" fill="transparent" stroke="transparent"
-                            stroke-width="0" stroke-opacity="100%" paint-order="stroke"></rect><svg width="512px"
-                            height="512px" viewBox="0 0 1024 1024" fill="currentColor" x="0" y="0" role="img"
-                            style="display:inline-block;vertical-align:middle" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="h-12 rounded text-black dark:text-white" viewBox="0 0 512 512"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <rect class="w-full h-full" rx="30" fill="transparent" stroke="transparent"></rect>
+                        <svg class="w-full h-full text-black dark:text-white" viewBox="0 0 1024 1024"
+                            fill="currentColor" role="img" xmlns="http://www.w3.org/2000/svg">
                             <g fill="currentColor">
                                 <path fill="currentColor"
                                     d="m665.216 768l110.848 192h-73.856L591.36 768H433.024L322.176 960H248.32l110.848-192H160a32 32 0 0 1-32-32V192H64a32 32 0 0 1 0-64h896a32 32 0 1 1 0 64h-64v544a32 32 0 0 1-32 32H665.216zM832 192H192v512h640V192zM352 448a32 32 0 0 1 32 32v64a32 32 0 0 1-64 0v-64a32 32 0 0 1 32-32zm160-64a32 32 0 0 1 32 32v128a32 32 0 0 1-64 0V416a32 32 0 0 1 32-32zm160-64a32 32 0 0 1 32 32v192a32 32 0 1 1-64 0V352a32 32 0 0 1 32-32z" />
                             </g>
                         </svg>
                     </svg>
+
                 </div>
-                <h3 class="text-xl font-semibold text-gray-800 mb-4">Personal analytics dashboard & lead capture</h3>
-                <p class="text-gray-600">Track page views, sources, unique users, average session duration, and more in
+                <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-4">Personal analytics dashboard & lead
+                    capture</h3>
+                <p class="text-gray-600 dark:text-white">Track page views, sources, unique users, average session
+                    duration, and more in
                     a dashboard dedicated to the performance of your sales and bookings. Capture all customer and lead
                     information in a single place and export your contacts anytime.
                 </p>
@@ -507,12 +532,11 @@
             <!-- Feature 10: 1-to-1 call before launch -->
             <div class="p-6">
                 <div class="flex justify-center">
-                    <svg class="h-12 rounded" viewBox="0 0 512 512" style="color:#050935"
-                        xmlns="http://www.w3.org/2000/svg" class="h-full w-full">
-                        <rect width="512" height="512" x="0" y="0" rx="30" fill="transparent" stroke="transparent"
-                            stroke-width="0" stroke-opacity="100%" paint-order="stroke"></rect><svg width="512px"
-                            height="512px" viewBox="0 0 14 14" fill="currentColor" x="0" y="0" role="img"
-                            style="display:inline-block;vertical-align:middle" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="h-12 rounded text-black dark:text-white" viewBox="0 0 512 512"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <rect class="w-full h-full" rx="30" fill="transparent" stroke="transparent"></rect>
+                        <svg class="w-full h-full text-black dark:text-white" viewBox="0 0 14 14" fill="currentColor"
+                            role="img" xmlns="http://www.w3.org/2000/svg">
                             <g fill="currentColor">
                                 <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
                                     <circle cx="7" cy="7" r="2.5" />
@@ -522,9 +546,11 @@
                             </g>
                         </svg>
                     </svg>
+
                 </div>
-                <h3 class="text-xl font-semibold text-gray-800 mb-4">1-to-1 call before launch</h3>
-                <p class="text-gray-600">Before your website goes live, we hop on a 1-to-1 Zoom or Google Meet call to
+                <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-4">1-to-1 call before launch</h3>
+                <p class="text-gray-600 dark:text-white">Before your website goes live, we hop on a 1-to-1 Zoom or
+                    Google Meet call to
                     show you your website and make any adjustments you might need. Happiness Guaranteed.
 
                 </p>
@@ -554,30 +580,35 @@
 
 <section>
     <div class="max-w-7xl mx-auto py-8 px-4">
-        <h2 class="text-3xl text-center font-bold mb-12">What makes Cloud Nine different?</h2>
+        <h2 class="text-3xl text-center dark:text-white font-chillax font-bold mb-12">What makes Cloud Nine different?
+        </h2>
         <div class="overflow-x-auto">
             <table class="max-w-3xl mx-auto  divide-y divide-gray-200">
-                <thead class="border bg-white border-gray-200">
+                <thead
+                    class="border bg-white text-dark dark:text-white dark:bg-gray-800 dark:border-gray-700 border-gray-200">
                     <tr>
-                        <th scope="col" class="px-6 py-6 text-left text-xl font-medium text-gray-900  tracking-wider">
+                        <th scope="col"
+                            class="px-6 whitespace-nowrap text-dark dark:text-white  font-bold py-6 text-left text-2xl tracking-wider">
                             Features
                         </th>
                         <th scope="col"
-                            class="px-6 whitespace-nowrap text-white bg-neutral font-bold py-6 text-left text-2xl tracking-wider">
+                            class="px-6 whitespace-nowrap text-white bg-primary font-bold py-6 text-left text-2xl tracking-wider">
                             Cloud Nine
                         </th>
-                        <th scope="col" class="px-6 py-6 text-center text-xl font-medium text-gray-900  tracking-wider">
+                        <th scope="col"
+                            class="px-6 whitespace-nowrap text-dark dark:text-white   font-bold py-6 text-center text-2xl tracking-wider">
                             Others
                         </th>
                     </tr>
                 </thead>
-                <tbody class="bg-white divide-y divide-gray-200">
+                <tbody
+                    class="border bg-white text-dark dark:text-white dark:bg-gray-800 dark:border-gray-900 border-gray-200 divide-y divide-gray-200 dark:divide-gray-700">
                     <tr>
                         <td class="px-6 py-4 whitespace-nowrap">
                             Easier & more affordable than DIY website builders and agencies.
                         </td>
                         <td
-                            class="px-6 py-4 flex justify-center  text-white bg-neutral font-semibold  whitespace-nowrap">
+                            class="px-6 py-4 flex justify-center  text-white bg-primary font-semibold  whitespace-nowrap">
                             <svg class="h-8 w-8 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -592,7 +623,7 @@
                         <td class="px-6 py-4 whitespace-nowrap">
                             Chances of launching your website
                         </td>
-                        <td class="px-6 bg-neutral text-white text-center font-semibold py-4 whitespace-nowrap">
+                        <td class="px-6 bg-primary text-white text-center font-semibold py-4 whitespace-nowrap">
                             100%
                         </td>
                         <td class="px-6 py-4 text-center whitespace-nowrap">
@@ -604,7 +635,7 @@
                             Done-for-you design & content
                         </td>
                         <td
-                            class="px-6 py-4 flex justify-center  text-white bg-neutral font-semibold  whitespace-nowrap">
+                            class="px-6 py-4 flex justify-center  text-white bg-primary font-semibold  whitespace-nowrap">
                             <svg class="h-8 w-8 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -619,7 +650,7 @@
                             Launch & training call
                         </td>
                         <td
-                            class="px-6 py-4 flex justify-center  text-white bg-neutral font-semibold  whitespace-nowrap">
+                            class="px-6 py-4 flex justify-center  text-white bg-primary font-semibold  whitespace-nowrap">
                             <svg class="h-8 w-8 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -634,7 +665,7 @@
                             Edit with easy-to-use website editor
                         </td>
                         <td
-                            class="px-6 py-4 flex justify-center  text-white bg-neutral font-semibold  whitespace-nowrap">
+                            class="px-6 py-4 flex justify-center  text-white bg-primary font-semibold  whitespace-nowrap">
                             <svg class="h-8 w-8 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -649,7 +680,7 @@
                             Custom one-on-one support
                         </td>
                         <td
-                            class="px-6 py-4 flex justify-center  text-white bg-neutral font-semibold  whitespace-nowrap">
+                            class="px-6 py-4 flex justify-center  text-white bg-primary font-semibold  whitespace-nowrap">
                             <svg class="h-8 w-8 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -664,7 +695,7 @@
                             Fast, secure hosting
                         </td>
                         <td
-                            class="px-6 py-4 flex justify-center  text-white bg-neutral font-semibold  whitespace-nowrap">
+                            class="px-6 py-4 flex justify-center  text-white bg-primary font-semibold  whitespace-nowrap">
                             <svg class="h-8 w-8 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -679,7 +710,7 @@
                             Launch in a week
                         </td>
                         <td
-                            class="px-6 py-4 flex justify-center  text-white bg-neutral font-semibold  whitespace-nowrap">
+                            class="px-6 py-4 flex justify-center  text-white bg-primary font-semibold  whitespace-nowrap">
                             <svg class="h-8 w-8 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -693,7 +724,7 @@
                         <td class="px-6 py-4 whitespace-nowrap">
                             Biggest frustration
                         </td>
-                        <td class="px-6 bg-neutral text-white text-center font-semibold py-4 whitespace-nowrap">
+                        <td class="px-6 bg-primary text-white text-center font-semibold py-4 whitespace-nowrap">
                             not finding us sooner
                         </td>
                         <td class="px-6 py-4 text-center whitespace-nowrap">
@@ -705,7 +736,7 @@
                             Use any domain to get started fast
                         </td>
                         <td
-                            class="px-6 py-4 flex justify-center  text-white bg-neutral font-semibold  whitespace-nowrap">
+                            class="px-6 py-4 flex justify-center  text-white bg-primary font-semibold  whitespace-nowrap">
                             <svg class="h-8 w-8 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -720,7 +751,7 @@
                             Unlimited edits for 30 days
                         </td>
                         <td
-                            class="px-6 py-4 flex justify-center  text-white bg-neutral font-semibold  whitespace-nowrap">
+                            class="px-6 py-4 flex justify-center  text-white bg-primary font-semibold  whitespace-nowrap">
                             <svg class="h-8 w-8 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -735,7 +766,7 @@
                             30 day money-back guarantee
                         </td>
                         <td
-                            class="px-6 py-4 flex justify-center  text-white bg-neutral font-semibold  whitespace-nowrap">
+                            class="px-6 py-4 flex justify-center  text-white bg-primary font-semibold  whitespace-nowrap">
                             <svg class="h-8 w-8 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -764,7 +795,7 @@
         <div class="max-w-7xl mx-auto mt-4 mb-12">
             <a href="#_" class="relative group group-hover:active-cursor inline-block text-lg group">
                 <span
-                    class="relative z-10 block px-5 py-3 overflow-hidden font-medium leading-tight text-gray-800 transition-colors duration-300 ease-out border-2 border-gray-900 rounded-lg group-hover:text-white">
+                    class="relative z-10 block px-5 py-3 overflow-hidden font-medium leading-tight text-gray-800  transition-colors duration-300 ease-out border-2 border-gray-900 rounded-lg group-hover:text-white">
                     <span class="absolute inset-0 w-full h-full px-5 py-3 rounded-lg bg-gray-50"></span>
                     <span
                         class="absolute left-0 w-48 h-48 -ml-2 transition-all duration-300 origin-top-right -rotate-90 -translate-x-full translate-y-12 bg-gray-900 group-hover:-rotate-180 ease"></span>
@@ -785,7 +816,7 @@
             Technologies we love using</h2>
         <div class="grid grid-cols-2 gap-8 text-gray-500 sm:gap-12 md:grid-cols-3 lg:grid-cols-6 dark:text-gray-400">
             <a href="#" class="flex justify-center items-center">
-                <svg class="h-32 text-gray-400 hover:text-green-400" viewBox="0 0 512 512"
+                <svg class="h-32 text-gray-300 hover:text-lime-400" viewBox="0 0 512 512"
                     xmlns="http://www.w3.org/2000/svg" class="h-full w-full">
                     <rect width="512" height="512" x="0" y="0" rx="30" fill="transparent" stroke="transparent"
                         stroke-width="0" stroke-opacity="100%" paint-order="stroke"></rect><svg width="512px"
@@ -824,7 +855,7 @@
                 </svg>
             </a>
             <a href="#" class="flex justify-center items-center">
-                <svg class="h-32 text-gray-400 hover:text-blue-400" viewBox="0 0 512 512"
+                <svg class="h-32 text-gray-400 hover:text-sky-400" viewBox="0 0 512 512"
                     xmlns="http://www.w3.org/2000/svg" class="h-full w-full">
                     <rect width="512" height="512" x="0" y="0" rx="30" fill="transparent" stroke="transparent"
                         stroke-width="0" stroke-opacity="100%" paint-order="stroke"></rect><svg width="512px"
@@ -902,8 +933,8 @@
                     </svg>
                 </svg>
             </a>
-            <a href="">
-                <svg class="h-32 text-gray-400 hover:text-gray-900" viewBox="0 0 512 512"
+            <a href="" class="flex justify-center items-center">
+                <svg class="h-32 text-gray-400 hover:text-black" viewBox="0 0 512 512"
                     xmlns="http://www.w3.org/2000/svg" class="h-full w-full">
                     <rect width="512" height="512" x="0" y="0" rx="30" fill="transparent" stroke="transparent"
                         stroke-width="0" stroke-opacity="100%" paint-order="stroke"></rect><svg width="512px"
@@ -925,7 +956,7 @@
                     </svg>
                 </svg>
             </a>
-            <a href="">
+            <a href="" class="flex justify-center items-center">
                 <svg class="h-32 text-gray-400 hover:text-indigo-600" viewBox="0 0 512 512"
                     xmlns="http://www.w3.org/2000/svg" class="h-full w-full">
                     <rect width="512" height="512" x="0" y="0" rx="30" fill="transparent" stroke="transparent"
@@ -938,7 +969,7 @@
                         </g>
                     </svg>
                 </svg> </a>
-            <a href="">
+            <a href="" class="flex justify-center items-center">
                 <svg class="h-32 text-gray-400 hover:text-fuchsia-500" viewBox="0 0 512 512"
                     xmlns="http://www.w3.org/2000/svg" class="h-full w-full">
                     <rect width="512" height="512" x="0" y="0" rx="30" fill="transparent" stroke="transparent"
@@ -952,8 +983,8 @@
                     </svg>
                 </svg>
             </a>
-            <a href="">
-                <svg class="h-32 text-gray-400 hover:text-blue-500" viewBox="0 0 512 512"
+            <a href="" class="flex justify-center items-center">
+                <svg class="h-32 text-gray-400 hover:text-sky-500" viewBox="0 0 512 512"
                     xmlns="http://www.w3.org/2000/svg" class="h-full w-full">
                     <rect width="512" height="512" x="0" y="0" rx="30" fill="transparent" stroke="transparent"
                         stroke-width="0" stroke-opacity="100%" paint-order="stroke"></rect><svg width="512px"
@@ -975,7 +1006,7 @@
                     </svg>
                 </svg>
             </a>
-            <a href="">
+            <a href="" class="flex justify-center items-center">
                 <svg class="h-32 grayscale hover:grayscale-0" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"
                     class="h-full w-full">
                     <rect width="512" height="512" x="0" y="0" rx="30" fill="transparent" stroke="transparent"
@@ -1005,7 +1036,7 @@
                     </svg>
                 </svg>
             </a>
-            <a href="">
+            <a href="" class="flex justify-center items-center">
                 <svg class="h-32 grayscale hover:grayscale-0" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"
                     class="h-full w-full">
                     <rect width="512" height="512" x="0" y="0" rx="30" fill="transparent" stroke="transparent"
@@ -1041,126 +1072,239 @@
             </div>
             <div class="flex flex-col md:flex-row justify-center items-center mb-8">
                 <div class="w-1/4 mb-4 md:mb-0">
-                    {{ with resources.Get "/images/web-dev/developer.png" }}
-                    {{ $together := .RelPermalink }}
-                    <img src="{{$together}}" class="w-auto" alt="Expert Development Team">
-                    {{ end }}
+                    <svg width="38px" height="38px" viewBox="0 0 24 24" stroke-width="2" fill="none"
+                        xmlns="http://www.w3.org/2000/svg" class="text-black dark:text-white">
+                        <path
+                            d="M6.81815 22L6.81819 19.143C6.66235 17.592 5.63284 16.4165 4.68213 15M14.4545 22L14.4545 20.2858C19.3636 20.2858 18.8182 14.5717 18.8182 14.5717C18.8182 14.5717 21 14.5717 21 12.286L18.8182 8.8576C18.8182 4.28632 15.1094 2.04169 11.1818 2.00068C8.98139 1.97771 7.22477 2.53124 5.91201 3.5"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        </path>
+                        <path d="M13 7L15 9.5L13 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round"></path>
+                        <path d="M5 7L3 9.5L5 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round"></path>
+                        <path d="M10 6L8 13" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round"></path>
+                    </svg>
+
+
                 </div>
                 <div class="w-3/4">
-                    <h4 class="text-2xl font-poppins font-bold">Expert Development Team</h4>
-                    <p>Leverage the expertise of our seasoned developers who craft bespoke websites tailored to your
+                    <h4 class="text-2xl font-chillax text-dark dark:text-white font-bold">Expert Development Team</h4>
+                    <p class="text-dark dark:text-white">Leverage the expertise of our seasoned developers who craft
+                        bespoke websites tailored to your
                         unique requirements.</p>
                 </div>
             </div>
 
             <div class="flex flex-col md:flex-row justify-center items-center mb-8">
                 <div class="w-1/4 mb-4 md:mb-0">
-                    {{ with resources.Get "/images/web-dev/fast-delivery.png" }}
-                    {{ $together := .RelPermalink }}
-                    <img src="{{$together}}" class="w-auto" alt="7-Day Rapid Delivery">
-                    {{ end }}
+                    <svg width="38px" height="38px" stroke-width="2" viewBox="0 0 24 24" fill="none"
+                        xmlns="http://www.w3.org/2000/svg" class="text-black dark:text-white">
+                        <path
+                            d="M8 19C9.10457 19 10 18.1046 10 17C10 15.8954 9.10457 15 8 15C6.89543 15 6 15.8954 6 17C6 18.1046 6.89543 19 8 19Z"
+                            stroke="currentColor" stroke-width="2" stroke-miterlimit="1.5" stroke-linecap="round"
+                            stroke-linejoin="round"></path>
+                        <path
+                            d="M18 19C19.1046 19 20 18.1046 20 17C20 15.8954 19.1046 15 18 15C16.8954 15 16 15.8954 16 17C16 18.1046 16.8954 19 18 19Z"
+                            stroke="currentColor" stroke-width="2" stroke-miterlimit="1.5" stroke-linecap="round"
+                            stroke-linejoin="round"></path>
+                        <path d="M10.05 17H15V6.6C15 6.26863 14.7314 6 14.4 6H1" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round"></path>
+                        <path d="M5.65 17H3.6C3.26863 17 3 16.7314 3 16.4V11.5" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round"></path>
+                        <path d="M2 9L6 9" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round"></path>
+                        <path
+                            d="M15 9H20.6101C20.8472 9 21.0621 9.13964 21.1584 9.35632L22.9483 13.3836C22.9824 13.4604 23 13.5434 23 13.6273V16.4C23 16.7314 22.7314 17 22.4 17H20.5"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+                        <path d="M15 17H16" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+                    </svg>
+
                 </div>
                 <div class="w-3/4">
-                    <h4 class="text-2xl font-poppins font-bold">7-Day Rapid Delivery</h4>
-                    <p>Experience swift turnaround times with our 7-day delivery guarantee, ensuring you get your
+                    <h4 class="text-2xl font-chillax text-dark dark:text-white font-bold">7-Day Rapid Delivery</h4>
+                    <p class="text-dark dark:text-white">Experience swift turnaround times with our 7-day delivery
+                        guarantee, ensuring you get your
                         website up and running in no time.</p>
                 </div>
             </div>
 
             <div class="flex flex-col md:flex-row justify-center items-center mb-8">
                 <div class="w-1/4 mb-4 md:mb-0">
-                    {{ with resources.Get "/images/web-dev/web-design.png" }}
-                    {{ $together := .RelPermalink }}
-                    <img src="{{$together}}" class="w-auto" alt="Custom UI/UX Design Services">
-                    {{ end }}
+                    <svg width="38px" height="38px" viewBox="0 0 24 24" stroke-width="2" fill="none"
+                        xmlns="http://www.w3.org/2000/svg" class="text-black dark:text-white">
+                        <path
+                            d="M21 7V17C21 19.2091 19.2091 21 17 21H7C4.79086 21 3 19.2091 3 17V7C3 4.79086 4.79086 3 7 3H17C19.2091 3 21 4.79086 21 7Z"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        </path>
+                        <path d="M7 8L11 16M7 16L11 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round"></path>
+                        <path
+                            d="M17 12V15.4C17 15.7314 16.7314 16 16.4 16H15C13.8954 16 13 15.1046 13 14V14C13 12.8954 13.8954 12 15 12H17ZM17 12V9"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        </path>
+                    </svg>
+
                 </div>
                 <div class="w-3/4">
-                    <h4 class="text-2xl font-poppins font-bold">Custom UI/UX Design Services</h4>
-                    <p>Elevate your online presence with our custom UI/UX design services, creating visually stunning
+                    <h4 class="text-2xl font-chillax text-dark dark:text-white font-bold">Custom UI/UX Design Services
+                    </h4>
+                    <p class="text-dark dark:text-white">Give your customers the expereince they deserve with our custom
+                        UI/UX design
+                        services, creating visually stunning
                         and user-friendly interfaces tailored to your brand and audience.</p>
                 </div>
             </div>
 
             <div class="flex flex-col md:flex-row justify-center items-center mb-8">
                 <div class="w-1/4 mb-4 md:mb-0">
-                    {{ with resources.Get "/images/web-dev/seo.png" }}
-                    {{ $together := .RelPermalink }}
-                    <img src="{{$together}}" class="w-auto" alt="Complimentary On-Page SEO">
-                    {{ end }}
+                    <svg width="38px" height="38px" stroke-width="2" viewBox="0 0 24 24" fill="none"
+                        xmlns="http://www.w3.org/2000/svg" class="text-black dark:text-white">
+                        <path
+                            d="M3 19V5C3 3.89543 3.89543 3 5 3H19C20.1046 3 21 3.89543 21 5V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19Z"
+                            stroke="currentColor" stroke-width="2"></path>
+                        <path
+                            d="M13.8562 13.8497C14.4747 13.2295 14.8571 12.3737 14.8571 11.4286C14.8571 9.53502 13.3221 8 11.4286 8C9.53502 8 8 9.53502 8 11.4286C8 13.3221 9.53502 14.8571 11.4286 14.8571C12.377 14.8571 13.2355 14.4721 13.8562 13.8497ZM13.8562 13.8497L16 16"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        </path>
+                    </svg>
+
                 </div>
                 <div class="w-3/4">
-                    <h4 class="text-2xl font-poppins font-bold">Complimentary On-Page SEO</h4>
-                    <p>Boost your online visibility with complimentary on-page technical SEO, optimizing your website
+                    <h4 class="text-2xl font-chillax text-dark dark:text-white font-bold">Complimentary On-Page SEO</h4>
+                    <p class="text-dark dark:text-white">Boost your online visibility with complimentary on-page
+                        technical SEO, optimizing your website
                         for search engines right from the start.</p>
                 </div>
             </div>
 
             <div class="flex flex-col md:flex-row justify-center items-center mb-8">
                 <div class="w-1/4 mb-4 md:mb-0">
-                    {{ with resources.Get "/images/web-dev/give.png" }}
-                    {{ $together := .RelPermalink }}
-                    <img src="{{$together}}" class="w-auto" alt="Free 1-Year Hosting">
-                    {{ end }}
+                    <svg width="38px" height="38px" stroke-width="2" viewBox="0 0 24 24" fill="none"
+                        xmlns="http://www.w3.org/2000/svg" class="text-black dark:text-white">
+                        <path d="M4 6V12C4 12 4 15 11 15C18 15 18 12 18 12V6" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M11 3C18 3 18 6 18 6C18 6 18 9 11 9C4 9 4 6 4 6C4 6 4 3 11 3Z" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M11 21C4 21 4 18 4 18V12" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round"></path>
+                        <path
+                            d="M17.3056 17.1133L18.2147 15.1856C18.3314 14.9381 18.6686 14.9381 18.7853 15.1856L19.6944 17.1133L21.7275 17.4243C21.9884 17.4642 22.0923 17.7998 21.9035 17.9923L20.4326 19.4917L20.7797 21.61C20.8243 21.882 20.5515 22.0895 20.3181 21.961L18.5 20.9603L16.6819 21.961C16.4485 22.0895 16.1757 21.882 16.2203 21.61L16.5674 19.4917L15.0965 17.9923C14.9077 17.7998 15.0116 17.4642 15.2725 17.4243L17.3056 17.1133Z"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        </path>
+                    </svg>
+
                 </div>
                 <div class="w-3/4">
-                    <h4 class="text-2xl font-poppins font-bold">Free 1-Year Hosting</h4>
-                    <p>Enjoy peace of mind with free hosting for the first year, providing a reliable foundation for
+                    <h4 class="text-2xl font-chillax text-dark dark:text-white font-bold">Free 1-Year Hosting</h4>
+                    <p class="text-dark dark:text-white">Enjoy peace of mind with free hosting for the first year,
+                        providing a reliable foundation for
                         your website's presence on the internet.</p>
                 </div>
             </div>
 
             <div class="flex flex-col md:flex-row justify-center items-center mb-8">
                 <div class="w-1/4 mb-4 md:mb-0">
-                    {{ with resources.Get "/images/web-dev/integration.png" }}
-                    {{ $together := .RelPermalink }}
-                    <img src="{{$together}}" class="w-auto" alt="Sales-Boosting Technology Integration">
-                    {{ end }}
+                    <svg width="38px" height="38px" stroke-width="2" viewBox="0 0 24 24" fill="none"
+                        xmlns="http://www.w3.org/2000/svg" class="text-black dark:text-white">
+                        <path d="M4 14V18.4C4 18.7314 4.26863 19 4.6 19H10" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M19 14V18.4C19 18.7314 18.7314 19 18.4 19H14" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M14 5H18.4C18.7314 5 19 5.26863 19 5.6V10" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M4 10V5.6C4 5.26863 4.26863 5 4.6 5H10" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M14 19V20C14 21.1046 13.1046 22 12 22C10.8954 22 10 21.1046 10 20V19"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        </path>
+                        <path d="M4 10H5C6.10457 10 7 10.8954 7 12C7 13.1046 6.10457 14 5 14H4" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M19 10H20C21.1046 10 22 10.8954 22 12C22 13.1046 21.1046 14 20 14H19"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        </path>
+                        <path d="M14 5V4C14 2.89543 13.1046 2 12 2C10.8954 2 10 2.89543 10 4V5" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+
                 </div>
                 <div class="w-3/4">
-                    <h4 class="text-2xl font-poppins font-bold">Sales-Boosting Technology Integration</h4>
-                    <p>Maximize your revenue potential with the seamless integration of cutting-edge technologies
+                    <h4 class="text-2xl font-chillax text-dark dark:text-white font-bold">Sales-Boosting Technology
+                        Integration</h4>
+                    <p class="text-dark dark:text-white">Maximize your revenue potential with the seamless integration
+                        of cutting-edge technologies
                         designed to enhance your sales performance.</p>
                 </div>
             </div>
 
             <div class="flex flex-col md:flex-row justify-center items-center mb-8">
                 <div class="w-1/4 mb-4 md:mb-0">
-                    {{ with resources.Get "/images/web-dev/quick.png" }}
-                    {{ $together := .RelPermalink }}
-                    <img src="{{$together}}" class="w-auto" alt="Lightning-Fast Loading Speed">
-                    {{ end }}
+                    <svg width="38px" height="38px" viewBox="0 0 24 24" stroke-width="2" fill="none"
+                        xmlns="http://www.w3.org/2000/svg" class="text-black dark:text-white">
+                        <path d="M13 10V3L5 14H11V21L19 10H13Z" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+
                 </div>
                 <div class="w-3/4">
-                    <h4 class="text-2xl font-poppins font-bold">Lightning-Fast Loading Speed</h4>
-                    <p>Delight your visitors with a lightning-fast loading website, ensuring an optimal user experience
+                    <h4 class="text-2xl font-chillax text-dark dark:text-white font-bold">Lightning-Fast Loading Speed
+                    </h4>
+                    <p class="text-dark dark:text-white">Delight your visitors with a lightning-fast loading website,
+                        ensuring an optimal user experience
                         and higher engagement rates.</p>
                 </div>
             </div>
 
             <div class="flex flex-col md:flex-row justify-center items-center mb-8">
                 <div class="w-1/4 mb-4 md:mb-0">
-                    {{ with resources.Get "/images/web-dev/maintenance.png" }}
-                    {{ $together := .RelPermalink }}
-                    <img src="{{$together}}" class="w-auto" alt="Maintenance After Website Development">
-                    {{ end }}
+                    <svg width="38px" height="38px" viewBox="0 0 24 24" stroke-width="2" fill="none"
+                        xmlns="http://www.w3.org/2000/svg" class="text-black dark:text-white">
+                        <path
+                            d="M10.0503 10.6066L2.97923 17.6777C2.19818 18.4587 2.19818 19.7251 2.97923 20.5061V20.5061C3.76027 21.2872 5.0266 21.2872 5.80765 20.5061L12.8787 13.4351"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        </path>
+                        <path
+                            d="M17.1927 13.7994L21.071 17.6777C21.8521 18.4587 21.8521 19.7251 21.071 20.5061V20.5061C20.29 21.2872 19.0236 21.2872 18.2426 20.5061L12.0341 14.2977"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        </path>
+                        <path
+                            d="M6.73267 5.90381L4.61135 6.61092L2.49003 3.07539L3.90424 1.66117L7.43978 3.78249L6.73267 5.90381ZM6.73267 5.90381L9.5629 8.73404"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        </path>
+                        <path
+                            d="M10.0503 10.6066C9.2065 8.45359 9.37147 5.62861 11.111 3.8891C12.8505 2.14958 16.0607 1.76778 17.8285 2.82844L14.7878 5.86911L14.5052 8.98015L17.6162 8.69754L20.6569 5.65686C21.7176 7.42463 21.3358 10.6349 19.5963 12.3744C17.8567 14.1139 15.0318 14.2789 12.8788 13.435"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        </path>
+                    </svg>
+
                 </div>
                 <div class="w-3/4">
-                    <h4 class="text-2xl font-poppins font-bold">Maintenance After Website Development</h4>
-                    <p>Ensure your website remains in peak condition with our post-development maintenance services,
+                    <h4 class="text-2xl font-chillax text-dark dark:text-white font-bold">Maintenance After Website
+                        Development</h4>
+                    <p class="text-dark dark:text-white">Ensure your website remains in peak condition with our
+                        post-development maintenance services,
                         keeping it updated and secure for optimal performance.</p>
                 </div>
             </div>
 
             <div class="flex flex-col md:flex-row justify-center items-center mb-8">
                 <div class="w-1/4 mb-4 md:mb-0">
-                    {{ with resources.Get "/images/web-dev/guarantee.png" }}
-                    {{ $together := .RelPermalink }}
-                    <img src="{{$together}}" class="w-auto" alt="100% Money Back Guarantee">
-                    {{ end }}
+                    <svg width="38px" height="38px" stroke-width="2" viewBox="0 0 24 24" fill="none"
+                        xmlns="http://www.w3.org/2000/svg" class="text-black dark:text-white">
+                        <path
+                            d="M3 20.4V3.6C3 3.26863 3.26863 3 3.6 3H20.4C20.7314 3 21 3.26863 21 3.6V20.4C21 20.7314 20.7314 21 20.4 21H3.6C3.26863 21 3 20.7314 3 20.4Z"
+                            stroke="currentColor" stroke-width="2"></path>
+                        <path
+                            d="M15 8.5C14.315 7.81501 13.1087 7.33855 12 7.30872M9 15C9.64448 15.8593 10.8428 16.3494 12 16.391M12 7.30872C10.6809 7.27322 9.5 7.86998 9.5 9.50001C9.5 12.5 15 11 15 14C15 15.711 13.5362 16.4462 12 16.391M12 7.30872V5.5M12 16.391V18.5"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        </path>
+                    </svg>
+
                 </div>
                 <div class="w-3/4">
-                    <h4 class="text-2xl font-poppins font-bold">100% Money Back Guarantee</h4>
-                    <p>We stand behind the quality of our work with a money-back guarantee, providing you with peace of
+                    <h4 class="text-2xl font-chillax text-dark dark:text-white font-bold">100% Money Back Guarantee</h4>
+                    <p class="text-dark dark:text-white">We stand behind the quality of our work with a money-back
+                        guarantee, providing you with peace of
                         mind throughout the process.</p>
                 </div>
             </div>
@@ -1190,27 +1334,27 @@
     <div class="container mx-auto">
         <div class="relative py-2 md:py-12">
             <div
-                class="container mx-auto bg-gradient-to-tr from-zinc-900 via-cyan-900 to-zinc-900 rounded-2xl shadow-md z-0">
+                class="container mx-auto bg-gradient-to-tr from-zinc-900 via-cyan-900 to-zinc-900 dark:from-gray-800 dark:via-gray-900 dark:to-gray-800 rounded-2xl shadow-md z-0">
                 <div class="row">
                     <div class="flex-col flex md:flex-row justify-between items-center">
                         <div class="mx-auto p-3 md:p-12">
                             <h3
-                                class="text-xl md:text-4xl max-w-2xl text-center md:text-left font-bold tracking-tight text-white sm:text-3xl">
+                                class="text-xl md:text-4xl max-w-2xl text-center md:text-left font-bold tracking-tight text-white dark:text-gray-100 sm:text-3xl">
                                 Professional website done for you. 7-day turnaround.
-
                             </h3>
                             <p
-                                class="max-w-2xl mb-12 mx-auto text-xl text-center md:text-left f md:text-xl tracking-tight font-semibold text-stone-400">
+                                class="max-w-2xl mb-12 mx-auto text-xl text-center md:text-left f md:text-xl tracking-tight font-semibold text-stone-400 dark:text-gray-100">
                                 Completely zero-risk. Unmatched customer service.
                             </p>
                             <a href="/book-consultation/"
-                                class="block px-5 py-3 w-64 mt-2 text-xl text-center text-white font-semibold border border-rose-800 rounded-lg focus:ring focus:ring-amber-300 bg-primary hover:bg-rose-800 transition ease-in-out duration-200">
-                                Book Free Consultation</a>
+                                class="block px-5 py-3 w-64 mt-2 text-xl text-center text-white font-semibold border border-rose-800 dark:border-rose-600 rounded-lg focus:ring focus:ring-amber-300 bg-primary hover:bg-rose-800 dark:hover:bg-rose-600 transition ease-in-out duration-200">
+                                Book Free Consultation
+                            </a>
                         </div>
                         <div class="sm:mx-auto sm:flex sm:max-w-lg">
                             {{ with resources.Get "/images/web-dev/0.png" }}
                             {{ $together := .RelPermalink }}
-                            <img src="{{$together}}" class="w-full z-40 overflow-vissible" alt="">
+                            <img src="{{$together}}" class="w-full z-40 overflow-visible" alt="">
                             {{ end }}
                         </div>
                     </div>
@@ -1219,6 +1363,7 @@
         </div>
     </div>
 </section>
+
 
 
 {{ end }}

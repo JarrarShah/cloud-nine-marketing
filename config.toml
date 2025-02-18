@@ -36,7 +36,7 @@ logo = ""
 keywords = ""
 home = "Home"
 # Google Analitycs
-googleAnalitycsID = "" # Your ID
+googleAnalitycsID = "GTM-TM8K5683"
 
 [markup]
   defaultMarkdownHandler = "goldmark"
