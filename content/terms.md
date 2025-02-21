@@ -4,27 +4,27 @@ date: 2023-04-10T11:10:36+08:00
 draft: false
 language: en
 description: Terms and conditions
-image: "images/og-cabconnects.png"
-images: ["images/og-cabconnects.png"]
+image: "images/og-cloudnine.png"
+images: ["images/og-cloudnine.png"]
 ---
 
 ### BINDING EFFECT
-This agreement (“Agreement”) is a binding agreement between you (“you”) and iMobilize Ltd, trading as Cloud Nine Marketing, (“Cloud Nine Marketing,” “Company,” “we” or “us”). Cloud Nine Marketing is an Alias under the private limited company iMobilize Ltd. By using the site at [www.parkinsonsigns.co.uk](/).(the ‘Site’) or any information, materials, images, graphics, data, text, files, links, software, messages, communications, content, organization, design, compilation, magnetic translation, digital conversion, HTML, XML, Java code and other content related to the Site (collectively ‘Content’) or services provided in connection with the Site (the ‘Service’), you agree to abide by these Terms of Use, as the Company may amend them from time to time in its sole discretion. YOU AGREE THAT BY USING THE SERVICE YOU REPRESENT THAT YOU ARE AT LEAST 18 YEARS OLD AND THAT YOU ARE LEGALLY ABLE TO ENTER INTO THIS AGREEMENT.
+This agreement (“Agreement”) is a binding agreement between you (“you”) and iMobilize Ltd, trading as Cloud Nine Marketing, (“Cloud Nine Marketing,” “Company,” “we” or “us”). Cloud Nine is an Alias under the private limited company Cloud Nine Marketing (SMC) PVT LTD. By using the site at [www.itscloudnine.com](/).(the ‘Site’) or any information, materials, images, graphics, data, text, files, links, software, messages, communications, content, organization, design, compilation, magnetic translation, digital conversion, HTML, XML, Java code and other content related to the Site (collectively ‘Content’) or services provided in connection with the Site (the ‘Service’), you agree to abide by these Terms of Use, as the Company may amend them from time to time in its sole discretion. YOU AGREE THAT BY USING THE SERVICE YOU REPRESENT THAT YOU ARE AT LEAST 18 YEARS OLD AND THAT YOU ARE LEGALLY ABLE TO ENTER INTO THIS AGREEMENT.
 
 
 ### REFUND POLICY / CANCELLATION
-Cloud Nine Marketing is committed to providing each customer with exceptional service. We want you to feel comfortable about transacting business with us. Due to the nature of our business and the accessibility of our products some of our programs have different refund and cancellation policies. Please find the complete details in the “refund policy” section of www.parkinsonsigns.co.uk.
-If you are not completely satisfied with the product you have paid for, you may contact [support@parkinsonsigns.com]() and we will look into your request.
+Cloud Nine Marketing is committed to providing each customer with exceptional service. We want you to feel comfortable about transacting business with us. Due to the nature of our business and the accessibility of our products some of our programs have different refund and cancellation policies. Please find the complete details in the “refund policy” section of www.itscloudnine.com.
+If you are not completely satisfied with the product you have paid for, you may contact [info@itscloudnine.com]() and we will look into your request.
 
 
 
 ### PRIVACY POLICY
-The company respects your privacy and permits you to control the treatment of your personal information. A complete statement of the Company’s current privacy policy (the “Privacy Policy”) can be found on the privacy policy section on [www.parkinsonsigns.co.uk](/).
+The company respects your privacy and permits you to control the treatment of your personal information. A complete statement of the Company’s current privacy policy (the “Privacy Policy”) can be found on the privacy policy section on [www.itscloudnine.com](/).
 
 
 
 ### PROGRAM-SPECIFIC TERMS AND CONDITIONS
-These terms are generalized for full terms and conditionals for a specific program you purchase please request them at [support@parkinsonsigns.com](/).Please note upon purchase the agreement must be signed on part of the client.
+These terms are generalized for full terms and conditionals for a specific program you purchase please request them at [info@itscloudnine.com](/).Please note upon purchase the agreement must be signed on part of the client.
 
 
 ### LICENSE
@@ -35,7 +35,8 @@ You acquire no ownership or other interest in, or another license to, any patent
 When accessing the Site or using the Content or Service, you agree to obey the law and to respect the intellectual property rights of others. Your use of the Service, Content and Site is at all times governed by and subject to laws regarding intellectual property ownership. You agree not to upload, download, display, perform, transmit, or otherwise distribute any information or content in violation of any third party’s copyrights, trademarks, or other intellectual property or proprietary rights. You agree to abide by laws regarding intellectual property ownership and use, and you shall be solely responsible for any violations of any relevant laws and for any infringements of third party rights caused by any content you provide or transmit, or that is provided or transmitted using your user name. The burden of proving that any content does not violate any laws or third party rights rests solely with you.
 If you use the Site or our Service in a manner that exceeds the scope of this license or breaches any relevant agreement, your license shall terminate immediately.
 
-CONFIDENTIALITY 
+### CONFIDENTIALITY 
+
 Client Data shall at all times remain the property of the Client or its licensors. Except to the extent Cloud Nine Marketing has direct obligations under data protection laws. The Client shall ensure (and is exclusively responsible for) the accuracy, quality, integrity, and legality of the Client Data and that its use (including use in connection with any of our Programs) complies with all applicable laws and Intellectual Property Rights. If Cloud Nine Marketing becomes aware of any allegation that Client Data may not comply with the Acceptable Use Policy Cloud Nine Marketing shall have the right to permanently delete Client Data that is suspected of being in breach of any of the foregoing from any of the Programs and/or disclose Client Data to law enforcement authorities (in each case without the need to consult the Client). Where reasonably practicable and lawful Cloud Nine Marketing shall notify the Client before taking such action on. Within 60 days of the earlier of the end of the provision of a client signing up to a Program (or any part) relating to the processing of the Client Data, unless otherwise set out in the Contract or subsequently agreed in writing, the Client hereby instructs that Cloud Nine Marketing shall securely dispose of such Client Data processed in relation to the Program (or any part) which have ended except to the extent that any Applicable Law (as defined in the Data Protection Addendum) requires Cloud Nine Marketing to store such Client Data.
 
 Cloud Nine Marketing shall maintain the confidentiality of the Client Data and shall not without the prior written consent of the Client or in accordance with the Contract, disclose or copy the Client Data other than as necessary for the performance of the Program or its express rights and obligations under the Contract. Cloud Nine Marketing shall implement technical and organizational security measures in accordance with [the Informa on Security Addendum]. Cloud Nine Marketing undertakes to disclose the Client Data only to those of its officers, employees, agents, contractors, and direct and indirect subcontractors to whom, and to the extent to which, such disclosure is necessary for the purposes contemplated under the Contract or as otherwise reasonably necessary for the provision or receipt of the Program, and shall be responsible to the Client for any acts or omissions of any of the persons referred to. In respect of the confidentiality and security of the Client Data as if they were Cloud Nine Marketing own. The provisions of this clause shall not apply to information which: is or comes into the public domain through no fault of Cloud Nine Marketing, its officers, employees, agents, or contractors; is independently developed by iMobilize Ltd (or any of its Affiliates or any person acting on its or their behalf), without access to or use of such information; or the client is required by law, by court or governMetal or regulatory order to be disclosed, that above clauses shall not apply to protected data. This clause shall survive the termination or expiry of the Contract for a period of 10 years. Any Client Data is Protected Data, Cloud Nine Marketing shall ensure that such Client Data may be disclosed or used only to the extent such disclosure or use does not conflict with any of Cloud Nine Marketing obligations under the Data Protection Addendum.

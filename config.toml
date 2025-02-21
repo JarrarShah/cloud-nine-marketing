@@ -1,5 +1,5 @@
-baseURL = "https://cab-connects.com"
-title = "Cloud Nine Marketing"
+baseURL = "https://www.itscloudnine.com"
+title = "Cloud Nine"
 
 languageCode = "en-us"
 DefaultContentLanguage = "en"
@@ -28,7 +28,7 @@ author = "Cloud Nine Marketing"
 authorimage = "../assets/images/global/author.webp"
 github = ""
 facebook = ""
-og_image = "images/og-cabconnects.png"
+og_image = "images/og-cloudnine.png"
 sitename = "Cloud Nine Marketing"
 twitter = ""
 description = "Welcome to CabConnects, your reliable inbound Call Center solution. With our 24/7 call answering services, we ensure that no call goes unanswered. Whether you need support during peak hours or assistance with overflow, our expert team is here to help. Trust CabConnects for seamless call center solutions tailored to your needs."
@@ -36,7 +36,7 @@ logo = ""
 keywords = ""
 home = "Home"
 # Google Analitycs
-googleAnalitycsID = "" # Your ID
+googleAnalitycsID = "GTM-TM8K5683"
 
 [markup]
   defaultMarkdownHandler = "goldmark"

@@ -5,19 +5,33 @@
 
     {{ partial "what-we-do.html" . }}
 
+    {{ partial "who-are-we.html" . }}
+
+    {{ partial "physical-business.html" . }}
+
+    {{ partial "enterprise-outsource.html" . }}
+
+    {{ partial "elevate-your-brand.html" . }}
+
     {{ partial "outsourcing.html" . }}
 
     {{ partial "metrics.html" . }}
 
-    <section id="case-study-section">
+    <section id="case-study-section" class="bg-white dark:bg-gray-900">
         {{ partial "case-study.html" . }}
     </section>
+
+    {{ partial "linking-section.html" . }}
+
+    <!-- {{ partial "animated-gallery.html" . }} -->
 
     {{ partial "technologies.html" . }}
 
     {{ partial "cta.html" . }}
 
     {{ partial "home-post-section.html" . }}
+
+    {{ partial "contact-forum.html" . }}
 
 </main>
 <!-- <script src="{{ .Site.BaseURL }}assets/js/stickyscroll.js"></script> -->

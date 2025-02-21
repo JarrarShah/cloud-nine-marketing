@@ -1,0 +1,68 @@
+<section class="bg-gradient-to-r from-white via-gray-50 to-white dark:from-gray-800 dark:via-gray-900 dark:to-gray-800">
+    <div class="container mx-auto ">
+        <div class="relative">
+            <div class="lg:mx-auto lg:grid lg:max-w-7xl lg:grid-cols-2 lg:items-center lg:gap-24 lg:px-8">
+                <div class="relative max-w-md px-4 mx-auto sm:max-w-3xl sm:px-6 lg:px-0">
+                    <!-- Content area -->
+                    <div class="md:py-12 sm:pt-6 lg:py-20">
+                        <div class="mb-4">
+                            <span
+                                class="inline-flex rounded-xl justify-between items-center py-1 px-4 mb-7 text-sm border border-2 border-gray-900 dark:border-white font-medium text-dark dark:text-white">Who
+                                are we?</span>
+                        </div>
+                        <h3 class="text-4xl text-dark font-chillax dark:text-white font-bold mb-4">Are You an Enterprise Seeking The <span
+                                class="text-primary font-extrabold rounded-3xl">Perfect </span>Outsourcing Partner?
+                        </h3>
+                        <p class="text-dark dark:text-white mb-8 leading-8 text-lg">
+                            Are you an enterprise looking to streamline operations and focus on your core strengths?
+                            Imagine having a dedicated team of experts handling your marketing and technical needs,
+                            allowing you to concentrate on what you do best.
+                            <br><br>
+                            We offer a seamless outsourcing experience, connecting your brand with ideal clients and
+                            driving substantial growth. Our tailored strategies ensure that your business attracts new
+                            customers and stands out in the industry.
+                        </p>
+                        <a href="/contact" class="relative group group-hover:active-cursor inline-block text-lg group">
+                          <span
+                              class="relative z-10 block px-5 py-3 overflow-hidden font-medium leading-tight text-gray-800 dark:text-gray-100 transition-colors duration-300 ease-out border-2 border-gray-900 dark:border-gray-600 rounded-lg group-hover:text-black dark:group-hover:text-white">
+                              <span
+                                  class="absolute inset-0 w-full h-full px-5 py-3 rounded-lg bg-gradient-to-r from-white via-stone-50 to-stone-200 dark:from-gray-700 dark:via-gray-800 dark:to-gray-900"></span>
+                              <span
+                                  class="absolute left-0 w-48  h-48 -ml-2 transition-all duration-300 origin-top-right -rotate-90 -translate-x-full translate-y-12 bg-gradient-to-r from-white via-stone-50 to-stone-200 dark:from-black dark:via-primary dark:to-black group-hover:-rotate-180 ease"></span>
+                              <span class="relative">Reach Out</span>
+                          </span>
+                          <span
+                              class="absolute bottom-0 right-0 w-full h-12 -mb-1 -mr-1 transition-all duration-200 ease-linear bg-gradient-to-r from-black via-stone-800 to-stone-700 dark:from-primary dark:via-rose-600 dark:to-secondary rounded-lg group-hover:mb-0 group-hover:mr-0"
+                              data-rounded="rounded-lg"></span>
+                      </a>
+                    </div>
+                </div>
+                <div class="relative sm:py-8 lg:py-0">
+                    <div
+                        class="relative max-w-md px-4 py-6 mx-auto sm:max-w-3xl sm:px-6 lg:max-w-none ">
+                        <!-- Testimonial card-->
+                        <div class="group relative">
+                            <div class="w-full flex justify-center items-center">
+                              <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"  type="module"></script>
+                              <dotlottie-player src="https://lottie.host/a4b88d03-9b4e-4c33-a787-df336cb67dc5/dSuNIN96bS.lottie" background="transparent" speed="1" class="h-[600px] w-[600px] object-cover" loop autoplay></dotlottie-player>
+                            </div>
+            
+            
+                            <!-- Image for Display Window -->
+                            {{ with resources.Get "images/man-2.png" }}
+                            <img src="{{ .RelPermalink }}" alt="Store Display"
+                              class="absolute top-[250px] left-[152px] md:top-[375px] w-[32px] h-auto  hidden group-hover:block" />
+                            {{ end }}
+                            {{ with resources.Get "images/man-1.png" }}
+                            <img src="{{ .RelPermalink }}" alt="Store Display"
+                              class="absolute top-[250px] left-[215px] md:top-[375px] md:left-[240px] w-[32px] h-auto  hidden group-hover:block" />
+                            {{ end }}
+                          </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>

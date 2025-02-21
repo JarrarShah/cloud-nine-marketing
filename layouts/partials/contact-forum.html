@@ -1,0 +1,82 @@
+<section class="py-6">
+    <div class="container mx-auto p-6 bg-white dark:bg-gray-800 rounded-2xl shadow-lg dark:shadow-indigo-50/50">
+        <form name="contact" method="POST" data-netlify="true" data-netlify-recaptcha="true" class="space-y-6">
+            <h2 class="text-3xl md:text-5xl font-bold text-dark dark:text-white">Start a project</h2>
+            
+            <!-- Hidden Inputs for Services and Budget -->
+            <input type="hidden" id="selected-services" name="services">
+            <input type="hidden" id="selected-budget" name="budget">
+            
+            <!-- Service Selection -->
+            <div>
+                <label class="block text-sm font-semibold text-dark dark:text-white mb-2">What are you looking for?</label>
+                <div class="flex flex-wrap gap-2">
+                    <button type="button" onclick="toggleMultiSelect(this, 'selected-services')" class="py-2 px-4 border border-black dark:border-gray-400 rounded-full dark:text-gray-400 text-black">Branding</button>
+                    <button type="button" onclick="toggleMultiSelect(this, 'selected-services')" class="py-2 px-4 border border-black dark:border-gray-400 rounded-full dark:text-gray-400 text-black">Social Media</button>
+                    <button type="button" onclick="toggleMultiSelect(this, 'selected-services')" class="py-2 px-4 border border-black dark:border-gray-400 rounded-full dark:text-gray-400 text-black">Performance Marketing (Google Ads, Meta Ads)</button>
+                    <button type="button" onclick="toggleMultiSelect(this, 'selected-services')" class="py-2 px-4 border border-black dark:border-gray-400 rounded-full dark:text-gray-400 text-black">Search Engine Optimisation(SEO)</button>
+                    <button type="button" onclick="toggleMultiSelect(this, 'selected-services')" class="py-2 px-4 border border-black dark:border-gray-400 rounded-full dark:text-gray-400 text-black">Website Development</button>
+                    <button type="button" onclick="toggleMultiSelect(this, 'selected-services')" class="py-2 px-4 border border-black dark:border-gray-400 rounded-full dark:text-gray-400 text-black">UI/UX Design</button>
+                    <button type="button" onclick="toggleMultiSelect(this, 'selected-services')" class="py-2 px-4 border border-black dark:border-gray-400 rounded-full dark:text-gray-400 text-black">E-commerce Platform Dev</button>
+                    <button type="button" onclick="toggleMultiSelect(this, 'selected-services')" class="py-2 px-4 border border-black dark:border-gray-400 rounded-full dark:text-gray-400 text-black">Content Marketing ( I.e. Email Marketing, Copy Writing)</button>
+                    <button type="button" onclick="toggleMultiSelect(this, 'selected-services')" class="py-2 px-4 border border-black dark:border-gray-400 rounded-full dark:text-gray-400 text-black">Product Photograpghy</button>
+                </div>
+            </div>
+            
+            <!-- Input Fields -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                    <label for="name" class="block text-sm font-medium text-gray-700 dark:text-white">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Name" class="w-full p-3 border border-gray-300 rounded-md bg-white text-black dark:bg-gray-800 dark:text-white dark:border-gray-600" required>
+                  </div>
+                  
+                  <div>
+                    <label for="email" class="block text-sm font-medium text-gray-700 dark:text-white">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Email" class="w-full p-3 border border-gray-300 rounded-md bg-white text-black dark:bg-gray-800 dark:text-white dark:border-gray-600" required>
+                  </div>
+                  
+                  <div>
+                    <label for="company" class="block text-sm font-medium text-gray-700 dark:text-white">Company Name</label>
+                    <input type="text" id="company" name="company" placeholder="Company name" class="w-full p-3 border border-gray-300 rounded-md bg-white text-black dark:bg-gray-800 dark:text-white dark:border-gray-600">
+                  </div>
+                  
+                  <div>
+                    <label for="designation" class="block text-sm font-medium text-gray-700 dark:text-white">Your Designation</label>
+                    <input type="text" id="designation" name="designation" placeholder="Your Designation" class="w-full p-3 border border-gray-300 rounded-md bg-white text-black dark:bg-gray-800 dark:text-white dark:border-gray-600">
+                  </div>
+                  
+                  <div>
+                    <label for="phone" class="block text-sm font-medium text-gray-700 dark:text-white">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Phone Number" class="w-full p-3 border border-gray-300 rounded-md bg-white text-black dark:bg-gray-800 dark:text-white dark:border-gray-600">
+                  </div>
+                  
+                <select name="hear-about" class="w-full p-3 border border-gray-300 rounded-md bg-white text-black dark:bg-gray-800 dark:text-white dark:border-gray-600">
+                    <option value="">How did you hear about us</option>
+                    <option value="google">Google</option>
+                    <option value="social-media">Social Media</option>
+                    <option value="referral">Referral</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            
+            <!-- Budget Selection -->
+            <div>
+                <label class="block text-sm font-semibold text-dark dark:text-white mb-2">Your budget</label>
+                <div class="flex gap-2">
+                    <button type="button" onclick="toggleSingleSelect(this, 'selected-budget')" class="py-2 px-4 border border-black dark:border-gray-400 rounded-full dark:text-gray-400 text-black">$1000 - $5000</button>
+                    <button type="button" onclick="toggleSingleSelect(this, 'selected-budget')" class="py-2 px-4 border border-black dark:border-gray-400 rounded-full dark:text-gray-400 text-black">$5000 - $10000</button>
+                    <button type="button" onclick="toggleSingleSelect(this, 'selected-budget')" class="py-2 px-4 border border-black dark:border-gray-400 rounded-full dark:text-gray-400 text-black">more than $10000</button>
+                </div>
+            </div>
+            
+            <!-- Project Details -->
+            <textarea name="message" placeholder="Share details about your project" class="w-full h-32 p-3 border border-gray-300 rounded-md bg-white text-black dark:bg-gray-800 dark:text-white dark:border-gray-600"></textarea>
+            
+            <!-- Recaptcha -->
+            <div data-netlify-recaptcha="true"></div>
+            
+            <!-- Submit Button -->
+            <button type="submit" class="w-full py-3 bg-black text-white font-semibold rounded-md hover:bg-gray-700">SEND NOW →</button>
+        </form>
+    </div>
+</section>

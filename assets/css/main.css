@@ -1,6 +1,4 @@
 @import "./glightbox.css";
-@import 'typeface-mukta';
-@import "./custom.css";
 
 /* assets */
 @tailwind base;
@@ -24,10 +22,6 @@ Segoe UI Symbol,
 Android Emoji,
 EmojiSymbols;
 /* Custom CSS */
-
-.prose :where(h1):not(:where([class~="not-prose"] *)) {
-    color: white !important;
-}
 
 .product-inner {
     position: relative;
@@ -134,14 +128,364 @@ EmojiSymbols;
 /* Example for sticky sections with dynamic styles */
 [data-sticky-sections] section {
     transition: opacity 0.3s ease, transform 0.3s ease;
-    opacity: var(--stick-visibility, 0);  /* Default opacity */
-    transform: scale(var(--stick-scale, 0.8));  /* Default scale */
-  }
-  
-  /* The container can also be styled with custom variables if needed */
-  [data-sticky-sections] {
+    opacity: var(--stick-visibility, 0);
+    /* Default opacity */
+    transform: scale(var(--stick-scale, 0.8));
+    /* Default scale */
+}
+
+/* The container can also be styled with custom variables if needed */
+[data-sticky-sections] {
     position: relative;
     display: flex;
     flex-direction: column;
+}
+
+.card-image {
+    background-size: cover;
+    background-position: center;
+}
+
+.card-image::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40%;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6), rgb(15 23 42));
+}
+
+.card-arrow {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.2);
+    /* Slightly transparent white */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+    /* Smooth transition on hover */
+}
+
+.card-arrow:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+    /* More opaque white on hover */
+}
+
+@layer components {
+    .span-style {
+        @apply absolute top-0 left-0 w-full h-full origin-center [transform-style:preserve-3d] lg:[transform:rotateY(calc(var(--i)*45deg))_translateZ(350px)] md:[transform:rotateY(calc(var(--i)*45deg))_translateZ(265px)] sm:[transform:rotateY(calc(var(--i)*45deg))_translateZ(216px)] [transform:rotateY(calc(var(--i)*45deg))_translateZ(120px)];
+    }
+
+    .img-style {
+        @apply absolute top-0 left-0 w-full h-full rounded-sm object-cover [transition:2s] sm:hover:-translate-y-[50px] hover:-translate-y-[20px] hover:scale-[1.3];
+    }
+}
+
+.area {
+    background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);
+    width: 100%;
+    height: 80vh;
+    position: absolute;
+    z-index: -1;
+}
+ 
+/* Cloud Animation */
+
+.clouds {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    overflow: hidden;
+}
+
+.clouds li {
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 150px;
+    /* Reduced the width */
+    height: 70px;
+    /* Reduced the height */
+    background: #dc4465;
+    box-shadow: 5px 5px rgba(0, 0, 0, 0.2);
+    animation: animate 25s linear infinite;
+    bottom: -150px;
+    border-radius: 50px;
+    /* Adjusted border-radius to match new size */
+}
+
+.clouds li::after,
+.clouds li::before {
+    content: "";
+    position: relative;
+    display: inline-block;
+    background: inherit;
+    border-radius: inherit;
+}
+
+.clouds li::after {
+    width: 50px;
+    /* Reduced the width */
+    height: 50px;
+    /* Reduced the height */
+    top: -100px;
+    /* Adjusted position */
+    left: 25px;
+    /* Adjusted position */
+}
+
+.clouds li::before {
+    width: 60px;
+    /* Reduced the width */
+    height: 60px;
+    /* Reduced the height */
+    top: -15px;
+    /* Adjusted position */
+    left: 45px;
+    /* Adjusted position */
+}
+
+.clouds li:nth-child(1) {
+    left: 25%;
+    width: 90px;
+    height: 50px;
+    animation-delay: 0s;
+}
+
+.clouds li:nth-child(2) {
+    left: 10%;
+    width: 65px;
+    height: 50px;
+    animation-delay: 2s;
+    animation-duration: 12s;
+}
+
+.clouds li:nth-child(3) {
+    left: 70%;
+    width: 70px;
+    height: 50px;
+    animation-delay: 4s;
+}
+
+.clouds li:nth-child(4) {
+    left: 40%;
+    width: 80px;
+    height: 50px;
+    animation-delay: 0s;
+    animation-duration: 18s;
+}
+
+.clouds li:nth-child(5) {
+    left: 65%;
+    width: 70px;
+    height: 45px;
+    animation-delay: 0s;
+}
+
+.clouds li:nth-child(6) {
+    left: 75%;
+    width: 75px;
+    height: 55px;
+    animation-delay: 3s;
+}
+
+.clouds li:nth-child(7) {
+    left: 35%;
+    width: 75px;
+    height: 50px;
+    animation-delay: 7s;
+}
+
+.clouds li:nth-child(8) {
+    left: 50%;
+    width: 80px;
+    height: 50px;
+    animation-delay: 15s;
+    animation-duration: 45s;
+}
+
+.clouds li:nth-child(9) {
+    left: 20%;
+    width: 77.5px;
+    height: 50.5px;
+    animation-delay: 2s;
+    animation-duration: 35s;
+}
+
+.clouds li:nth-child(10) {
+    left: 85%;
+    width: 65px;
+    height: 50px;
+    animation-delay: 0s;
+    animation-duration: 11s;
+}
+
+@keyframes animate {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-1000px);
+        opacity: 0;
+    }
+}
+
+.accent-cut-dark::after {
+    border-bottom: 48px solid #000000;
+    border-left: 40px solid transparent;
+    bottom: -1px;
+    content: "";
+    height: 0;
+    position: absolute;
+    right: -1px;
+    width: 0;
+}
+
+.accent-cut::after {
+    border-bottom: 48px solid #fff;
+    border-left: 40px solid transparent;
+    bottom: -1px;
+    content: "";
+    height: 0;
+    position: absolute;
+    right: -1px;
+    width: 0;
+}
+
+.dark .accent-cut::after {
+    border-bottom-color: rgb(17 24 39 / var(--tw-bg-opacity)); /* Adjust this color for dark mode */
+}
+
+@media (min-width: 1024px) {
+    .accent-cut::after {
+        border-bottom-width: 66px;
+        border-left-width: 55px;
+    }
+}
+
+.accent-vertical.accent-vertical-primary-300:before {
+    --tw-bg-opacity: 1;
+    background-color: #DC4465;
+}
+
+.accent-vertical:before {
+    --tw-skew-y: -50deg;
+    height: 100%;
+    left: -20px;
+    position: absolute;
+    top: 12px;
+    width: 20px;
+}
+
+.accent-underline:after, .accent-vertical:before {
+    content: "";
+    display: block;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+/* custom scrollbar styles globally */
+*::-webkit-scrollbar {
+    width: 12px; /* Adjust the width of the scrollbar */
   }
+  
+  *::-webkit-scrollbar-track {
+    background-color: #838383 !important; /* Tailwind gray-200 */
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background-image: linear-gradient(45deg, #000000, #181818) !important; /* Gradient colors */
+    border-radius: 6px !important; /* Optional: Add rounded corners */
+  }
+  
+  *::-webkit-scrollbar-thumb:hover {
+    background-image: linear-gradient(45deg, #181818, #2b2b2b) !important; /* Gradient colors for hover state */
+  }
+  
+/* Nav item animation */
+.nav-item::after {
+    display: block;
+    content: '';
+    border-bottom: solid 3px black;  
+    transform: scaleX(0);  
+    transition: transform 250ms ease-in-out;
+  }
+  .nav-item:hover::after { 
+    transform: scaleX(1); 
+  }
+  
+ /* Apply the custom cursor */
+ *, *:before, *:after {
+   @apply cursor-custom;
+ }
+ 
+ /* Active cursor for specific elements */
+ .active-cursor, 
+ .active-cursor *,
+ html body a, 
+ html body a *, 
+ html body button, 
+ html body button *, 
+ html body input, 
+ html body input *, 
+ html body label, 
+ html body label *, 
+ html body option, 
+ html body option *, 
+ html body select, 
+ html body select *, 
+ html body textarea, 
+ html body textarea * {
+   cursor: url(/images/active-cursor-small.png), auto !important;
+ }
+ 
+ @font-face {
+    font-family: "Chillax";
+    src: url("/fonts/Chillax-Regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: "Chillax";
+    src: url("/fonts/Chillax-Medium.woff2") format("woff2");
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: "Chillax";
+    src: url("/fonts/Chillax-Bold.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+
+  .portfolio-item {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.portfolio-item[data-industry] {
+    display: block;
+    /* Default display */
+}
+ 
+@media (min-width: 768px) {
+    .portfolio-item:nth-child(2n+2) {
+        margin-top: 80px;
+    }
+    .portfolio-item:nth-child(2n+1) {
+        margin-top: 0;
+    }
+}
+ 
   

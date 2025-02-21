@@ -1,37 +1,76 @@
-<section>
-    <div class="bg-grey-50 max-w-5xl mx-auto">
-        <div class="px-2 sm:container py-16 md:py-20 mx-auto">
-            <div class="flex justify-center">
-                <div class="mb-8">
-                    <span
-                        class="inline-flex rounded-xl justify-between items-center py-1 px-4 mb-7 text-sm bg-neutral font-medium text-white">Blogs
-                        & Articles</span>
-                </div>
+<section class="bg-white dark:bg-gray-900">
+    <div class="mx-auto container">
+        <div class="max-w-7xl mx-auto pb-20">
+            <!-- Title and Subtitle -->
+            <div class="px-2 sm:px-6 py-16 md:py-20 mx-auto text-center">
+                <h2 class="font-bold font-chillax text-2xl md:text-4xl lg:text-5xl leading-none text-dark dark:text-gray-100 tracking-tighter mb-4">
+                    Read Our Blog
+                </h2>
+                <p class="text-lg sm:text-xl md:text-2xl lg:text-3xl text-dark dark:text-gray-100 mb-8">Insights and updates from our team
+                </p>
             </div>
-            <div class="flex justify-center">
-                <h2
-                    class="font-bold text-xl sm:text-2xl md:text-3xl lg:text-4xl leading-none text-dark tracking-tighter">
-                    Some of our articles </h2>
-            </div>
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-12 w-full">
-                {{ range ( first 3 ( where .Paginator.Pages "Type" "blog" ) ) }}
-                <div class="">
-                    <a href="{{.RelPermalink}}">
-                        {{ $featured := .Params.featuredImage }}
-                        {{ with .Resources.GetMatch $featured }}
-                        {{ $postimage := (.Resize "600x webp q100").RelPermalink }}
-                        <img src="{{ $postimage }}" class="w-full h-64 rounded-2xl" alt="{{ .Params.description }}"
-                            title="{{ .Params.description }}" />
-                        {{ end }}
-                        <div class="py-6 xl:py-8">
-                            <h4 class="block text-lg font-semibold text-dark underline hover:text-blue-600">
-                                {{.Title}}</h4>
-                            <p class="block pt-2 text-dark">{{ .Summary | truncate 100 }}</p>
 
+            <!-- First Row with 2 Blog Cards -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-12 w-full">
+                {{ range (first 2 (where .Site.RegularPages.ByDate.Reverse "Section" "blog")) }}
+                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden">
+                    <a href="{{ .RelPermalink }}">
+                        <div class="relative card-image">
+                            {{ $featured := .Params.featuredImage }}
+                            {{ with .Resources.GetMatch $featured }}
+                            {{ $postimage := (.Resize "600x400 webp q100").RelPermalink }}
+                            <img src="{{ $postimage }}" class="w-full h-auto object-cover rounded-2xl"
+                                alt="{{ .Params.description }}" title="{{ .Params.description }}" />
+                            {{ end }}
+                            <div class="absolute z-20 bottom-0 left-0 bg-opacity-20 text-white p-4 max-w-md">
+                                <h4 class="text-lg hover:text-neutral font-semibold max-w-xl">{{ .Title }}</h4>
+                                <p class="text-sm">{{ .Date.Format "January 2, 2006" }}</p>
+                            </div>
+                            <a href="{{ .RelPermalink }}" class="card-arrow z-20">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-white">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                                </svg>
+                            </a>
                         </div>
-                        <div class="pt-2 pb-4">
-                            <a href="{{ .RelPermalink }}" class="text-dark hover:text-blue-300 font-semibold">Learn
-                                more →</a>
+                    </a>
+                </div>
+                {{ end }}
+            </div>
+
+            <!-- Second Row with Text and CTA Button, and a Blog Card -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-12 w-full">
+                <!-- Text and CTA Button -->
+                <div class="rounded-lg p-6 flex flex-col justify-center items-center text-center">
+                    <p class="text-lg md:text-2xl lg:text-4xl text-dark dark:text-gray-100 mb-4">Stay updated with our latest
+                        articles</p>
+                    <a href="/blog"
+                        class="btn-primary text-white bg-primary hover:bg-blue-600 px-6 py-3 rounded-lg">Visit
+                        Blog</a>
+                </div>
+                <!-- Single Blog Card -->
+                {{ range (first 1 (after 2 (where .Site.RegularPages.ByDate.Reverse "Section" "blog"))) }}
+                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden">
+                    <a href="{{ .RelPermalink }}">
+                        <div class="relative card-image">
+                            {{ $featured := .Params.featuredImage }}
+                            {{ with .Resources.GetMatch $featured }}
+                            {{ $postimage := (.Resize "600x400 webp q100").RelPermalink }}
+                            <img src="{{ $postimage }}" class="w-full h-auto object-cover rounded-2xl"
+                                alt="{{ .Params.description }}" title="{{ .Params.description }}" />
+                            {{ end }}
+                            <div class="absolute z-20 bottom-0 left-0 bg-opacity-20 text-white p-4 max-w-md">
+                                <h4 class="text-lg hover:text-neutral font-semibold max-w-xl">{{ .Title }}</h4>
+                                <p class="text-sm">{{ .Date.Format "January 2, 2006" }}</p>
+                            </div>
+                            <a href="{{ .RelPermalink }}" class="card-arrow z-20">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-white">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                                </svg>
+                            </a>
                         </div>
                     </a>
                 </div>

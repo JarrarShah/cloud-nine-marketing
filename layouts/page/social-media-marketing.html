@@ -1,0 +1,516 @@
+{{ define "main" }}
+
+<main>
+    <section
+        class="pt-20 bg-gradient-to-r from-white via-sky-50 to-white dark:from-gray-800 dark:via-gray-900 dark:to-gray-800">
+        <!--Start Background Animation Body-->
+        <!-- <div class="area">
+            <ul class="clouds">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div> -->
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-12 pb-16 text-center lg:pt-12">
+            <span
+                class="inline-flex rounded-xl justify-between items-center py-1 px-4 mb-7 text-sm border border-2 border-gray-900 dark:border-gray-100 font-medium text-dark dark:text-gray-100">Get
+                to know us</span>
+
+            <h1
+                class="mb-4 text-3xl max-w-4xl mx-auto font-medium font-chillax tracking-tight leading-none text-dark dark:text-gray-100 md:text-6xl lg:text-8xl">
+                <span class="inline-block">SOCIAL MEDIA
+                    <span class="relative whitespace-nowrap text-primary">
+                        <span class="relative">MARKETING</span>
+                    </span>
+                </span>
+                <span class="inline-block">SERVICES</span>
+            </h1>
+
+            <!-- <p class="mx-auto mt-9 max-w-3xl text-xl md:text-2xl tracking-tight text-dark sm:mt-6">
+                <span class="inline-block">Cloud Nine integrates your social channels seamlessly into an omnichannel strategy. Our approach combines intelligent AI utilization, data-driven analysis, and agile responses to market dynamics, harmonizing your social media marketing strategy with broader digital objectives like digital PR and SEO..</span>
+            </p> -->
+            <div class="pt-8 flex justify-center">
+                {{ with resources.Get "images/ssocial.png" }}
+                {{ $together := .RelPermalink }}
+                <img src="{{$together}}" class="w-auto dark:bg-stone-50 rounded-3xl"
+                    alt="Social Media Marketing Services By Cloud Nine - Top Notch Marketing Services for businesses based in United kingdom UK and USA United States of America">
+                {{ end }}
+            </div>
+        </div>
+
+    </section>
+
+    <section class="bg-white dark:bg-gray-900">
+        <div class="container mx-auto px-6 md:px-12 lg:px-24 lg:py-20">
+            <div class="flex flex-wrap items-center mx-auto max-w-7xl">
+                <div
+                    class="flex flex-col items-start justify-between mt-12 mb-16 text-left text-lg lg:flex-grow lg:w-1/2 lg:pl-6 xl:pl-24 md:mb-0 xl:mt-0">
+                    <h2
+                        class="mb-8 xs:text-2xl md:text-3xl lg:text-4xl font-medium leading-none text-neutral-600 dark:text-gray-100">
+                        Why do you need Social Media Marketing?
+                    </h2>
+                    <p class="mb-8 max-w-xl leading-relaxed text-left text-dark dark:text-gray-100">
+                        Your brand represents you, where every scroll, like, and share counts, your brand’s story
+                        deserves to be heard. At Cloud Nine, we don’t just tell your story; we set the digital stage for
+                        it to echo across the social media universe. <br><br> Unlike traditional digital marketing
+                        agencies, we don't just advocate for sporadic posting on social platforms in the hopes of
+                        gaining traction. Instead, we take a tailored, results-driven approach
+                        <br><br>
+                    </p>
+                </div>
+                <div class="w-full lg:max-w-lg lg:w-1/2 rounded-xl pt-0">
+                    <div>
+                        <div class="relative w-full max-w-lg">
+                            <div class="relative">
+                                {{ with resources.Get "images/chillguy.png" }}
+                                {{ $small := (.Resize "550x webp q100").RelPermalink }}
+                                {{ $medium := (.Resize "900x webp q100").RelPermalink }}
+                                {{ $large := (.Resize "1500x webp q100").RelPermalink }}
+                                {{ $together := (.Resize "1500x webp q100").RelPermalink }}
+                                <img class="object-cover grayscale hover:grayscale-0 object-center mx-auto" alt="hero"
+                                    src="{{$together}}">
+                                {{ end }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    {{ partial "cta.html" . }}
+
+    <section class="bg-white dark:bg-gray-800 py-6">
+        <div class="container relative mx-auto pt-8">
+            <div class="max-w-lg">
+                <h2
+                    class="mb-8 text-4xl md:text-3xl lg:text-6xl font-medium leading-none text-neutral-600 dark:text-gray-100">
+                    Social Media Marketing
+                </h2>
+            </div>
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="w-full md:w-1/3 justify-center">
+                    <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
+                        type="module"></script>
+                    <dotlottie-player src="https://lottie.host/f9610241-961c-4e85-a865-30fabe1ba2a2/XiyiAosbfA.lottie"
+                        background="transparent" speed="1" class="h-32 md:h-96" loop autoplay></dotlottie-player>
+                </div>
+                <div class="w-full md:w-2/3 justify-center">
+                    <p class="text-xl md:text-2xl pt-2 dark:text-gray-100">
+                        Your social media presence should never be an afterthought or treated separately from your
+                        marketing efforts; rather, it should seamlessly complement and extend your overall marketing
+                        strategy.
+                        <br> Creating the right social media approach can yield numerous advantages, regardless of your
+                        marketing goals. With our deep understanding of the social landscape, we collaborate with you to
+                        identify the platforms that best align with your business objectives.
+                    </p>
+                    <p class="text-base md:text-xl mt-6 max-w-2xl dark:text-gray-100">
+                        We excel in ensuring that you achieve the highest return on investment (ROI), optimizing the
+                        efficiency of your campaigns. Our team creates engaging content that resonates with both organic
+                        and paid audiences, and we leverage artificial intelligence (AI) to implement agile automation
+                        within your PPC marketing strategy. Performance is paramount in all our endeavors, including
+                        social media management.
+                    </p>
+                    <div class="flex justify-center mt-6 md:justify-start">
+                        <a href="/book-consultation/"
+                            class="block px-5 mt-2 py-3 text-xl text-center font-medium text-white bg-primary border border-rose-600 rounded-md shadow hover:bg-rose-800 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-amber-500 sm:px-10">
+                            Book Free Consultation
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="bg-white dark:bg-gray-900">
+        <div class="flex md:flex-row flex-col justify-end mt-16">
+            <div
+                class="w-full md:w-4/5 rounded bg-gradient-to-l from-teal-100 via-cyan-100 to-emerald-100 dark:from-gray-800 dark:via-gray-900 dark:to-gray-800 h-full w-full">
+                <div class="w-full">
+                    <h2
+                        class="text-3xl max-w-3xl font-extrabold md:text-6xl text-center md:text-left lg:text-6xl text-gray-900 dark:text-gray-100 font-bold pt-12 px-16">
+                        Engage in the Conversation with Cloud Nine
+                    </h2>
+                    <div class="flex flex-col md:flex-row items-center">
+                        <div class="w-full mx-auto py-6 md:py-0 md:w-3/4 text-left">
+                            <div class="container mt-12 ml-0 md:ml-10 ">
+                                <div class="text-2xl md:max-w-3xl text-gray-900 dark:text-gray-100 inline-block">
+                                    <p
+                                        class="leading-7 text-xl md:text-2xl text-stone-600 dark:text-gray-100 inline-block">
+                                        We aim to create a tailored social media management strategy that goes beyond
+                                        your expectations.</p>
+                                </div>
+                                <div class="mt-2">
+                                    <div
+                                        class="text-2xl mt-6 space-y-6 md:max-w-3xl text-stone-400 dark:text-gray-100 inline-block">
+                                        <p class="leading-7 text-lg text-stone-400 dark:text-gray-100 inline-block">
+                                            A common misconception about social is that it’s a separate entity. It’s
+                                            more powerful when aligned with the rest of your digital mix as part of an
+                                            omnichannel strategy. Like any discussion, social media is always more
+                                            rewarding when combined with different voices, and we can help you align
+                                            your social approach with your broader marketing plan.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="mt-2">
+                                    <div
+                                        class="text-2xl mt-6 space-y-6 md:max-w-3xl text-stone-400 dark:text-gray-100 inline-block">
+                                        <p class="leading-7 text-lg text-stone-400 dark:text-gray-100 inline-block">
+                                            It's important to interact with your audience on social media platforms, as
+                                            user-generated content from these channels can lead to a 4.5% increase in
+                                            conversion rates. We recognize the importance of strategic social media
+                                            marketing that educates, captivates, and converts your audience.
+                                            <br><br>
+                                            Our comprehensive nine-step process is designed to achieve these objectives
+                                        </p>
+                                    </div>
+                                    <div class="flex justify-center mt-6 mb-12 md:justify-start">
+                                        <a href="/book-consultation/"
+                                            class="block px-5 mt-2 py-3 text-xl text-center font-medium text-white bg-primary border border-rose-600 rounded-md shadow hover:bg-rose-800 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-amber-500 sm:px-10">
+                                            Book Free Consultation
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full md:w-1/2">
+                            <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
+                                type="module"></script>
+                            <dotlottie-player
+                                src="https://lottie.host/6b025990-da7f-4a60-b40b-cf692bfcd127/6VijhRD0b8.lottie"
+                                background="transparent" speed="1" class="h-32 md:h-[32rem]" loop
+                                autoplay></dotlottie-player>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="relative md:pb-24 pb-16 pt-6 bg-white dark:bg-gray-900">
+        <div class="container mx-auto">
+            <div class="flex justify-center">
+                <div class="mt-12">
+                    <h2
+                        class="mt-12 mb-16 font-chillax max-w-5xl mx-auto text-left text-2xl font-semibold tracking-tight text-gray-900 capitalize dark:text-gray-50 sm:text-4xl">
+                        ENGAGING SOCIAL MEDIA STRATEGY
+                    </h2>
+                    <p
+                        class="mb-8 leading-7 max-w-2xl text-xl md:text-2xl inline-block text-left text-gray-700 dark:text-gray-300">
+                        We’re here to craft the perfect social media management strategy to exceed your needs and
+                        requirements. Engaging with your audience on social media is vital – you can achieve a 4.5%
+                        higher conversion rate through user-generated content from social platforms.
+                    </p>
+                    <p class="mb-8 leading-relaxed max-w-2xl text-left text-gray-700 dark:text-gray-300">
+                        We understand the need for tactical social media marketing services that inform, engage, and
+                        convert your audience. This nine-point process delivers those goals.
+                    </p>
+                </div>
+            </div>
+            <div class="flex justify-center items-center mt-6">
+                <div class="w-full md:w-1/2 justify-center">
+                    <div class="flex flex-col md:flex-row justify-center items-center">
+                        <div class="w-1/4 mb-4 md:mb-0">
+                            <svg width="28px" height="28px" stroke-width="2" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" class="text-black dark:text-white">
+                                <path
+                                    d="M8 7H4C2.89543 7 2 7.89543 2 9V19C2 20.1046 2.89543 21 4 21H20C21.1046 21 22 20.1046 22 19V9C22 7.89543 21.1046 7 20 7H16M8 7V3.6C8 3.26863 8.26863 3 8.6 3H15.4C15.7314 3 16 3.26863 16 3.6V7M8 7H16"
+                                    stroke="currentColor" stroke-width="2"></path>
+                            </svg>
+
+                        </div>
+                        <div class="w-3/4 text-black dark:text-white">
+                            <h4 class="text-2xl font-chillax text-black dark:text-white font-bold">Audit & objectives
+                            </h4>
+                            <p>With your overall marketing strategies at the forefront, we’ll evaluate the success and
+                                strengths of your existing social platforms and identify the areas that need
+                                improvement. From this will become the foundations of a well-rounded, targeted social
+                                strategy.
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex justify-center items-center mt-6">
+                <div class="w-full md:w-1/2 justify-center">
+                    <div class="flex flex-col md:flex-row justify-center items-center">
+                        <div class="w-1/4 mb-4 md:mb-0">
+                            <svg width="28px" height="28px" stroke-width="2" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" class="text-black dark:text-white">
+                                <path d="M6 3H3V6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round"></path>
+                                <path d="M18 3H21V6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round"></path>
+                                <path d="M6 21H3V18" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round"></path>
+                                <path d="M7 18V17C7 14.2386 9.23858 12 12 12V12C14.7614 12 17 14.2386 17 17V18"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round"></path>
+                                <path
+                                    d="M12 12C13.6569 12 15 10.6569 15 9C15 7.34315 13.6569 6 12 6C10.3431 6 9 7.34315 9 9C9 10.6569 10.3431 12 12 12Z"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round"></path>
+                                <path d="M18 21H21V18" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round"></path>
+                            </svg>
+
+                        </div>
+                        <div class="w-3/4 text-black dark:text-white">
+                            <h4 class="text-2xl font-chillax text-black dark:text-white font-bold">Identify personas
+                            </h4>
+                            <p>It’s essential you know precisely who your customers are and where to locate them for any
+                                marketing strategy. If you don’t already know your personas, we’ll help you understand
+                                who they are and how they operate across social media.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex justify-center items-center mt-12">
+                <div class="w-full md:w-1/2 justify-center">
+                    <div class="flex flex-col md:flex-row justify-center items-center">
+                        <div class="w-1/4 mb-4 md:mb-0">
+                            <svg width="28px" height="28px" viewBox="0 0 24 24" stroke-width="2" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" class="text-black dark:text-white">
+                                <path d="M10 3L6 21" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                                </path>
+                                <path d="M20.5 16H2.5" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                                </path>
+                                <path d="M22 7H4" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+                                <path d="M18 3L14 21" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                                </path>
+                            </svg>
+
+                        </div>
+                        <div class="w-3/4 text-black dark:text-white">
+                            <h4 class="text-2xl font-chillax text-black dark:text-white font-bold">Channel development
+
+                            </h4>
+                            <p>Numerous social channels are at your disposal, but they are likely not all right for your
+                                strategy. So whether it’s building intuitive shopping interfaces on Pinterest and
+                                Instagram, harnessing Facebook’s far-reaching targeting capabilities or utilising
+                                Twitter’s amplification quirks, we’ll identify the optimum platforms for your goals.
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-center items-center mt-12">
+                <div class="w-full md:w-1/2 justify-center">
+                    <div class="flex flex-col md:flex-row justify-center items-center">
+                        <div class="w-1/4 mb-4 md:mb-0">
+                            <svg width="28px" height="28px" stroke-width="2" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" class="text-black dark:text-white">
+                                <path
+                                    d="M10.5213 2.62368C11.3147 1.75255 12.6853 1.75255 13.4787 2.62368L14.4989 3.74391C14.8998 4.18418 15.4761 4.42288 16.071 4.39508L17.5845 4.32435C18.7614 4.26934 19.7307 5.23857 19.6757 6.41554L19.6049 7.92905C19.5771 8.52388 19.8158 9.10016 20.2561 9.50111L21.3763 10.5213C22.2475 11.3147 22.2475 12.6853 21.3763 13.4787L20.2561 14.4989C19.8158 14.8998 19.5771 15.4761 19.6049 16.071L19.6757 17.5845C19.7307 18.7614 18.7614 19.7307 17.5845 19.6757L16.071 19.6049C15.4761 19.5771 14.8998 19.8158 14.4989 20.2561L13.4787 21.3763C12.6853 22.2475 11.3147 22.2475 10.5213 21.3763L9.50111 20.2561C9.10016 19.8158 8.52388 19.5771 7.92905 19.6049L6.41553 19.6757C5.23857 19.7307 4.26934 18.7614 4.32435 17.5845L4.39508 16.071C4.42288 15.4761 4.18418 14.8998 3.74391 14.4989L2.62368 13.4787C1.75255 12.6853 1.75255 11.3147 2.62368 10.5213L3.74391 9.50111C4.18418 9.10016 4.42288 8.52388 4.39508 7.92905L4.32435 6.41553C4.26934 5.23857 5.23857 4.26934 6.41554 4.32435L7.92905 4.39508C8.52388 4.42288 9.10016 4.18418 9.50111 3.74391L10.5213 2.62368Z"
+                                    stroke="currentColor" stroke-width="2"></path>
+                                <path d="M9 12L11 14L15 10" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+
+                        </div>
+                        <div class="w-3/4 text-black dark:text-white">
+                            <h4 class="text-2xl font-chillax text-black dark:text-white font-bold">Social & paid media
+                                strategies
+
+                            </h4>
+                            <p>Once we know which direction we need to take and who we want to target, we will compile a
+                                comprehensive, engaging social strategy to outline how to bring your brand alive on
+                                social media. For paid social strategies, we will outline proposed spend alongside
+                                estimated reach and engagement.
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-center items-center mt-12">
+                <div class="w-full md:w-1/2 justify-center">
+                    <div class="flex flex-col md:flex-row justify-center items-center">
+                        <div class="w-1/4 mb-4 md:mb-0">
+                            <svg width="28px" height="28px" stroke-width="2" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" class="text-black dark:text-white">
+                                <path
+                                    d="M15 12V16.4C15 16.7314 14.7314 17 14.4 17H3.6C3.26863 17 3 16.7314 3 16.4V7.6C3 7.26863 3.26863 7 3.6 7H14.4C14.7314 7 15 7.26863 15 7.6V12ZM15 12L20.0159 7.82009C20.4067 7.49443 21 7.77232 21 8.28103V15.719C21 16.2277 20.4067 16.5056 20.0159 16.1799L15 12Z"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round"></path>
+                            </svg>
+
+                        </div>
+                        <div class="w-3/4 text-black dark:text-white">
+                            <h4 class="text-2xl font-chillax text-black dark:text-white font-bold">Ads & creatives
+                            </h4>
+                            <p>Once we finalise the strategy, it’s down to business. We will build campaign schedules
+                                with daily updates and bespoke media assets. We will also draft out any adverts we plan
+                                to run, including creatives, outlining how we see this existing alongside your existing
+                                social provisions.
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-center items-center mt-12">
+                <div class="w-full md:w-1/2 justify-center">
+                    <div class="flex flex-col md:flex-row justify-center items-center">
+                        <div class="w-1/4 mb-4 md:mb-0">
+                            <svg width="28px" height="28px" stroke-width="2" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" class="text-black dark:text-white">
+                                <path
+                                    d="M14 14V6M14 14L20.1023 17.487C20.5023 17.7156 21 17.4268 21 16.9661V3.03391C21 2.57321 20.5023 2.28439 20.1023 2.51296L14 6M14 14H7C4.79086 14 3 12.2091 3 10V10C3 7.79086 4.79086 6 7 6H14"
+                                    stroke="currentColor" stroke-width="2"></path>
+                                <path
+                                    d="M7.75716 19.3001L7 14H11L11.6772 18.7401C11.8476 19.9329 10.922 21 9.71716 21C8.73186 21 7.8965 20.2755 7.75716 19.3001Z"
+                                    stroke="currentColor" stroke-width="2"></path>
+                            </svg>
+
+                        </div>
+                        <div class="w-3/4 text-black dark:text-white">
+                            <h4 class="text-2xl font-chillax text-black dark:text-white font-bold">Campaign build
+                            </h4>
+                            <p>The hard work starts here when all our research and development of your campaign strategy
+                                gets put into practice. You will still own your social networks – we will simply oversee
+                                the activity on your behalf.
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-center items-center mt-12">
+                <div class="w-full md:w-1/2 justify-center">
+                    <div class="flex flex-col md:flex-row justify-center items-center">
+                        <div class="w-1/4 mb-4 md:mb-0">
+                            <svg width="28px" height="28px" stroke-width="2" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" class="text-black dark:text-white">
+                                <path d="M5 9V15.7407C5 19.1976 8.13401 22 12 22C15.866 22 19 19.1976 19 15.7407V9"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round"></path>
+                                <path d="M5 9H8" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round"></path>
+                                <path d="M16 9H19" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round"></path>
+                                <path
+                                    d="M14.0741 11.5V15.0606C14.0741 16.1317 13.1455 17 12 17C10.8545 17 9.9259 16.1317 9.9259 15.0606V11.5"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round"></path>
+                                <path d="M10 13L5 13" stroke="currentColor" stroke-width="2" stroke-linejoin="round">
+                                </path>
+                                <path d="M19 13L14 13" stroke="currentColor" stroke-width="2" stroke-linejoin="round">
+                                </path>
+                                <path d="M11.6667 2L10 5H14L12.3333 8" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+
+                        </div>
+                        <div class="w-3/4 text-black dark:text-white">
+                            <h4 class="text-2xl font-chillax text-black dark:text-white font-bold">Social platform
+                                optimisation
+                            </h4>
+                            <p>As we work, your customers will tell us more and more about their experiences and
+                                expectations, data we use to optimise your strategy. We’ll set up automations that can
+                                nimbly react to customer behaviour in real-time, applying the findings across every
+                                channel.
+
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-center items-center mt-12">
+                <div class="w-full md:w-1/2 justify-center">
+                    <div class="flex flex-col md:flex-row justify-center items-center">
+                        <div class="w-1/4 mb-4 md:mb-0">
+                            <svg width="28px" height="28px" viewBox="0 0 24 24" stroke-width="2" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" class="text-black dark:text-white">
+                                <path
+                                    d="M2.90602 17.505L5.33709 3.71766C5.5289 2.62987 6.56621 1.90354 7.654 2.09534L19.4717 4.17912C20.5595 4.37093 21.2858 5.40824 21.094 6.49603L18.6629 20.2833C18.4711 21.3711 17.4338 22.0975 16.346 21.9057L4.52834 19.8219C3.44055 19.6301 2.71421 18.5928 2.90602 17.505Z"
+                                    stroke="currentColor" stroke-width="2"></path>
+                                <path d="M8.92902 6.38184L16.8075 7.77102" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round"></path>
+                                <path d="M8.23444 10.3213L16.1129 11.7105" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round"></path>
+                                <path d="M7.53986 14.2607L12.4639 15.129" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round"></path>
+                            </svg>
+
+                        </div>
+                        <div class="w-3/4 text-black dark:text-white">
+                            <h4 class="text-2xl font-chillax text-black dark:text-white font-bold">Reporting
+
+                            </h4>
+                            <p class="">We provide reports focused on metrics that apply to your specific KPIs. This is
+                                also around a schedule that best suits your needs, typically weekly or monthly. The
+                                rapid developments in social media mean we will alert you to significant trends as they
+                                happen. There will always be a dedicated account manager on call for any queries.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-center">
+                <div class="max-w-7xl mx-auto mt-4">
+                    <a href="/book-consultation/"
+                        class="block px-5 py-3 text-xl text-center font-medium text-white bg-primary border border-rose-600 rounded-md shadow hover:bg-rose-800 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-amber-500 sm:px-10">
+                        <span class="font-bold">Interested?</span> Contact Now
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="bg-white dark:bg-gray-900">
+        <div class="container relative mx-auto pt-8 pb-12">
+          <div class="max-w-lg"></div>
+          <div class="flex flex-col md:flex-row justify-center items-center">
+            <div class="w-full md:w-2/5">
+              <div class="flex justify-center">
+                <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
+                <dotlottie-player src="https://lottie.host/7b6c32bf-a75d-42c7-8e69-27482202ee4d/JimcChtXly.lottie" background="transparent" speed="1" class="h-96 md:h-full" loop autoplay></dotlottie-player>
+              </div>
+            </div>
+            <div class="w-full md:w-2/3 max-w-2xl">
+              <div class="flex justify-center">
+                <div>
+                  <h2 class="mb-8 text-4xl md:text-3xl font-chillax lg:text-6xl font-medium leading-none text-neutral-600 dark:text-gray-100">
+                    Channel Development and Community Management
+                  </h2>
+                  <p class="text-xl md:text-2xl max-w-2xl pt-2 dark:text-gray-100">
+                    The growth potential of social media is a key asset, and we specialize in services aimed at expanding and enhancing each platform you choose. With advancements in machine learning, it's easier to connect with genuine, active followers. As a social media management company, we excel at creating campaigns that boost your audience numbers.
+                  </p>
+                  <p class="text-base md:text-xl mt-6 max-w-2xl dark:text-gray-100">
+                    We're also skilled at ensuring you get the best return on investment, making your campaigns more efficient. We produce engaging content that appeals to both organic and paid audiences, and we use AI to create flexible automation in your PPC marketing strategy. Performance is always our priority, even in the world of social media.
+                  </p>
+                  <div class="flex justify-center mt-6 md:justify-start">
+                    <a href="/book-consultation/" class="block px-5 mt-2 py-3 text-xl text-center font-medium text-white bg-primary border border-rose-600 rounded-md shadow hover:bg-rose-800 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-amber-500 sm:px-10">
+                      Book Free Consultation
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+
+</main>
+
+
+{{ end }}

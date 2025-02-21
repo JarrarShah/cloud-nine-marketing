@@ -1,92 +1,220 @@
 {{define "main"}}
 
-<main class="mb-16">
 
-  <div class="mx-auto max-w-screen-xl px-6 pt-8 md:pt-14 lg:pt-20">
-    <h1
-      class="pb-4 h1 font-medium text-secondary tracking-snug leading-tight sm:leading-tight md:leading-tight lg:leading-tight md:text-center">
-      Explore Our Craftsmanship Portfolio    </h1>
-    <p class="pb-6 text-gray-600 text-base md:tracking-tight md:text-center leading-normal md:leading-normal">
-      Unveiling a Tapestry of Expertise and Innovation in Signage Solutions
-    </p>
-    <div class="pt-8 flex justify-center text-primary">
-      <svg width="204" height="14" xmlns="http://www.w3.org/2000/svg">
-        <g fill="currentColor" fill-rule="evenodd">
-          <path
-            d="M.835 7.23c-.264-.864-.033-1.753.708-2.42.91-.758 2.285-.742 3.1.09l.112.124a9.767 9.767 0 006.37 3.34c2.362.24 4.745-.389 6.631-1.785l.254-.195c.186-.132.367-.283.548-.442l.557-.494c.096-.083.194-.166.295-.247l.58-.527c.702-.632 1.495-1.31 2.412-1.835 2.201-1.24 4.914-1.629 7.719-1.101 2.083.433 4.232 1.286 6.575 2.773 1.087.674 1.395 2.09.702 3.12-.674 1.088-2.09 1.395-3.12.703-1.932-1.172-3.533-1.878-5.068-2.164-1.743-.348-3.385-.161-4.603.589-.565.314-1.09.758-1.63 1.242l-.546.493-1.635 1.444c-2.854 2.194-6.555 3.263-10.183 2.925-3.57-.356-7.01-2.137-9.36-4.88a1.922 1.922 0 01-.418-.753zM93.541 4.686c.38.828.24 1.815-.424 2.521-.843.95-2.348.97-3.297.127-1.86-1.76-4.35-2.698-6.806-2.702a9.87 9.87 0 00-6.533 2.539l-.238.223a6.299 6.299 0 00-.628.648l-.418.49c-.073.085-.148.171-.226.258l-.82.908c-.566.62-1.183 1.257-1.933 1.822-2.056 1.51-4.796 2.221-7.703 1.977-2.204-.207-4.415-.853-7.01-2.136-1.185-.582-1.665-1.946-1.083-3.13.502-1.12 1.829-1.623 2.93-1.135l.143.069c2.069 1.004 3.807 1.542 5.364 1.695 1.806.14 3.452-.237 4.635-1.102.66-.517 1.326-1.223 1.973-1.988l.732-.822c.253-.281.512-.565.776-.834C75.59 1.552 79.225.063 82.92.003 86.633 0 90.273 1.405 92.95 3.986c.3.16.503.412.591.7z">
-          </path>
-          <g>
-            <path
-              d="M112.835 7.23c-.264-.864-.033-1.753.708-2.42.91-.758 2.285-.742 3.1.09l.112.124a9.767 9.767 0 006.37 3.34c2.362.24 4.745-.389 6.631-1.785l.254-.195c.186-.132.367-.283.548-.442l.557-.494c.096-.083.194-.166.295-.247l.58-.527c.702-.632 1.495-1.31 2.412-1.835 2.201-1.24 4.914-1.629 7.719-1.101 2.083.433 4.232 1.286 6.575 2.773 1.087.674 1.395 2.09.702 3.12-.674 1.088-2.09 1.395-3.12.703-1.932-1.172-3.533-1.878-5.068-2.164-1.743-.348-3.385-.161-4.603.589-.565.314-1.09.758-1.63 1.242l-.546.493-1.635 1.444c-2.854 2.194-6.555 3.263-10.183 2.925-3.57-.356-7.01-2.137-9.36-4.88a1.922 1.922 0 01-.418-.753zM203.541 4.686c.38.828.24 1.815-.424 2.521-.843.95-2.348.97-3.297.127-1.86-1.76-4.35-2.698-6.806-2.702a9.87 9.87 0 00-6.533 2.539l-.238.223a6.299 6.299 0 00-.628.648l-.418.49c-.073.085-.148.171-.226.258l-.82.908c-.566.62-1.183 1.257-1.933 1.822-2.056 1.51-4.796 2.221-7.703 1.977-2.204-.207-4.415-.853-7.01-2.136-1.185-.582-1.665-1.946-1.083-3.13.502-1.12 1.829-1.623 2.93-1.135l.143.069c2.069 1.004 3.807 1.542 5.364 1.695 1.806.14 3.452-.237 4.635-1.102.66-.517 1.326-1.223 1.973-1.988l.732-.822c.253-.281.512-.565.776-.834 2.615-2.562 6.25-4.051 9.946-4.111 3.712-.002 7.352 1.402 10.029 3.983.3.16.503.412.591.7z">
-            </path>
-          </g>
-        </g>
-      </svg>
-    </div>
-  </div>
 
-  <!-- {{ $products := getJSON "/data/products.json" }}
-
-  <section class="container pt-12 mb-12 mx-auto">
-      <div class="flex justify-center">
-          <h2 class="font-semibold mt-4 text-4xl leading-snug lg:text-5xl lg:leading-[62px] text-slate-800 mb-12">Outdoor Garden Products</h2>
-      </div>
-      <div class="flex-row md:flex space-y-4 gap-x-6 justify-center">
-              {{ range $products }}
-          {{ partial "product.html" . }}
-          {{ end }}
-      </div>
-  </section> -->
-
-  <div class="container mx-auto md:mt-12 mt-5">
-    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-      {{ range $index, $element := (where .Site.RegularPages "Section" "portfolio") }}
-      <div class="{{ if mod $index 2 }}bg-gray-100 text-dark{{ else }}bg-gray-50{{ end }} p-6 rounded-lg">
-        <a href="{{ .RelPermalink }}" class="group">
-            <div class="aspect-w-3 aspect-h-2">
-              {{ with .Resources.GetMatch .Params.featuredImage }}
-                {{ $postimage := (.Resize "500x webp q90").RelPermalink }}
-                <img class="object-cover shadow-lg rounded-lg group-hover:opacity-75 h-64" src="{{ $postimage }}" alt="{{ .Title }}">
-              {{ else }}
-                {{ $im := (.Resources.Get .Params.featuredImage) }}
-                {{ $im }}
-              {{ end }}
+<section class="bg-black pt-14">
+    <div
+        class="relative bg-white dark:bg-gray-900 rounded-t-3xl px-8 items-center justify-center w-full overflow-hidden pt-4 md:pt-8">
+        <div class="relative z-10">
+            <div
+                class="absolute inset-x-0 top-1/2 -z-10 flex -translate-y-1/2 justify-center overflow-hidden [mask-image:radial-gradient(50%_45%_at_50%_55%,white,transparent)]">
+                <svg class="h-[60rem] w-[100rem] flex-none stroke-secondary dark:stroke-white opacity-10"
+                    aria-hidden="true">
+                    <defs>
+                        <pattern id="e9033f3e-f665-41a6-84ef-756f6778e6fe" width="200" height="200" x="50%" y="50%"
+                            patternUnits="userSpaceOnUse" patternTransform="translate(-100 0)">
+                            <path d="M.5 200V.5H200" fill="none"></path>
+                        </pattern>
+                    </defs>
+                    <rect width="100%" height="100%" stroke-width="0" fill="url(#e9033f3e-f665-41a6-84ef-756f6778e6fe)">
+                    </rect>
+                </svg>
             </div>
-          </a>
-    
-          <div class="mt-4">
-            <div class="flex items-center space-x-3">
-              <div class="flex items-center space-x-2">
-                {{ range $index, $tag := .Params.categories }}
-                  <span class="inline-flex items-center leading-none px-2.5 py-1.5 text-sm font-medium text-skin-inverted rounded-full border border-skin-input">
-                    {{ $tag }}
-                  </span>
-                {{ end }}
-              </div>
-            </div>
-    
-            <div class="mt-2">
-              <a href="{{ .RelPermalink }}" class="group">
-                <h4 class="text-[22px] leading-[34px]  font-semibold hover:text-primary mt-auto">{{ .Title }}</h4>
-              </a>
-              <p class="mt-1 text-base font-normal text-skin-base tracking-tight leading-tight">
-                {{ if .Params.summary }}
-                  {{ .Params.summary }}
-                {{ else }}
-                  {{ .Params.description }}
-                {{ end }}
-              </p>
-    
-              <a href="{{.RelPermalink}}"
-                        class="text-primary hover:underline mt-16 inline-block uppercase font-medium tracking-[0.86px]">Read
-                        more</a>
-            </div>
-          </div>
         </div>
-      {{ end }}
+        <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-4 lg:px-12 relative z-10">
+
+            <span
+                class="inline-flex dark:text-white dark:border-white rounded-xl justify-between items-center py-1 px-4 mb-7 text-sm border border-2 dark:border-white border-gray-900 font-medium text-dark dark:text-white">
+                Tailored Digital Solutions</span>
+            <h1
+                class="mb-4 text-3xl font-chillax dark:text-white max-w-4xl mx-auto font-medium tracking-tight leading-none text-dark dark:text-white md:text-4xl lg:text-5xl">
+                Boosting Brand Success
+            </h1>
+            <p class="mb-8 text-xl md:text-2xl font-normal text-stone-400 sm:px-16 xl:px-48 dark:text-stone-50">Turning
+                Visions into Viral Success Stories
+            </p>
+            <div class="flex flex-col mb-8 lg:mb-16 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
+                <a href="/contact" class="relative group group-hover:active-cursor inline-block text-lg group">
+                    <span
+                        class="relative z-10 block px-5 py-3 overflow-hidden font-medium leading-tight text-gray-800 dark:text-gray-100 transition-colors duration-300 ease-out border-2 border-gray-900 dark:border-gray-600 rounded-lg group-hover:text-black dark:group-hover:text-white">
+                        <span
+                            class="absolute inset-0 w-full h-full px-5 py-3 rounded-lg bg-gradient-to-r from-white via-stone-50 to-stone-200 dark:from-gray-700 dark:via-gray-800 dark:to-gray-900"></span>
+                        <span
+                            class="absolute left-0 w-48  h-48 -ml-2 transition-all duration-300 origin-top-right -rotate-90 -translate-x-full translate-y-12 bg-gradient-to-r from-white via-stone-50 to-stone-200 dark:from-black dark:via-primary dark:to-black group-hover:-rotate-180 ease"></span>
+                        <span class="relative">Reach Out</span>
+                    </span>
+                    <span
+                        class="absolute bottom-0 right-0 w-full h-12 -mb-1 -mr-1 transition-all duration-200 ease-linear bg-gradient-to-r from-black via-stone-800 to-stone-700 dark:from-primary dark:via-rose-600 dark:to-secondary rounded-lg group-hover:mb-0 group-hover:mr-0"
+                        data-rounded="rounded-lg"></span>
+                </a>
+
+                <a href="#_" class="relative group group-hover:active-cursor inline-block text-lg group">
+                    <span
+                        class="relative z-10 block px-4 py-3 overflow-hidden font-medium leading-tight text-gray-800 dark:text-gray-100 transition-colors duration-300 ease-out border-2 border-gray-900 dark:border-gray-600 rounded-lg group-hover:text-black dark:group-hover:text-white">
+                        <span
+                            class="absolute inset-0 w-full h-full px-5 py-3 rounded-lg bg-gradient-to-r from-white via-stone-50 to-stone-200 dark:from-gray-700 dark:via-gray-800 dark:to-gray-900"></span>
+                        <span
+                            class="absolute left-0 w-48 h-48 -ml-2 transition-all duration-300 origin-top-right -rotate-90 -translate-x-full translate-y-12 bg-gradient-to-r from-white via-stone-50 to-stone-200 dark:from-secondary dark:via-neutral dark:to-sky-900 group-hover:-rotate-180 ease"></span>
+                        <span class="relative">Learn More</span>
+                    </span>
+                    <span
+                        class="absolute bottom-0 right-0 w-full h-12 -mb-1 -mr-1 transition-all duration-200 ease-linear bg-gradient-to-r from-black via-stone-800 to-stone-700 dark:from-secondary dark:via-neutral dark:to-sky-900 rounded-lg group-hover:mb-0 group-hover:mr-0"
+                        data-rounded="rounded-lg"></span>
+                </a>
+            </div>
+            <!-- <div class="flex justify-center">
+              <div class="relative  w-full max-w-4xl xl:max-w-6xl lg:w-screen">
+                  {{ with resources.Get "images/hero-software.png" }}
+                  {{ $small := (.Resize "900x webp q100").RelPermalink }}
+                  {{ $medium := (.Resize "1500x webp q100").RelPermalink }}
+                  {{ $large := (.Resize "2000x webp q100").RelPermalink }}
+                  {{ $heroimage := (.Resize "2000x webp q100").RelPermalink }}
+                  <img srcset="
+                  {{- with $small -}}, {{.}} 768w{{- end -}}
+                  {{- with $medium -}}, {{.}} 1024w{{- end -}}
+                  {{- with $large -}}, {{.}} 1374w{{- end -}}" src="{{ $heroimage }}"
+                      class="w-full h-full rounded-xl" alt="Sign Makers crafting a high quality premium LED signage">
+                  {{ end }}
+              </div>
+          </div> -->
+        </div>
     </div>
-  </div>
-  
-</main>
+</section>
+
+<section class="dark:bg-gray-900">
+    <div class="container mx-auto rounded-b-3xl">
+        <div class="flex flex-col md:flex-row gap-y-6 py-20 justify-center">
+            <div class="w-full md:w-1/2">
+                <h2 class="h2 text-dark font-chillax dark:text-white dark:text-gray-100">Cloud Nine in Action</h2>
+                <p class="text-gray-500 dark:text-gray-100 max-w-xl">
+                    We are a collective of visionary marketers, creative artists, and strategic thinkers who thrive on
+                    transforming ideas into impactful realities. From startups to established enterprises, we work
+                    hand-in-hand with brands to craft innovative strategies that resonate with their audience, drive
+                    engagement, and deliver measurable results.
+                    <br><br>
+                    Our approach is simple yet powerful: <b class="italic">we listen, we create, and we execute</b>.
+                    Whether it’s through bold branding, dynamic digital campaigns, or unforgettable events, we ensure
+                    every brand we touch soars above the competition.
+
+                </p>
+            </div>
+            <div class="w-full md:w-1/2">
+                {{ with resources.Get "images/hero-software.png" }}
+                {{ $small := (.Resize "900x webp q100").RelPermalink }}
+                {{ $medium := (.Resize "1500x webp q100").RelPermalink }}
+                {{ $large := (.Resize "2000x webp q100").RelPermalink }}
+                {{ $heroimage := (.Resize "2000x webp q100").RelPermalink }}
+                <img srcset="
+                    {{- with $small -}}, {{.}} 768w{{- end -}}
+                    {{- with $medium -}}, {{.}} 1024w{{- end -}}
+                    {{- with $large -}}, {{.}} 1374w{{- end -}}" src="{{ $heroimage }}"
+                    class="w-full h-auto object-cover grayscale hover:grayscale-0"
+                    alt="Sign Makers crafting a high quality premium LED signage">
+                {{ end }}
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section
+    class="bg-gradient-to-r from-gray-50 via-white to-gray-100 dark:from-gray-800 dark:via-gray-900 dark:to-gray-800 py-12 px-4">
+    <div class="container mx-auto max-w-7xl">
+        <div class="flex justify-start">
+            <h4 class="text-lg my-4 text-dark dark:text-white font-medium font-chillax">Filter via Industry</h4>
+        </div>
+        <!-- Category Filters -->
+        <div class="flex justify-start mb-8">
+            <ul class="flex-col flex space-y-4 md:space-y-0 md:flex-row md:space-x-6 md:items-center">
+                <!-- "All" Filter -->
+                <li class="flex justify-start items-center">
+                    <button onclick="filterSelection('all')"
+                        class="py-2 px-4 font-chillax border border-black dark:border-gray-400 rounded-full dark:text-gray-400 text-black hover:scale-105 ease-in-out duration-150">VIEW
+                        ALL</button>
+                </li>
+                {{ $industryTypes := slice }}
+                {{ range where .Site.Pages "Section" "portfolio" }}
+                {{ $industryType := .Params.industry_type }}
+                {{ if $industryType }}
+                {{ if reflect.IsSlice $industryType }}
+                {{ range $industryType }}
+                {{ if not (in $industryTypes .) }}
+                {{ $industryTypes = $industryTypes | append . }}
+                {{ end }}
+                {{ end }}
+                {{ else }}
+                {{ if not (in $industryTypes $industryType) }}
+                {{ $industryTypes = $industryTypes | append $industryType }}
+                {{ end }}
+                {{ end }}
+                {{ end }}
+                {{ end }}
+                {{ range $industryTypes }}
+                <li class="flex justify-start items-center">
+                    <button onclick="filterSelection('{{ lower . | urlize }}')"
+                        class="py-2 px-4 border font-chillax border-black dark:border-gray-400 rounded-full dark:text-gray-400 text-black hover:scale-105 ease-in-out duration-150">{{
+                        . | upper }}</button>
+                </li>
+                {{ end }}
+            </ul>
+        </div>
+
+        <div class="grid grid-cols-1 items-stretch md:grid-cols-2 lg:grid-cols-2 gap-12">
+            <div class="max-w-2xl mb-12 self-end">
+                <p class="text-primary font-semibold">Portfolio</p>
+                <h2 class="text-4xl font-chillax font-bold text-dark dark:text-white"> Dive into our portfolio and
+                    discover the stories of success we’ve crafted together.
+                </h2>
+                <p class="mt-2 text-gray-600 dark:text-stone-100">
+
+                </p>
+            </div>
+            {{ range $index, $page := where .Site.Pages "Section" "portfolio" }}
+            <a class="group flex flex-col portfolio-item"
+                data-industry="{{ $page.Params.industry_type | lower | urlize }}" href="{{ $page.RelPermalink }}">
+                <div class="relative rounded-lg overflow-hidden">
+                    {{ with $page.Resources.GetMatch $page.Params.featuredImage }}
+                    {{ $large := (.Resize "2000x webp q100").RelPermalink }}
+                    <img class="w-full h-96 md:h-96 rounded-2xl shadow-md object-cover transition-transform duration-500 transform group-hover:scale-105"
+                        src="{{ $large }}" alt="{{ $page.Title }}">
+                    {{ end }}
+                </div>
+                <!-- Portfolio Text Section -->
+                <div class="mt-4">
+                    <p class="text-sm font-chillax text-primary uppercase font-semibold"><span>&#8212;</span>
+                        {{ $page.Params.industry_type }}</p> <!-- Adding the dash and industry -->
+                    <h3 class="text-xl font-semibold text-dark dark:text-white group-hover:text-primary">{{ $page.Title
+                        }}</h3>
+                </div>
+            </a>
+            {{ end }}
+        </div>
+    </div>
+</section>
+
+
+
+
+<!-- JavaScript for Filtering -->
+<script>
+    function filterSelection(industry) {
+        const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+        portfolioItems.forEach(item => {
+            const itemIndustries = item.getAttribute('data-industry').split(' ');
+            if (industry === 'all' || itemIndustries.includes(industry)) {
+                item.style.display = 'block';
+            } else {
+                item.style.display = 'none';
+            }
+        });
+    }
+
+    // Initialize by showing all items
+    filterSelection('all');
+</script>
+
+
+
 
 {{ end }}

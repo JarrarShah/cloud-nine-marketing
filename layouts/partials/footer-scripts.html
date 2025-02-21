@@ -23,11 +23,44 @@
 {{ $search := resources.Get "js/search.js" }}
 <script src="{{ $search.RelPermalink }}"></script>
 
+{{ $darkmode := resources.Get "js/darkmode.js" }}
+<script src="{{ $darkmode.RelPermalink }}"></script>
 
 
 
 
 <!-- Additional scripts below if any -->
+<script>
+  function toggleMultiSelect(button, inputId) {
+      const input = document.getElementById(inputId);
+      let values = input.value ? input.value.split(",") : [];
+      const value = button.innerText;
+  
+      if (values.includes(value)) {
+          values = values.filter(v => v !== value);
+          button.classList.remove("bg-black", "text-white");
+      } else {
+          values.push(value);
+          button.classList.add("bg-black", "text-white");
+      }
+      input.value = values.join(",");
+  }
+  
+  function toggleSingleSelect(button, inputId) {
+      const input = document.getElementById(inputId);
+      const value = button.innerText;
+      
+      document.querySelectorAll(`[onclick*='${inputId}']`).forEach(btn => {
+          btn.classList.remove("bg-black", "text-white");
+      });
+  
+      button.classList.add("bg-black", "text-white");
+      input.value = value;
+  }
+  </script>
+  
+  
+  
 
 
 <script>

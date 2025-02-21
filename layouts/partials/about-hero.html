@@ -1,0 +1,108 @@
+<div class="pt-14 bg-black dark:bg-black">
+  <section class="pt-16 rounded-t-3xl overflow-hidden bg-white dark:bg-gray-900">
+    <div class="relative rounded-t-3xl px-8 items-center justify-center w-full z-10 rounded-3xl w-full">
+      <div class="area">
+        <ul class="clouds">
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+      <div class="relative z-10">
+        <div
+          class="absolute inset-x-0 top-1/2 -z-10 flex -translate-y-1/2 justify-center overflow-hidden [mask-image:radial-gradient(50%_45%_at_50%_55%,white,transparent)] dark:[mask-image:radial-gradient(50%_45%_at_50%_55%,black,transparent)]">
+          <svg class="h-[60rem] w-[100rem] flex-none stroke-secondary dark:stroke-white opacity-10" aria-hidden="true">
+            <defs>
+              <pattern id="e9033f3e-f665-41a6-84ef-756f6778e6fe" width="200" height="200" x="50%" y="50%"
+                patternUnits="userSpaceOnUse" patternTransform="translate(-100 0)">
+                <path d="M.5 200V.5H200" fill="none"></path>
+              </pattern>
+            </defs>
+            <rect width="100%" height="100%" stroke-width="0" fill="url(#e9033f3e-f665-41a6-84ef-756f6778e6fe)">
+            </rect>
+          </svg>
+        </div>
+      </div>
+      <div class="container px-4 mx-auto max-w-screen-xl">
+        <div class="flex justify-center">
+          <div class="flex justify-center">
+            <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-4 lg:px-12 relative z-10">
+
+              <span
+                class="inline-flex rounded-xl justify-between items-center py-1 px-4 mb-7 text-sm border border-2 dark:border-white border-gray-900 font-medium text-dark dark:text-gray-100">Get
+                to know us</span>
+              <h1
+                class="mb-4 text-3xl max-w-4xl font-chillax mx-auto font-medium tracking-tight leading-none text-dark md:text-4xl lg:text-5xl dark:text-gray-100">
+                Why Partner With Us?</h1>
+              <p class="mb-8 text-xl md:text-2xl font-normal text-stone-400 sm:px-16 xl:px-48 dark:text-stone-50">
+                Tailored Solutions For Startups & E-Commerce Giants</p>
+              <div
+                class="flex flex-col mb-8 lg:mb-16 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
+                <a href="/contact" class="relative group group-hover:active-cursor inline-block text-lg group">
+                  <span
+                    class="relative z-10 block px-5 py-3 overflow-hidden font-medium leading-tight text-gray-800 dark:text-gray-100 transition-colors duration-300 ease-out border-2 border-gray-900 dark:border-gray-600 rounded-lg group-hover:text-black dark:group-hover:text-white">
+                    <span
+                      class="absolute inset-0 w-full h-full px-5 py-3 rounded-lg bg-gradient-to-r from-white via-stone-50 to-stone-200 dark:from-gray-700 dark:via-gray-800 dark:to-gray-900"></span>
+                    <span
+                      class="absolute left-0 w-48  h-48 -ml-2 transition-all duration-300 origin-top-right -rotate-90 -translate-x-full translate-y-12 bg-gradient-to-r from-white via-stone-50 to-stone-200 dark:from-black dark:via-primary dark:to-black group-hover:-rotate-180 ease"></span>
+                    <span class="relative">Reach Out</span>
+                  </span>
+                  <span
+                    class="absolute bottom-0 right-0 w-full h-12 -mb-1 -mr-1 transition-all duration-200 ease-linear bg-gradient-to-r from-black via-stone-800 to-stone-700 dark:from-primary dark:via-rose-600 dark:to-secondary rounded-lg group-hover:mb-0 group-hover:mr-0"
+                    data-rounded="rounded-lg"></span>
+                </a>
+
+                <a href="#team" class="relative group group-hover:active-cursor inline-block text-lg group">
+                  <span
+                    class="relative z-10 block px-4 py-3 overflow-hidden font-medium leading-tight text-gray-800 dark:text-gray-100 transition-colors duration-300 ease-out border-2 border-gray-900 dark:border-gray-600 rounded-lg group-hover:text-black dark:group-hover:text-white">
+                    <span
+                      class="absolute inset-0 w-full h-full px-5 py-3 rounded-lg bg-gradient-to-r from-white via-stone-50 to-stone-200 dark:from-gray-700 dark:via-gray-800 dark:to-gray-900"></span>
+                    <span
+                      class="absolute left-0 w-48 h-48 -ml-2 transition-all duration-300 origin-top-right -rotate-90 -translate-x-full translate-y-12 bg-gradient-to-r from-white via-stone-50 to-stone-200 dark:from-secondary dark:via-neutral dark:to-sky-900 group-hover:-rotate-180 ease"></span>
+                    <span class="relative">Meet the team</span>
+                  </span>
+                  <span
+                    class="absolute bottom-0 right-0 w-full h-12 -mb-1 -mr-1 transition-all duration-200 ease-linear bg-gradient-to-r from-black via-stone-800 to-stone-700 dark:from-secondary dark:via-neutral dark:to-sky-900 rounded-lg group-hover:mb-0 group-hover:mr-0"
+                    data-rounded="rounded-lg"></span>
+                </a>
+              </div>
+              <!-- <div class="flex justify-center">
+                      <div class="relative  w-full max-w-4xl xl:max-w-6xl lg:w-screen">
+                          {{ with resources.Get "images/hero-software.png" }}
+                          {{ $small := (.Resize "900x webp q100").RelPermalink }}
+                          {{ $medium := (.Resize "1500x webp q100").RelPermalink }}
+                          {{ $large := (.Resize "2000x webp q100").RelPermalink }}
+                          {{ $heroimage := (.Resize "2000x webp q100").RelPermalink }}
+                          <img srcset="
+                          {{- with $small -}}, {{.}} 768w{{- end -}}
+                          {{- with $medium -}}, {{.}} 1024w{{- end -}}
+                          {{- with $large -}}, {{.}} 1374w{{- end -}}" src="{{ $heroimage }}"
+                              class="w-full h-full rounded-xl" alt="Sign Makers crafting a high quality premium LED signage">
+                          {{ end }}
+                      </div>
+                  </div> -->
+            </div>
+          </div><!--end col-->
+
+          <div class="lg:col-span-5 mt-8 md:mt-0">
+            <!-- {{ with resources.Get "images/one-to-one-therapy-saba-nasir.jpg" }}
+            {{ $small := (.Resize "400x webp q80").RelPermalink }}
+            {{ $medium := (.Resize "550x webp q80").RelPermalink }}
+            {{ $large := (.Resize "900x webp q80").RelPermalink }}
+            {{ $featuredimage := (.Resize "1500x webp q80").RelPermalink }}
+            <img class="object-scale-down xs:mx-auto xs:h-96 md:h-auto" src="{{ $featuredimage }}" srcset="
+            {{- with $small -}}, {{.}} 400w{{- end -}}
+            {{- with $medium -}}, {{.}} 550w{{- end -}}
+            {{- with $large -}}, {{.}} 768w{{- end -}}
+            {{- with $featuredimage -}}, {{.}} 1100w{{- end -}}" alt="About Cloud Nine Manager">
+            {{end}} -->
+          </div>
+        </div>
+      </div>
+  </section>
+</div>

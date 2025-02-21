@@ -3,7 +3,7 @@ title: "Call Center Services"
 date: 2024-03-08
 draft: false
 description: "CabConnents acts as an extension of your transport company, providing cost-effective custom solutions that improve operational efficiency and reduce labor costs. Explore our inbound call center solutions and other services."
-author: "Cab Connents"
+author: "Cloud Nine "
 featuredImage: "images/call-center.jpg"
 image: "images/call-center.jpg"
 images: ["images/call-center.jpg"]

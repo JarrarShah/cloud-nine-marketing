@@ -1,9 +1,9 @@
 ---
-title: "Home"
+title: "Best Digital Marketing Company 2025"
 date: 2023-02-23T15:28:43+06:00
 draft: false
-description: "CabConnects is an inbound Call Center. Whether you need us to handle calls on a 24/7 basis or supplement your team when they are overloaded, we will never miss your incoming call."
+description: "Cloud Nine is a marketing company providing services such as Social Media Management, Website Development, Social Media Marketing and Branding."
 author: "CabConnects"
-image: "images/og-cabconnects.png"
-images: ["images/og-cabconnects.png"]
+image: "images/og-cloudnine.png"
+images: ["images/og-cloudnine.png"]
 ---

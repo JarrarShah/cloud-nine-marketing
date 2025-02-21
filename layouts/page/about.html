@@ -1,95 +1,876 @@
 {{ define "main" }}
 
-<main>
-  <div class="relative items-center justify-center w-full overflow-y-hidden pt-20 lg:pt-20">
-    <div class="relative z-10">
-      <div
-        class="absolute inset-x-0 top-1/2 -z-10 flex -translate-y-1/2 justify-center overflow-hidden [mask-image:radial-gradient(50%_45%_at_50%_55%,white,transparent)]">
-        <svg class="h-[60rem] w-[100rem] flex-none stroke-white opacity-10" aria-hidden="true">
-          <defs>
-            <pattern id="e9033f3e-f665-41a6-84ef-756f6778e6fe" width="200" height="200" x="50%" y="50%"
-              patternUnits="userSpaceOnUse" patternTransform="translate(-100 0)">
-              <path d="M.5 200V.5H200" fill="none"></path>
-            </pattern>
-          </defs>
-          <rect width="100%" height="100%" stroke-width="0" fill="url(#e9033f3e-f665-41a6-84ef-756f6778e6fe)">
-          </rect>
-        </svg>
+{{ partial "about-hero.html" . }}
+
+<section class="dark:bg-gray-800 py-8">
+  <div class="container mx-auto">
+    <div class="relative my-4">
+      <div class="lg:mx-auto lg:grid lg:max-w-7xl lg:grid-cols-2 lg:items-center lg:gap-24 lg:px-8">
+        <div class="text-pretty dark:text-gray-100">
+          <h2 class="text-3xl font-chillax font-semibold mb-4">Our Mission</h2>
+          <p class="text-gray-700 dark:text-gray-300 font-normal text-lg mb-4 max-w-2xl">
+            At Cloud Nine, we don’t just create strategies—we craft legacies. We’re a collective of relentless dreamers,
+            thinkers, and doers who pour our heart and soul into building business strategies that don’t just meet
+            expectations—they shatter them. For us, your success isn’t just a goal; it’s the very foundation of who we
+            are. Because when you thrive, we thrive. And we’re not here to settle for anything less than extraordinary.
+            <br><br>
+            We’re the architects of your ascent, the catalysts of your growth, and the partners who’ll stop at nothing
+            to see you soar. From the first spark of an idea to the moment you reach the pinnacle of your industry,
+            we’re with you every step of the way. Why? Because your journey is our mission, and your victory is our
+            pride.
+          </p>
+        </div>
+        <div class="relative">
+          <div class="rounded-lg overflow-hidden">
+            {{ with resources.Get "images/c9.svg" }}
+            {{ if eq .MediaType.SubType "svg" }}
+            <img src="{{ .RelPermalink }}" class="w-full h-auto object-cover grayscale hover:grayscale-0" alt="">
+            {{ else }}
+            {{ $heroimage := (.Resize "2000x webp q100").RelPermalink }}
+            <img src="{{ $heroimage }}" class="w-full h-auto object-cover grayscale hover:grayscale-0" alt="">
+            {{ end }}
+            {{ end }}
+
+          </div>
+        </div>
       </div>
     </div>
-    <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12">
-      <span
-        class="inline-flex rounded-xl justify-between items-center py-1 px-4 mb-7 text-sm bg-neutral font-medium text-secondary">About
-        Us</span>
-      <h1
-        class="mb-4 text-3xl max-w-4xl mx-auto font-medium tracking-tight leading-none text-white md:text-4xl lg:text-5xl">
-        About Us</h1>
+    <div class="container mx-auto">
+      <div class="flex flex-col md:flex-row justify-center gap-x-20 mt-12 mb-12">
+        <hr class="h-px my-8 bg-dark text-dark border-0">
+        <div class="w-auto">
+          <li class="flex justify-center items-center space-x-2">
+            <span class="text-4xl font-bold text-primary">50+</span>
+            <span class="text-lg md:text-4xl text-gray-600 dark:text-gray-300">People we work with</span>
+          </li>
+        </div>
+        <div class="w-auto">
+          <li class="flex  justify-center items-center space-x-2">
+            <span class="text-4xl font-bold text-primary">500+</span>
+            <span class="text-lg md:text-4xl text-gray-600 dark:text-gray-300">Appointments set</span>
+          </li>
+        </div>
+        <div class="w-auto">
+          <li class="flex justify-center items-center space-x-2">
+            <span class="text-4xl font-bold text-primary">10k+</span>
+            <span class="text-lg md:text-4xl text-gray-600 dark:text-gray-300">Leads generated</span>
+          </li>
+        </div>
+      </div>
+    </div>
+    <div class="container mx-auto pt-12 mb-8">
+      <div class="flex flex-col gap-4">
+        <div class="flex justify-center gap-x-6">
+          <div class="w-1/2 overflow-hidden">
+            {{ with resources.Get "images/hero-software.png" }}
+            {{ $small := (.Resize "900x webp q100").RelPermalink }}
+            {{ $medium := (.Resize "1500x webp q100").RelPermalink }}
+            {{ $large := (.Resize "2000x webp q100").RelPermalink }}
+            {{ $heroimage := (.Resize "2000x webp q100").RelPermalink }}
+            <img srcset="
+                    {{- with $small -}}, {{.}} 768w{{- end -}}
+                    {{- with $medium -}}, {{.}} 1024w{{- end -}}
+                    {{- with $large -}}, {{.}} 1374w{{- end -}}" src="{{ $heroimage }}"
+              class="w-full h-full rounded-bl-2xl rounded-t-2xl object-cover grayscale hover:grayscale-0 "
+              alt="Sign Makers crafting a high quality premium LED signage">
+            {{ end }}
+          </div>
+          <div class="w-full overflow-hidden">
+            {{ with resources.Get "images/hero-software.png" }}
+            {{ $small := (.Resize "900x webp q100").RelPermalink }}
+            {{ $medium := (.Resize "1500x webp q100").RelPermalink }}
+            {{ $large := (.Resize "2000x webp q100").RelPermalink }}
+            {{ $heroimage := (.Resize "2000x webp q100").RelPermalink }}
+            <img srcset="
+                    {{- with $small -}}, {{.}} 768w{{- end -}}
+                    {{- with $medium -}}, {{.}} 1024w{{- end -}}
+                    {{- with $large -}}, {{.}} 1374w{{- end -}}" src="{{ $heroimage }}"
+              class="w-full h-96 object-cover grayscale hover:grayscale-0 rounded-br-2xl rounded-t-2xl"
+              alt="Sign Makers crafting a high quality premium LED signage">
+            {{ end }}
+          </div>
+        </div>
+        <div class="flex justify-center gap-x-6 mt-4">
+          <div class="w-1/2 overflow-hidden">
+            {{ with resources.Get "images/hero-software.png" }}
+            {{ $small := (.Resize "900x webp q100").RelPermalink }}
+            {{ $medium := (.Resize "1500x webp q100").RelPermalink }}
+            {{ $large := (.Resize "2000x webp q100").RelPermalink }}
+            {{ $heroimage := (.Resize "2000x webp q100").RelPermalink }}
+            <img srcset="
+                    {{- with $small -}}, {{.}} 768w{{- end -}}
+                    {{- with $medium -}}, {{.}} 1024w{{- end -}}
+                    {{- with $large -}}, {{.}} 1374w{{- end -}}" src="{{ $heroimage }}"
+              class="w-full h-96 rounded-tl-2xl rouned-br-2xl shadow-md object-cover grayscale hover:grayscale-0 rounded-bl-2xl rounded-t-2xl"
+              alt="Sign Makers crafting a high quality premium LED signage">
+            {{ end }}
+          </div>
+          <div class="rounded-lg overflow-hidden">
+            {{ with resources.Get "images/hero-software.png" }}
+            {{ $small := (.Resize "900x webp q100").RelPermalink }}
+            {{ $medium := (.Resize "1500x webp q100").RelPermalink }}
+            {{ $large := (.Resize "2000x webp q100").RelPermalink }}
+            {{ $heroimage := (.Resize "2000x webp q100").RelPermalink }}
+            <img srcset="
+                    {{- with $small -}}, {{.}} 768w{{- end -}}
+                    {{- with $medium -}}, {{.}} 1024w{{- end -}}
+                    {{- with $large -}}, {{.}} 1374w{{- end -}}" src="{{ $heroimage }}"
+              class="w-full h-auto object-cover grayscale hover:grayscale-0 rounded-br-2xl rounded-t-2xl" alt="">
+            {{ end }}
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="h-screen flex items-center justify-center bg-white dark:bg-gray-900">
+  <div class="">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="lg:text-center">
+        <span
+          class="inline-flex rounded-xl justify-between items-center py-1 px-4 mb-7 text-sm border border-2 dark:border-white border-gray-900 font-medium text-dark dark:text-gray-100">Why
+          Choose Cloud Nine?</span>
+
+        <p
+          class="font-chillax  mt-2 text-3xl leading-8 font-semibold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
+          Imagine a world where your business isn't just running—it's thriving
+        </p>
+        <p class="mt-4 max-w-2xl text-lg text-gray-500 dark:text-gray-400 lg:mx-auto">
+          Where every decision is backed by data, every strategy is tailored to your goals, and every result is
+          celebrated like a victory. That's the world we create for our clients. Here's what you can expect when you
+          join the Cloud Nine family:
+        </p>
+      </div>
+
+      <div class="mt-10">
+        <dl class="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
+          <div class="relative">
+            <dt>
+              <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-primary-500 text-white">
+                <svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none"
+                  xmlns="http://www.w3.org/2000/svg" class="stroke-current text-black dark:text-white">
+                  <path
+                    d="M14.2718 10.445L18 2M9.31612 10.6323L5 2M12.7615 10.0479L8.835 2M14.36 2L13.32 4.5M6 16C6 19.3137 8.68629 22 12 22C15.3137 22 18 19.3137 18 16C18 12.6863 15.3137 10 12 10C8.68629 10 6 12.6863 6 16Z">
+                  </path>
+                  <path d="M10.5 15L12.5 13.5V18.5"></path>
+                </svg>
+              </div>
+              <p class="font-chillax ml-16 text-lg leading-6 font-bold text-gray-700 dark:text-white">One Unified Vision
+              </p>
+            </dt>
+            <dd class="mt-2 ml-16 text-base text-gray-500 dark:text-gray-400">
+              A cross-channel marketing strategy designed by the best in the business, ensuring every piece of the
+              puzzle fits perfectly.
+            </dd>
+          </div>
+
+          <div class="relative">
+            <dt>
+              <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-primary-500 text-white">
+                <svg width="24px" height="24px" viewBox="0 0 24 24" stroke-width="1.5" fill="none"
+                  xmlns="http://www.w3.org/2000/svg" class="stroke-current text-black dark:text-white">
+                  <path
+                    d="M22 4.6V17.4C22 17.7314 21.7314 18 21.4 18H2.6C2.26863 18 2 17.7314 2 17.4V4.6C2 4.26863 2.26863 4 2.6 4H21.4C21.7314 4 22 4.26863 22 4.6Z"
+                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <path d="M8.5 21.5L12 18L15.5 21.5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  </path>
+                  <path d="M12 2V4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <path d="M9 12V14" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <path d="M12 10V14" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <path d="M15 8V14" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+
+              </div>
+              <p class="font-chillax ml-16 text-lg leading-6 font-bold text-gray-700 dark:text-white">Cutting-Edge
+                Insights</p>
+            </dt>
+            <dd class="mt-2 ml-16 text-base text-gray-500 dark:text-gray-400">
+              Weekly, monthly, and quarterly updates packed with thoughtful leadership, industry research, and
+              actionable expertise to keep you ahead of the curve.
+            </dd>
+          </div>
+
+          <div class="relative">
+            <dt>
+              <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-primary-500 text-white">
+                <svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none"
+                  xmlns="http://www.w3.org/2000/svg" class="stroke-current text-black dark:text-white">
+                  <path d="M20 20H4V4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <path d="M4 16.5L12 9L15 12L19.5 7.5" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round"></path>
+                </svg>
+              </div>
+              <p class="font-chillax ml-16 text-lg leading-6 font-bold text-gray-700 dark:text-white">Results-Driven
+                Plans</p>
+            </dt>
+            <dd class="mt-2 ml-16 text-base text-gray-500 dark:text-gray-400">
+              Clear, actionable business strategies that show you where you've been, where you're going, and how to get
+              there.
+            </dd>
+          </div>
+
+          <div class="relative">
+            <dt>
+              <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-primary-500 text-white">
+                <svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none"
+                  xmlns="http://www.w3.org/2000/svg" class="stroke-current text-black dark:text-white">
+                  <path d="M5 19L7.33333 20L16.6667 20L19 19" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round"></path>
+                  <path d="M8 22.01L8.01 21.9989" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  </path>
+                  <path d="M16 22.01L16.01 21.9989" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  </path>
+                  <path
+                    d="M7 7.8335C7 7.8335 8.82843 6.91929 10 6.3335C12 5.3335 14.2705 6.90111 14.2705 6.90111L9.96227 10.0363L14 13.3335V17.3335"
+                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <path d="M9.54875 13.3445L8.30818 14.1716H5" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round"></path>
+                  <path d="M15.1653 9.20935H17.887" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  </path>
+                  <path
+                    d="M17 6C18.1046 6 19 5.10457 19 4C19 2.89543 18.1046 2 17 2C15.8954 2 15 2.89543 15 4C15 5.10457 15.8954 6 17 6Z"
+                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+              </div>
+              <p class="font-chillax ml-16 text-lg leading-6 font-bold text-gray-700 dark:text-white">Transparency at
+                Every Step</p>
+            </dt>
+            <dd class="mt-2 ml-16 text-base text-gray-500 dark:text-gray-400">
+              Dashboards and budgets tied directly to your goals, so you always know where you stand.
+            </dd>
+          </div>
+
+          <div class="relative">
+            <dt>
+              <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-primary-500 text-white">
+                <svg width="24px" height="24px" viewBox="0 0 24 24" stroke-width="1.5" fill="none"
+                  xmlns="http://www.w3.org/2000/svg" class="stroke-current text-black dark:text-white">
+                  <path d="M9 9L13.5 12L18 9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <path d="M3 13.5H5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <path d="M1 10.5H5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <path
+                    d="M5 7.5V7C5 5.89543 5.89543 5 7 5H20C21.1046 5 22 5.89543 22 7V17C22 18.1046 21.1046 19 20 19H7C5.89543 19 5 18.1046 5 17V16.5"
+                    stroke-width="1.5" stroke-linecap="round"></path>
+                </svg>
+              </div>
+              <p class="font-chillax ml-16 text-lg leading-6 font-bold text-gray-700 dark:text-white">Seamless
+                Communication</p>
+            </dt>
+            <dd class="mt-2 ml-16 text-base text-gray-500 dark:text-gray-400">
+              Real-time updates via Slack and project management systems, with deep integration across all business
+              verticals.
+            </dd>
+          </div>
+        </dl>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="bg-white dark:bg-slate-800 py-16 px-4 md:px-8 lg:px-16">
+  <div class="container mx-auto py-16">
+    <div class="max-w-7xl mx-auto text-center">
+      <h3 class="text-3xl md:text-5xl font-bold font-chillax text-black dark:text-white">The Heart <span
+          class="animate-pulse">❤️</span> of Cloud Nine</h3>
+      <p class="text-gray-600 dark:text-gray-300 mt-4">
+        At Cloud Nine, we don’t just talk about values—we live them. They’re the compass that guides every decision,
+        every strategy, and every relationship we build.
+      </p>
+    </div>
+    <div class="mt-12 grid gap-6 md:grid-cols-3">
+      <!-- Card 1 -->
+      <div
+        class="max-w-md rounded-3xl p-px bg-gradient-to-b from-sky-300 to-pink-300 dark:from-sky-800 dark:to-indigo-800 ">
+        <div class="rounded-[calc(1.5rem-1px)] p-10 bg-white dark:bg-gray-900">
+          <h4 class="text-gray-700 text-lg font-chillax font-medium md:text-2xl dark:text-stone-50">Dedication and
+            Honesty</h4>
+          <p class="text-gray-700 dark:text-gray-300">We believe in the power of promises kept. That’s why we’re
+            committed to 100% client satisfaction, built on the foundation of long-term, mutually beneficial
+            relationships. Our motto? The three “R’s”: Relationships, Responsiveness, and Results. We hold ourselves
+            accountable to the highest standards, ensuring every campaign delivers on its promises—and then some.</p>
+
+          <!-- <div class="mt-8 flex gap-4 items-center">
+            <img class="h-12 w-12 rounded-full" src="https://pbs.twimg.com/profile_images/1599029039297077249/p0znhFdE_400x400.jpg" alt="" />
+            <div>
+              <h3 class="text-lg font-medium text-gray-700 dark:text-white">Oketa Fred</h3>
+              <span class="text-sm tracking-wide text-gray-600 dark:text-gray-400">Fullstack Developer</span>
+            </div>
+          </div> -->
+        </div>
+      </div>
+      <!-- Card 2 -->
+      <div
+        class="max-w-md rounded-3xl p-px bg-gradient-to-b from-sky-300 to-pink-300 dark:from-sky-800 dark:to-indigo-800 ">
+        <div class="rounded-[calc(1.5rem-1px)] p-10 bg-white dark:bg-gray-900">
+          <h4 class="text-gray-700 text-lg font-chillax font-medium  md:text-2xl dark:text-stone-50">Flexibility
+          </h4>
+          <p class="text-gray-700 dark:text-gray-300 pb-12">The only constant in business is change, and we’re built to
+            adapt. Our results-driven approach is designed to evolve with your needs, ensuring you’re always one step
+            ahead. With Cloud Nine, there’s no such thing as a dead period—just relentless momentum from start to
+            finish.</p>
+
+          <!-- <div class="mt-8 flex gap-4 items-center">
+            <img class="h-12 w-12 rounded-full" src="https://pbs.twimg.com/profile_images/1599029039297077249/p0znhFdE_400x400.jpg" alt="" />
+            <div>
+              <h3 class="text-lg font-medium text-gray-700 dark:text-white">Oketa Fred</h3>
+              <span class="text-sm tracking-wide text-gray-600 dark:text-gray-400">Fullstack Developer</span>
+            </div>
+          </div> -->
+        </div>
+      </div>
+      <!-- Card 3 -->
+      <div
+        class="max-w-md rounded-3xl p-px bg-gradient-to-b from-sky-300 to-pink-300 dark:from-sky-800 dark:to-indigo-800 ">
+        <div class="rounded-[calc(1.5rem-1px)] p-10 bg-white dark:bg-gray-900">
+          <h4 class="text-gray-700 text-lg  font-chillax font-medium  md:text-2xl dark:text-stone-50">Creativity</h4>
+          <p class="text-gray-700 dark:text-gray-300  pb-6">We believe creativity is the lifeblood of innovation. It’s
+            how we dream, solve problems, and reimagine what’s possible. At Cloud Nine, we foster a culture of bold
+            ideas, courageous collaboration, and fearless risk-taking. Because the best ideas don’t come from following
+            the rules—they come from breaking them.</p>
+
+          <!-- <div class="mt-8 flex gap-4 items-center">
+            <img class="h-12 w-12 rounded-full" src="https://pbs.twimg.com/profile_images/1599029039297077249/p0znhFdE_400x400.jpg" alt="" />
+            <div>
+              <h3 class="text-lg font-medium text-gray-700 dark:text-white">Oketa Fred</h3>
+              <span class="text-sm tracking-wide text-gray-600 dark:text-gray-400">Fullstack Developer</span>
+            </div>
+          </div> -->
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section
+  class="h-screen flex items-center justify-center bg-gradient-to-r from-white from-10% via-gray-50 via-30% to-white to-90% dark:from-gray-800 dark:via-gray-900 dark:to-gray-800 text-dark py-16 px-8 dark:text-gray-100">
+
+  <div class="">
+    <div class="max-w-7xl mx-auto space-y-12">
+      <!-- Header -->
+      <div class="space-y-4">
+        <!-- <h3 class="text-lg font-semibold uppercase tracking-wide">Meet the team</h3> -->
+        <h3 class="text-4xl font-bold font-chillax">Your Success, Our Obsession</h3>
+        <p class="text-lg max-w-4xl dark:text-gray-100">
+          Cloud Nine is not just a company; it's a culmination of passion, expertise, and unwavering dedication. Founded
+          by two industry trailblazers and supported by visionary investors who believe in the extraordinary, we bring
+          unparalleled knowledge and commitment to every endeavor.
+        </p>
+      </div>
+
+      <!-- Story Section -->
+      <div class="grid md:grid-cols-2 gap-8 items-center">
+        <div class="space-y-4">
+          <p class="text-lg dark:text-gray-100">
+            At Cloud Nine, we’re not just another agency—we’re your partners in growth, your champions of success, and
+            your relentless advocates. We’re here to turn your vision into reality, your challenges into opportunities,
+            and your goals into achievements.
+
+          </p>
+          <p class="text-lg dark:text-gray-100">
+            So, why settle for the ordinary when you can reach Cloud Nine? Let’s create something
+            extraordinary—together.
+          </p>
+        </div>
+        <div class="flex justify-center">
+          {{ with resources.Get "images/hero-software.png" }}
+          {{ $small := (.Resize "900x webp q100").RelPermalink }}
+          {{ $medium := (.Resize "1500x webp q100").RelPermalink }}
+          {{ $large := (.Resize "2000x webp q100").RelPermalink }}
+          {{ $heroimage := (.Resize "2000x webp q100").RelPermalink }}
+          <img srcset="
+                  {{- with $small -}}, {{.}} 768w{{- end -}}
+                  {{- with $medium -}}, {{.}} 1024w{{- end -}}
+                  {{- with $large -}}, {{.}} 1374w{{- end -}}" src="{{ $heroimage }}"
+            class="rounded-lg shadow-lg max-w-full" alt="Meet the team - Cloud Nine">
+          {{ end }}
+        </div>
+      </div>
     </div>
   </div>
 
+</section>
 
-  <!-- Testimonial/stats section -->
-  <section class="relative z-10">
-    <div class="container mx-auto">
-      <div class="relative my-4">
-        <div class="lg:mx-auto lg:grid lg:max-w-7xl lg:grid-cols-2 lg:items-start lg:gap-24 lg:px-8">
-          <div class="relative sm:py-8 lg:py-0">
-            <div class="md:py-12 sm:pt-6 lg:py-20">
-              <div class="mb-4">
-                <span
-                  class="inline-flex rounded-xl justify-between items-center py-1 px-4 mb-7 text-sm bg-slate-50 font-medium text-secondary">About
-                  us</span>
-              </div>
-              <h2 class="text-3xl text-white font-bold mb-4">Who we are</h2>
-              <p class="text-white mb-8">At Sign Makers, we pride ourselves on being experts in signboard design and
-                production. With decades of experience and a dedicated team of experts, we blend art and science to
-                create
-                impactful signage. From initial concepts to meticulous craftsmanship, we bring your vision to life with
-                precision and flair.
-                <br><br>
-                Founded in 1946, Sign Makers is a family-owned business with a rich legacy of excellence. Our expertise
-                covers all aspects of signage, including top-tier design, precise manufacturing, seamless installation,
-                and
-                meticulous maintenance. 
-                <br><br>
-                Serving clients across the UK, we handle everything from one-off projects to nationwide installations
-                for
-                national accounts. Our commitment to quality extends beyond installation with maintenance contracts to
-                ensure your signs remain in optimal condition. At Sign Makers, our decades-long experience and
-                dedication
-                guarantee outstanding sign solutions that stand the test of time.
-              </p>
-              <a href="/contact"
-                class="inline-block px-6 py-3 text-white bg-primary rounded-lg font-semibold shadow hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500">
-                Reach Out →
+
+
+<section class="relative z-0 scroll-mt-24 scroll-mt-32 l:!scroll-mt-64 py-16 bg-white dark:bg-gray-900" id="team">
+  <div class="container mx-auto">
+    <!-- Team Section -->
+    <div>
+      <h3 class="text-8xl font-chillax dark:text-white font-bold mb-6 py-12"> Meet The Team</h3>
+    </div>
+    <div class="mx-auto flex flex-wrap items-center justify-center gap-12 t:gap-16 lg:max-w-[none] lg:gap-24 d:px-16">
+
+      <!-- First Team Member -->
+      <div
+        class="absolute inset-0 z-30 opacity-0 transition delay-[200ms] duration-500 ease-in-out group-hover:opacity-100 group-hover:delay-[0ms]">
+        <div class="absolute inset-0 z-10 flex h-full w-full p-6 lg:p-8">
+          <div class="flex gap-8">
+            <div class="w-1/2">
+              <a class="group/card block w-full" href="#">
+                <div class="rounded-[0.875rem] bg-gradient-to-r from-rose-50 via-yellow-50 to-sky-5 p-0.5">
+                  <div class="aspect-wide w-full rounded-xl bg-gray-1100 p-8">
+                    {{ with resources.Get "images/jerry2.png" }}
+                    {{ $small := (.Resize "550x webp q100").RelPermalink }}
+                    {{ $medium := (.Resize "900x webp q100").RelPermalink }}
+                    {{ $large := (.Resize "1500x webp q100").RelPermalink }}
+                    {{ $together := (.Resize "1500x webp q100").RelPermalink }}
+                    <img
+                      class="h-full w-full grayscale object-contain transition-transform duration-300 ease-in-out group-hover/card:scale-105"
+                      alt="hero" src="{{$together}}" class="absolute -top-6">
+                    {{ end }}
+                  </div>
+                </div>
               </a>
             </div>
-          </div>
-
-          <div class="relative max-w-md px-4 mx-auto sm:max-w-3xl sm:px-6 lg:px-0">
-            <!-- Content area -->
-            <div class="relative max-w-md px-4 py-6 mx-auto sm:max-w-3xl sm:px-6 lg:max-w-none lg:px-0 lg:py-20">
-              <!-- Testimonial card-->
-              <div class="relative overflow-hidden">
-                {{ $missionimage := resources.Get "images/why-choose-us.png" }}
-                {{ with $missionimage }}
-                {{ with .Resize (printf "%dx%d webp q50" .Width .Height) }}
-                <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}"
-                  class="object-cover w-full h-full" alt="Our Mission - Sign Makers" loading="lazy" />
-                {{ end }}
-                {{ end }}
-
+            <div class="relative h-full w-1/2 pt-2">
+              <div
+                class="inline-flex items-center gap-1.5 font-sohne text-10pt font-extrabold uppercase tracking-widest text-gray-900">
+                <span>CEO | Founder</span>
+              </div>
+              <div class="rich-text mt-2 text-9pt font-normal leading-snug text-gray-400">
+                <p>The YC and Google backed startup is disrupting the CMS ecosystem with a free and open source
+                  alternative that’s more flexible and powerful than the SaaS incumbents.</p>
               </div>
             </div>
-
           </div>
-
         </div>
-
       </div>
+      <div class="w-full scroll-mt-32 lg:w-[calc(50%-3rem)] d:!scroll-mt-48">
+        <div
+          class="group rounded-xl bg-gradient-to-r from-rose-50 via-yellow-50 to-sky-50 dark:from-primary dark:via-indigo-900 dark:to-primary p-2">
+          <div class="relative flex justify-between rounded-lg bg-white dark:bg-gray-900 lg:aspect-wider h-96">
+            <div
+              class="flex justify-between p-6 opacity-100 transition delay-[200ms] duration-500 ease-in-out group-hover:opacity-0 group-hover:delay-[0ms] lg:p-8">
+              <div
+                class="max-w-[10ch] font-chillax text-4xl font-bold leading-[0.9] tracking-tighter dark:text-stone-50 text-black t:text-36pt lg:text-6xl lg:leading-[1.125] d:text-36pt">
+                Jarrar Shah</div>
+              <div
+                class="pointer-events-none absolute -bottom-6 -right-4 -top-6 aspect-wide h-[calc(100%+3rem)] lg:-bottom-12 lg:-right-12 lg:-top-12 lg:h-[calc(100%+6rem)]">
+                <div class="h-full">
+                  {{ with resources.Get "images/jerry2.png" }}
+                  {{ $small := (.Resize "550x webp q100").RelPermalink }}
+                  {{ $medium := (.Resize "900x webp q100").RelPermalink }}
+                  {{ $large := (.Resize "1500x webp q100").RelPermalink }}
+                  {{ $together := (.Resize "1500x webp q100").RelPermalink }}
+                  <img class="fade-to-be2 grayscale h-full w-full object-contain object-top-right" alt="hero"
+                    src="{{$together}}">
+                  {{ end }}
+                </div>
+              </div>
+            </div>
+            <div
+              class="absolute inset-0 z-30 opacity-0 transition delay-[200ms] duration-500 ease-in-out group-hover:opacity-100 group-hover:delay-[0ms]">
+              <div class="absolute inset-0 z-10 flex h-full w-full p-6 lg:p-8">
+                <div class="flex gap-8">
+                  <div class="w-1/2">
+                    <a class="group/card block w-full" href="#">
+                      <div class="rounded-[0.875rem] bg-gradient-to-r from-rose-50 via-yellow-50 to-sky-5 p-0.5">
+                        <div class="aspect-wide w-full rounded-xl bg-gray-1100 p-8">
+                          {{ with resources.Get "images/jerry2.png" }}
+                          {{ $small := (.Resize "550x webp q100").RelPermalink }}
+                          {{ $medium := (.Resize "900x webp q100").RelPermalink }}
+                          {{ $large := (.Resize "1500x webp q100").RelPermalink }}
+                          {{ $together := (.Resize "1500x webp q100").RelPermalink }}
+                          <img
+                            class="h-full w-full grayscale object-contain transition-transform duration-300 ease-in-out group-hover/card:scale-105"
+                            alt="hero" src="{{$together}}">
+                          {{ end }}
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="relative h-full w-1/2 pt-2">
+                    <div
+                      class="inline-flex items-center gap-1.5 font-sohne text-10pt font-extrabold uppercase tracking-widest text-gray-900">
+                      <span>CEO | Founder</span>
+                    </div>
+                    <div class="rich-text mt-2 text-9pt font-normal leading-snug text-gray-400">
+                      <p>The YC and Google backed startup is disrupting the CMS ecosystem with a free and open source
+                        alternative that’s more flexible and powerful than the SaaS incumbents.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- First team memeber end -->
+
+      <!-- second team member -->
+
+      <div class="w-full scroll-mt-32 lg:w-[calc(50%-3rem)] d:!scroll-mt-48">
+        <div
+          class="group rounded-xl bg-gradient-to-r from-rose-50 via-yellow-50 to-sky-50  dark:from-primary dark:via-indigo-900 dark:to-primary p-2">
+          <div class="relative flex justify-between rounded-lg bg-white dark:bg-gray-900 lg:aspect-wider h-96">
+            <div
+              class="flex justify-between p-6 opacity-100 transition delay-[200ms] duration-500 ease-in-out group-hover:opacity-0 group-hover:delay-[0ms] lg:p-8">
+              <div
+                class="max-w-[10ch] font-chillax text-4xl font-bold leading-[0.9] tracking-tighter dark:text-white text-black t:text-36pt lg:text-6xl lg:leading-[1.125] d:text-36pt">
+                Sarfaraz Khan</div>
+              <div
+                class="pointer-events-none absolute -bottom-6 -right-4 -top-6 aspect-wide h-[calc(100%+3rem)] lg:-bottom-12 lg:-right-12 lg:-top-12 lg:h-[calc(100%+6rem)]">
+                <div class="h-full">
+                  {{ with resources.Get "images/sarfaraz.png" }}
+                  {{ $small := (.Resize "550x webp q100").RelPermalink }}
+                  {{ $medium := (.Resize "900x webp q100").RelPermalink }}
+                  {{ $large := (.Resize "1500x webp q100").RelPermalink }}
+                  {{ $together := (.Resize "1500x webp q100").RelPermalink }}
+                  <img class="fade-to-be2 h-full w-full object-contain object-right-bottom" alt="hero"
+                    src="{{$together}}">
+                  {{ end }}
+                </div>
+              </div>
+            </div>
+            <div
+              class="absolute inset-0 z-30 opacity-0 transition delay-[200ms] duration-500 ease-in-out group-hover:opacity-100 group-hover:delay-[0ms]">
+              <div class="absolute inset-0 z-10 flex h-full w-full p-6 lg:p-8">
+                <div class="flex gap-8">
+                  <div class="w-1/2">
+                    <a class="group/card block w-full" href="#">
+                      <div class="rounded-[0.875rem] bg-gradient-to-r from-rose-50 via-yellow-50 to-sky-5 p-0.5">
+                        <div class="aspect-wide w-full rounded-xl bg-gray-1100 p-8">
+                          {{ with resources.Get "images/sarfaraz.png" }}
+                          {{ $small := (.Resize "550x webp q100").RelPermalink }}
+                          {{ $medium := (.Resize "900x webp q100").RelPermalink }}
+                          {{ $large := (.Resize "1500x webp q100").RelPermalink }}
+                          {{ $together := (.Resize "1500x webp q100").RelPermalink }}
+                          <img
+                            class="h-full w-full object-contain transition-transform duration-300 ease-in-out group-hover/card:scale-105"
+                            alt="hero" src="{{$together}}">
+                          {{ end }}
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="relative h-full w-1/2 pt-2">
+                    <div
+                      class="inline-flex items-center gap-1.5 font-sohne text-10pt font-extrabold uppercase tracking-widest text-gray-900">
+                      <span>Client</span>
+                    </div>
+                    <div class="rich-text mt-2 text-9pt font-normal leading-snug text-gray-400">
+                      <p>The YC and Google backed startup is disrupting the CMS ecosystem with a free and open source
+                        alternative that’s more flexible and powerful than the SaaS incumbents.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- <div class="absolute bottom-0 left-0 z-50 flex gap-6 p-6 lg:p-8">
+              <div class="group relative inline-flex flex-shrink-0">
+                <div class="absolute inset-0 flex h-full w-full max-w-full">
+                  <div class="squircle h-full w-full bg-gray-900"></div>
+                </div>
+                <div class="bg-gray-900 text-white squircle group/button inline-block border-px border-transparent transition duration-300 ease-in-out hover:scale-105 cursor-pointer h-9">
+                  <a class="inline-flex flex-shrink-0 items-center font-sohne font-semibold leading-none gap-1.5 px-2.5 text-12pt h-9" href="/project/payload"></a>
+                </div>
+              </div>
+            </div> -->
+          </div>
+        </div>
+      </div>
+      <!-- second team member end -->
+
+      <!-- Third Team Member -->
+      <div class="w-full scroll-mt-32 lg:w-[calc(50%-3rem)] d:!scroll-mt-48">
+        <div
+          class="group rounded-xl bg-gradient-to-r from-rose-50 via-yellow-50 to-sky-50 dark:from-primary dark:via-indigo-900 dark:to-primary p-2">
+          <div class="relative flex justify-between rounded-lg bg-white dark:bg-gray-900 lg:aspect-wider h-96">
+            <div
+              class="flex justify-between p-6 opacity-100 transition delay-[200ms] duration-500 ease-in-out group-hover:opacity-0 group-hover:delay-[0ms] lg:p-8">
+              <div
+                class="max-w-[10ch] text-4xl font-bold font-chillax dark:text-white leading-[0.9] tracking-tighter text-black t:text-36pt lg:text-6xl lg:leading-[1.125] d:text-36pt">
+                Ali Ahmad</div>
+              <div
+                class="pointer-events-none absolute -bottom-6 -right-4 -top-6 aspect-wide h-[calc(100%+3rem)] lg:-bottom-12 lg:-right-12 lg:-top-12 lg:h-[calc(100%+6rem)]">
+                <div class="h-full">
+                  {{ with resources.Get "images/Ali.png" }}
+                  {{ $small := (.Resize "550x webp q100").RelPermalink }}
+                  {{ $medium := (.Resize "900x webp q100").RelPermalink }}
+                  {{ $large := (.Resize "1500x webp q100").RelPermalink }}
+                  {{ $together := (.Resize "1500x webp q100").RelPermalink }}
+                  <img class="fade-to-be2 h-full w-full object-contain object-right-bottom" alt="hero"
+                    src="{{$together}}">
+                  {{ end }}
+                </div>
+              </div>
+            </div>
+            <div
+              class="absolute inset-0 z-30 opacity-0 transition delay-[200ms] duration-500 ease-in-out group-hover:opacity-100 group-hover:delay-[0ms]">
+              <div class="absolute inset-0 z-10 flex h-full w-full p-6 lg:p-8">
+                <div class="flex gap-8">
+                  <div class="w-1/2">
+                    <a class="group/card block w-full" href="#">
+                      <div class="rounded-[0.875rem] bg-gradient-to-r from-rose-50 via-yellow-50 to-sky-5  p-0.5">
+                        <div class="aspect-wide w-full rounded-xl bg-gray-1100 p-8">
+                          {{ with resources.Get "images/Ali.png" }}
+                          {{ $small := (.Resize "550x webp q100").RelPermalink }}
+                          {{ $medium := (.Resize "900x webp q100").RelPermalink }}
+                          {{ $large := (.Resize "1500x webp q100").RelPermalink }}
+                          {{ $together := (.Resize "1500x webp q100").RelPermalink }}
+                          <img
+                            class="h-full w-full object-contain transition-transform duration-300 ease-in-out group-hover/card:scale-105"
+                            alt="hero" src="{{$together}}">
+                          {{ end }}
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="relative h-full w-1/2 pt-2">
+                    <div
+                      class="inline-flex items-center gap-1.5 font-sohne text-10pt font-extrabold uppercase tracking-widest text-gray-900">
+                      <span>Client</span>
+                    </div>
+                    <div class="rich-text mt-2 text-9pt font-normal leading-snug text-gray-400">
+                      <p>The YC and Google backed startup is disrupting the CMS ecosystem with a free and open source
+                        alternative that’s more flexible and powerful than the SaaS incumbents.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- <div class="absolute bottom-0 left-0 z-50 flex gap-6 p-6 lg:p-8">
+              <div class="group relative inline-flex flex-shrink-0">
+                <div class="absolute inset-0 flex h-full w-full max-w-full">
+                  <div class="squircle h-full w-full bg-gray-900"></div>
+                </div>
+                <div class="bg-gray-900 text-white squircle group/button inline-block border-px border-transparent transition duration-300 ease-in-out hover:scale-105 cursor-pointer h-9">
+                  <a class="inline-flex flex-shrink-0 items-center font-sohne font-semibold leading-none gap-1.5 px-2.5 text-12pt h-9" href="/project/payload"></a>
+                </div>
+              </div>
+            </div> -->
+          </div>
+        </div>
+      </div>
+      <!-- Third team memeber end -->
+
+      <!-- Fourth Team Member -->
+      <div class="w-full scroll-mt-32 lg:w-[calc(50%-3rem)] d:!scroll-mt-48">
+        <div
+          class="group rounded-xl bg-gradient-to-r from-rose-50 via-yellow-50 to-sky-50 dark:from-primary dark:via-indigo-900 dark:to-primary p-2">
+          <div class="relative flex justify-between rounded-lg bg-white dark:bg-gray-900 lg:aspect-wider h-96">
+            <div
+              class="flex justify-between p-6 opacity-100 transition delay-[200ms] duration-500 ease-in-out group-hover:opacity-0 group-hover:delay-[0ms] lg:p-8">
+              <div
+                class="max-w-[10ch] font-chillax dark:text-white text-4xl font-bold leading-[0.9] tracking-tighter text-black t:text-36pt lg:text-6xl lg:leading-[1.125] d:text-36pt">
+                Abdullah</div>
+              <div
+                class="pointer-events-none absolute -bottom-6 -right-4 -top-6 aspect-wide h-[calc(100%+3rem)] lg:-bottom-12 lg:-right-12 lg:-top-12 lg:h-[calc(100%+6rem)]">
+                <div class="h-full">
+                  {{ with resources.Get "images/abdullah-cloud-nine.png" }}
+                  {{ $small := (.Resize "550x webp q100").RelPermalink }}
+                  {{ $medium := (.Resize "900x webp q100").RelPermalink }}
+                  {{ $large := (.Resize "1500x webp q100").RelPermalink }}
+                  {{ $together := (.Resize "1500x webp q100").RelPermalink }}
+                  <img class="fade-to-be2 h-full w-full object-contain object-right-bottom" alt="hero"
+                    src="{{$together}}">
+                  {{ end }}
+                </div>
+              </div>
+            </div>
+            <div
+              class="absolute inset-0 z-30 opacity-0 transition delay-[200ms] duration-500 ease-in-out group-hover:opacity-100 group-hover:delay-[0ms]">
+              <div class="absolute inset-0 z-10 flex h-full w-full p-6 lg:p-8">
+                <div class="flex gap-8">
+                  <div class="w-1/2">
+                    <a class="group/card block w-full" href="#">
+                      <div class="rounded-[0.875rem] bg-gradient-to-r from-rose-50 via-yellow-50 to-sky-5 p-0.5">
+                        <div class="aspect-wide w-full rounded-xl bg-gray-1100 p-8">
+                          {{ with resources.Get "images/abdullah-cloud-nine.png" }}
+                          {{ $small := (.Resize "550x webp q100").RelPermalink }}
+                          {{ $medium := (.Resize "900x webp q100").RelPermalink }}
+                          {{ $large := (.Resize "1500x webp q100").RelPermalink }}
+                          {{ $together := (.Resize "1500x webp q100").RelPermalink }}
+                          <img
+                            class="h-full w-full object-contain transition-transform duration-300 ease-in-out group-hover/card:scale-105"
+                            alt="hero" src="{{$together}}">
+                          {{ end }}
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="relative h-full w-1/2 pt-2">
+                    <div
+                      class="inline-flex items-center gap-1.5 font-sohne text-10pt font-extrabold uppercase tracking-widest text-gray-900">
+                      <span>Client</span>
+                    </div>
+                    <div class="rich-text mt-2 text-9pt font-normal leading-snug text-gray-400">
+                      <p>The YC and Google backed startup is disrupting the CMS ecosystem with a free and open source
+                        alternative that’s more flexible and powerful than the SaaS incumbents.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- <div class="absolute bottom-0 left-0 z-50 flex gap-6 p-6 lg:p-8">
+              <div class="group relative inline-flex flex-shrink-0">
+                <div class="absolute inset-0 flex h-full w-full max-w-full">
+                  <div class="squircle h-full w-full bg-gray-900"></div>
+                </div>
+                <div class="bg-gray-900 text-white squircle group/button inline-block border-px border-transparent transition duration-300 ease-in-out hover:scale-105 cursor-pointer h-9">
+                  <a class="inline-flex flex-shrink-0 items-center font-sohne font-semibold leading-none gap-1.5 px-2.5 text-12pt h-9" href="/project/payload"></a>
+                </div>
+              </div>
+            </div> -->
+          </div>
+        </div>
+      </div>
+      <!-- fourth team memeber end -->
+
+      <!-- fifth team member -->
+      <div class="w-full scroll-mt-32 lg:w-[calc(50%-3rem)] d:!scroll-mt-48">
+        <div
+          class="group rounded-xl bg-gradient-to-r from-rose-50 via-yellow-50 to-sky-50 dark:from-primary dark:via-indigo-900 dark:to-primary p-2">
+          <div class="relative flex justify-between rounded-lg bg-white dark:bg-gray-900 lg:aspect-wider h-96">
+            <div
+              class="flex justify-between p-6 opacity-100 transition delay-[200ms] duration-500 ease-in-out group-hover:opacity-0 group-hover:delay-[0ms] lg:p-8">
+              <div
+                class="max-w-[10ch] font-chillax dark:text-white text-4xl font-bold leading-[0.9] tracking-tighter text-black t:text-36pt lg:text-6xl lg:leading-[1.125] d:text-36pt">
+                Debbie</div>
+              <div
+                class="pointer-events-none absolute -bottom-6 -right-4 -top-6 aspect-wide h-[calc(100%+3rem)] lg:-bottom-12 lg:-right-12 lg:-top-12 lg:h-[calc(100%+6rem)]">
+                <div class="h-full">
+                  {{ with resources.Get "images/debbie-cloud-nine.png" }}
+                  {{ $small := (.Resize "550x webp q100").RelPermalink }}
+                  {{ $medium := (.Resize "900x webp q100").RelPermalink }}
+                  {{ $large := (.Resize "1500x webp q100").RelPermalink }}
+                  {{ $together := (.Resize "1500x webp q100").RelPermalink }}
+                  <img class="fade-to-be2 h-full w-full object-contain object-right-bottom" alt="hero"
+                    src="{{$together}}">
+                  {{ end }}
+                </div>
+              </div>
+            </div>
+            <div
+              class="absolute inset-0 z-30 opacity-0 transition delay-[200ms] duration-500 ease-in-out group-hover:opacity-100 group-hover:delay-[0ms]">
+              <div class="absolute inset-0 z-10 flex h-full w-full p-6 lg:p-8">
+                <div class="flex gap-8">
+                  <div class="w-1/2">
+                    <a class="group/card block w-full" href="#">
+                      <div class="rounded-[0.875rem] bg-gradient-to-r from-rose-50 via-yellow-50 to-sky-5 p-0.5">
+                        <div class="aspect-wide w-full rounded-xl bg-gray-1100 p-8">
+                          {{ with resources.Get "images/debbie-cloud-nine.png" }}
+                          {{ $small := (.Resize "550x webp q100").RelPermalink }}
+                          {{ $medium := (.Resize "900x webp q100").RelPermalink }}
+                          {{ $large := (.Resize "1500x webp q100").RelPermalink }}
+                          {{ $together := (.Resize "1500x webp q100").RelPermalink }}
+                          <img
+                            class="h-full w-full object-contain transition-transform duration-300 ease-in-out group-hover/card:scale-105"
+                            alt="hero" src="{{$together}}">
+                          {{ end }}
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="relative h-full w-1/2 pt-2">
+                    <div
+                      class="inline-flex items-center gap-1.5 font-sohne text-10pt font-extrabold uppercase tracking-widest text-gray-900">
+                      <span>Client</span>
+                    </div>
+                    <div class="rich-text mt-2 text-9pt font-normal leading-snug text-gray-400">
+                      <p>The YC and Google backed startup is disrupting the CMS ecosystem with a free and open source
+                        alternative that’s more flexible and powerful than the SaaS incumbents.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- <div class="absolute bottom-0 left-0 z-50 flex gap-6 p-6 lg:p-8">
+              <div class="group relative inline-flex flex-shrink-0">
+                <div class="absolute inset-0 flex h-full w-full max-w-full">
+                  <div class="squircle h-full w-full bg-gray-900"></div>
+                </div>
+                <div class="bg-gray-900 text-white squircle group/button inline-block border-px border-transparent transition duration-300 ease-in-out hover:scale-105 cursor-pointer h-9">
+                  <a class="inline-flex flex-shrink-0 items-center font-sohne font-semibold leading-none gap-1.5 px-2.5 text-12pt h-9" href="/project/payload"></a>
+                </div>
+              </div>
+            </div> -->
+          </div>
+        </div>
+      </div>
+      <!-- fifth team member end -->
+      <!-- sixth team member -->
+      <div class="w-full scroll-mt-32 lg:w-[calc(50%-3rem)] d:!scroll-mt-48">
+        <div
+          class="group rounded-xl bg-gradient-to-r from-rose-50 via-yellow-50 to-sky-50 dark:from-primary dark:via-indigo-900 dark:to-primary p-2">
+          <div class="relative flex justify-between rounded-lg bg-white dark:bg-gray-900 lg:aspect-wider h-96">
+            <div
+              class="flex justify-between p-6 opacity-100 transition delay-[200ms] duration-500 ease-in-out group-hover:opacity-0 group-hover:delay-[0ms] lg:p-8">
+              <div
+                class="max-w-[10ch] font-chillax dark:text-white text-4xl font-bold leading-[0.9] tracking-tighter text-black t:text-36pt lg:text-6xl lg:leading-[1.125] d:text-36pt">
+                Shaiza</div>
+              <div
+                class="pointer-events-none absolute -bottom-6 -right-4 -top-6 aspect-wide h-[calc(100%+3rem)] lg:-bottom-12 lg:-right-12 lg:-top-12 lg:h-[calc(100%+6rem)]">
+                <div class="h-full">
+                  {{ with resources.Get "images/shaiza-shah-chief-legals-officer-cloud-nine.png" }}
+                  {{ $small := (.Resize "550x webp q100").RelPermalink }}
+                  {{ $medium := (.Resize "900x webp q100").RelPermalink }}
+                  {{ $large := (.Resize "1500x webp q100").RelPermalink }}
+                  {{ $together := (.Resize "1500x webp q100").RelPermalink }}
+                  <img class="fade-to-be2 h-full w-full object-contain object-right-bottom" alt="hero"
+                    src="{{$together}}">
+                  {{ end }}
+                </div>
+              </div>
+            </div>
+            <div
+              class="absolute inset-0 z-30 opacity-0 transition delay-[200ms] duration-500 ease-in-out group-hover:opacity-100 group-hover:delay-[0ms]">
+              <div class="absolute inset-0 z-10 flex h-full w-full p-6 lg:p-8">
+                <div class="flex gap-8">
+                  <div class="w-1/2">
+                    <a class="group/card block w-full" href="#">
+                      <div class="rounded-[0.875rem] bg-gradient-to-r from-rose-50 via-yellow-50 to-sky-5 p-0.5">
+                        <div class="aspect-wide w-full rounded-xl bg-gray-1100 p-8">
+                          {{ with resources.Get "images/shaiza-shah-chief-legals-officer-cloud-nine.png" }}
+                          {{ $small := (.Resize "550x webp q100").RelPermalink }}
+                          {{ $medium := (.Resize "900x webp q100").RelPermalink }}
+                          {{ $large := (.Resize "1500x webp q100").RelPermalink }}
+                          {{ $together := (.Resize "1500x webp q100").RelPermalink }}
+                          <img
+                            class="h-full w-full object-contain transition-transform duration-300 ease-in-out group-hover/card:scale-105"
+                            alt="hero" src="{{$together}}">
+                          {{ end }}
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="relative h-full w-1/2 pt-2">
+                    <div
+                      class="inline-flex items-center gap-1.5 font-sohne text-10pt font-extrabold uppercase tracking-widest text-gray-900">
+                      <span>Client</span>
+                    </div>
+                    <div class="rich-text mt-2 text-9pt font-normal leading-snug text-gray-400">
+                      <p>The YC and Google backed startup is disrupting the CMS ecosystem with a free and open source
+                        alternative that’s more flexible and powerful than the SaaS incumbents.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- <div class="absolute bottom-0 left-0 z-50 flex gap-6 p-6 lg:p-8">
+              <div class="group relative inline-flex flex-shrink-0">
+                <div class="absolute inset-0 flex h-full w-full max-w-full">
+                  <div class="squircle h-full w-full bg-gray-900"></div>
+                </div>
+                <div class="bg-gray-900 text-white squircle group/button inline-block border-px border-transparent transition duration-300 ease-in-out hover:scale-105 cursor-pointer h-9">
+                  <a class="inline-flex flex-shrink-0 items-center font-sohne font-semibold leading-none gap-1.5 px-2.5 text-12pt h-9" href="/project/payload"></a>
+                </div>
+              </div>
+            </div> -->
+          </div>
+        </div>
+      </div>
+      <!-- sixth team member end -->
     </div>
-  </section>
+  </div>
+
+</section>
 
 
-</main>
 {{ end }}
