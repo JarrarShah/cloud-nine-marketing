@@ -84,6 +84,9 @@ module.exports = {
       left: {
         '112': '28rem', // Adjust the value as per your requirement
       },
+      scale: {
+        150: '1.5', // Custom scale value
+      },
     },
   },
   variants: {

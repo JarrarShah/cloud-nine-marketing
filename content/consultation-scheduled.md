@@ -6,8 +6,8 @@ sitemapExclude: true
 language: en
 description: ""
 keywords: "Cloud Nine Marketing"
-image: "images/og-cabconnects.png"
-images: ["images/og-cabconnects.png"]
+image: "images/og-cloudnine.png"
+images: ["images/og-cloudnine.png"]
 ---
 
 ## Your free consultation has been scheduled

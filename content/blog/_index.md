@@ -6,7 +6,7 @@ description: "Explore Cloud Nine Marketing's premium sigange solutions for busin
 author: ""
 featuredImage: "images/1.png"
 authorImage: "images/global/andre-author.jpg"
-image: "images/og-cabconnects.png"
-images: ["images/og-cabconnects.png"]
+image: "images/og-cloudnine.png"
+images: ["images/og-cloudnine.png"]
 # keywords: "Blog, Cloud Nine Marketing, Metal Fabrication, Stainless Steel, news"
 ---

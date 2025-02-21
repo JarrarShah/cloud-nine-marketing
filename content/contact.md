@@ -6,7 +6,7 @@ language: en
 description: Contact Cloud Nine Marketing
 type: page
 layout: contact
-image: "images/og-cabconnects.png"
-images: ["images/og-cabconnects.png"]
+image: "images/og-cloudnine.png"
+images: ["images/og-cloudnine.png"]
 keywords: "Cloud Nine Marketing, contact, email form, Our Location"
 ---

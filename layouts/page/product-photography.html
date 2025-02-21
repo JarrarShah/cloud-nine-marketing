@@ -1,7 +1,7 @@
 {{ define "main" }}
 
 <main>
-    <section id="home-section" class="bg-gray-50 dark:bg-gray-700">
+    <section id="home-section" class="bg-gray-50 dark:bg-gray-700 h-4/5 items-center flex">
         <div class="container mx-auto lg:max-w-screen-xl md:max-w-screen-md px-4 pt-20">
             <div class="grid grid-cols-1 lg:grid-cols-12 items-center">
                 <div class="col-span-6">
@@ -10,61 +10,128 @@
                         Epic Products Sell More</h1>
                     <p class="text-black/55 dark:text-white/50 lg:text-lg font-normal mb-10 lg:text-start text-center">
                         Get Stunning, Professional Product Photos & Infographics – Boost Sales on Amazon and Beyond!</p>
-                    <div class="md:flex align-middle justify-center lg:justify-start"><a
-                            class="text-xl w-full md:w-auto font-medium rounded-full text-white py-5 px-6 bg-primary hover:text-primary lg:px-14 mr-6 border border-primary hover:bg-transparent"
-                            href="#cook-section">Lets cook</a><a
-                            class="flex border w-full md:w-auto mt-5 md:mt-0 border-primary justify-center rounded-full text-xl font-medium items-center py-5 px-10 text-primary hover:text-white hover:bg-primary"
-                            href="#about-section">Explore now</a></div>
+                    <div class="md:flex align-middle justify-center gap-x-6 lg:justify-start">
+                        <a href="/contact" class="relative group group-hover:active-cursor inline-block text-lg group">
+                            <span
+                                class="relative z-10 block px-5 py-3 overflow-hidden font-medium leading-tight text-gray-800 dark:text-gray-100 transition-colors duration-300 ease-out border-2 border-gray-900 dark:border-gray-600 rounded-lg group-hover:text-black dark:group-hover:text-white">
+                                <span
+                                    class="absolute inset-0 w-full h-full px-5 py-3 rounded-lg bg-gradient-to-r from-white via-stone-50 to-stone-200 dark:from-gray-700 dark:via-gray-800 dark:to-gray-900"></span>
+                                <span
+                                    class="absolute left-0 w-48  h-48 -ml-2 transition-all duration-300 origin-top-right -rotate-90 -translate-x-full translate-y-12 bg-gradient-to-r from-white via-stone-50 to-stone-200 dark:from-black dark:via-primary dark:to-black group-hover:-rotate-180 ease"></span>
+                                <span class="relative">Reach Out</span>
+                            </span>
+                            <span
+                                class="absolute bottom-0 right-0 w-full h-12 -mb-1 -mr-1 transition-all duration-200 ease-linear bg-gradient-to-r from-black via-stone-800 to-stone-700 dark:from-primary dark:via-rose-600 dark:to-secondary rounded-lg group-hover:mb-0 group-hover:mr-0"
+                                data-rounded="rounded-lg"></span>
+                        </a>
+
+                        <a href="#howto" class="relative group group-hover:active-cursor inline-block text-lg group">
+                            <span
+                                class="relative z-10 block px-4 py-3 overflow-hidden font-medium leading-tight text-gray-800 dark:text-gray-100 transition-colors duration-300 ease-out border-2 border-gray-900 dark:border-gray-600 rounded-lg group-hover:text-black dark:group-hover:text-white">
+                                <span
+                                    class="absolute inset-0 w-full h-full px-5 py-3 rounded-lg bg-gradient-to-r from-white via-stone-50 to-stone-200 dark:from-gray-700 dark:via-gray-800 dark:to-gray-900"></span>
+                                <span
+                                    class="absolute left-0 w-48 h-48 -ml-2 transition-all duration-300 origin-top-right -rotate-90 -translate-x-full translate-y-12 bg-gradient-to-r from-white via-stone-50 to-stone-200 dark:from-secondary dark:via-neutral dark:to-sky-900 group-hover:-rotate-180 ease"></span>
+                                <span class="relative">Learn More</span>
+                            </span>
+                            <span
+                                class="absolute bottom-0 right-0 w-full h-12 -mb-1 -mr-1 transition-all duration-200 ease-linear bg-gradient-to-r from-black via-stone-800 to-stone-700 dark:from-secondary dark:via-neutral dark:to-sky-900 rounded-lg group-hover:mb-0 group-hover:mr-0"
+                                data-rounded="rounded-lg"></span>
+                        </a>
+                    </div>
                 </div>
                 <div class="col-span-6 flex justify-center relative">
-                    <div class="flex bg-white p-2 gap-5 items-center bottom-10 left-10 rounded-xl absolute"><img
-                            alt="pizza-image" loading="lazy" width="68" height="68" decoding="async" data-nimg="1"
-                            style="color:transparent" src="/chefs-kitchen-nextjs-free/images/hero/pizza.svg" />
-                        <p class="text-lg font-normal">More than 500+ <br /> recipes.</p>
-                    </div><img alt="nothing" loading="lazy" width="1000" height="805" decoding="async" data-nimg="1"
-                        style="color:transparent" src="/chefs-kitchen-nextjs-free/images/hero/banner-image.png" />
+                    <div class="flex bg-white p-2 gap-5 items-center bottom-10 left-10 rounded-xl absolute z-30">
+                        {{ with resources.Get "images/products-photograpghy/ice8_product_image_cloud_nine.png" }}
+                        {{ $small := (.Resize "900x webp q100").RelPermalink }}
+                        {{ $medium := (.Resize "1500x webp q100").RelPermalink }}
+                        {{ $large := (.Resize "2000x webp q100").RelPermalink }}
+                        {{ $heroimage := (.Resize "2000x webp q100").RelPermalink }}
+                        <img srcset="
+                                {{- with $small -}}, {{.}} 768w{{- end -}}
+                                {{- with $medium -}}, {{.}} 1024w{{- end -}}
+                                {{- with $large -}}, {{.}} 1374w{{- end -}}" src="{{ $heroimage }}"
+                            class="h-12 w-12 rounded-bl-2xl rounded-t-2xl object-cover"
+                            alt="High Quality Product Images Captured by Cloud Nine">
+                        {{ end }}
+                        <p class="text-lg font-normal">More than 500+ <br /> images</p>
+                    </div>{{ with resources.Get "images/products-photograpghy/ice8_photo_shoot.png" }}
+                    {{ $small := (.Resize "900x webp q100").RelPermalink }}
+                    {{ $medium := (.Resize "1500x webp q100").RelPermalink }}
+                    {{ $large := (.Resize "2000x webp q100").RelPermalink }}
+                    {{ $heroimage := (.Resize "2000x webp q100").RelPermalink }}
+                    <img srcset="
+                            {{- with $small -}}, {{.}} 768w{{- end -}}
+                            {{- with $medium -}}, {{.}} 1024w{{- end -}}
+                            {{- with $large -}}, {{.}} 1374w{{- end -}}" src="{{ $heroimage }}"
+                        class="w-full h-full rounded-bl-2xl rounded-t-2xl object-cover grayscale hover:grayscale-0 "
+                        alt="Product Photograpghy by Cloud Nine for a Jewlery Brand">
+                    {{ end }}
                 </div>
             </div>
         </div>
     </section>
-    <section class="relative">
+    <section class="relative my-40">
         <div class="container mx-auto lg:max-w-screen-xl md:max-w-screen-md">
-            <div class="absolute right-0 bottom-[-18%] hidden lg:block"><img alt="burger-image" loading="lazy"
-                    width="463" height="622" decoding="async" data-nimg="1" style="color:transparent"
-                    src="/chefs-kitchen-nextjs-free/images/cook/burger.png" /></div>
-            <div class="grid grid-cols-1 lg:grid-cols-12 my-16 space-x-5">
-                <div class="col-span-6 flex justify-start"><img alt="nothing" loading="lazy" width="636" height="808"
-                        decoding="async" data-nimg="1" style="color:transparent"
-                        src="/chefs-kitchen-nextjs-free/images/cook/cook.png" /></div>
+            <div class="absolute right-0 bottom-[-18%] hidden lg:block">
+                <img alt="burger-image" loading="lazy" width="463" height="622" decoding="async" data-nimg="1"
+                    style="color:transparent" src="/chefs-kitchen-nextjs-free/images/cook/burger.png" />
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-12 my-16 space-x-12">
+                <div class="col-span-6 flex justify-start">
+                    {{ with resources.Get "images/products-photograpghy/product_image_cloud_nine_1.jpg" }}
+                    {{ $small := (.Resize "900x webp q100").RelPermalink }}
+                    {{ $medium := (.Resize "1500x webp q100").RelPermalink }}
+                    {{ $large := (.Resize "2000x webp q100").RelPermalink }}
+                    {{ $heroimage := (.Resize "2000x webp q100").RelPermalink }}
+                    <img srcset="
+                    {{- with $small -}}, {{.}} 768w{{- end -}}
+                    {{- with $medium -}}, {{.}} 1024w{{- end -}}
+                    {{- with $large -}}, {{.}} 1374w{{- end -}}" src="{{ $heroimage }}"
+                        class="h-full rounded-bl-2xl rounded-t-2xl object-cover grayscale hover:grayscale-0 "
+                        alt="Sign Makers crafting a high quality premium LED signage">
+                    {{ end }}
+                </div>
                 <div class="col-span-6 flex flex-col justify-center">
                     <div class="w-32 ">
                         <span
                             class="inline-flex justify-center items-center rounded-xl justify-between text-center items-center py-1 px-4 mb-7 text-sm border border-2 dark:border-white border-gray-900 font-medium text-dark dark:text-gray-100">How
                             to</span>
                     </div>
-                    <h2 class="text-3xl lg:text-5xl font-semibold text-black dark:text-white text-start">Let’s Make Your
-                        Products Shine with Cloud Nine!</h2>
-                    <p class="text-black/50 dark:text-white/50 md:text-lg font-normal mb-10 text-start mt-2">At Cloud
-                        Nine, we’re not just snapping pictures—we’re creating magic for your e-commerce business! With
-                        loads of experience in the fast-paced world of online selling, we know exactly what it takes to
-                        make your products pop. Think of us as your creative sidekicks, here to help your brand stand
-                        out in the crowded digital marketplace.
+                    <h2 class="text-3xl lg:text-5xl font-semibold text-black dark:text-white text-start">Your Products
+                        Deserve More Than Just a Picture – They Deserve a Story</h2>
+                    <p class="text-black/50 dark:text-white/50 md:text-lg font-normal mb-10 text-start mt-2"> Without
+                        compelling visuals, even the best items can go unnoticed. Poor-quality images, generic graphics,
+                        and uninspiring content could be costing you sales.
 
-                    <p class="text-black/50 dark:text-white/50 md:text-lg font-normal mb-10 text-start mt-1"> Our
-                        superpower? Turning your products into eye-catching, scroll-stopping visuals that grab attention
-                        and boost sales. We specialize in crafting stunning, high-quality images that not only look
-                        amazing but also connect with your audience. Whether it’s sleek product shots or lifestyle
-                        imagery, we’ve got you covered.</p>
+                    <p class="text-black/50 dark:text-white/50 md:text-lg font-normal mb-10 text-start mt-1"> At
+                        <strong>Cloud Nine</strong>, <i>we don’t just take photos – we create an experience.</i> We turn
+                        ordinary products into high-converting masterpieces, ensuring that your brand stands out and
+                        shines.
+                    </p>
 
-                    </p><button
-                        class="text-xl font-medium rounded-full text-white py-5 px-6 bg-primary lg:px-10 mr-6 w-fit border border-primary hover:bg-transparent hover:text-primary">Learn
-                        more</button>
+                    </p>
+                    <div class="w-64">
+                        <a href="/contact" class="relative group group-hover:active-cursor inline-block text-lg group">
+                            <span
+                                class="relative z-10 block px-5 py-3 overflow-hidden font-medium leading-tight text-gray-800 dark:text-gray-100 transition-colors duration-300 ease-out border-2 border-gray-900 dark:border-gray-600 rounded-lg group-hover:text-black dark:group-hover:text-white">
+                                <span
+                                    class="absolute inset-0 w-full h-full px-5 py-3 rounded-lg bg-gradient-to-r from-white via-stone-50 to-stone-200 dark:from-gray-700 dark:via-gray-800 dark:to-gray-900"></span>
+                                <span
+                                    class="absolute left-0 w-48  h-48 -ml-2 transition-all duration-300 origin-top-right -rotate-90 -translate-x-full translate-y-12 bg-gradient-to-r from-white via-stone-50 to-stone-200 dark:from-black dark:via-primary dark:to-black group-hover:-rotate-180 ease"></span>
+                                <span class="relative">Reach Out</span>
+                            </span>
+                            <span
+                                class="absolute bottom-0 right-0 w-full h-12 -mb-1 -mr-1 transition-all duration-200 ease-linear bg-gradient-to-r from-black via-stone-800 to-stone-700 dark:from-primary dark:via-rose-600 dark:to-secondary rounded-lg group-hover:mb-0 group-hover:mr-0"
+                                data-rounded="rounded-lg"></span>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
     <section>
-        <div class="container mx-auto lg:max-w-screen-xl md:max-w-screen-md" id="about-section">
+        <div class="container mx-auto lg:max-w-screen-xl md:max-w-screen-md" id="howto">
             <div class="text-center mb-14">
                 <span
                     class="inline-flex justify-center items-center rounded-xl justify-between text-center items-center py-1 px-4 mb-7 text-sm border border-2 dark:border-white border-gray-900 font-medium text-dark dark:text-gray-100">How
@@ -75,515 +142,381 @@
             <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-y-20 gap-x-5 mt-32">
                 <div
                     class="p-8 relative rounded-3xl bg-gradient-to-b from-black/5 to-white dark:from-white/5 dark:to-black">
-                    <div
-                        class="work-img-bg rounded-full flex justify-center absolute -top-[50%] sm:top-[-40%] md:top-[-55%] lg:top-[-45%] left-[0%]">
-                        <img alt="images/Features/featureOne.svg" loading="lazy" width="510" height="10"
-                            decoding="async" data-nimg="1" style="color:transparent"
-                            src="/chefs-kitchen-nextjs-free/images/Features/featureOne.svg" />
+                    <div class="flex justify-center">
+                        <svg width="48px" height="48px" stroke-width="2" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg" class="text-black dark:text-white">
+                            <path
+                                d="M2.6954 7.18536L11.6954 11.1854L12.3046 9.81464L3.3046 5.81464L2.6954 7.18536ZM12.75 21.5V10.5H11.25V21.5H12.75ZM12.3046 11.1854L21.3046 7.18536L20.6954 5.81464L11.6954 9.81464L12.3046 11.1854Z"
+                                class="fill-current"></path>
+                            <path
+                                d="M3 17.1101V6.88992C3 6.65281 3.13964 6.43794 3.35632 6.34164L11.7563 2.6083C11.9115 2.53935 12.0885 2.53935 12.2437 2.6083L20.6437 6.34164C20.8604 6.43794 21 6.65281 21 6.88992V17.1101C21 17.3472 20.8604 17.5621 20.6437 17.6584L12.2437 21.3917C12.0885 21.4606 11.9115 21.4606 11.7563 21.3917L3.35632 17.6584C3.13964 17.5621 3 17.3472 3 17.1101Z"
+                                class="stroke-current" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            </path>
+                            <path d="M7.5 4.5L16.1437 8.34164C16.3604 8.43794 16.5 8.65281 16.5 8.88992V12.5"
+                                class="stroke-current" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            </path>
+                        </svg>
+
+
                     </div>
                     <h3 class="text-2xl text-black dark:text-white font-semibold text-center mt-16">Pack it carefully
                     </h3>
-                    <p class="text-lg font-normal text-black/50 dark:text-white/50 text-center mt-2">Sed ut perspiciatis
-                        unde omnis iste natus error</p>
-                    <div class="flex items-center justify-center "><a
-                            class="text-center text-lg group duration-300 ease-in-out font-medium text-primary mt-2 overflow-hidden flex items-center relative after:absolute after:w-full after:h-px after:bg-primary after:bottom-0 after:right-0 after:translate-x-full hover:after:translate-x-0"
-                            href="/chefs-kitchen-nextjs-free">Learn More<span></span></a></div>
+                    <p class="text-lg font-normal text-black/50 leading-2 dark:text-white/50 text-justify mt-2">A little
+                        extra care goes a long way in ensuring we receive your product in perfect condition, ready for
+                        its moment in the spotlight.</p>
                 </div>
                 <div
                     class="p-8 relative rounded-3xl bg-gradient-to-b from-black/5 to-white dark:from-white/5 dark:to-black">
-                    <div
-                        class="work-img-bg rounded-full flex justify-center absolute -top-[50%] sm:top-[-40%] md:top-[-55%] lg:top-[-45%] left-[0%]">
-                        <img alt="images/Features/featureTwo.svg" loading="lazy" width="510" height="10"
-                            decoding="async" data-nimg="1" style="color:transparent"
-                            src="/chefs-kitchen-nextjs-free/images/Features/featureTwo.svg" />
+                    <div class="flex justify-center">
+                        <svg width="48px" height="48px" stroke-width="2" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg" class="text-black dark:text-white">
+                            <path d="M22 5H16M16 5L19 2M16 5L19 8" class="stroke-current" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path
+                                d="M18.1182 14.702L14 15.5C11.2183 14.1038 9.5 12.5 8.5 10L9.26995 5.8699L7.81452 2L4.0636 2C2.93605 2 2.04814 2.93178 2.21654 4.04668C2.63695 6.83 3.87653 11.8765 7.5 15.5C11.3052 19.3052 16.7857 20.9564 19.802 21.6127C20.9668 21.8662 22 20.9575 22 19.7655L22 16.1812L18.1182 14.702Z"
+                                class="stroke-current" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            </path>
+                        </svg>
+
                     </div>
                     <h3 class="text-2xl text-black dark:text-white font-semibold text-center mt-16">Contact Us</h3>
-                    <p class="text-lg font-normal text-black/50 dark:text-white/50 text-center mt-2">Sed ut perspiciatis
-                        unde omnis iste natus error</p>
-                    <div class="flex items-center justify-center "><a
-                            class="text-center text-lg group duration-300 ease-in-out font-medium text-primary mt-2 overflow-hidden flex items-center relative after:absolute after:w-full after:h-px after:bg-primary after:bottom-0 after:right-0 after:translate-x-full hover:after:translate-x-0"
-                            href="/chefs-kitchen-nextjs-free">Learn More<span></span></a></div>
+                    <p class="text-lg font-normal text-black/50 leading-2 dark:text-white/50 text-justify mt-2">Tell us
+                        about your product and photography needs, and we’ll provide a tailored quote.Don't hesitate to
+                        get in touch with any queries or concerns you may have.</p>
                 </div>
                 <div
                     class="p-8 relative rounded-3xl bg-gradient-to-b from-black/5 to-white dark:from-white/5 dark:to-black">
-                    <div
-                        class="work-img-bg rounded-full flex justify-center absolute -top-[50%] sm:top-[-40%] md:top-[-55%] lg:top-[-45%] left-[0%]">
-                        <img alt="images/Features/featureThree.svg" loading="lazy" width="510" height="10"
-                            decoding="async" data-nimg="1" style="color:transparent"
-                            src="/chefs-kitchen-nextjs-free/images/Features/featureThree.svg" />
+                    <div class="flex justify-center">
+                        <svg width="48px" height="48px" stroke-width="2" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg" class="text-black dark:text-white">
+                            <path
+                                d="M8 19C9.10457 19 10 18.1046 10 17C10 15.8954 9.10457 15 8 15C6.89543 15 6 15.8954 6 17C6 18.1046 6.89543 19 8 19Z"
+                                class="stroke-current" stroke-width="2" stroke-miterlimit="1.5" stroke-linecap="round"
+                                stroke-linejoin="round"></path>
+                            <path
+                                d="M18 19C19.1046 19 20 18.1046 20 17C20 15.8954 19.1046 15 18 15C16.8954 15 16 15.8954 16 17C16 18.1046 16.8954 19 18 19Z"
+                                class="stroke-current" stroke-width="2" stroke-miterlimit="1.5" stroke-linecap="round"
+                                stroke-linejoin="round"></path>
+                            <path d="M10.05 17H15V6.6C15 6.26863 14.7314 6 14.4 6H1" class="stroke-current"
+                                stroke-width="2" stroke-linecap="round"></path>
+                            <path d="M5.65 17H3.6C3.26863 17 3 16.7314 3 16.4V11.5" class="stroke-current"
+                                stroke-width="2" stroke-linecap="round"></path>
+                            <path d="M2 9L6 9" class="stroke-current" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"></path>
+                            <path
+                                d="M15 9H20.6101C20.8472 9 21.0621 9.13964 21.1584 9.35632L22.9483 13.3836C22.9824 13.4604 23 13.5434 23 13.6273V16.4C23 16.7314 22.7314 17 22.4 17H20.5"
+                                class="stroke-current" stroke-width="2" stroke-linecap="round"></path>
+                            <path d="M15 17H16" class="stroke-current" stroke-width="2" stroke-linecap="round"></path>
+                        </svg>
+
                     </div>
                     <h3 class="text-2xl text-black dark:text-white font-semibold text-center mt-16">Deliver the product
                     </h3>
-                    <p class="text-lg font-normal text-black/50 dark:text-white/50 text-center mt-2">Sed ut perspiciatis
-                        unde omnis iste natus error</p>
-                    <div class="flex items-center justify-center "><a
-                            class="text-center text-lg group duration-300 ease-in-out font-medium text-primary mt-2 overflow-hidden flex items-center relative after:absolute after:w-full after:h-px after:bg-primary after:bottom-0 after:right-0 after:translate-x-full hover:after:translate-x-0"
-                            href="/chefs-kitchen-nextjs-free">Learn More<span></span></a></div>
+                    <p class="text-lg font-normal text-black/50 dark:text-white/50 text-center mt-2">Send your product
+                        to our address, ensuring it reaches us safely. Pick a fast courier servic eand please use a
+                        method that offers tracking for added peace of mind
+                    </p>
+                    <div class="flex items-center justify-center "></div>
                 </div>
                 <div
                     class="p-8 relative rounded-3xl bg-gradient-to-b from-black/5 to-white dark:from-white/5 dark:to-black">
-                    <div
-                        class="work-img-bg rounded-full flex justify-center absolute -top-[50%] sm:top-[-40%] md:top-[-55%] lg:top-[-45%] left-[0%]">
-                        <img alt="images/Features/featureFour.svg" loading="lazy" width="510" height="10"
-                            decoding="async" data-nimg="1" style="color:transparent"
-                            src="/chefs-kitchen-nextjs-free/images/Features/featureFour.svg" />
+                    <div class="flex justify-center">
+                        <svg width="48px" height="48px" stroke-width="2" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg" class="text-black dark:text-white">
+                            <path
+                                d="M21 7.6V20.4C21 20.7314 20.7314 21 20.4 21H7.6C7.26863 21 7 20.7314 7 20.4V7.6C7 7.26863 7.26863 7 7.6 7H20.4C20.7314 7 21 7.26863 21 7.6Z"
+                                class="stroke-current" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            </path>
+                            <path d="M18 4H4.6C4.26863 4 4 4.26863 4 4.6V18" class="stroke-current" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M7 16.8L12.4444 15L21 18" class="stroke-current" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path
+                                d="M16.5 13C15.6716 13 15 12.3284 15 11.5C15 10.6716 15.6716 10 16.5 10C17.3284 10 18 10.6716 18 11.5C18 12.3284 17.3284 13 16.5 13Z"
+                                class="stroke-current" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            </path>
+                        </svg>
+
                     </div>
-                    <h3 class="text-2xl text-black dark:text-white font-semibold text-center mt-16">We'll do the rest
+                    <h3 class="text-2xl text-black dark:text-white font-semibold text-center mt-16">Receive Stunning
+                        Images
                     </h3>
-                    <p class="text-lg font-normal text-black/50 dark:text-white/50 text-center mt-2">Sed ut perspiciatis
-                        unde omnis iste natus error</p>
-                    <div class="flex items-center justify-center "><a
-                            class="text-center text-lg group duration-300 ease-in-out font-medium text-primary mt-2 overflow-hidden flex items-center relative after:absolute after:w-full after:h-px after:bg-primary after:bottom-0 after:right-0 after:translate-x-full hover:after:translate-x-0"
-                            href="/chefs-kitchen-nextjs-free">Learn More<span></span></a></div>
+                    <p class="text-lg font-normal text-black/50 dark:text-white/50 text-center mt-2">In as little as two
+                        weeks, you’ll receive high-quality, ready-to-use images designed to maximize your online
+                        presence.
+                    </p>
+                    <div class="flex items-center justify-center "></div>
                 </div>
             </div>
         </div>
     </section>
     <section class="relative">
         <div class="container mx-auto lg:max-w-screen-xl md:max-w-screen-md">
-            <div class="absolute right-0 bottom-[-18%] hidden lg:block"><img alt="burger-image" loading="lazy"
-                    width="463" height="622" decoding="async" data-nimg="1" style="color:transparent"
-                    src="/chefs-kitchen-nextjs-free/images/cook/burger.png" /></div>
-            <div class="grid grid-cols-1 lg:grid-cols-12 my-16 space-x-5">
-                <div class="col-span-6 flex justify-start"><img alt="nothing" loading="lazy" width="636" height="808"
-                        decoding="async" data-nimg="1" style="color:transparent"
-                        src="/chefs-kitchen-nextjs-free/images/cook/cook.png" /></div>
+            <!-- <div class="absolute right-0 bottom-[-18%] hidden lg:block"> {{ with resources.Get
+                "images/products-photograpghy/product_image_cloud_nine_1.jpg" }}
+                {{ $small := (.Resize "900x webp q100").RelPermalink }}
+                {{ $medium := (.Resize "1500x webp q100").RelPermalink }}
+                {{ $large := (.Resize "2000x webp q100").RelPermalink }}
+                {{ $heroimage := (.Resize "2000x webp q100").RelPermalink }}
+                <img srcset="
+                    {{- with $small -}}, {{.}} 768w{{- end -}}
+                    {{- with $medium -}}, {{.}} 1024w{{- end -}}
+                    {{- with $large -}}, {{.}} 1374w{{- end -}}" src="{{ $heroimage }}"
+                    class="h-96 w-96 rounded-bl-2xl rounded-t-2xl object-cover grayscale hover:grayscale-0 "
+                    alt="Sign Makers crafting a high quality premium LED signage">
+                {{ end }}
+            </div> -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 my-16 space-x-12">
+                <div class="col-span-6 flex justify-start">
+                    {{ with resources.Get "images/products-photograpghy/ice8_product_image_cloud_nine.png" }}
+                    {{ $small := (.Resize "900x webp q100").RelPermalink }}
+                    {{ $medium := (.Resize "1500x webp q100").RelPermalink }}
+                    {{ $large := (.Resize "2000x webp q100").RelPermalink }}
+                    {{ $heroimage := (.Resize "2000x webp q100").RelPermalink }}
+                    <img srcset="
+                    {{- with $small -}}, {{.}} 768w{{- end -}}
+                    {{- with $medium -}}, {{.}} 1024w{{- end -}}
+                    {{- with $large -}}, {{.}} 1374w{{- end -}}" src="{{ $heroimage }}"
+                        class="h-full rounded-bl-2xl rounded-t-2xl object-cover grayscale hover:grayscale-0 "
+                        alt="Sign Makers crafting a high quality premium LED signage">
+                    {{ end }}
+                </div>
                 <div class="col-span-6 flex flex-col justify-center">
                     <div class="w-32 ">
                         <span
                             class="inline-flex justify-center items-center rounded-xl justify-between text-center items-center py-1 px-4 mb-7 text-sm border border-2 dark:border-white border-gray-900 font-medium text-dark dark:text-gray-100">How
                             to</span>
                     </div>
-                    <h2 class="text-3xl lg:text-5xl font-semibold text-black dark:text-white text-start">Professional
-                        Images Sell More!</h2>
-                    <p class="text-black/50 dark:text-white/50 md:text-lg font-normal mb-10 text-start mt-2">We get
-                        it—running an online store is no small feat. That’s why we tailor our services to fit your
-                        unique needs, making sure every image we create works hard to sell your products. With Cloud
-                        Nine, you’re not just getting a photography service; you’re getting a partner who’s as invested
-                        in your success as you are.
-
+                    <h2 class="text-3xl lg:text-5xl font-semibold text-black dark:text-white text-start">Why Cloud Nine?
+                    </h2>
+                    <p class="text-black/50 dark:text-white/50 md:text-lg font-normal mb-10 text-start mt-2">We’re not
+                        just another product photography studio. We’re your <strong>marketing partner</strong>. With
+                        expertise in Amazon, Shopify, and B2B product photography, we craft visuals <strong>that convert
+                            browsers into buyers</strong>. Whether you need high-quality imagery, 360° video production,
+                        or engaging infographics, Cloud nine is your one-stop shop for success.
 
                     <p class="text-black/50 dark:text-white/50 md:text-lg font-normal mb-10 text-start mt-1"> Ready to
                         take your product listings from “meh” to “WOW”? Trust us to bring our e-commerce expertise,
                         creative flair, and a sprinkle of fun to your brand. Let’s make your products unforgettable!
                     </p>
 
-                    </p><button
-                        class="text-xl font-medium rounded-full text-white py-5 px-6 bg-primary lg:px-10 mr-6 w-fit border border-primary hover:bg-transparent hover:text-primary">Learn
-                        more</button>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- <section class="bg-primary/15">
-        <div class="container mx-auto lg:max-w-screen-xl md:max-w-screen-md">
-            <div class="text-center">
-                <div class="flex justify-center">
-                    <span
-                        class="inline-flex justify-center items-center rounded-xl justify-between text-center items-center py-1 px-4 mb-7 text-sm border border-2 dark:border-white border-gray-900 font-medium text-dark dark:text-gray-100">How
-                        to</span>
-                </div>
-                <h2 class="text-3xl lg:text-5xl font-semibold text-black dark:text-white">Let&#x27;s meet the expert.
-                </h2>
-            </div>
-            <div class="slick-slider slick-initialized" dir="ltr">
-                <div class="slick-list">
-                    <div class="slick-track" style="width:500.00000000000006%;left:-100.00000000000001%">
-                        <div data-index="-3" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true"
-                            style="width:6.666666666666667%">
-                            <div>
-                                <div tabindex="-1" style="width:100%;display:inline-block">
-                                    <div class="m-3 py-14 my-10 text-center">
-                                        <div class="relative"><img alt="gaby" loading="lazy" width="362" height="262"
-                                                decoding="async" data-nimg="1" class="inline-block m-auto"
-                                                style="color:transparent"
-                                                src="/chefs-kitchen-nextjs-free//images/Expert/girl.png" />
-                                            <div class="absolute top-[50%] right-[2%]"><img alt="linkedin"
-                                                    loading="lazy" width="220" height="120" decoding="async"
-                                                    data-nimg="1" style="color:transparent"
-                                                    src="/chefs-kitchen-nextjs-free/images/Expert/Linkedin.svg" /></div>
-                                        </div>
-                                        <h3 class="text-2xl font-semibold text-lightblack">Shoo Thar Mien</h3>
-                                        <h4 class="text-lg font-normal text-lightblack pt-4 pb-2 opacity-50">Junior Chef
-                                        </h4>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div data-index="-2" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true"
-                            style="width:6.666666666666667%">
-                            <div>
-                                <div tabindex="-1" style="width:100%;display:inline-block">
-                                    <div class="m-3 py-14 my-10 text-center">
-                                        <div class="relative"><img alt="gaby" loading="lazy" width="362" height="262"
-                                                decoding="async" data-nimg="1" class="inline-block m-auto"
-                                                style="color:transparent"
-                                                src="/chefs-kitchen-nextjs-free//images/Expert/boyone.svg" />
-                                            <div class="absolute top-[50%] right-[2%]"><img alt="linkedin"
-                                                    loading="lazy" width="220" height="120" decoding="async"
-                                                    data-nimg="1" style="color:transparent"
-                                                    src="/chefs-kitchen-nextjs-free/images/Expert/Linkedin.svg" /></div>
-                                        </div>
-                                        <h3 class="text-2xl font-semibold text-lightblack">Shoo Thar Mien</h3>
-                                        <h4 class="text-lg font-normal text-lightblack pt-4 pb-2 opacity-50">Senior Chef
-                                        </h4>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div data-index="-1" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true"
-                            style="width:6.666666666666667%">
-                            <div>
-                                <div tabindex="-1" style="width:100%;display:inline-block">
-                                    <div class="m-3 py-14 my-10 text-center">
-                                        <div class="relative"><img alt="gaby" loading="lazy" width="362" height="262"
-                                                decoding="async" data-nimg="1" class="inline-block m-auto"
-                                                style="color:transparent"
-                                                src="/chefs-kitchen-nextjs-free//images/Expert/boytwo.svg" />
-                                            <div class="absolute top-[50%] right-[2%]"><img alt="linkedin"
-                                                    loading="lazy" width="220" height="120" decoding="async"
-                                                    data-nimg="1" style="color:transparent"
-                                                    src="/chefs-kitchen-nextjs-free/images/Expert/Linkedin.svg" /></div>
-                                        </div>
-                                        <h3 class="text-2xl font-semibold text-lightblack">Shoo Thar Mien</h3>
-                                        <h4 class="text-lg font-normal text-lightblack pt-4 pb-2 opacity-50">Junior Chef
-                                        </h4>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div data-index="0" class="slick-slide slick-active slick-current" tabindex="-1"
-                            aria-hidden="false" style="outline:none;width:6.666666666666667%">
-                            <div>
-                                <div tabindex="-1" style="width:100%;display:inline-block">
-                                    <div class="m-3 py-14 my-10 text-center">
-                                        <div class="relative"><img alt="gaby" loading="lazy" width="362" height="262"
-                                                decoding="async" data-nimg="1" class="inline-block m-auto"
-                                                style="color:transparent"
-                                                src="/chefs-kitchen-nextjs-free//images/Expert/boyone.svg" />
-                                            <div class="absolute top-[50%] right-[2%]"><img alt="linkedin"
-                                                    loading="lazy" width="220" height="120" decoding="async"
-                                                    data-nimg="1" style="color:transparent"
-                                                    src="/chefs-kitchen-nextjs-free/images/Expert/Linkedin.svg" /></div>
-                                        </div>
-                                        <h3 class="text-2xl font-semibold text-lightblack">Shoo Thar Mien</h3>
-                                        <h4 class="text-lg font-normal text-lightblack pt-4 pb-2 opacity-50">Senior Chef
-                                        </h4>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div data-index="1" class="slick-slide slick-active" tabindex="-1" aria-hidden="false"
-                            style="outline:none;width:6.666666666666667%">
-                            <div>
-                                <div tabindex="-1" style="width:100%;display:inline-block">
-                                    <div class="m-3 py-14 my-10 text-center">
-                                        <div class="relative"><img alt="gaby" loading="lazy" width="362" height="262"
-                                                decoding="async" data-nimg="1" class="inline-block m-auto"
-                                                style="color:transparent"
-                                                src="/chefs-kitchen-nextjs-free//images/Expert/girl.png" />
-                                            <div class="absolute top-[50%] right-[2%]"><img alt="linkedin"
-                                                    loading="lazy" width="220" height="120" decoding="async"
-                                                    data-nimg="1" style="color:transparent"
-                                                    src="/chefs-kitchen-nextjs-free/images/Expert/Linkedin.svg" /></div>
-                                        </div>
-                                        <h3 class="text-2xl font-semibold text-lightblack">Shoo Thar Mien</h3>
-                                        <h4 class="text-lg font-normal text-lightblack pt-4 pb-2 opacity-50">Junior Chef
-                                        </h4>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div data-index="2" class="slick-slide slick-active" tabindex="-1" aria-hidden="false"
-                            style="outline:none;width:6.666666666666667%">
-                            <div>
-                                <div tabindex="-1" style="width:100%;display:inline-block">
-                                    <div class="m-3 py-14 my-10 text-center">
-                                        <div class="relative"><img alt="gaby" loading="lazy" width="362" height="262"
-                                                decoding="async" data-nimg="1" class="inline-block m-auto"
-                                                style="color:transparent"
-                                                src="/chefs-kitchen-nextjs-free//images/Expert/boytwo.svg" />
-                                            <div class="absolute top-[50%] right-[2%]"><img alt="linkedin"
-                                                    loading="lazy" width="220" height="120" decoding="async"
-                                                    data-nimg="1" style="color:transparent"
-                                                    src="/chefs-kitchen-nextjs-free/images/Expert/Linkedin.svg" /></div>
-                                        </div>
-                                        <h3 class="text-2xl font-semibold text-lightblack">Shoo Thar Mien</h3>
-                                        <h4 class="text-lg font-normal text-lightblack pt-4 pb-2 opacity-50">Junior Chef
-                                        </h4>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div data-index="3" class="slick-slide" tabindex="-1" aria-hidden="true"
-                            style="outline:none;width:6.666666666666667%">
-                            <div>
-                                <div tabindex="-1" style="width:100%;display:inline-block">
-                                    <div class="m-3 py-14 my-10 text-center">
-                                        <div class="relative"><img alt="gaby" loading="lazy" width="362" height="262"
-                                                decoding="async" data-nimg="1" class="inline-block m-auto"
-                                                style="color:transparent"
-                                                src="/chefs-kitchen-nextjs-free//images/Expert/girl.png" />
-                                            <div class="absolute top-[50%] right-[2%]"><img alt="linkedin"
-                                                    loading="lazy" width="220" height="120" decoding="async"
-                                                    data-nimg="1" style="color:transparent"
-                                                    src="/chefs-kitchen-nextjs-free/images/Expert/Linkedin.svg" /></div>
-                                        </div>
-                                        <h3 class="text-2xl font-semibold text-lightblack">Shoo Thar Mien</h3>
-                                        <h4 class="text-lg font-normal text-lightblack pt-4 pb-2 opacity-50">Junior Chef
-                                        </h4>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div data-index="4" class="slick-slide" tabindex="-1" aria-hidden="true"
-                            style="outline:none;width:6.666666666666667%">
-                            <div>
-                                <div tabindex="-1" style="width:100%;display:inline-block">
-                                    <div class="m-3 py-14 my-10 text-center">
-                                        <div class="relative"><img alt="gaby" loading="lazy" width="362" height="262"
-                                                decoding="async" data-nimg="1" class="inline-block m-auto"
-                                                style="color:transparent"
-                                                src="/chefs-kitchen-nextjs-free//images/Expert/boyone.svg" />
-                                            <div class="absolute top-[50%] right-[2%]"><img alt="linkedin"
-                                                    loading="lazy" width="220" height="120" decoding="async"
-                                                    data-nimg="1" style="color:transparent"
-                                                    src="/chefs-kitchen-nextjs-free/images/Expert/Linkedin.svg" /></div>
-                                        </div>
-                                        <h3 class="text-2xl font-semibold text-lightblack">Shoo Thar Mien</h3>
-                                        <h4 class="text-lg font-normal text-lightblack pt-4 pb-2 opacity-50">Senior Chef
-                                        </h4>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div data-index="5" class="slick-slide" tabindex="-1" aria-hidden="true"
-                            style="outline:none;width:6.666666666666667%">
-                            <div>
-                                <div tabindex="-1" style="width:100%;display:inline-block">
-                                    <div class="m-3 py-14 my-10 text-center">
-                                        <div class="relative"><img alt="gaby" loading="lazy" width="362" height="262"
-                                                decoding="async" data-nimg="1" class="inline-block m-auto"
-                                                style="color:transparent"
-                                                src="/chefs-kitchen-nextjs-free//images/Expert/boytwo.svg" />
-                                            <div class="absolute top-[50%] right-[2%]"><img alt="linkedin"
-                                                    loading="lazy" width="220" height="120" decoding="async"
-                                                    data-nimg="1" style="color:transparent"
-                                                    src="/chefs-kitchen-nextjs-free/images/Expert/Linkedin.svg" /></div>
-                                        </div>
-                                        <h3 class="text-2xl font-semibold text-lightblack">Shoo Thar Mien</h3>
-                                        <h4 class="text-lg font-normal text-lightblack pt-4 pb-2 opacity-50">Junior Chef
-                                        </h4>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div data-index="6" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true"
-                            style="width:6.666666666666667%">
-                            <div>
-                                <div tabindex="-1" style="width:100%;display:inline-block">
-                                    <div class="m-3 py-14 my-10 text-center">
-                                        <div class="relative"><img alt="gaby" loading="lazy" width="362" height="262"
-                                                decoding="async" data-nimg="1" class="inline-block m-auto"
-                                                style="color:transparent"
-                                                src="/chefs-kitchen-nextjs-free//images/Expert/boyone.svg" />
-                                            <div class="absolute top-[50%] right-[2%]"><img alt="linkedin"
-                                                    loading="lazy" width="220" height="120" decoding="async"
-                                                    data-nimg="1" style="color:transparent"
-                                                    src="/chefs-kitchen-nextjs-free/images/Expert/Linkedin.svg" /></div>
-                                        </div>
-                                        <h3 class="text-2xl font-semibold text-lightblack">Shoo Thar Mien</h3>
-                                        <h4 class="text-lg font-normal text-lightblack pt-4 pb-2 opacity-50">Senior Chef
-                                        </h4>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div data-index="7" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true"
-                            style="width:6.666666666666667%">
-                            <div>
-                                <div tabindex="-1" style="width:100%;display:inline-block">
-                                    <div class="m-3 py-14 my-10 text-center">
-                                        <div class="relative"><img alt="gaby" loading="lazy" width="362" height="262"
-                                                decoding="async" data-nimg="1" class="inline-block m-auto"
-                                                style="color:transparent"
-                                                src="/chefs-kitchen-nextjs-free//images/Expert/girl.png" />
-                                            <div class="absolute top-[50%] right-[2%]"><img alt="linkedin"
-                                                    loading="lazy" width="220" height="120" decoding="async"
-                                                    data-nimg="1" style="color:transparent"
-                                                    src="/chefs-kitchen-nextjs-free/images/Expert/Linkedin.svg" /></div>
-                                        </div>
-                                        <h3 class="text-2xl font-semibold text-lightblack">Shoo Thar Mien</h3>
-                                        <h4 class="text-lg font-normal text-lightblack pt-4 pb-2 opacity-50">Junior Chef
-                                        </h4>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div data-index="8" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true"
-                            style="width:6.666666666666667%">
-                            <div>
-                                <div tabindex="-1" style="width:100%;display:inline-block">
-                                    <div class="m-3 py-14 my-10 text-center">
-                                        <div class="relative"><img alt="gaby" loading="lazy" width="362" height="262"
-                                                decoding="async" data-nimg="1" class="inline-block m-auto"
-                                                style="color:transparent"
-                                                src="/chefs-kitchen-nextjs-free//images/Expert/boytwo.svg" />
-                                            <div class="absolute top-[50%] right-[2%]"><img alt="linkedin"
-                                                    loading="lazy" width="220" height="120" decoding="async"
-                                                    data-nimg="1" style="color:transparent"
-                                                    src="/chefs-kitchen-nextjs-free/images/Expert/Linkedin.svg" /></div>
-                                        </div>
-                                        <h3 class="text-2xl font-semibold text-lightblack">Shoo Thar Mien</h3>
-                                        <h4 class="text-lg font-normal text-lightblack pt-4 pb-2 opacity-50">Junior Chef
-                                        </h4>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div data-index="9" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true"
-                            style="width:6.666666666666667%">
-                            <div>
-                                <div tabindex="-1" style="width:100%;display:inline-block">
-                                    <div class="m-3 py-14 my-10 text-center">
-                                        <div class="relative"><img alt="gaby" loading="lazy" width="362" height="262"
-                                                decoding="async" data-nimg="1" class="inline-block m-auto"
-                                                style="color:transparent"
-                                                src="/chefs-kitchen-nextjs-free//images/Expert/girl.png" />
-                                            <div class="absolute top-[50%] right-[2%]"><img alt="linkedin"
-                                                    loading="lazy" width="220" height="120" decoding="async"
-                                                    data-nimg="1" style="color:transparent"
-                                                    src="/chefs-kitchen-nextjs-free/images/Expert/Linkedin.svg" /></div>
-                                        </div>
-                                        <h3 class="text-2xl font-semibold text-lightblack">Shoo Thar Mien</h3>
-                                        <h4 class="text-lg font-normal text-lightblack pt-4 pb-2 opacity-50">Junior Chef
-                                        </h4>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div data-index="10" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true"
-                            style="width:6.666666666666667%">
-                            <div>
-                                <div tabindex="-1" style="width:100%;display:inline-block">
-                                    <div class="m-3 py-14 my-10 text-center">
-                                        <div class="relative"><img alt="gaby" loading="lazy" width="362" height="262"
-                                                decoding="async" data-nimg="1" class="inline-block m-auto"
-                                                style="color:transparent"
-                                                src="/chefs-kitchen-nextjs-free//images/Expert/boyone.svg" />
-                                            <div class="absolute top-[50%] right-[2%]"><img alt="linkedin"
-                                                    loading="lazy" width="220" height="120" decoding="async"
-                                                    data-nimg="1" style="color:transparent"
-                                                    src="/chefs-kitchen-nextjs-free/images/Expert/Linkedin.svg" /></div>
-                                        </div>
-                                        <h3 class="text-2xl font-semibold text-lightblack">Shoo Thar Mien</h3>
-                                        <h4 class="text-lg font-normal text-lightblack pt-4 pb-2 opacity-50">Senior Chef
-                                        </h4>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div data-index="11" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true"
-                            style="width:6.666666666666667%">
-                            <div>
-                                <div tabindex="-1" style="width:100%;display:inline-block">
-                                    <div class="m-3 py-14 my-10 text-center">
-                                        <div class="relative"><img alt="gaby" loading="lazy" width="362" height="262"
-                                                decoding="async" data-nimg="1" class="inline-block m-auto"
-                                                style="color:transparent"
-                                                src="/chefs-kitchen-nextjs-free//images/Expert/boytwo.svg" />
-                                            <div class="absolute top-[50%] right-[2%]"><img alt="linkedin"
-                                                    loading="lazy" width="220" height="120" decoding="async"
-                                                    data-nimg="1" style="color:transparent"
-                                                    src="/chefs-kitchen-nextjs-free/images/Expert/Linkedin.svg" /></div>
-                                        </div>
-                                        <h3 class="text-2xl font-semibold text-lightblack">Shoo Thar Mien</h3>
-                                        <h4 class="text-lg font-normal text-lightblack pt-4 pb-2 opacity-50">Junior Chef
-                                        </h4>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    </p>
+                    <div class="w-64">
+                        <a href="/contact" class="relative group group-hover:active-cursor inline-block text-lg group">
+                            <span
+                                class="relative z-10 block px-5 py-3 overflow-hidden font-medium leading-tight text-gray-800 dark:text-gray-100 transition-colors duration-300 ease-out border-2 border-gray-900 dark:border-gray-600 rounded-lg group-hover:text-black dark:group-hover:text-white">
+                                <span
+                                    class="absolute inset-0 w-full h-full px-5 py-3 rounded-lg bg-gradient-to-r from-white via-stone-50 to-stone-200 dark:from-gray-700 dark:via-gray-800 dark:to-gray-900"></span>
+                                <span
+                                    class="absolute left-0 w-48  h-48 -ml-2 transition-all duration-300 origin-top-right -rotate-90 -translate-x-full translate-y-12 bg-gradient-to-r from-white via-stone-50 to-stone-200 dark:from-black dark:via-primary dark:to-black group-hover:-rotate-180 ease"></span>
+                                <span class="relative">Reach Out</span>
+                            </span>
+                            <span
+                                class="absolute bottom-0 right-0 w-full h-12 -mb-1 -mr-1 transition-all duration-200 ease-linear bg-gradient-to-r from-black via-stone-800 to-stone-700 dark:from-primary dark:via-rose-600 dark:to-secondary rounded-lg group-hover:mb-0 group-hover:mr-0"
+                                data-rounded="rounded-lg"></span>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
-    </section> -->
-    <section>
+    </section>
+
+    <section class="py-12 bg-gray-100 dark:bg-gray-800">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8 text-gray-900 dark:text-white">What We Offer</h2>
+            <div class="grid grid-cols-1 md:grid-cols-5 lg:grid-cols-5 gap-8">
+                <div
+                    class="bg-white h-64 dark:bg-gray-900 p-6 rounded-tr-3xl  rounded-bl-3xl bg-gradient-to-tr from-red-50 via-teal-50 to-red-100 dark:from-slate-900 dark:via-slate-900 dark:to-slate-800 shadow-lg shadow-gray-300 dark:shadow-indigo-800">
+                    <div class="flex jsutify-center">
+                        <svg width="48px" height="48px" stroke-width="2" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg" class="text-black dark:text-white">
+                            <path
+                                d="M2 19V9C2 7.89543 2.89543 7 4 7H4.5C5.12951 7 5.72229 6.70361 6.1 6.2L8.32 3.24C8.43331 3.08892 8.61115 3 8.8 3H15.2C15.3889 3 15.5667 3.08892 15.68 3.24L17.9 6.2C18.2777 6.70361 18.8705 7 19.5 7H20C21.1046 7 22 7.89543 22 9V19C22 20.1046 21.1046 21 20 21H4C2.89543 21 2 20.1046 2 19Z"
+                                class="stroke-current" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            </path>
+                            <path
+                                d="M12 17C14.2091 17 16 15.2091 16 13C16 10.7909 14.2091 9 12 9C9.79086 9 8 10.7909 8 13C8 15.2091 9.79086 17 12 17Z"
+                                class="stroke-current" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            </path>
+                        </svg>
+
+                    </div>
+                    <h3 class="text-2xl font-semibold text-gray-900 dark:text-white">Product Photography</h3>
+                    <p class="mt-4 text-gray-700 dark:text-gray-400">Professional, high-resolution images tailored to
+                        your brand.</p>
+                </div>
+                <div
+                    class="bg-white dark:bg-gray-900 p-6 rounded-tr-3xl rounded-bl-3xl bg-gradient-to-tr from-red-50 via-teal-50 to-red-100 dark:from-slate-900 dark:via-slate-900 dark:to-slate-800 shadow-lg shadow-gray-300 dark:shadow-indigo-800">
+                    <div class="flex juify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                            class="text-black dark:text-white w-12">
+                            <path
+                                d="M21.997 18.2294C21.997 18.9572 21.5919 20.3571 20.6823 21.1263C20.5002 21.2667 20.3181 21.187 20.3979 20.983C20.6625 20.3352 21.2694 18.8356 20.985 18.4912C20.7839 18.2294 19.954 18.2485 19.2462 18.3092C18.923 18.3501 18.6393 18.3699 18.4191 18.4136C18.2152 18.4305 18.1736 18.2513 18.3775 18.1109C18.6393 17.926 18.923 17.7855 19.2483 17.6832C20.3979 17.3388 21.7269 17.5461 21.9172 17.7658C21.954 17.8083 21.997 17.926 21.997 18.2294ZM20.0754 19.5244C19.8136 19.7262 19.5299 19.9104 19.2462 20.0734C17.1235 21.3493 14.3748 22.0168 11.9875 22.0168C8.14505 22.0168 4.70765 20.5998 2.10014 18.2294C1.87644 18.0474 2.06133 17.7827 2.32314 17.926C5.13247 19.566 8.6108 20.5582 12.2112 20.5582C14.4772 20.5582 16.9195 20.1341 19.2462 19.2216C19.4085 19.1609 19.5906 19.0784 19.7501 19.0205C20.117 18.8547 20.4395 19.2625 20.0754 19.5244ZM13.9051 8.49485C13.9059 7.45265 13.9472 6.8397 13.6019 6.31359C13.2955 5.88081 12.7691 5.62128 12.0335 5.66194C11.2353 5.70607 10.3784 6.22935 10.1595 7.18824C10.1174 7.40711 9.98855 7.6235 9.72343 7.6714L7.28779 7.36168C7.11352 7.32039 6.84922 7.18824 6.93595 6.8397C7.45875 4.08774 9.81097 3.12884 12.0335 3H12.5563C13.7762 3 15.3438 3.34854 16.3473 4.26448C17.5639 5.40012 17.4342 6.92642 17.4342 8.58487V12.5113C17.4342 13.6891 17.9116 14.211 18.3923 14.8247C18.522 15.0436 18.5666 15.3021 18.3477 15.4797C17.867 15.9149 16.9535 16.6987 16.4307 17.134C16.2565 17.2669 15.9424 17.2811 15.8212 17.1794C15.0514 16.5336 14.8631 16.1759 14.3857 15.5209C13.5565 16.3923 12.8594 16.873 12.0302 17.134C11.5074 17.2669 10.9433 17.3504 10.2462 17.3504C8.15583 17.3504 6.50069 16.0471 6.50069 13.4694C6.50069 11.4211 7.5909 10.0276 9.20062 9.36867C10.8103 8.7097 13.1505 8.49857 13.9051 8.49485ZM13.4277 13.6858C13.9472 12.8144 13.9051 12.0996 13.9051 10.501C13.2534 10.501 12.5985 10.5464 12.0335 10.6786C10.9887 10.9817 10.1595 11.6399 10.1595 13.0341C10.1595 14.1243 10.7269 14.866 11.685 14.866C11.8171 14.866 11.9328 14.8495 12.0335 14.8214C12.7028 14.6346 13.1213 14.2986 13.4277 13.6858Z"
+                                class="fill-current" />
+                        </svg>
+
+
+                    </div>
+                    <h3 class="text-2xl font-semibold text-gray-900 dark:text-white">Amazon & Shopify Photography</h3>
+                    <p class="mt-4 text-gray-700 dark:text-gray-400">Optimized to meet e-commerce platform requirements.
+                    </p>
+                </div>
+                <div
+                    class="bg-white dark:bg-gray-900 p-6 rounded-tr-3xl rounded-bl-3xl bg-gradient-to-tr from-red-50 via-teal-50 to-red-100 dark:from-slate-900 dark:via-slate-900 dark:to-slate-800 shadow-lg shadow-gray-300 dark:shadow-indigo-800">
+                    <div class="flex">
+                        <svg width="48px" height="48px" stroke-width="2" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg" class="text-black dark:text-white">
+                            <path
+                                d="M15 12V16.4C15 16.7314 14.7314 17 14.4 17H3.6C3.26863 17 3 16.7314 3 16.4V7.6C3 7.26863 3.26863 7 3.6 7H14.4C14.7314 7 15 7.26863 15 7.6V12ZM15 12L20.0159 7.82009C20.4067 7.49443 21 7.77232 21 8.28103V15.719C21 16.2277 20.4067 16.5056 20.0159 16.1799L15 12Z"
+                                class="stroke-current" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            </path>
+                        </svg>
+
+                    </div>
+                    <div class="flex">
+
+                    </div>
+                    <h3 class="text-2xl font-semibold text-gray-900 dark:text-white">B2B Photography</h3>
+                    <p class="mt-4 text-gray-700 dark:text-gray-400">Stand out with crisp, detail-rich images for your
+                        business clients.</p>
+                </div>
+                <div
+                    class="bg-white dark:bg-gray-900 p-6 rounded-tr-3xl rounded-bl-3xl bg-gradient-to-tr from-red-50 via-teal-50 to-red-100 dark:from-slate-900 dark:via-slate-900 dark:to-slate-800 shadow-lg shadow-gray-300 dark:shadow-indigo-800">
+                    <div class="flex">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                            class="text-black dark:text-white w-12">
+                            <path
+                                d="M4.7134 7.12811L4.46682 7.69379C4.28637 8.10792 3.71357 8.10792 3.53312 7.69379L3.28656 7.12811C2.84706 6.11947 2.05545 5.31641 1.06767 4.87708L0.308047 4.53922C-0.102682 4.35653 -0.102682 3.75881 0.308047 3.57612L1.0252 3.25714C2.03838 2.80651 2.84417 1.97373 3.27612 0.930828L3.52932 0.319534C3.70578 -0.106511 4.29417 -0.106511 4.47063 0.319534L4.72382 0.930828C5.15577 1.97373 5.96158 2.80651 6.9748 3.25714L7.69188 3.57612C8.10271 3.75881 8.10271 4.35653 7.69188 4.53922L6.93228 4.87708C5.94451 5.31641 5.15288 6.11947 4.7134 7.12811ZM6.33421 15.8154C6.51032 15.233 6.7072 14.6562 6.93912 14.0327C8.99484 8.50636 12.4197 5.08172 18.0129 4.21479C17.5 5.35838 17.0151 6.15301 16.5858 6.58237C16.2521 6.91603 15.9185 7.24993 15.5848 7.58407L14.1721 8.99878L15.6279 10.4535C14.4976 12.5384 12.2652 14.1979 9.75193 14.512C8.43544 14.6766 7.29345 15.1188 6.33421 15.8154ZM18 9.99658L17 8.99728C17.3331 8.66372 17.6662 8.33039 18.0027 7.99391C19.0018 6.99303 20.0009 4.99392 21 1.99658C6.31105 1.99658 4.08854 15.422 3.06361 21.6132C3.0419 21.7443 3.02074 21.8722 3 21.9966H4.99824C5.66421 18.6635 7.33146 16.8301 10 16.4966C14 15.9966 17 12.9966 18 9.99658Z"
+                                class="fill-current" />
+                        </svg>
+
+                    </div>
+                    <h3 class="text-2xl font-semibold text-gray-900 dark:text-white">Graphic Design</h3>
+                    <p class="mt-4 text-gray-700 dark:text-gray-400">Infographics and visuals that communicate your
+                        product’s benefits instantly.</p>
+                </div>
+                <div
+                    class="bg-white dark:bg-gray-900 p-6  rounded-tr-3xl rounded-bl-3xl bg-gradient-to-tr from-red-50 via-teal-50 to-red-100 dark:from-slate-900 dark:via-slate-900 dark:to-slate-800 shadow-lg shadow-gray-300 dark:shadow-indigo-800">
+                    <div class="flex">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                            class="text-black dark:text-white w-12">
+                            <path
+                                d="M12 20H20V22H12C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 14.2512 21.2561 16.3287 20.0007 18H17.2916C18.9525 16.5341 20 14.3894 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20ZM12 10C10.8954 10 10 9.10457 10 8C10 6.89543 10.8954 6 12 6C13.1046 6 14 6.89543 14 8C14 9.10457 13.1046 10 12 10ZM8 14C6.89543 14 6 13.1046 6 12C6 10.8954 6.89543 10 8 10C9.10457 10 10 10.8954 10 12C10 13.1046 9.10457 14 8 14ZM16 14C14.8954 14 14 13.1046 14 12C14 10.8954 14.8954 10 16 10C17.1046 10 18 10.8954 18 12C18 13.1046 17.1046 14 16 14ZM12 18C10.8954 18 10 17.1046 10 16C10 14.8954 10.8954 14 12 14C13.1046 14 14 14.8954 14 16C14 17.1046 13.1046 18 12 18Z"
+                                class="fill-current" />
+                        </svg>
+
+                    </div>
+                    <h3 class="text-2xl font-semibold text-gray-900 dark:text-white">360° Video Production</h3>
+                    <p class="mt-4 text-gray-700 dark:text-gray-400">Immersive content that keeps customers engaged.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-12">
         <div class="container mx-auto lg:max-w-screen-xl md:max-w-screen-md" id="gallery-section">
             <div class="text-center">
-                <p class="text-primary text-lg font-normal mb-3 tracking-widest uppercase">Our Gallery</p>
                 <h2 class="text-3xl lg:text-5xl font-semibold text-black dark:text-white">Gallery of our work
                 </h2>
             </div>
             <div class="my-16 px-6">
                 <div class="flex gap-6">
                     <div style="width:50%" class="masonry-column">
-                        <div class="overflow-hidden rounded-3xl mb-6 relative group"><img alt="Caesar Salad(187 Kcal)"
-                                loading="lazy" width="600" height="500" decoding="async" data-nimg="1"
-                                class="object-cover w-full h-full" style="color:transparent"
-                                src="/chefs-kitchen-nextjs-free//images/Gallery/foodone.jpg" />
+                        <div class="overflow-hidden rounded-3xl mb-6 relative group">{{ with resources.Get
+                            "images/products-photograpghy/product_image_cloud_nine_1.jpg" }}
+                            {{ $small := (.Resize "900x webp q100").RelPermalink }}
+                            {{ $medium := (.Resize "1500x webp q100").RelPermalink }}
+                            {{ $large := (.Resize "2000x webp q100").RelPermalink }}
+                            {{ $heroimage := (.Resize "2000x webp q100").RelPermalink }}
+                            <img srcset="
+                            {{- with $small -}}, {{.}} 768w{{- end -}}
+                            {{- with $medium -}}, {{.}} 1024w{{- end -}}
+                            {{- with $large -}}, {{.}} 1374w{{- end -}}" src="{{ $heroimage }}"
+                                class="h-full rounded-bl-2xl rounded-t-2xl object-cover grayscale hover:grayscale-0 "
+                                alt="Sign Makers crafting a high quality premium LED signage">
+                            {{ end }}
                             <div
                                 class="w-full h-full absolute bg-black/40 top-full group-hover:top-0 duration-500 p-12 flex flex-col items-start gap-8 justify-end">
-                                <p class="text-white text-2xl"><span class="font-semibold">Name:</span> <!-- -->Caesar
-                                    Salad(187 Kcal)</p>
+                                <p class="text-white text-2xl">Want to get a similar image</p>
                                 <div class="flex items-center justify-between w-full">
-                                    <p class="text-white text-2xl"><span class="font-semibold">Price:</span> $<!-- -->35
+                                    <p class="text-white text-2xl"><span class="font-semibold">Contact us today
                                     </p><a
                                         class="text-white rounded-full bg-primary border border-primary py-2 px-6 hover:bg-primary/40 hover:backdrop-blur-sm"
-                                        href="#">Learn More</a>
+                                        href="/contact">Contact us</a>
                                 </div>
                             </div>
                         </div>
-                        <div class="overflow-hidden rounded-3xl mb-6 relative group"><img
-                                alt="Sauteed mushrooms with pumpkin and sweet pepper(238 kcal)" loading="lazy"
-                                width="600" height="500" decoding="async" data-nimg="1"
-                                class="object-cover w-full h-full" style="color:transparent"
-                                src="/chefs-kitchen-nextjs-free//images/Gallery/foodthree.jpg" />
+                        <div class="overflow-hidden rounded-3xl mb-6 relative group">{{ with resources.Get
+                            "images/products-photograpghy/product_image_cloud_nine_LLG.png" }}
+                            {{ $small := (.Resize "900x webp q100").RelPermalink }}
+                            {{ $medium := (.Resize "1500x webp q100").RelPermalink }}
+                            {{ $large := (.Resize "2000x webp q100").RelPermalink }}
+                            {{ $heroimage := (.Resize "2000x webp q100").RelPermalink }}
+                            <img srcset="
+                            {{- with $small -}}, {{.}} 768w{{- end -}}
+                            {{- with $medium -}}, {{.}} 1024w{{- end -}}
+                            {{- with $large -}}, {{.}} 1374w{{- end -}}" src="{{ $heroimage }}"
+                                class="h-full rounded-bl-2xl rounded-t-2xl object-cover grayscale hover:grayscale-0 "
+                                alt="Sign Makers crafting a high quality premium LED signage">
+                            {{ end }}
                             <div
                                 class="w-full h-full absolute bg-black/40 top-full group-hover:top-0 duration-500 p-12 flex flex-col items-start gap-8 justify-end">
-                                <p class="text-white text-2xl"><span class="font-semibold">Name:</span> <!-- -->Sauteed
-                                    mushrooms with pumpkin and sweet pepper(238 kcal)</p>
+                                <p class="text-white text-2xl">Want to get a similar image</p>
                                 <div class="flex items-center justify-between w-full">
-                                    <p class="text-white text-2xl"><span class="font-semibold">Price:</span> $<!-- -->45
+                                    <p class="text-white text-2xl"><span class="font-semibold">Contact us today
                                     </p><a
                                         class="text-white rounded-full bg-primary border border-primary py-2 px-6 hover:bg-primary/40 hover:backdrop-blur-sm"
-                                        href="#">Learn More</a>
+                                        href="/contact">Contact us</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div style="width:50%" class="masonry-column">
-                        <div class="overflow-hidden rounded-3xl mb-6 relative group"><img
-                                alt="Christmas salad(118 Kcal)" loading="lazy" width="600" height="500" decoding="async"
-                                data-nimg="1" class="object-cover w-full h-full" style="color:transparent"
-                                src="/chefs-kitchen-nextjs-free//images/Gallery/foodtwo.jpg" />
+                        <div class="overflow-hidden rounded-3xl mb-6 relative group">{{ with resources.Get
+                            "images/products-photograpghy/product_image_cloud_nine_whipped.jpg" }}
+                            {{ $small := (.Resize "900x webp q100").RelPermalink }}
+                            {{ $medium := (.Resize "1500x webp q100").RelPermalink }}
+                            {{ $large := (.Resize "2000x webp q100").RelPermalink }}
+                            {{ $heroimage := (.Resize "2000x webp q100").RelPermalink }}
+                            <img srcset="
+                            {{- with $small -}}, {{.}} 768w{{- end -}}
+                            {{- with $medium -}}, {{.}} 1024w{{- end -}}
+                            {{- with $large -}}, {{.}} 1374w{{- end -}}" src="{{ $heroimage }}"
+                                class="h-full rounded-bl-2xl rounded-t-2xl object-cover grayscale hover:grayscale-0 "
+                                alt="Sign Makers crafting a high quality premium LED signage">
+                            {{ end }}
                             <div
                                 class="w-full h-full absolute bg-black/40 top-full group-hover:top-0 duration-500 p-12 flex flex-col items-start gap-8 justify-end">
-                                <p class="text-white text-2xl"><span class="font-semibold">Name:</span>
-                                    <!-- -->Christmas salad(118 Kcal)</p>
+                                <p class="text-white text-2xl">Want to get a similar image</p>
                                 <div class="flex items-center justify-between w-full">
-                                    <p class="text-white text-2xl"><span class="font-semibold">Price:</span> $<!-- -->17
+                                    <p class="text-white text-2xl"><span class="font-semibold">Contact us today
                                     </p><a
                                         class="text-white rounded-full bg-primary border border-primary py-2 px-6 hover:bg-primary/40 hover:backdrop-blur-sm"
-                                        href="#">Learn More</a>
+                                        href="/contact">Contact us</a>
                                 </div>
                             </div>
                         </div>
-                        <div class="overflow-hidden rounded-3xl mb-6 relative group"><img
-                                alt="BBQ Chicken Feast Pizza(272 kcal)" loading="lazy" width="600" height="500"
-                                decoding="async" data-nimg="1" class="object-cover w-full h-full"
-                                style="color:transparent"
-                                src="/chefs-kitchen-nextjs-free//images/Gallery/foodfour.jpg" />
+                        <div class="overflow-hidden rounded-3xl mb-6 relative group">
+                            {{ with resources.Get
+                            "images/products-photograpghy/product_image_cloud_nine.jpg" }}
+                            {{ $small := (.Resize "900x webp q100").RelPermalink }}
+                            {{ $medium := (.Resize "1500x webp q100").RelPermalink }}
+                            {{ $large := (.Resize "2000x webp q100").RelPermalink }}
+                            {{ $heroimage := (.Resize "2000x webp q100").RelPermalink }}
+                            <img srcset="
+                            {{- with $small -}}, {{.}} 768w{{- end -}}
+                            {{- with $medium -}}, {{.}} 1024w{{- end -}}
+                            {{- with $large -}}, {{.}} 1374w{{- end -}}" src="{{ $heroimage }}"
+                                class="h-full rounded-bl-2xl rounded-t-2xl object-cover grayscale hover:grayscale-0 "
+                                alt="">
+                            {{ end }}
                             <div
                                 class="w-full h-full absolute bg-black/40 top-full group-hover:top-0 duration-500 p-12 flex flex-col items-start gap-8 justify-end">
-                                <p class="text-white text-2xl"><span class="font-semibold">Name:</span> <!-- -->BBQ
-                                    Chicken Feast Pizza(272 kcal)</p>
+                                <p class="text-white text-2xl">Want to get a similar image</p>
                                 <div class="flex items-center justify-between w-full">
-                                    <p class="text-white text-2xl"><span class="font-semibold">Price:</span> $<!-- -->27
+                                    <p class="text-white text-2xl"><span class="font-semibold">Contact us today
                                     </p><a
                                         class="text-white rounded-full bg-primary border border-primary py-2 px-6 hover:bg-primary/40 hover:backdrop-blur-sm"
-                                        href="#">Learn More</a>
+                                        href="/contact">Contact us</a>
                                 </div>
                             </div>
                         </div>
@@ -592,47 +525,59 @@
             </div>
         </div>
     </section>
-    <section class="relative">
-        <div class="container mx-auto lg:max-w-screen-xl md:max-w-screen-md ">
-            <div class="bg-primary rounded-Newsletter grid grid-cols-1 gap-y-10 gap-x-6 md:grid-cols-12 xl:gap-x-8">
-                <div class="col-span-7">
-                    <div class="m-10 lg:ml-32 lg:mt-20 lg:mb-20">
-                        <p class="text-lg font-normal text-white mb-3 ls-51"> <!-- -->NEWSLETTER<!-- --> </p>
-                        <h2 class="text-3xl md:text-5xl font-semibold text-white mb-8">Subscribe our <br /> newsletter.
-                        </h2>
-                        <div>
-                            <div
-                                class="relative text-white focus-within:text-white flex flex-row-reverse shadow-fi rounded-full">
-                                <input type="Email address"
-                                    class="py-6 sm:py-8 text-sm w-full text-black dark:text-white rounded-full pl-4 par-87 focus:outline-none focus:text-black"
-                                    placeholder="@ enter your email-address" autoComplete="off" name="q" />
-                                <div class="absolute inset-y-0 right-0 flex items-center pr-2"><button type="submit"
-                                        class="p-2 bg-gray-900 hover:scale-110 duration-300 rounded-full"><span></span></button>
-                                </div>
+
+    <section class="mt-12">
+        <div class="container mx-auto">
+            <div class="relative py-2 md:py-12">
+                <div
+                    class="container mx-auto bg-gradient-to-tr from-zinc-900 via-primary to-zinc-900 dark:from-gray-800 dark:via-gray-900 dark:to-gray-800 rounded-2xl shadow-md z-0">
+                    <div class="row">
+                        <div class="flex-col flex md:flex-row justify-between items-center">
+                            <div class="mx-auto md:p-12">
+                                <h3
+                                    class="text-xl md:text-4xl max-w-2xl text-center md:text-left font-bold tracking-tight text-white dark:text-gray-100 sm:text-3xl">
+                                    Still Have Questions?
+                                </h3>
+                                <p
+                                    class="max-w-lg mb-12 mx-auto text-xl text-center md:text-left f md:text-xl tracking-loose font-semibold text-stone-300 dark:text-gray-100">
+                                    No problem, becuase that's what CLOUD NINE is all about. Contact us today and we'll help you with your quries.
+                                </p>
+                                <a href="/contact#bookacall" class="relative group group-hover:active-cursor inline-block text-lg group">
+                                  <span
+                                      class="relative z-10 block px-5 py-3 overflow-hidden font-medium leading-tight text-gray-800 dark:text-gray-100 transition-colors duration-300 ease-out border-2 border-gray-900 dark:border-gray-600 rounded-lg group-hover:text-black dark:group-hover:text-white">
+                                      <span
+                                          class="absolute inset-0 w-full h-full px-5 py-3 rounded-lg bg-gradient-to-r from-white via-stone-50 to-stone-200 dark:from-gray-700 dark:via-gray-800 dark:to-gray-900"></span>
+                                      <span
+                                          class="absolute left-0 w-48  h-48 -ml-2 transition-all duration-300 origin-top-right -rotate-90 -translate-x-full translate-y-12 bg-gradient-to-r from-white via-stone-50 to-stone-200 dark:from-black dark:via-primary dark:to-black group-hover:-rotate-180 ease"></span>
+                                      <span class="relative">Book a free call</span>
+                                  </span>
+                                  <span
+                                      class="absolute bottom-0 right-0 w-full h-12 -mb-1 -mr-1 transition-all duration-200 ease-linear bg-gradient-to-r from-black via-stone-800 to-stone-700 dark:from-primary dark:via-rose-600 dark:to-secondary rounded-lg group-hover:mb-0 group-hover:mr-0"
+                                      data-rounded="rounded-lg"></span>
+                              </a>
+              
+                              <a href="/contact" class="relative group group-hover:active-cursor inline-block text-lg group">
+                                  <span class="relative z-10 block px-4 py-3 overflow-hidden font-medium leading-tight text-gray-800 dark:text-gray-100 transition-colors duration-300 ease-out border-2 border-gray-900 dark:border-gray-600 rounded-lg group-hover:text-black dark:group-hover:text-white">
+                                    <span class="absolute inset-0 w-full h-full px-5 py-3 rounded-lg bg-gradient-to-r from-white via-stone-50 to-stone-200 dark:from-gray-700 dark:via-gray-800 dark:to-gray-900"></span>
+                                    <span class="absolute left-0 w-48 h-48 -ml-2 transition-all duration-300 origin-top-right -rotate-90 -translate-x-full translate-y-12 bg-gradient-to-r from-white via-stone-50 to-stone-200 dark:from-secondary dark:via-neutral dark:to-sky-900 group-hover:-rotate-180 ease"></span>
+                                    <span class="relative">Reach Out</span>
+                                  </span>
+                                  <span class="absolute bottom-0 right-0 w-full h-12 -mb-1 -mr-1 transition-all duration-200 ease-linear bg-gradient-to-r from-black via-stone-800 to-stone-700 dark:from-secondary dark:via-neutral dark:to-sky-900 rounded-lg group-hover:mb-0 group-hover:mr-0" data-rounded="rounded-lg"></span>
+                                </a>
+                            </div>
+                            <div class="sm:mx-auto sm:flex sm:max-w-lg">
+                                {{ with resources.Get "/images/products-photograpghy/cta-camera.png" }}
+                                {{ $together := .RelPermalink }}
+                                <img src="{{$together}}" class="w-full z-40 overflow-visible" alt="">
+                                {{ end }}
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-span-5 relative hidden md:block">
-                    <div><img alt="soup-image" loading="lazy" width="626" height="602" decoding="async" data-nimg="1"
-                            class="-mt-24" style="color:transparent"
-                            src="/chefs-kitchen-nextjs-free/images/Newsletter/soup.svg" /></div>
-                    <div class="absolute top-[78%]"><img alt="onion-image" loading="lazy" width="300" height="122"
-                            decoding="async" data-nimg="1" style="color:transparent"
-                            src="/chefs-kitchen-nextjs-free/images/Newsletter/onion.svg" /></div>
-                    <div class="absolute top-[30%] right-[-23%] hidden lg:block"><img alt="lettuce-image" loading="lazy"
-                            width="300" height="122" decoding="async" data-nimg="1" style="color:transparent"
-                            src="/chefs-kitchen-nextjs-free/images/Newsletter/lec.svg" /></div>
-                    <div class="absolute bottom-[10%] left-[0%]"><img alt="yellow-image" loading="lazy" width="59"
-                            height="59" decoding="async" data-nimg="1" style="color:transparent"
-                            src="/chefs-kitchen-nextjs-free/images/Newsletter/yellow.svg" /></div>
-                    <div class="absolute bottom-[20%] right-[20%]"><img alt="blue-image" loading="lazy" width="25"
-                            height="25" decoding="async" data-nimg="1" style="color:transparent"
-                            src="/chefs-kitchen-nextjs-free/images/Newsletter/blue.svg" /></div>
-                </div>
             </div>
         </div>
-    </section>
+      </section>
+
 </main>
 
 {{ end }}

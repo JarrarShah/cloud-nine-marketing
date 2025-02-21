@@ -4,15 +4,15 @@ date: 2023-04-10T11:10:36+08:00
 draft: false
 language: en
 description: Privacy policy
-image: "images/og-cabconnects.png"
-images: ["images/og-cabconnects.png"]
+image: "images/og-cloudnine.png"
+images: ["images/og-cloudnine.png"]
 ---
 
 ### 1. INTRODUCTION  
 
-This privacy notice provides you with details of how we collect and process your personal data through your use of our site [www.parkinsonsigns.co.uk](/). By providing us with your data, you warrant to us that you are over 13 years of age.
+This privacy notice provides you with details of how we collect and process your personal data through your use of our site [www.itscloudnine.com](/). By providing us with your data, you warrant to us that you are over 13 years of age.
 
-iMobilize Ltd/Cloud Nine Marketing ltd [is/am/are] the data controller and we are responsible for your personal data (referred to as “we”, “us” or “our” in this privacy notice)
+Cloud Nine Marketing (SMC) PVT LTD [is/am/are] the data controller and we are responsible for your personal data (referred to as “we”, “us” or “our” in this privacy notice)
 
 ### 2. WHAT DATA DO WE COLLECT ABOUT YOU, FOR WHAT PURPOSE AND ON WHAT GROUND WE PROCESS IT 
 
@@ -124,7 +124,7 @@ If you are not happy with any aspect of how we collect and use your data, you ha
 
 You can set your browser to refuse all or some browser cookies, or to alert you when websites set or access cookies. If you disable or refuse cookies, please note that some parts of this website may become inaccessible or not function properly. For more information about the cookies we use, please see.
 
-Contact Details
+<!-- Contact Details
 
 Full name of legal entity: Andre Barrett
 
@@ -134,10 +134,10 @@ Email address: support@parkinsonsigns.com
 
 Postal address: Kemp House, 160 City Road, London, EC1V 2NX
 
-It is very important that the information we hold about you is accurate and up to date. Please let us know if at any time your personal information changes by emailing us at support@parkinsonsigns.com.  
+It is very important that the information we hold about you is accurate and up to date. Please let us know if at any time your personal information changes by emailing us at support@parkinsonsigns.com.   -->
 
 Services will be provided by:
 Cloud Nine Marketing
-Kemp House, 160 City Road, London, EC1V 2NX
-Effective Date: April 2, 2023
+407, Middle Ring Road, Business District, Bahria Town, Phase 8, Islamabad, 46620, Pakistan.
+Effective Date: Jan 01, 2025
 
