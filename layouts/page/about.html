@@ -24,10 +24,10 @@
           <div class="rounded-lg overflow-hidden">
             {{ with resources.Get "images/c9.svg" }}
             {{ if eq .MediaType.SubType "svg" }}
-            <img src="{{ .RelPermalink }}" class="w-full h-auto object-cover grayscale hover:grayscale-0" alt="">
+            <img src="{{ .RelPermalink }}" class="w-full h-auto object-cover grayscale hover:grayscale-0" alt="Cloud Nine Marketings town" title="Cloud Nine Marketing Township">
             {{ else }}
             {{ $heroimage := (.Resize "2000x webp q100").RelPermalink }}
-            <img src="{{ $heroimage }}" class="w-full h-auto object-cover grayscale hover:grayscale-0" alt="">
+            <img src="{{ $heroimage }}" class="w-full h-auto object-cover grayscale hover:grayscale-0" alt="Cloud Nines Aeroplane" title="cloud nine aeroplane">
             {{ end }}
             {{ end }}
 
@@ -72,7 +72,7 @@
                     {{- with $medium -}}, {{.}} 1024w{{- end -}}
                     {{- with $large -}}, {{.}} 1374w{{- end -}}" src="{{ $heroimage }}"
               class="w-full h-full rounded-bl-2xl rounded-t-2xl object-cover grayscale hover:grayscale-0 "
-              alt="Sign Makers crafting a high quality premium LED signage">
+              alt="Cloud Nine web development services UK" title="High Quality Web Development by Cloud Nine">
             {{ end }}
           </div>
           <div class="w-full overflow-hidden">
@@ -86,7 +86,7 @@
                     {{- with $medium -}}, {{.}} 1024w{{- end -}}
                     {{- with $large -}}, {{.}} 1374w{{- end -}}" src="{{ $heroimage }}"
               class="w-full h-96 object-cover grayscale hover:grayscale-0 rounded-br-2xl rounded-t-2xl"
-              alt="Sign Makers crafting a high quality premium LED signage">
+              alt="Cloud Nine responsive web design USA" title="High quality web design in USA">
             {{ end }}
           </div>
         </div>
@@ -102,7 +102,7 @@
                     {{- with $medium -}}, {{.}} 1024w{{- end -}}
                     {{- with $large -}}, {{.}} 1374w{{- end -}}" src="{{ $heroimage }}"
               class="w-full h-96 rounded-tl-2xl rouned-br-2xl shadow-md object-cover grayscale hover:grayscale-0 rounded-bl-2xl rounded-t-2xl"
-              alt="Sign Makers crafting a high quality premium LED signage">
+              alt="Cloud Nine digital marketing Australia" title="Australia's best digital marketing company">
             {{ end }}
           </div>
           <div class="rounded-lg overflow-hidden">
@@ -115,13 +115,12 @@
                     {{- with $small -}}, {{.}} 768w{{- end -}}
                     {{- with $medium -}}, {{.}} 1024w{{- end -}}
                     {{- with $large -}}, {{.}} 1374w{{- end -}}" src="{{ $heroimage }}"
-              class="w-full h-auto object-cover grayscale hover:grayscale-0 rounded-br-2xl rounded-t-2xl" alt="">
+              class="w-full h-auto object-cover grayscale hover:grayscale-0 rounded-br-2xl rounded-t-2xl" alt="Top web design company Cloud Nine" title="Top Web Design in Australia">
             {{ end }}
           </div>
         </div>
       </div>
     </div>
-
   </div>
 </section>
 
@@ -386,7 +385,7 @@
                   {{- with $small -}}, {{.}} 768w{{- end -}}
                   {{- with $medium -}}, {{.}} 1024w{{- end -}}
                   {{- with $large -}}, {{.}} 1374w{{- end -}}" src="{{ $heroimage }}"
-            class="rounded-lg shadow-lg max-w-full" alt="Meet the team - Cloud Nine">
+            class="rounded-lg shadow-lg max-w-full" alt="Face behind Cloud Nine" title="Cloud Nine Team">
           {{ end }}
         </div>
       </div>
@@ -421,7 +420,7 @@
                     {{ $together := (.Resize "1500x webp q100").RelPermalink }}
                     <img
                       class="h-full w-full grayscale object-contain transition-transform duration-300 ease-in-out group-hover/card:scale-105"
-                      alt="hero" src="{{$together}}" class="absolute -top-6">
+                      alt="Jarrar Haider Shah" title="Jarrar Haider Shah - CEO CLOUD NINE" src="{{$together}}" class="absolute -top-6">
                     {{ end }}
                   </div>
                 </div>
@@ -457,7 +456,7 @@
                   {{ $medium := (.Resize "900x webp q100").RelPermalink }}
                   {{ $large := (.Resize "1500x webp q100").RelPermalink }}
                   {{ $together := (.Resize "1500x webp q100").RelPermalink }}
-                  <img class="fade-to-be2 grayscale h-full w-full object-contain object-top-right" alt="hero"
+                  <img class="fade-to-be2 grayscale h-full w-full object-contain object-top-right" alt="Jarrar Haider Shah - Cloud Nine" title="Jarrar Haider Shah - CEO CLOUD NINE"
                     src="{{$together}}">
                   {{ end }}
                 </div>
@@ -478,7 +477,7 @@
                           {{ $together := (.Resize "1500x webp q100").RelPermalink }}
                           <img
                             class="h-full w-full grayscale object-contain transition-transform duration-300 ease-in-out group-hover/card:scale-105"
-                            alt="hero" src="{{$together}}">
+                            alt="Jarrar Shah" title="JARRAR SHAH CEO CLOUD NINE" src="{{$together}}" >
                           {{ end }}
                         </div>
                       </div>
@@ -522,7 +521,7 @@
                   {{ $medium := (.Resize "900x webp q100").RelPermalink }}
                   {{ $large := (.Resize "1500x webp q100").RelPermalink }}
                   {{ $together := (.Resize "1500x webp q100").RelPermalink }}
-                  <img class="fade-to-be2 h-full w-full object-contain object-right-bottom" alt="hero"
+                  <img class="fade-to-be2 h-full w-full object-contain object-right-bottom" alt="Sarfraz Khan Bangash Cloud Nine" title="Sarfraz Khan Bangash"
                     src="{{$together}}">
                   {{ end }}
                 </div>
@@ -543,7 +542,7 @@
                           {{ $together := (.Resize "1500x webp q100").RelPermalink }}
                           <img
                             class="h-full w-full object-contain transition-transform duration-300 ease-in-out group-hover/card:scale-105"
-                            alt="hero" src="{{$together}}">
+                            alt="Sarfraz Khan Bangash-Cloud Nine Marketing" title="Sarfraz Khan Bangash Cloud Nine" src="{{$together}}">
                           {{ end }}
                         </div>
                       </div>
@@ -595,7 +594,7 @@
                   {{ $medium := (.Resize "900x webp q100").RelPermalink }}
                   {{ $large := (.Resize "1500x webp q100").RelPermalink }}
                   {{ $together := (.Resize "1500x webp q100").RelPermalink }}
-                  <img class="fade-to-be2 h-full w-full object-contain object-right-bottom" alt="hero"
+                  <img class="fade-to-be2 h-full w-full object-contain object-right-bottom" alt="Ali Ahmad" title="Cloud Nine - Ali Ahmad"
                     src="{{$together}}">
                   {{ end }}
                 </div>
@@ -616,7 +615,7 @@
                           {{ $together := (.Resize "1500x webp q100").RelPermalink }}
                           <img
                             class="h-full w-full object-contain transition-transform duration-300 ease-in-out group-hover/card:scale-105"
-                            alt="hero" src="{{$together}}">
+                            alt="Ali Ahmad - Cloud Nine" title="Social Media Manager - Cloud Nine - Ali Ahmad"  src="{{$together}}">
                           {{ end }}
                         </div>
                       </div>
@@ -668,7 +667,7 @@
                   {{ $medium := (.Resize "900x webp q100").RelPermalink }}
                   {{ $large := (.Resize "1500x webp q100").RelPermalink }}
                   {{ $together := (.Resize "1500x webp q100").RelPermalink }}
-                  <img class="fade-to-be2 h-full w-full object-contain object-right-bottom" alt="hero"
+                  <img class="fade-to-be2 h-full w-full object-contain object-right-bottom" alt="Abdullah Bin Ahmed" title="Abdullah Bin Ahmed Cloud Nine"
                     src="{{$together}}">
                   {{ end }}
                 </div>
@@ -689,7 +688,7 @@
                           {{ $together := (.Resize "1500x webp q100").RelPermalink }}
                           <img
                             class="h-full w-full object-contain transition-transform duration-300 ease-in-out group-hover/card:scale-105"
-                            alt="hero" src="{{$together}}">
+                            alt="Abdullah Bin Ahmed" title="Abdullah Bin Ahmed Cloud Nine Marketing"  src="{{$together}}">
                           {{ end }}
                         </div>
                       </div>
@@ -741,7 +740,7 @@
                   {{ $medium := (.Resize "900x webp q100").RelPermalink }}
                   {{ $large := (.Resize "1500x webp q100").RelPermalink }}
                   {{ $together := (.Resize "1500x webp q100").RelPermalink }}
-                  <img class="fade-to-be2 h-full w-full object-contain object-right-bottom" alt="hero"
+                  <img class="fade-to-be2 h-full w-full object-contain object-right-bottom" alt="Debbie Mokhosi-Madalane" title="Debbie Mokhosi-Madalane - Cloud Nine"
                     src="{{$together}}">
                   {{ end }}
                 </div>
@@ -762,7 +761,7 @@
                           {{ $together := (.Resize "1500x webp q100").RelPermalink }}
                           <img
                             class="h-full w-full object-contain transition-transform duration-300 ease-in-out group-hover/card:scale-105"
-                            alt="hero" src="{{$together}}">
+                            alt="Debbie Mokhosi-Madalane  - Cloud Nine Marketing" title="Debbie Mokhosi-Madalane" src="{{$together}}">
                           {{ end }}
                         </div>
                       </div>
@@ -813,7 +812,7 @@
                   {{ $medium := (.Resize "900x webp q100").RelPermalink }}
                   {{ $large := (.Resize "1500x webp q100").RelPermalink }}
                   {{ $together := (.Resize "1500x webp q100").RelPermalink }}
-                  <img class="fade-to-be2 h-full w-full object-contain object-right-bottom" alt="hero"
+                  <img class="fade-to-be2 h-full w-full object-contain object-right-bottom" alt="Shaiza Haider Shah - Legal Attoerny" title="Shaiza Haider Shah - Cloud Nine"
                     src="{{$together}}">
                   {{ end }}
                 </div>
@@ -834,7 +833,7 @@
                           {{ $together := (.Resize "1500x webp q100").RelPermalink }}
                           <img
                             class="h-full w-full object-contain transition-transform duration-300 ease-in-out group-hover/card:scale-105"
-                            alt="hero" src="{{$together}}">
+                            alt="Shaiza Haider Shah" title="Shaiza Haider Shah - Legal Attoerny - Cloud Nine" src="{{$together}}">
                           {{ end }}
                         </div>
                       </div>
