@@ -65,9 +65,12 @@
                     <img srcset="
                     {{- with $small -}}, {{.}} 768w{{- end -}}
                     {{- with $medium -}}, {{.}} 1024w{{- end -}}
-                    {{- with $large -}}, {{.}} 1374w{{- end -}}" src="{{ $heroimage }}"
-                        class="w-full h-auto rounded-xl group-hover:bg-sky-400"
-                        alt="Sign Makers crafting a high quality premium LED signage">
+                    {{- with $large -}}, {{.}} 1374w{{- end -}}" 
+     src="{{ $heroimage }}"
+     class="w-full h-auto rounded-xl group-hover:bg-sky-400"
+     alt="Cloud Nine Town Sketch"
+     title="The Town of Marketers - Hover on this image to see what we call the Cloud Nine Impact">
+
                     {{ end }}
                     {{ with resources.Get "images/hero-4.png" }}
                     {{ $small := (.Resize "900x webp q100").RelPermalink }}
@@ -79,7 +82,8 @@
                     {{- with $medium -}}, {{.}} 1024w{{- end -}}
                     {{- with $large -}}, {{.}} 1374w{{- end -}}" src="{{ $heroimage2 }}"
                         class="absolute inset-x-0 bottom-0 w-32 md:w-96 h-auto rounded-xl z-50 group-hover:bg-primary"
-                        alt="Overlay image description">
+                        alt="Welcome to Cloud Nine Town - Town of Marketers"
+                        title="We're Cloud Nine - Marketers, Entrepreneurs, and Campaign Strategists">
                     {{ end }}
                 </div>
             </div>

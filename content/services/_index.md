@@ -2,10 +2,8 @@
 title: "Services"
 date: 2020-09-23T15:28:43+06:00
 draft: false
-description: "Explore our top services: Social Media Marketing, Website Development, Logo Design, Branding, PPC & Google Ads, and Product Photography. Enhance your business with Cloud Nine."
-author: " "
+description: "High-quality Web Dev, Design & Marketing services for physical & digital businesses, including Shopify & Amazon.  We Know how to make more sales"
+author: "Cloud Nine"
 image: "images/og-cloudnine.png"
 images: ["images/og-cloudnine.png"]
-featuredImage: "images/pages/products-saturn-spraying.png"
-keywords: "DiscMaster, DiscMatic, PortaDisc"
 ---

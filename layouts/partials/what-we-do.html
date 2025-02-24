@@ -11,19 +11,20 @@
               <div class="relative flex items-center justify-center h-96 w-full grayscale group-hover:grayscale-0">
                 {{ with resources.Get "images/flying-saucer.png" }}
                 {{ $saucer := .RelPermalink }}
-                <img src="{{ $saucer }}" class="absolute -top-20 animate-wiggle animate-bounce h-48 lg:h-64 xl:h-64 z-30" alt="Flying Saucer">
+                <img src="{{ $saucer }}" class="absolute -top-20 animate-wiggle animate-bounce h-48 lg:h-64 xl:h-64 z-30" alt="Cloud Nine Marketings Space Ship"
+                title="Innovating Marketing Strategies - We're Alines">
                 {{ end }}
 
                 {{ with resources.Get "images/light.png" }}
                 {{ $lightning := .RelPermalink }}
-                <img src="{{ $lightning }}" class="relative bottom-12 left-6 animate-pulse h-32 z-20" alt="Lightning">
+                <img src="{{ $lightning }}" class="relative bottom-12 left-6 animate-pulse h-32 z-20" alt="Space Ship Lightning" title="Cloud nine is the light to your business">
                 {{ end }}
 
                 {{ with resources.Get "images/truck.png" }}
                 {{ $truck := .RelPermalink }}
                 <img src="{{ $truck }}"
                   class="absolute top-40 md:top-60  animate-wiggle h-48 md:h-64 xl:h-64"
-                  alt="Truck">
+                  alt="Truck" title="We carry your old business and optimise it for sales">
                 {{ end }}
               </div>
 
@@ -90,7 +91,7 @@
     </p>
     <footer class="flex items-center gap-3 mt-6 md:mt-12">
       <img class="flex-shrink-0 w-12 h-12 border rounded-full border-black/10"
-        src="https://loremflickr.com/g/200/200/girl" alt="Sebastiaan Kloos" loading="lazy">
+        src="https://loremflickr.com/g/200/200/girl" alt="Mandy Purewal Tetimonial" title="mandy purewals testimonial avatar" loading="lazy">
       <a href="" target="_blank" class="inline-block font-bold tracking-tight dark:text-gray-100">
         <p class="text-2xl">Mandy Purewal</p>
         <p class="font-medium text-black/60 dark:text-gray-400">Founder of LiveLong Genetics</p>
